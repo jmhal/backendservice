@@ -54,7 +54,7 @@ class Cluster:
    def getClusterStatistics(self):
       """
       Returns the overall status of the cluster. I expect the format to be similar with
-      a dictionnary created from a YAML file. In other words, key:value, where key stands
+      a dictionary created from a YAML file. In other words, key:value, where key stands
       for a metric (cluster load, bandwidth usage, etc) and value is the perception for that
       metric. 
       The metrics and values are defined by the maintainer developing the Platform component and
