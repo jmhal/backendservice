@@ -85,14 +85,30 @@ class AllocationPort(gov.cca.Port):
 ## Uses ports
 
 ### Notification
-class NotificationPort(gov.cca.Port):
-   pass
+# class NotificationPort(gov.cca.Port):
+#  pass
 
 # The component itself
 class PlatformComponent(gov.cca.Component):
    def __init__(self):
-      self.activationPort = ActivationPort("elastichpc.base.platform.ActivationPort")
+      """
+      This is more of an example of how the programmer must deal with the ports after extending 
+      this class. It is expected that he/she will change the module elastihpc.base.platform for
+      the appropriated module.
+      """
+      self.activationPort = ActivationPort("elastichpc.base.platform.ActivationPort");
+      self.monitoringPort = MonitoringPort("elastichpc.base.platform.MonitoringPort");
+      self.allocationPort = AllocationPort("elastichpc.base.platform.AllocationPort");
 
    def setServices(self, services):
+      """
+      I think this method is general enough. After all, even if the user extends the ports,
+      they will still be descendants of the base classes.
+      """
       self.services = services
-      self.addProvidesPort(self.activationPort, "ActivationPort", "elastichpc.base.platform.ActivationPort")
+
+      self.services.addProvidesPort(self.activationPort, "ActivationPort", "elastichpc.base.platform.ActivationPort", None)
+      self.services.addProvidesPort(self.monitoringPort, "MonitoringPort", "elastichpc.base.platform.MonitoringPort", None)
+      self.services.addProvidesPort(self.allocationPort, "AllocationPort", "elastichpc.base.platform.AllocationPort", None)
+
+      self.services.registerUsesPort("NotificationPort", "elastichpc.base.computation.NotificationPort")
