@@ -57,7 +57,7 @@ class ExecutionControlPort(CCAPython.gov.cca.Port):
       super(ExecutionControlPort, self).__init__(portType)
       return
       
-   def persist():
+   def persist(self):
       """
       It is up to the developer to define a persistence mechanism. 
       But this method will always return the path to a file containing the state of the computation.
@@ -65,7 +65,7 @@ class ExecutionControlPort(CCAPython.gov.cca.Port):
       """
       raise NotImplementedError("Base Component.")
 
-   def start(state = None):
+   def start(self, state = None):
       """
       Starts or restarts the computation. The state holds the path to a file inside the root node.
       It it up to the developer to define how to start the components units. 
@@ -73,7 +73,7 @@ class ExecutionControlPort(CCAPython.gov.cca.Port):
       allocationPort = self.component.services.getPort("AllocationPort")
       raise NotImplementedError("Base Component.")
 
-   def isFinished():
+   def isFinished(self):
       raise NotImplementedError("Base Component.")
 
 
