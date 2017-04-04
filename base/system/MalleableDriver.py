@@ -10,7 +10,7 @@ if __name__ == '__main__':
    platform = fwk.createInstance("PlatformInstance", "elastichpc.base.platform.malleable.MalleablePlatformComponent", None)
 
    fwk.connect(computation, "AllocationPort", platform, "AllocationPort")
-   fwk.connect(platform, "ComputationReconfiguration", computation, "ComputationReconfigurationPort")
+   fwk.connect(platform, "ComputationReconfigurationPort", computation, "ComputationReconfigurationPort")
 
    qosPort = fwk.lookupPort(platform, "QoSConfigurationPort")
    qosPort.setQosContract()

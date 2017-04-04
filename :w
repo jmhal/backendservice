@@ -1,4 +1,4 @@
-import CCAPython.gov.cca
+from CCAPython import gov
 import time
 import threading
 
@@ -29,7 +29,7 @@ class ComputationProgress():
       with self.lock:
          return self.log.copy()
 
-class ReconfigurationPort(CCAPython.gov.cca.Port):
+class ReconfigurationPort(gov.cca.Port):
    """
    The malleable computation component provides this port for reconfiguration from the platform.
    """
@@ -51,7 +51,7 @@ class ReconfigurationPort(CCAPython.gov.cca.Port):
       """
       raise NotImplementedError("Base Component.")
 
-class ExecutionControlPort(CCAPython.gov.cca.Port):
+class ExecutionControlPort(gov.cca.Port):
    def __init__(self, portType, component):
       self.component = component
       super(ExecutionControlPort, self).__init__(portType)
@@ -77,7 +77,7 @@ class ExecutionControlPort(CCAPython.gov.cca.Port):
       raise NotImplementedError("Base Component.")
 
 
-class MalleableComputationComponent(CCAPython.gov.cca.Component):
+class MalleableComputationComponent(gov.cca.Component):
    def __init__(self):
       self.progressLog = ComputationProgress()
       self.reconfigurationPort = ReconfigurationPort("elastichpc.base.computation.malleable.ReconfigurationPort", self.progressLog, self)

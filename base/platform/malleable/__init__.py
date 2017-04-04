@@ -1,4 +1,4 @@
-import gov.cca
+import CCAPython.gov.cca
 
 class ReconfigurationDecisionLoop():
    def __init__(self, reconfigurationPort):
@@ -17,12 +17,12 @@ class ReconfigurationDecisionLoop():
    def execute(self):
       raise NotImplementedError("Base Component.")
 
-class AllocationPort(gov.cca.Port):
+class AllocationPort(CCAPython.gov.cca.Port):
    def __init__(self, portType):    
-      super(AllocationPort, self). __init__(portType)
+      super(AllocationPort, self).__init__(portType)
       return
 
-   def getResources(): 
+   def getResources(self): 
       """
       This should return a resource description for the computation.
       This description should contain:
@@ -33,23 +33,31 @@ class AllocationPort(gov.cca.Port):
       """
       raise NotImplementedError("Base Component.")
 
-class QoSConfigurationPort(gov.cca.Port):
+class QoSConfigurationPort(CCAPython.gov.cca.Port):
    def __init__(self, portType):
-      super(AllocationPort, self). __init__(portType)
+      super(QoSConfigurationPort, self).__init__(portType)
       return
 
    def setQoSContract(self, qos):
+      """
+      This should represent the execution requirements. 
+      For malleable scenario, I'm considering:
+      - Execution time estimative given the initial resources.
+      - Execution cost restriction. 
+      - A function, defined by the application provider or component developer, that, 
+        given a new set of resources, delivers the new estimation of time and cost.
+      """
       raise NotImplementedError("Base Component.")
 
-class MalleablePlatformComponent(gov.cca.Component):
+class MalleablePlatformComponent(CCAPython.gov.cca.Component):
    def __init__(self):
       self.allocationPort = AllocationPort("elastichpc.base.platform.malleable.AllocationPort")
-      self.qosConfigurationPort = QoSConfigurationPort("elastichpc.base.platforma.malleable.QoSConfigurationPort")
+      self.qosConfigurationPort = QoSConfigurationPort("elastichpc.base.platform.malleable.QoSConfigurationPort")
       return
 
    def setServices(self, services):
       self.services = services
       services.addProvidesPort(self.allocationPort, "AllocationPort", "elastichpc.base.platform.malleable.AllocationPort", None)
-      services.addProvidesPort(self.allocationPort, "QosConfigurationPort", "elastichpc.base.platform.malleable.QosConfigurationPort", None)
-      services.registerUsesPort("ComputationReconfiguration","elastichpc.base.computation.malleable.ReconfigurationPort", None)
+      services.addProvidesPort(self.qosConfigurationPort, "QoSConfigurationPort", "elastichpc.base.platform.malleable.QoSConfigurationPort", None)
+      services.registerUsesPort("ComputationReconfigurationPort","elastichpc.base.computation.malleable.ReconfigurationPort", None)
       return
