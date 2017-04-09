@@ -16,7 +16,7 @@ class ComputationProgress():
 
    def updateProgress(self, progress):
       """
-      Both components, Platform and Computation, are running on the same not.
+      Both components, Platform and Computation, are running on the same node.
       There is no problem in using the local time.
       """
       with self.lock:
@@ -33,8 +33,7 @@ class ReconfigurationPort(CCAPython.gov.cca.Port):
    """
    The malleable computation component provides this port for reconfiguration from the platform.
    """
-   def __init__(self, portType, logProgress, component):
-      self.computationProgress = logProgress
+   def __init__(self, portType,  component):
       self.component = component
       super(ReconfigurationPort, self). __init__(portType)
       return
@@ -43,7 +42,7 @@ class ReconfigurationPort(CCAPython.gov.cca.Port):
       """
       Will return to the Platform (and the internal Reconfiguration) the progress of the Computation.
       """
-      return self.computationProgress.retrieveProgress()
+      return self.component.computationProgress.retrieveProgress()
 
    def updateResources(self, resources):
       """
@@ -70,17 +69,18 @@ class ExecutionControlPort(CCAPython.gov.cca.Port):
       Starts or restarts the computation. The state holds the path to a file inside the root node.
       It it up to the developer to define how to start the components units. 
       """
-      allocationPort = self.component.services.getPort("AllocationPort")
       raise NotImplementedError("Base Component.")
 
    def isFinished(self):
-      raise NotImplementedError("Base Component.")
-
+      for value in self.component.computationProgress.retrieveProgress().values():
+         if value == 1.0:
+            return True
+      return False
 
 class MalleableComputationComponent(CCAPython.gov.cca.Component):
    def __init__(self):
-      self.progressLog = ComputationProgress()
-      self.reconfigurationPort = ReconfigurationPort("elastichpc.base.computation.malleable.ReconfigurationPort", self.progressLog, self)
+      self.computationProgress = ComputationProgress()
+      self.reconfigurationPort = ReconfigurationPort("elastichpc.base.computation.malleable.ReconfigurationPort", self)
       self.executionControlPort = ExecutionControlPort("elastichpc.base.computation.malleable.ExecutionControlPort", self)
       return
 

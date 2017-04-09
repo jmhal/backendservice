@@ -18,7 +18,9 @@ if __name__ == '__main__':
    executionPort = fwk.lookupPort(computation, "ExecutionControlPort")
    executionPort.start()
 
-   print executionPort.isFinished()
+   while executionPort.isFinished() == False: 
+      print "Componentes ainda executando..."
+      time.sleep(5)
 
    fwk.destroyInstance(computation, 0.0)
    fwk.destroyInstance(platform, 0.0)

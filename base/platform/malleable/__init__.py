@@ -18,8 +18,9 @@ class ReconfigurationDecisionLoop():
       raise NotImplementedError("Base Component.")
 
 class AllocationPort(CCAPython.gov.cca.Port):
-   def __init__(self, portType):    
+   def __init__(self, portType, component):    
       super(AllocationPort, self).__init__(portType)
+      self.component = component
       return
 
    def getResources(self): 
@@ -34,8 +35,9 @@ class AllocationPort(CCAPython.gov.cca.Port):
       raise NotImplementedError("Base Component.")
 
 class QoSConfigurationPort(CCAPython.gov.cca.Port):
-   def __init__(self, portType):
+   def __init__(self, portType, component):
       super(QoSConfigurationPort, self).__init__(portType)
+      self.component = component
       return
 
    def setQoSContract(self, qos):
@@ -51,8 +53,8 @@ class QoSConfigurationPort(CCAPython.gov.cca.Port):
 
 class MalleablePlatformComponent(CCAPython.gov.cca.Component):
    def __init__(self):
-      self.allocationPort = AllocationPort("elastichpc.base.platform.malleable.AllocationPort")
-      self.qosConfigurationPort = QoSConfigurationPort("elastichpc.base.platform.malleable.QoSConfigurationPort")
+      self.allocationPort = AllocationPort("elastichpc.base.platform.malleable.AllocationPort", self)
+      self.qosConfigurationPort = QoSConfigurationPort("elastichpc.base.platform.malleable.QoSConfigurationPort", self)
       return
 
    def setServices(self, services):
