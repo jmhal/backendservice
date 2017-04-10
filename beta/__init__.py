@@ -17,12 +17,15 @@ from elastichpc.base.platform.malleable import MalleablePlatformComponent
 def compute(computationProgress):
    for i in range(0,11):
       print "Calculando tarefa: " + str(i)
-      computationProgress.updateProgress(i / 10.0)
+      computationProgress.value = i / 10.0
       time.sleep(5)
 
 class MyReconfigurationPort(ReconfigurationPort):
    def updateResources(self, resources):
       print "updateResources: " + str(resources)
+
+   def getComputationProgress(self):
+      return self.component.computationProgress.value
 
 class MyExecutionControlPort(ExecutionControlPort):
    def start(self, state = None):
@@ -33,9 +36,15 @@ class MyExecutionControlPort(ExecutionControlPort):
       computation_process.start();
       return
 
+   def isFinished(self):
+      if (self.component.computationProgress.value >= 1.0):
+         return True
+      return False
+
 class MyMalleableComputation(MalleableComputationComponent):
    def __init__(self):
       super(MyMalleableComputation, self).__init__()
+      self.computationProgress = Value('f', 0.0, lock = True)
       self.reconfigurationPort = MyReconfigurationPort("elastichpc.base.computation.malleable.ReconfigurationPort", self)
       self.executionControlPort = MyExecutionControlPort("elastichpc.base.computation.malleable.ExecutionControlPort", self)
       return
@@ -44,7 +53,8 @@ class MyMalleableComputation(MalleableComputationComponent):
 
 # This is the process for the reconfiguration loop
 def mape_k_loop(reconfiguration_port):
-   while True :
+   progress = 0.0
+   while progress < 1.0 :
       print "Recuperando Progresso da Computacao."
       reconfiguration_port.updateResources(resources = "Novos Recursos") 
       
