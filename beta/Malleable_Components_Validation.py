@@ -28,7 +28,7 @@ if __name__ == '__main__':
    executionPort.start()
 
    while executionPort.isFinished() == False: 
-      logger.debug("Computação em Execução.")
+#      logger.debug("Computação em Execução.")
       time.sleep(5)
 
    fwk.destroyInstance(computation, 0.0)

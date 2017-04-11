@@ -1,5 +1,7 @@
+#-*- coding: iso-8859-15 -*-
 import time
 import logging
+import random
 from multiprocessing import Process, Value, Array
 
 from elastichpc.base.computation.malleable import ReconfigurationPort
@@ -18,23 +20,27 @@ logger = logging.getLogger('root')
 # This is the process for the computation
 
 def compute(computationProgress, resources):
+   interval = resources.value
+   logger.debug("Iniciando Computação com Intervalo: " + str(interval))
    for i in range(0,11):
       logger.debug("Calculando tarefa: " + str(i))
       computationProgress.value = i / 10.0
-      time.sleep(5)
+      time.sleep(interval)
 
 class MyReconfigurationPort(ReconfigurationPort):
    def updateResources(self, resources):
-      print "updateResources: " + str(resources)
+      logger.debug("updateResources: " + str(resources))
+      self.component.computationResources.value = resources
 
    def getComputationProgress(self):
       return self.component.computationProgress.value
 
 class MyExecutionControlPort(ExecutionControlPort):
    def start(self, state = None):
-      print "Iniciando Computacao..."
+      logger.debug("Iniciando Computacao.")
       allocationPort = self.component.services.getPort("AllocationPort")
-      allocationPort.getResources()
+      resources =  allocationPort.getResources()
+      self.component.computationResources.value = resources
       computation_process = Process(target = compute, args=(self.component.computationProgress,self.component.computationResources))
       computation_process.start();
       return
@@ -52,7 +58,10 @@ class MyMalleableComputation(MalleableComputationComponent):
       self.computationProgress = Value('f', 0.0, lock = True)
 
       # This is the parameter variable.
-      self.computationResources = Array('c', 'node:2', lock = True)
+      # For this example will be a integer. But it my be an array (fixed size), a list, or a dictionnary (mutable, using managers).
+      # Maybe for the final platform, the dictionnary will be the best option, since the key/value may contain 
+      # different information models. 
+      self.computationResources = Value('i', 0, lock = True)
 
       self.reconfigurationPort = MyReconfigurationPort("elastichpc.base.computation.malleable.ReconfigurationPort", self)
       self.executionControlPort = MyExecutionControlPort("elastichpc.base.computation.malleable.ExecutionControlPort", self)
@@ -63,29 +72,55 @@ class MyMalleableComputation(MalleableComputationComponent):
 # This is the process for the reconfiguration loop
 def mape_k_loop(reconfiguration_port):
    progress = 0.0
+   progressLog = {}
    while progress < 1.0 :
-      print "Recuperando Progresso da Computacao."
-      reconfiguration_port.updateResources(resources = "Novos Recursos") 
+      logger.debug("Monitorando Progresso da Computação.")
       
+      # Monitor
       progress = reconfiguration_port.getComputationProgress() 
-      print progress
+      progressLog[time.time()] = progress
+      logger.debug("Progresso: " + str(progress))
+
+      # Analyze 
+      if len(progressLog) >= 2 :
+         firstTimeStamp = sorted(progressLog)[0]
+         firstSample = progressLog[firstTimeStamp]
+
+         lastTimeStamp = sorted(progressLog)[-1]
+         lastSample = progressLog[lastTimeStamp]
+      
+         averageStepInterval = (lastTimeStamp - firstTimeStamp) / (lastSample - firstSample)
+         logger.debug("Average Step Interval:" + str(averageStepInterval))
+
+         predicted = (1.0 - lastSample) * averageStepInterval
+         logger.debug("Predicted Remaining Time: " + str(predicted))
+
+         # Plan
+
+         # Execute
+      else :
+         logger.debug("Registros Insuficientes.")
 
       time.sleep(5)
+   logger.debug(progressLog)
    return
 
 class MyAllocationPort(AllocationPort):
    def getResources(self):
-      print "Enviando Recursos."
+      interval = random.randint(1, 20)
+      logger.debug("Enviando Recursos: " + str(interval))
+
       reconfigurationPort = self.component.services.getPort("ComputationReconfigurationPort")
       mape_processo = Process(target = mape_k_loop, args=(reconfigurationPort,))
       mape_processo.start()
-      print "Processo de Monitoramento Iniciado."
-      return
+      
+      logger.debug("Processo de Monitoramento Iniciado.")
+      return interval
 
 class MyQoSConfigurationPort(QoSConfigurationPort):
    def setQoSContract(self, qos = None):
-      print "Contrato Recebido."
-
+       logger.debug("Contrato Recebido.")
+      
 class MyMalleablePlatform(MalleablePlatformComponent):
    def __init__(self):
       super(MyMalleablePlatform, self).__init__()
