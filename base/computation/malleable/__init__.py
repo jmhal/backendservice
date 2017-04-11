@@ -42,7 +42,7 @@ class ReconfigurationPort(CCAPython.gov.cca.Port):
       """
       Will return to the Platform (and the internal Reconfiguration) the progress of the Computation.
       """
-      return self.component.computationProgress.retrieveProgress()
+      raise NotImplementedError("Base Component.")
 
    def updateResources(self, resources):
       """
@@ -72,14 +72,10 @@ class ExecutionControlPort(CCAPython.gov.cca.Port):
       raise NotImplementedError("Base Component.")
 
    def isFinished(self):
-      for value in self.component.computationProgress.retrieveProgress().values():
-         if value == 1.0:
-            return True
-      return False
+      raise NotImplementedError("Base Component.")
 
 class MalleableComputationComponent(CCAPython.gov.cca.Component):
    def __init__(self):
-      self.computationProgress = ComputationProgress()
       self.reconfigurationPort = ReconfigurationPort("elastichpc.base.computation.malleable.ReconfigurationPort", self)
       self.executionControlPort = ExecutionControlPort("elastichpc.base.computation.malleable.ExecutionControlPort", self)
       return

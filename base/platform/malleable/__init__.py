@@ -1,22 +1,5 @@
 import CCAPython.gov.cca
 
-class ReconfigurationDecisionLoop():
-   def __init__(self, reconfigurationPort):
-      self.reconfigurationPort = reconfigurationPort
-      return
-
-   def monitor(self):
-      raise NotImplementedError("Base Component.")
-
-   def analysis(self):
-      raise NotImplementedError("Base Component.")
-
-   def planning(self):
-      raise NotImplementedError("Base Component.")
-
-   def execute(self):
-      raise NotImplementedError("Base Component.")
-
 class AllocationPort(CCAPython.gov.cca.Port):
    def __init__(self, portType, component):    
       super(AllocationPort, self).__init__(portType)

@@ -1,4 +1,5 @@
 import time
+import logging
 from multiprocessing import Process, Value, Array
 
 from elastichpc.base.computation.malleable import ReconfigurationPort
@@ -12,11 +13,13 @@ from elastichpc.base.platform.malleable import MalleablePlatformComponent
 
 # Computation
 
+logger = logging.getLogger('root')
+
 # This is the process for the computation
 
-def compute(computationProgress):
+def compute(computationProgress, resources):
    for i in range(0,11):
-      print "Calculando tarefa: " + str(i)
+      logger.debug("Calculando tarefa: " + str(i))
       computationProgress.value = i / 10.0
       time.sleep(5)
 
@@ -32,7 +35,7 @@ class MyExecutionControlPort(ExecutionControlPort):
       print "Iniciando Computacao..."
       allocationPort = self.component.services.getPort("AllocationPort")
       allocationPort.getResources()
-      computation_process = Process(target = compute, args=(self.component.computationProgress,))
+      computation_process = Process(target = compute, args=(self.component.computationProgress,self.component.computationResources))
       computation_process.start();
       return
 
@@ -44,7 +47,13 @@ class MyExecutionControlPort(ExecutionControlPort):
 class MyMalleableComputation(MalleableComputationComponent):
    def __init__(self):
       super(MyMalleableComputation, self).__init__()
+
+      # This is the sensor variable. It must be a primitive value.
       self.computationProgress = Value('f', 0.0, lock = True)
+
+      # This is the parameter variable.
+      self.computationResources = Array('c', 'node:2', lock = True)
+
       self.reconfigurationPort = MyReconfigurationPort("elastichpc.base.computation.malleable.ReconfigurationPort", self)
       self.executionControlPort = MyExecutionControlPort("elastichpc.base.computation.malleable.ExecutionControlPort", self)
       return
