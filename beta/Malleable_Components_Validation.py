@@ -21,7 +21,7 @@ if __name__ == '__main__':
 
    logger.debug("Configurando o Contrato.")
    qosPort = fwk.lookupPort(platform, "QoSConfigurationPort")
-   qosPort.setQoSContract()
+   qosPort.setQoSContract((100,100))
 
    logger.debug("Iniciando a Execução da Computação")
    executionPort = fwk.lookupPort(computation, "ExecutionControlPort")
