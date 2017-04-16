@@ -20,7 +20,8 @@ def manager_unit(manager_conn, computation):
       logger.debug("Manager Unit Got Message: " + str(message))
       if message["action"] == "start":
          resources = message["resources"]
-         start_status = computation.start(resources)  
+         state = message["state"]
+         start_status = computation.start(resources, state)  
          manager_conn.send({"start_status": start_status})
       elif message["action"] == "progress":
          progress = computation.getProgress()
@@ -32,6 +33,9 @@ def manager_unit(manager_conn, computation):
       elif message["action"] == "persist":
          persist_status = computation.persist()
          manager_conn.send({"persist_status" : persist_status})
+      elif message["action"] == "getResults":
+         results_status = computation.getResults()
+         manager_conn.send({"result_status" : result_status})
       elif message["action"] == "stop":
          stop_status = computation.stop()
          manager_conn.send({"stop_status" : stop_status}]
@@ -43,14 +47,14 @@ class Computation_Unit():
    """
    This is an abstract class that must be overwritten for every component.
    I'm writing this with MPI computations in mind, where the MPI processes
-   will be launch with the help of the subprocess package. Although right 
+   will be launched with the help of the subprocess package. Although right 
    now I'm not dealing with the environment ports, this class should also 
    be responsible for setting up a web services container. 
    """
    def __init__(self):
       raise NotImplementedError("Abstract Class.")
      
-   def start(self, resources):
+   def start(self, resources, state):
       raise NotImplementedError("Abstract Class.")
 
    def setNewResources(self, new_resources):
@@ -60,6 +64,9 @@ class Computation_Unit():
       raise NotImplementedError("Abstract Class.")
 
    def stop(self):
+      raise NotImplementedError("Abstract Class.")
+
+   def getResults(self):
       raise NotImplementedError("Abstract Class.")
 
 
@@ -102,17 +109,53 @@ class ExecutionControlPort(CCAPython.gov.cca.Port):
       But this method will always return the path to a file containing the state of the computation.
       The component places this file in the file system of the root node.
       """
-      raise NotImplementedError("Base Component.")
+      self.component.framework_conn.send({"action" : "persist"})
+      message = self.component.framework_conn.recv()
+      return message["persist_status"]
 
    def start(self, state = None):
       """
       Starts or restarts the computation. The state holds the path to a file inside the root node.
       It it up to the developer to define how to start the components units. 
       """
-      raise NotImplementedError("Base Component.")
+      allocationPort = self.component.services.getPort("AllocationPort")
+      resources = allocationPort.getResources()
+      
+      logger.debug("Starting Computation: Resources %s, State %s" % (str(resources), str(state)))
+      computation_process = Process(target = manager_unit, args=(self.component.compute_conn, self.component.computation))
+      computation_process.daemon = True
+      computation_process.start();
+
+      self.component.framework_conn.send({"action": start, "resources" : resources, "state": state})
+      message = self.component.framework_conn.recv()
+
+      return message["start_status"]
+
+   def stop(self):
+      """
+      Stops the computation.
+      """
+      self.component.framework_conn.send({"action": "stop"})
+      message = self.component.framework_conn.recv()
+      return message["stop_status"]   
+
+   def getResults(self):
+      """
+      Returns the result of the computation.
+      """
+      if self.isFinished():
+         self.component.framework_conn.send({"action" : "getResults"})
+         message = self.component.framework_conn.recv()
+         return message["result_status"]
+      else return None
 
    def isFinished(self):
-      raise NotImplementedError("Base Component.")
+      """
+      The return of getComputationProgress must be a number.
+      """
+      if (self.component.reconfigurationPort.getComputationProgress() >= 1.0):
+         return True
+      return False
 
 class MalleableComputationComponent(CCAPython.gov.cca.Component):
    """
@@ -122,9 +165,12 @@ class MalleableComputationComponent(CCAPython.gov.cca.Component):
       """
       Creates the reconfiguration and execution ports, and the communication pipe.
       """
-      framwork_conn, computation_conn = Pipe()
+      framework_conn, computation_conn = Pipe()
       self.framework_conn = framework_conn
       self.computation_conn = compute_conn
+
+      # This line must be rewritten for the actual Computation Component
+      self.computation = Computation_Unit()
 
       self.reconfigurationPort = ReconfigurationPort("elastichpc.base.computation.malleable.ReconfigurationPort", self)
       self.executionControlPort = ExecutionControlPort("elastichpc.base.computation.malleable.ExecutionControlPort", self)
