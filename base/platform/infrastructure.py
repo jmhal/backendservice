@@ -1,16 +1,12 @@
 """
-As basic infrastructure, we consider a cluster, that might be virtual or physical.
-These classes are abstract. In the final scenario, a maintainer should derive these
-classes to represent it's real infrastructure.
+As basic infrastructure, we consider a cluster. This class is abstract. 
+In the final scenario, a maintainer should derive these classes to represent its real infrastructure.
 """
 
-"""
-This is a cluster infrastructure. It represents the whole infrastructure available
-to the computational system. 
-- If it is a virtual Cluster, nodes may be added. Also, elasticity may change the configuration of these nodes and the assignment of nodes to components. 
-- If it is a physical cluster, we cannot alter the nodes' configuration.
-"""
 class Cluster: 
+   """
+   This is a cluster infrastructure. It represents the resources available to the computational system. 
+   """
    def __init__(self):
       """
       The extended class must initialize the set of nodes for the cluster.
@@ -20,110 +16,94 @@ class Cluster:
       """
       raise NotImplementedError("Abstract Class!")
 
-   def isVirtual(self):
-      """
-      Should return True if this cluster
-      """
-      raise NotImplementedError("Abstract Class!")
-
    def getNodes(self):
       """
-      Returns the nodes, as a dictionnary, {NodeID: NodeObject}
+      Returns the nodes, as a dictionary, {hostname : NodeObject}
       """
       raise NotImplementedError("Abstract Class!")
 
-   def getNodesForComponent(self, componentId):
+   def isElastic(self):
       """
-      Returns the nodes assigned to a component.
-      We consider that a node is assigned to a single component.
-      """
-      raise NotImplementedError("Abstract Class!")
-
-   def assignNodeForComponent(self, nodeId, componentId):
-      """
-      Establishes that node with nodeId is assigned to component componentId
-      """
-      raise NotImplementedError("Abstract Class!")
-
-   def deAssignNodeForComponent(self, nodeId, componentId):
-      """
-      Establishes that node with nodeId is no longer assigned to component componentId
+      Returns True if the cluster supports horizontal elasticity, False otherwise.
       """
       raise NotImplementedError("Abstract Class!")
 
    def getClusterStatistics(self):
       """
-      Returns the overall status of the cluster. I expect the format to be similar with
-      a dictionary created from a YAML file. In other words, key:value, where key stands
-      for a metric (cluster load, bandwidth usage, etc) and value is the perception for that
-      metric. 
-      The metrics and values are defined by the maintainer developing the Platform component and
-      must be informed in the contextual contract for the platform.
-      For example, a Virtual Cluster may inform the price of spot instances. Another possibility is
-      a accounting of how much the execution of each component is costing the user.
+      Returns the overall status of the cluster. 
+      For the CPU, Memory, Disk and Bandwidth, is the average for the values of each node.
+      For the cost, is the sum of the value of each node. 
+      sample output: {"cpuload": 0.5, "memory" : 0.5, "diskusage": 0.5, "network" : 0.5, "cost" : 13.4 }
       """
       raise NotImplementedError("Abstract Class!")
   
-   def getNodeStatistics(self, nodeId):
-      """
-      Returns the status of a specific node. The same way as getClusterStatistics, I expect
-      this to be highly implementation dependent. 
-      """
-      raise NotImplementedError("Abstract Class!")
-
-class VirtualCluster(Cluster):
-   def __init__(self):
-      """ 
-      This class should be extended to acommodate the different cloud providers
-      """
-      raise NotImplementedError("Abstract Class!")
-
-   def addNode(self, flavorId):
+   def addNode(self)
       """  
-      As a virtual cluster, you can create new instances of virtual machines.
+      Add a node to the set of resources.      
+      The node is added with the default values from the contract.
+      It may be reconfigured right after.
       """
       raise NotImplementedError("Abstract Class!")
 
-   def removeNode(self, nodeId):
+   def removeNode(self, hostname)
       """
-      As a virtual cluster, you can remove instances of virtual machines.
-      """
-      raise NotImplementedError("Abstract Class!")
-
-   def resizeNode(self, newConfiguration):
-      """
-      This is tricky method. After, not all hypervisors support vertical elasticity.
-      If a maintainer has a hypervisor with such feature, it must define a configuration
-      object to describe how to change the node. For example, the configuration object may 
-      have scalar quantities for memory and storage. Will it require rebooting the node?
-      I don't know. This method is here in case future advances allow easier vertical elasticity.
+      Remove a node from the set of resources.
       """
       raise NotImplementedError("Abstract Class!")
 
-class PhysicalCluster(Cluster):
-   def __init__(self):
-      """
-      I don't think that the Physical Cluster has any special methods.
-      """
-      raise NotImplementedError("Abstract Class!")
-
-"""
-Every cluster is made of nodes. We assume a homogeneous in certain aspects, for example, 
-processor architecture.
-"""
 class Node:
-   def __init__(self):
+   """
+   Every cluster is made of nodes. 
+   There is no need for detailed description of the node, since the contextual
+   contract guarantees that it has the necessary settings.
+   """
+   def __init__(self)
       """
-      The extended class must have attributes to describing the node configuration.
-      For example, CPU, Memory, Storage, etc.
-      They must match the cluster description.
+      The maintaner must extend this class with at least the following attributes:
+      - min_core_count
+      - max_core_count
+      - current_core_count
+      - min_memory
+      - max_memory
+      - current_memory
+      - network_bandwidth
+      - hostname 
+      - credentials
+      - a cost function (current_core_count, current_memory, etc) -> cost_per_hour
+      - accumulated_cost
+      - creation_time
+      - last_reconfiguration_time
+      """
+      raise NotImplementedError("Abstract Class!")
+
+   def isElastic(self):
+      """
+      Returns True if the node supports vertical elasticity, False otherwise.
+      """
+      raise NotImplementedError("Abstract Class!")
+
+   def reconfigureNode(self, new_configuration):
+      """
+      Configure the new values for current_core_count and current_memory, and for each configurable parameter.
+      new_configuration = { "core_count" : 4, "memory" : 16000 }
       """
       raise NotImplementedError("Abstract Class!")
 
    def getStatistics(self):
       """
       The metrics/values for this node type.
+      Each performance metric has value in the interval [0.0 ... 1.0]
+
+      CPU: third field of /proc/loadavg divided by core count.
+      Memory: second column of free -m divided by total memory.
+      Disk: fourth column of df -h for the /home partition row.
+      Network Metric: total traffic from uptime (RX + TX bytes) divided by the uptime and the network bandwidth. 
+      By default, the metrics are collected instantaneously. But the platform manager may collect this information
+      from monitoring systems such as Ganglia. 
+      
+      The cost metric contains the total amount spent during execution for this node.
+
+      sample output: {"cpuload": 0.5, "memory" : 0.5, "diskusage": 0.5, "network" : 0.5, "cost" : 13.4 }
       """
       raise NotImplementedError("Abstract Class!")
-
 

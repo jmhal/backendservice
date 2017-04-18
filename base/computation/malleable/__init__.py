@@ -1,8 +1,5 @@
 import CCAPython.gov.cca
-import time
-import threading
 import logging
-import elastichpc.common.log
 from multiprocessing import Process, Value, Array, Pipe
 
 # Setting Up Log
