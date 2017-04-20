@@ -40,7 +40,7 @@ def manager_unit(manager_conn, computation):
    manager_conn.close()
    return  
 
-class Computation_Unit():
+class ComputationUnit():
    """
    This is an abstract class that must be overwritten for every component.
    I'm writing this with MPI computations in mind, where the MPI processes
@@ -115,8 +115,8 @@ class ExecutionControlPort(CCAPython.gov.cca.Port):
       Starts or restarts the computation. The state holds the path to a file inside the root node.
       It it up to the developer to define how to start the components units. 
       """
-      allocationPort = self.component.services.getPort("AllocationPort")
-      resources = allocationPort.getResources()
+      allocation_port = self.component.services.getPort("AllocationPort")
+      resources = allocation_port.getResources()
       
       logger.debug("Starting Computation: Resources %s, State %s" % (str(resources), str(state)))
       computation_process = Process(target = manager_unit, args=(self.component.compute_conn, self.component.computation))
@@ -150,7 +150,7 @@ class ExecutionControlPort(CCAPython.gov.cca.Port):
       """
       The return of getComputationProgress must be a number.
       """
-      if (self.component.reconfigurationPort.getComputationProgress() >= 1.0):
+      if (self.component.reconfiguration_port.getComputationProgress() >= 1.0):
          return True
       return False
 
@@ -167,16 +167,16 @@ class MalleableComputationComponent(CCAPython.gov.cca.Component):
       self.computation_conn = compute_conn
 
       # This line must be rewritten for the actual Computation Component
-      self.computation = Computation_Unit()
+      self.computation = ComputationUnit()
 
-      self.reconfigurationPort = ReconfigurationPort("elastichpc.base.computation.malleable.ReconfigurationPort", self)
-      self.executionControlPort = ExecutionControlPort("elastichpc.base.computation.malleable.ExecutionControlPort", self)
+      self.reconfiguration_port = ReconfigurationPort("elastichpc.base.computation.malleable.ReconfigurationPort", self)
+      self.execution_control_port = ExecutionControlPort("elastichpc.base.computation.malleable.ExecutionControlPort", self)
       return
 
    def setServices(self, services):
       self.services = services
-      services.addProvidesPort(self.reconfigurationPort, "ComputationReconfigurationPort", "elastichpc.base.computation.malleable.ReconfigurationPort", None)
-      services.addProvidesPort(self.executionControlPort, "ExecutionControlPort", "elastichpc.base.computation.malleable.ExecutionControlPort", None)
+      services.addProvidesPort(self.reconfiguration_port, "ComputationReconfigurationPort", "elastichpc.base.computation.malleable.ReconfigurationPort", None)
+      services.addProvidesPort(self.execution_control_port, "ExecutionControlPort", "elastichpc.base.computation.malleable.ExecutionControlPort", None)
       services.registerUsesPort("AllocationPort", "elastichpc.base.platform.malleable.AllocationPort", None)
       return 
 
