@@ -9,7 +9,30 @@ from elastichpc import logging
 logger = logging.getLogger('root')
 
 class MatrixMultiplicationWorkQueue(base.computation.malleable.ComputationUnitImpl):
-   pass
+   """
+   Controls the MPI process creation.
+   """
+   def __init__(self):
+      raise NotImplementedError("Interface.")
+     
+   def start(self, resources, input_data):
+      raise NotImplementedError("Interface.")
+
+   def getProgress(self, new_resources):
+      raise NotImplementedError("Interface.")
+
+   def updateResources(self, new_resources):
+      raise NotImplementedError("Interface.")
+    
+   def persist(self):
+      raise NotImplementedError("Interface.")
+
+   def getResults(self):
+      raise NotImplementedError("Interface.")
+
+   def stop(self):
+      raise NotImplementedError("Interface.")
+
 
 class MatrixSetup(CCAPython.gov.cca.Port):
    """
