@@ -52,7 +52,7 @@ class ComputationUnit(object):
    def start(self, resources, input_data):
       raise NotImplementedError("Interface.")
 
-   def getProgress(self, new_resources):
+   def getProgress(self):
       raise NotImplementedError("Interface.")
 
    def updateResources(self, new_resources):
@@ -157,10 +157,10 @@ class ReconfigurationPort(CCAPython.gov.cca.Port):
       return
 
    def getComputationProgress(self):
-      return component.computation_proxy.getProgress() 
+      return self.component.computation_proxy.getProgress() 
 
    def updateResources(self, resources):
-      return component.computation_proxy.updateResources(resources)
+      return self.component.computation_proxy.updateResources(resources)
 
 class MalleableComputationComponent(CCAPython.gov.cca.Component):
    """

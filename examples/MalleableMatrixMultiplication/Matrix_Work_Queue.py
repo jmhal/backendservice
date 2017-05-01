@@ -31,24 +31,58 @@ comm = MPI.COMM_WORLD
 size = comm.Get_size()
 rank = comm.Get_rank()
 
+# Tasks identifying the MPI messages
 TASKFINISHEDTAG = 2
 KEEPWORKINGTAG = 1
 STOPWORKINGTAG = 0
 
-# This is the dimension of the square matrices.
-N = int(sys.argv[1])
+# The Matrix Order
+N = None
 
-# This is the task size. It's the number of lines each worker will compute from C.
-# N must be divisible by task_size and size, and task_size must be great than size.
-task_size = int(sys.argv[2])
+# The Task Size
+task_size = None
 
-# Send B to everyone
-# Suppose B is read from a file. This can be done in rank 0 and later broadcasted for everyone.
-# Right now, doesn't make any sense. 
-B = np.ones((N,N), dtype=float)
+if rank == 0:
+   # Get the filenames
+   matrix_A_filename = sys.argv[1]
+   matrix_B_filename = sys.argv[2]
+   matrix_C_filename = sys.argv[3]
+ 
+   # Read matrices A and B
+   A = np.load(matrix_A_filename)
+   B = np.load(matrix_B_filename)
+
+   # Verify if the matrix C exists.
+   if os.path.isfile(matrix_C_filename):
+      # This is a restart. last_line holds the last computed line of C.
+      C = np.load(matrix_C_filename)
+      last_line_value = int(sys.argv[4])
+   else:
+      # Otherwise, compute from the beginning.
+      # The values passed as a parameters are just ignored.
+      last_line_value = -1 
+ 
+   # Assign matrix order to N
+   N = A.shape[0]
+   
+   # This is the task size. It's the number of lines each worker will compute from C.
+   # N must be divisible by task_size and size, and task_size must be great than size.
+   # Default Task Size is 10
+   task_size = 10
+
+# Broadcast N to everyone
+N = comm.bcast(N, root = 0)
+
+# Broadcast task_size to everyone
+task_size = comm.bcast(task_size, root = 0)
+
+# Broadcast  B to everyone
+if rank != 0:
+   B = np.zeros((N,N), dtype=float)
 comm.Bcast(B, root = 0)
 
 if rank == 0:
+   # This is the Master code
    # MPI variable for status of communication directives
    status = MPI.Status()
    
@@ -59,29 +93,13 @@ if rank == 0:
    # The control process deals with the exchange of these values with the root unit of the Computation component.
    progress = Value('f', 0.0, lock = True)
    persist = Value('b', False, lock = True)
-   last_line = Value('i', -1, lock = True)
-   last_line.value = int(sys.argv[3])
+   last_line = Value('i', last_line_value, lock = True)
    control_process = Process(target = control_dispatch, args=(33002, persist, progress, last_line))
-   # print "Starting Control Process."
    control_process.daemon = True
    control_process.start()
 
-   # The Matrices A and C
-   A = np.ones((N,N), dtype=float)  
+   # The Matrix C
    C = np.zeros((N,N), dtype=float)
-
-   # Verify if the matrix file exists.
-   file_name = sys.argv[4]
-   if os.path.isfile(file_name):
-      print "Reading Matrix from File."
-      C = np.loadtxt(file_name)
-      print "Restarting Computation from Line: %d" % last_line.value
-   else:
-      # Otherwise, compute from the beginning.
-      # The value passed as a parameter is just ignored.
-      print "Starting Computation."
-      last_line.value = -1 
-      
 
    # Dictionary with the last assignments
    # For each process rank used as a key, it returns a tuple with the last
@@ -102,7 +120,7 @@ if rank == 0:
    # Start receiving the work done and sends new tasks
    remaining_tasks = (N - last_line.value) / task_size
    remaining_results = remaining_tasks + size - 1
-   print "Remaining_tasks: %d, Remaining_results: %d" % (remaining_tasks, remaining_results)
+   # print "Remaining_tasks: %d, Remaining_results: %d" % (remaining_tasks, remaining_results)
 
    # This is the main loop.
    while (remaining_tasks != 0) or (remaining_results != 0):
@@ -121,7 +139,7 @@ if rank == 0:
 
       # Progress is defined by the last line calculated.
       progress.value = float(last_line.value) / N
-      print "Setting Progress to: %d / %d = %.2f, remaining_tasks = %d, remaining_results = %d" % (last_line.value, N, progress.value, remaining_tasks, remaining_results)
+      # print "Setting Progress to: %d / %d = %.2f, remaining_tasks = %d, remaining_results = %d" % (last_line.value, N, progress.value, remaining_tasks, remaining_results)
 
       # Send new work
       if remaining_tasks != 0:
@@ -149,11 +167,9 @@ if rank == 0:
       sendbuffer = np.zeros(1)
       comm.Send(sendbuffer, dest = worker, tag = STOPWORKINGTAG)
    
-   # print C
-
    # Save matrix to file
    print "Saving Matrix to File."
-   np.savetxt(file_name, C)
+   np.save(matrix_C_filename, C)
    print "Matrix Saved to File."
 
    # Finish the control process

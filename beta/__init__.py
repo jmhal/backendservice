@@ -2,7 +2,7 @@
 import time
 import logging
 import random
-from multiprocessing import Process, Value, Array
+from multiprocessing import Process, Value, Array, Pipe
 
 from elastichpc.base.computation.malleable import ReconfigurationPort
 from elastichpc.base.computation.malleable import ExecutionControlPort
@@ -19,33 +19,51 @@ logger = logging.getLogger('root')
 
 # This is the process for the computation
 
-def compute(computationProgress, resources):
-   logger.debug("Starting Computation with Interval: " + str(resources.value))
-   for i in range(0,11):
-      logger.debug("Computing task: " + str(i))
-      computationProgress.value = i / 10.0
-      time.sleep(resources.value)
-
+def compute(compute_conn):
+   while True:
+   message = compute_conn.recv()
+   if message[0] == "start":
+   elif message[0] == "progress":
+   elif message[0] == "resources":
+   elif message[0] == "persist":
+      continue
+   elif message[0] == "stop":
+      break
+   compute_conn.close()
+   
 class MyReconfigurationPort(ReconfigurationPort):
    def updateResources(self, resources):
       logger.debug("Updating Resources for: " + str(resources))
-      self.component.computationResources.value = resources
+      self.component.driver_conn.send(["resources", resources])
+      message = self.component.driver_conn.recv()
+      if message[0] == "resource_reply":
+         return "SUCCESS"
+      else 
+         return "FAIL: " + message[1]
 
    def getComputationProgress(self):
-      return self.component.computationProgress.value
+      self.component.driver_conn.send(["progress"])
+      message = self.component.driver_conn.recv()
+      if message[0] == "progress_reply":
+         return message[1]
+      else:
+         return -1.0
 
 class MyExecutionControlPort(ExecutionControlPort):
    def start(self, state = None):
       logger.debug("Starting Computation.")
       allocationPort = self.component.services.getPort("AllocationPort")
-      resources =  allocationPort.getResources()
-      self.component.computationResources.value = resources
-      computation_process = Process(target = compute, args=(self.component.computationProgress,self.component.computationResources))
+      resources = allocationPort.getResources()
+
+      computation_process = Process(target = compute, args=(self.component.compute_conn,))
+      computation_process.daemon = True
       computation_process.start();
+
+      self.component.driver_conn.send(["start", resources])
       return
 
    def isFinished(self):
-      if (self.component.computationProgress.value >= 1.0):
+      if (self.component.reconfigurationPort.getComputationProgress() >= 1.0):
          return True
       return False
 
@@ -53,14 +71,10 @@ class MyMalleableComputation(MalleableComputationComponent):
    def __init__(self):
       super(MyMalleableComputation, self).__init__()
 
-      # This is the sensor variable. It must be a primitive value.
-      self.computationProgress = Value('f', 0.0, lock = True)
-
-      # This is the parameter variable.
-      # For this example will be a integer. But it my be an array (fixed size), a list, or a dictionnary (mutable, using managers).
-      # Maybe for the final platform, the dictionnary will be the best option, since the key/value may contain 
-      # different information models. 
-      self.computationResources = Value('f', 0, lock = True)
+      # There is a Pipe for the driver to communicate with the root unit
+      driver_conn, compute_conn = Pipe()
+      self.driver_conn = driver_conn
+      self.compute_conn = compute_conn
 
       self.reconfigurationPort = MyReconfigurationPort("elastichpc.base.computation.malleable.ReconfigurationPort", self)
       self.executionControlPort = MyExecutionControlPort("elastichpc.base.computation.malleable.ExecutionControlPort", self)
