@@ -50,3 +50,45 @@ class Cluster:
       """
       raise NotImplementedError("Abstract Class!")
 
+
+"""
+The resource is useful for dealing with the virtual cluster
+"""
+class Resources:
+    def __init__(self, credentials, ips, cores):
+       """
+       credentials - key file for SSH connection
+       ips - dictionary with the IPs
+          floating_ip - for SSH access
+ 	  head_node_ip - for starting the MPI process
+          compute_node_ips - list of remaining cluster IPs
+       cores - number of cores per node.
+       """
+       raise NotImplementedError("Abstract Class!")
+   
+    def runCommand(self, cmd):
+      """
+      cmd - command to be executed on the head node
+      """
+      raise NotImplementedError("Abstract Class!")
+
+    def connect(self):
+      """
+      establish SSH connection
+      """
+      raise NotImplementedError("Abstract Class!")
+
+    def disconnect(self):
+      """
+      destroy the connection
+      """
+      raise NotImplementedError("Abstract Class!")
+
+    def getMachineFile(self):
+      """
+      returns an updated machine file.
+      also creates a update version on the head node.
+      """
+      raise NotImplementedError("Abstract Class!")
+
+

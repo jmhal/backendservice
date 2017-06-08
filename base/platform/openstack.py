@@ -6,19 +6,54 @@ import time
 import logging
 import uuid
 import sys
+import paramiko
 
 from os import environ as env
 from os import path as path
 from datetime import datetime
 from heatclient.common import template_utils
 
+class Resources:
+    def __init__(self, credentials, ips, cores):
+       self.cores = cores
+       self.ips = ips
+       self.credentials = credentials
+
+       self.username = "ubuntu"
+       self.port = 22
+       self.ssh = paramiko.SSHClient()
+
+    def runCommand(self, cmd):
+       self.connect()
+       ssh_stdin, ssh_stdout, ssh_stderr = self.ssh.exec_command(cmd)
+       output = ""
+       for line in ssh_stdout.readlines():
+            output = output + line
+       self.disconnect()
+       return output
+
+    def connect(self):
+       self.ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+       self.ssh.connect(self.ips['floating_ip'], self.port, username=self.username, key_filename=self.credentials)
+
+    def disconnect(self):
+       self.ssh.close()
+ 
+    def getMachineFile(self):
+       machinefile = self.ips['head_node_ip'] + ":" + str(self.cores) + "\n"
+       self.runCommand("echo " + self.ips['head_node_ip'] + ":" + str(self.cores) + " > machinefile")
+       for machine in self.ips['compute_node_ips']:
+          machinefile += machine + ":" + str(self.cores) + "\n"
+	  self.runCommand("echo " + machine + ":" + str(self.cores) + " >> machinefile")
+       return machinefile  
+
 class OpenStackCloud:
-    def __init__(self, credentials_filename, profile_filename):
+    def __init__(self, credentials, profile):
         # Unique ID for this cluster
 	self.deployment_id = uuid.uuid4()
 
         # credentials
-	_dict = self.parse_rc(credentials_filename)
+	_dict = self.parse_rc(credentials)
         self.username = _dict["OS_USERNAME"]
 	self.password = _dict["OS_PASSWORD"]
 	self.key_file = _dict["OS_KEYFILE"]
@@ -28,7 +63,7 @@ class OpenStackCloud:
 	self.region_name = _dict["OS_REGION_NAME"]
 
 	# profile
-	profile_file = open(profile_filename, "r")
+	profile_file = open(profile, "r")
 	profile_dict = yaml.load(profile_file)
 	self.template_dir = profile_dict["profile"]["template_dir"]
         self.template = profile_dict["profile"]["template"]
@@ -62,6 +97,32 @@ class OpenStackCloud:
 	logging.basicConfig(level=logging.DEBUG)
 	self.logger = logging.getLogger(__name__)
 
+    def getResources(self):
+       """
+       Returns the nodes, as a machine file for MPI
+       node0:corecount
+       node1:corecount
+       node2:corecount
+       ...
+       """
+       self.resources = Resources(self.key_file, self.get_ips(), 2)
+       return self.resources
+
+    def getClusterStatistics(self):
+       """
+       Returns the overall status of the cluster. 
+       For the CPU, Memory, Disk and Bandwidth, is the average for the values of each node.
+       For the cost, is the sum of the value of each node. 
+       sample output: {"cpuload": 0.5, "memory" : 0.5, "diskusage": 0.5, "network" : 0.5, "cost" : 13.4 }
+       """
+       raise NotImplementedError("Abstract Class!")
+ 
+    def addNode(self, n = 1):
+       return self.changeNodeNumber(n)
+       
+    def removeNode(self, n = 1):
+        return self.changeNodeNumber(-n)
+	
     def parse_rc(self, rc_filename):
        """
        Parse OpenStack credentials file to dict.
@@ -115,6 +176,16 @@ class OpenStackCloud:
 	heat_status = status['stack']['stack_status']
         return self.results_status[heat_status]
 
+    def get_ips(self):
+        self.authenticate()
+        status = self.status_stack(token = self.token, tenant_id = self.tenant_id, heat_base_url = self.heat_base_url,
+                     stack_name = self.stack_name, stack_id = self.stack_id)
+        outputs = status['stack']['outputs']
+	ips = {}
+	for d in outputs:
+           ips[d['output_key']] = d['output_value']
+	return ips
+
     def deallocate_resources(self):
         """
         Destroy the stack.
@@ -125,12 +196,6 @@ class OpenStackCloud:
                           stack_name = self.stack_name, stack_id = self.stack_id)
 
         return "DESTROYED" 
-
-    def getResources(self):
-        pass
-
-    def getClusterStatistics(self):
-        pass
 
     def changeNodeNumber(self, n = 0):
         self.authenticate()
@@ -155,12 +220,6 @@ class OpenStackCloud:
 	   self.number_of_nodes = new_node_count 
            return "BUILDING"
 
-    def addNode(self, n = 1):
-        return self.changeNodeNumber(n)
-       
-    def removeNode(self, n = 1):
-        return self.changeNodeNumber(-n)
-	
     def get_auth_token(self, url, tenant_name, username, password):
         headers = {'Content-Type':'application/json'}
         fields = {
@@ -234,15 +293,17 @@ if __name__ == "__main__":
    # while cluster.allocation_status() != "READY":
    #    time.sleep(10)
    print "Stack Created..."
+   print cluster.getResources().getMachineFile()
+   print cluster.getResources().runCommand("cat ~/machinefile")
    # print "Type to increase the cluster in 1 ..."
    # wait = raw_input()
-   print cluster.addNode(1)
+   # print cluster.addNode(1)
    # print "Type to decrease the cluster in 2 ..."
    # wait = raw_input()
-   print cluster.removeNode(2)
+   #print cluster.removeNode(2)
    # print "Type anything to destroy the stack..."
    # wait = raw_input()
-   cluster.deallocate_resources()
+   # cluster.deallocate_resources()
 
 
       
