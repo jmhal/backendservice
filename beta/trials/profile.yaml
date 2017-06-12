@@ -1,0 +1,15 @@
+profile:
+   id: 0
+   name: elastic_profile
+   template_dir: /home/joaoalencar/repositorios/elastichpc/beta/trials/templates
+   template: cluster.yaml
+   nodes:
+      min: 1
+      max: 10
+   parameters: 
+      image: ElasticNode
+      flavor: shelf.tiny
+      key: joaoalencar 
+      cluster_size: 2 
+      public_network: ext-net
+
