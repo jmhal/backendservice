@@ -82,6 +82,9 @@ class OpenStackCloud:
         self.stack_name = profile_dict["profile"]["name"] + str(self.deployment_id)
         self.tenant_id = self.get_tenant_id(self.auth_url + "/tenants", self.token, self.tenant_name)
 
+        # cluster resources
+	self.resources = None
+
         # status messages
         self.results_status = {
            'CREATE_IN_PROGRESS': "BUILDING",
@@ -106,6 +109,7 @@ class OpenStackCloud:
        ...
        """
        self.resources = Resources(self.key_file, self.get_ips(), 2)
+       self
        return self.resources
 
     def getClusterStatistics(self):
@@ -115,7 +119,10 @@ class OpenStackCloud:
        For the cost, is the sum of the value of each node. 
        sample output: {"cpuload": 0.5, "memory" : 0.5, "diskusage": 0.5, "network" : 0.5, "cost" : 13.4 }
        """
-       raise NotImplementedError("Abstract Class!")
+       if self.resources == None:
+          return None
+       else :
+          raise NotImplementedError("Abstract Class!")
  
     def addNode(self, n = 1):
        return self.changeNodeNumber(n)
@@ -178,6 +185,10 @@ class OpenStackCloud:
 
     def get_ips(self):
         self.authenticate()
+
+        while self.allocation_status() == "BUILDING" :
+	   time.sleep(10)
+
         status = self.status_stack(token = self.token, tenant_id = self.tenant_id, heat_base_url = self.heat_base_url,
                      stack_name = self.stack_name, stack_id = self.stack_id)
         outputs = status['stack']['outputs']
@@ -202,7 +213,8 @@ class OpenStackCloud:
 
         while self.allocation_status() == "BUILDING" :
 	   time.sleep(10)
-	if self.allocation_status() != "READY" :
+
+        if self.allocation_status() != "READY" :
 	   return None
 	
 	new_node_count = self.number_of_nodes + n
@@ -290,20 +302,8 @@ if __name__ == "__main__":
    cluster = OpenStackCloud(credentials, profile)
 
    cluster.allocate_resources()
-   # while cluster.allocation_status() != "READY":
-   #    time.sleep(10)
-   print "Stack Created..."
    print cluster.getResources().getMachineFile()
    print cluster.getResources().runCommand("cat ~/machinefile")
-   # print "Type to increase the cluster in 1 ..."
-   # wait = raw_input()
-   # print cluster.addNode(1)
-   # print "Type to decrease the cluster in 2 ..."
-   # wait = raw_input()
-   #print cluster.removeNode(2)
-   # print "Type anything to destroy the stack..."
-   # wait = raw_input()
-   # cluster.deallocate_resources()
 
 
       
