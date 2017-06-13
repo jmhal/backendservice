@@ -1,7 +1,7 @@
 import logging
 import time
-from keystone import Keystone
-from heat import Heat
+from infrastructure.cloud.keystone import Keystone
+from infrastructure.cloud.heat import Heat
 
 class OpenStack:
    def __init__(self, credentials):
@@ -9,7 +9,6 @@ class OpenStack:
       _dict = self.parse_rc(credentials)
       self.username = _dict["OS_USERNAME"]
       self.password = _dict["OS_PASSWORD"]
-      self.key_file = _dict["OS_KEYFILE"]
       self.auth_url = _dict["OS_AUTH_URL"]
       self.heat_base_url = "http://" + self.auth_url.split(":")[1][2:] + ":8004/v1"
       self.tenant_name = _dict["OS_TENANT_NAME"]
@@ -77,6 +76,10 @@ class OpenStack:
       """
       Deploy the template stack.
       """
+
+      # avoid updating while creation
+      while self.profile_status(stack_name, stack_id) == "BUILDING" :
+         time.sleep(5)
         
       data = self.heat.update_stack(token = self.keystone.authenticate(), 
 	                            tenant_id = self.keystone.tenant_id, 
@@ -84,7 +87,8 @@ class OpenStack:
 				    stack_id = stack_id,
 	                            template_file = template_file, 
 				    params = params)
-
+ 
+      # only proceed is updating is complete
       while self.profile_status(stack_name, stack_id) == "BUILDING" :
          time.sleep(5)
        

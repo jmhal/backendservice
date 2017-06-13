@@ -5,6 +5,7 @@ import sys
 from Platform import platform_unit as platform_unit
 from Computation import computation_unit as computation_unit
 from multiprocessing import Process, Value, Manager
+from infrastructure.resources import Resources
 
 class ReconfigurationPort():
    def __init__(self):
@@ -23,12 +24,12 @@ if __name__ == "__main__":
    # The information of the virtual cluster
    stack_name = sys.argv[1]
    stack_id = sys.argv[2]
-   min_node = sys.argv[3]
-   number_of_nodes = sys.argv[4]
-   max_node = sys.argv[5]
-   computation_input = sys.argv[6]
+   computation_input = sys.argv[3]
 
-   print stack_name, stack_id, min_node, number_of_nodes, max_node, computation_input
+   print stack_name, stack_id, computation_input
+
+   resources = Resources(stack_name, stack_id)
+   resources.addNode(1)
 
    # A port for communication between components
 #   reconfiguration_port = ReconfigurationPort()
