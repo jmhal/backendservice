@@ -1,3 +1,5 @@
+import logging
+import time
 from keystone import Keystone
 from heat import Heat
 
@@ -14,7 +16,7 @@ class OpenStack:
       self.region_name = _dict["OS_REGION_NAME"]
 
       # keystone service
-      self.keystone = Keystone(self.auth_url, self_tenant_name, self.username, self.password)
+      self.keystone = Keystone(self.auth_url, self.tenant_name, self.username, self.password)
 
       # heat service
       self.heat = Heat(self.heat_base_url)
@@ -69,7 +71,7 @@ class OpenStack:
       while self.profile_status(stack_name, stack_id) == "BUILDING" :
          time.sleep(5)
        
-      return self.stack_id
+      return stack_id
 
    def update_profile(self, stack_name, stack_id, template_file, params):
       """
@@ -86,7 +88,7 @@ class OpenStack:
       while self.profile_status(stack_name, stack_id) == "BUILDING" :
          time.sleep(5)
        
-      return self.stack_id
+      return data 
 
    def profile_status(self, stack_name, stack_id):
       """
@@ -112,7 +114,7 @@ class OpenStack:
       return "DESTROYED" 
       
    def get_ips(self, stack_name, stack_id):
-      while self.allocation_status(stack_name, stack_id) == "BUILDING" :
+      while self.profile_status(stack_name, stack_id) == "BUILDING" :
          time.sleep(10)
 
       data = self.heat.status_stack(token = self.keystone.authenticate(), 

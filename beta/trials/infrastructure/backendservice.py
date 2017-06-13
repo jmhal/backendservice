@@ -22,7 +22,7 @@ class BackEndService:
      
       template_dir = profile_dict["profile"]["template_dir"]
       template = profile_dict["profile"]["template"]
-      template_file = self.template_dir + "/" + self.template
+      template_file = template_dir + "/" + template
       output['template_file'] = template_file
 
       number_of_nodes = profile_dict["profile"]["parameters"]["cluster_size"] + 1
@@ -57,7 +57,7 @@ class BackEndService:
       stack_name = "elastic_cluster_" + str(uuid.uuid4())
       profile_dict = self.parse_profile(profile)
       
-      stack_id = self.openstack.deploy_profile(stack_name, profile_dict['template_file'], profile_dict['param'])
+      stack_id = self.openstack.deploy_profile(stack_name, profile_dict['template_file'], profile_dict['params'])
 
       return (stack_name, stack_id)
 
@@ -69,13 +69,13 @@ class BackEndService:
       (stack_name, stack_id) = self.deploy_platform(profile)
 
       # recover head_node_ip
-      head_node_ip = self.openstack.get_ips(stack_name, stack_id)['head_node_ip']
+      head_node_ip = self.openstack.get_ips(stack_name, stack_id)['floating_ip']
 
       # execute the Computational System remotely  
-      min_node = self.parse_profile(profile)[0]
-      number_of_nodes = self.parse_profile(profile)[1]
-      max_node = self.parse_profile(profile)[2]
-      cmd = "/home/ubuntu/repositorios/elastichpc/beta/trials/System.py " + stack_name + " " + stack_id + " " + str(min_node) + " " + str(number_of_nodes) + " " + str(max_node) + " " + computational_input 
+      min_node = self.parse_profile(profile)['nodes'][0]
+      number_of_nodes = self.parse_profile(profile)['nodes'][1]
+      max_node = self.parse_profile(profile)['nodes'][2]
+      cmd = "/home/ubuntu/repositorios/elastichpc/beta/trials/System.py " + stack_name + " " + stack_id + " " + str(min_node) + " " + str(number_of_nodes) + " " + str(max_node) + " " + computation_input 
       output = self.run_command(head_node_ip, cmd)
 
       # destroy the platform
@@ -89,7 +89,7 @@ if __name__ == '__main__':
    computation_input = sys.argv[3]
 
    service = BackEndService(credentials_file)
-   print service.go(profile_file, computation_input)
+   print "SAIDA: " +  service.go(profile_file, computation_input)
    
 
 

@@ -53,7 +53,7 @@ class Heat:
 
    def delete_stack(self, token, tenant_id, stack_name, stack_id):
       headers = {'X-Auth-Token': token}
-      r = requests.delete(sel.fheat_base_url + "/" + tenant_id + "/stacks/" + stack_name + "/" + stack_id, headers = headers)
-      data = r.json()
+      r = requests.delete(self.heat_base_url + "/" + tenant_id + "/stacks/" + stack_name + "/" + stack_id, headers = headers)
+      data = r
       self.logger.debug("DELETE STACK DATA: %s", data)
       return data

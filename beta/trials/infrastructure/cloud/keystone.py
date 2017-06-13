@@ -6,13 +6,14 @@ from datetime import datetime
 
 class Keystone:
    def __init__(self, auth_url, tenant_name, username, password):
+      self.auth_url = auth_url
       self.url = auth_url + "/tokens"
       self.tenant_name = tenant_name
       self.username = username
       self.password = password
 
       self.token_create_time = datetime.now()
-      self.token = self.keystone.get_auth_token(self.tenant_name, self.username, self.password)
+      self.token = self.get_auth_token(self.tenant_name, self.username, self.password)
       self.tenant_id = self.get_tenant_id(self.tenant_name)
 
       # configure logging
@@ -46,9 +47,8 @@ class Keystone:
       return token_id
 
    def get_tenant_id(self, tenant_name):
-      self.authenticate()
-      headers = {'X-Auth-Token': self.token}
-      r = requests.get(self.url, headers=headers)
+      headers = {'X-Auth-Token': self.authenticate()}
+      r = requests.get(self.auth_url + "/tenants", headers=headers)
       json = r.json()
       for element in json['tenants']:
          if element['name'] == tenant_name:
