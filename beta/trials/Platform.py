@@ -1,9 +1,8 @@
 import time
-from openstack import OpenStackCloud
+from infrastructure.cloud import OpenStack
 
 def platform_unit(reconfiguration_port, credentials, profile, stack_id):
-   cluster = OpenStackCloud(credentials, profile, stack_id)
-   cluster.get_resources().configure_machine_file()
+   cloud = OpenStack(credentials)
 
    # start the computation
    reconfiguration_port.get_actuator().value = "start"
