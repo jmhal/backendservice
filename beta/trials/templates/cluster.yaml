@@ -8,7 +8,7 @@ parameters:
     type: string
     label: Image name or ID
     description: Image to be used for cluster instance
-    default: Ubuntu1404
+    default: ElasticNode 
   flavor:
     type: string
     label: Flavor
