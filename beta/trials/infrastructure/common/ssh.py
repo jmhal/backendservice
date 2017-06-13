@@ -19,7 +19,7 @@ class SSH:
    def copy_file(self, ip, _file, name):
       self.connect(ip)
       sftp = self.ssh.open_sftp()
-      sftp.put(_file, "$HOME/" + name);
+      sftp.put(_file, "/home/ubuntu/" + name);
       sftp.close()
       self.disconnect()
 

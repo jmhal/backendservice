@@ -1,7 +1,7 @@
 profile:
    id: 0
    name: elastic_profile
-   template_dir: /home/joaoalencar/repositorios/elastichpc/beta/trials/infrastructure/templates
+   template_dir: repositorios/elastichpc/beta/trials/infrastructure/templates
    template: cluster.yaml
    nodes:
       min: 1

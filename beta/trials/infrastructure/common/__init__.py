@@ -1,4 +1,5 @@
 import yaml
+import os
 
 def parse_profile(profile):
    output = {}
@@ -6,7 +7,7 @@ def parse_profile(profile):
    profile_file = open(profile, "r")
    profile_dict = yaml.load(profile_file)
      
-   template_dir = profile_dict["profile"]["template_dir"]
+   template_dir = os.environ['HOME'] + '/'+ profile_dict["profile"]["template_dir"]
    template = profile_dict["profile"]["template"]
    template_file = template_dir + "/" + template
    output['template_file'] = template_file

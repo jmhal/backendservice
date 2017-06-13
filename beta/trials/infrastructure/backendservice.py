@@ -1,3 +1,4 @@
+import os
 import sys
 import uuid
 from infrastructure.cloud import OpenStack
@@ -10,7 +11,7 @@ class BackEndService:
       self.openstack = OpenStack(credentials)
       
       # ssh configuration
-      self.ssh = SSH("ubuntu", self.openstack.parse_rc(credentials)["OS_KEYFILE"], 22)
+      self.ssh = SSH(os.environ['USER'], self.openstack.parse_rc(credentials)["OS_KEYFILE"], 22)
 
    def deploy_platform(self, profile):
       stack_name = "elastic_cluster_" + str(uuid.uuid4())
@@ -35,11 +36,11 @@ class BackEndService:
       self.ssh.copy_file(head_node_ip, profile, "profile")
 
       # execute the Computational System remotely  
-      cmd = "/home/ubuntu/repositorios/elastichpc/beta/trials/System.py " + stack_name + " " + stack_id + " " + computation_input 
+      cmd = os.environ['HOME'] + "/" + "repositorios/elastichpc/beta/trials/System.py " + stack_name + " " + stack_id + " " + computation_input 
       output = self.ssh.run_command(head_node_ip, cmd)
 
       # destroy the platform
-      self.destroy_platform(stack_name, stack_id)
+      # self.destroy_platform(stack_name, stack_id)
 
       return output
    

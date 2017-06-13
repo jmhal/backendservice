@@ -23,7 +23,7 @@ class Resources():
       self.ssh = SSH("ubuntu", "/home/ubuntu/.ssh/id_rsa.pub", 22)
 
    def configure_machine_file(self):
-      machinefile = open("~/machinefile", "w")
+      machinefile = open("/home/ubuntu/machinefile", "w")
       
       ips = self.openstack.get_ips(self.stack_name, self.stack_id)
       
