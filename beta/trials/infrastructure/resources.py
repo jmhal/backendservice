@@ -1,3 +1,4 @@
+import os
 import yaml
 import paramiko
 from infrastructure.cloud import OpenStack
@@ -7,10 +8,10 @@ from infrastructure.common.ssh import SSH
 class Resources():
    def __init__(self, stack_name, stack_id):
       # openstack services
-      self.openstack = OpenStack("/home/ubuntu/credentials")
+      self.openstack = OpenStack(os.environ['HOME'] + "/credentials")
 
       # profile information
-      self.profile_dict = parse_profile("/home/ubuntu/profile")
+      self.profile_dict = parse_profile(os.environ['HOME'] + "/profile")
       self.min_node = self.profile_dict['nodes'][0]
       self.node_count = self.profile_dict['nodes'][1] + 1
       self.max_node = self.profile_dict['nodes'][2]
@@ -20,10 +21,10 @@ class Resources():
       self.stack_name = stack_name
      
       # ssh setup
-      self.ssh = SSH("ubuntu", "/home/ubuntu/.ssh/id_rsa.pub", 22)
+      self.ssh = SSH(os.environ['USER'], os.environ['HOME']+ "/.ssh/id_rsa.pub", 22)
 
    def configure_machine_file(self):
-      machinefile = open("/home/ubuntu/machinefile", "w")
+      machinefile = open(os.environ['HOME'] + "/machinefile", "w")
       
       ips = self.openstack.get_ips(self.stack_name, self.stack_id)
       
