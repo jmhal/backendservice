@@ -1,6 +1,6 @@
 import yaml
 
-def parse_profile(self, profile):
+def parse_profile(profile):
    output = {}
    # profile
    profile_file = open(profile, "r")
