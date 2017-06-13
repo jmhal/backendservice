@@ -1,21 +1,12 @@
+import yaml
+import paramiko
+from openstack import OpenStack
 
-class Cluster():
-   def __init__(self, credentials, profile, stack_id, stack_name):
+class Resources():
+   def __init__(self, credentials, stack_id, stack_name, min_node, number_of_nodes, max_node):
       # openstack services
       self.openstack = OpenStack(credentials)
-
-      # profile
-      profile_file = open(profile, "r")
-      profile_dict = yaml.load(profile_file)
-      self.template_dir = profile_dict["profile"]["template_dir"]
-      self.template = profile_dict["profile"]["template"]
-      self.template_file = self.template_dir + "/" + self.template
-      self.number_of_nodes = profile_dict["profile"]["parameters"]["cluster_size"] + 1
-      self.min_node = profile_dict["profile"]["nodes"]["min"]
-      self.max_node = profile_dict["profile"]["nodes"]["max"]
-      self.params = profile_dict["profile"]["parameters"]
-      profile_file.close()
-      
+     
       # stack name and stack id
       self.stack_id = stack_id
       self.stack_name = stack_name

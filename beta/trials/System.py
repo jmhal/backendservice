@@ -21,26 +21,30 @@ class ReconfigurationPort():
 
 if __name__ == "__main__": 
    # The information of the virtual cluster
-   credentials = sys.argv[1]
-   profile = sys.argv[2]
-   stack_id = sys.argv[3]
-   computation_input = sys.argv[4]
+   stack_name = sys.argv[1]
+   stack_id = sys.argv[2]
+   min_node = sys.argv[3]
+   number_of_nodes = sys.argv[4]
+   max_node = sys.argv[5]
+   computation_input = sys.argv[6]
+
+   print stack_name, stack_id, min_node, number_of_nodes, max_node, computation_input
 
    # A port for communication between components
-   reconfiguration_port = ReconfigurationPort()
-
-   platform = Process(target = platform_unit, args=(reconfiguration_port, credentials, profile, stack_id))
-   platform.daemon = True
-   platform.start()
-
-   computation = Process(target = computation_unit, args=(reconfiguration_port, computation_input))
-   computation.daemon = True
-   computation.start()
-
-   platform.join()
-   computation.join()
-
-   print reconfiguration_port.get_sensor().value
-   print reconfiguration_port.get_actuator().value
-
-   
+#   reconfiguration_port = ReconfigurationPort()
+#
+#   platform = Process(target = platform_unit, args=(reconfiguration_port, credentials, profile, stack_id))
+#   platform.daemon = True
+#   platform.start()
+#
+#   computation = Process(target = computation_unit, args=(reconfiguration_port, computation_input))
+#   computation.daemon = True
+#   computation.start()
+#
+#   platform.join()
+#   computation.join()
+#
+#   print reconfiguration_port.get_sensor().value
+#   print reconfiguration_port.get_actuator().value
+#
+#   

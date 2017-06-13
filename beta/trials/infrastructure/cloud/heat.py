@@ -1,6 +1,5 @@
 import json
 import requests
-import yaml
 import logging
 from heatclient.common import template_utils
 
@@ -28,7 +27,7 @@ class Heat:
       r = requests.post(self.heat_base_url + "/" + tenant_id + "/stacks", data = json.dumps(fields), headers = headers)
       data = r.json()
       self.logger.debug("CREATE STACK DATA: %s", data)
-      return data['stack']['id']
+      return data #['stack']['id']
     
    def update_stack(self, token, tenant_id, stack_name, stack_id, template_file, params):
       headers = {'X-Auth-Token': token}
@@ -50,7 +49,7 @@ class Heat:
       r = requests.get(self.heat_base_url + "/" + tenant_id + "/stacks/" + stack_name + "/" + stack_id, headers = headers)
       data = r.json()
       self.logger.debug("STATUS STACK DATA: %s", data)
-      return data['stack']['stack_status']
+      return data #['stack']['stack_status']
 
    def delete_stack(self, token, tenant_id, stack_name, stack_id):
       headers = {'X-Auth-Token': token}
