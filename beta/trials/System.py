@@ -31,13 +31,13 @@ if __name__ == "__main__":
    proxy = ResourcesProxy(url, stack_name, stack_id)
    for i in range(1, 8):
       print "add" + str(i)
-      proxy.add_node(1)
-      proxy.configure_machine_file()
+      print proxy.add_node(1)
+      print proxy.configure_machine_file()
 
    for i in range(1, 8):
       print "remove" + str(i)
-      proxy.remove_node(1)
-      proxy.configure_machine_file()
+      print proxy.remove_node(1)
+      print proxy.configure_machine_file()
 
    # A port for communication between components
 #   reconfiguration_port = ReconfigurationPort()

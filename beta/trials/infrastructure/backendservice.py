@@ -47,7 +47,6 @@ class BackEndService:
       # server.terminate()
       # self.destroy_platform(stack_name, stack_id)
      
-      server.join()
       return output
    
 if __name__ == '__main__':

@@ -57,6 +57,8 @@ resources:
                wc_notify: { get_attr: ['wh', 'curl_cli'] }
             template: |
               #!/bin/bash -ex
+              
+              #echo "nameserver 200.17.41.36" >> /etc/resolv.conf
 
               # Update repositories
               su - ubuntu -c "/home/ubuntu/repositorios/pull_repos.sh"

@@ -17,7 +17,7 @@ parameters:
     type: comma_delimited_list
     label: DNS nameservers
     description: Comma separated list of DNS nameservers for the private network.
-    default: [8.8.8.8,200.19.188.89]
+    default: [200.17.41.36,8.8.8.8,200.19.188.89]
 
 resources:
   private_network:

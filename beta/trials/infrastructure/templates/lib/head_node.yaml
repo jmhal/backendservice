@@ -73,6 +73,7 @@ resources:
                # Disable ssh know_hosts warnings
                echo "StrictHostKeyChecking no" >> /etc/ssh/ssh_config
                echo "UserKnownHostsFile=/dev/null" >> /etc/ssh/ssh_config 
+               # echo "nameserver 200.17.41.36" >> /etc/resolv.conf
 
                # Update repositories
                su - ubuntu -c "/home/ubuntu/repositorios/pull_repos.sh"
