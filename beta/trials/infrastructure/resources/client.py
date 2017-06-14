@@ -4,13 +4,13 @@ class ResourcesProxy():
    def __init__(self, url, stack_name, stack_id):
       self.proxy = xmlrpclib.ServerProxy(url)      
 
-   def addNode(self, n = 1):
+   def add_node(self, n = 1):
       return self.proxy.add_node(self.stack_name, self.stack_id, n) 
        
-   def removeNode(self, n = 1):
+   def remove_node(self, n = 1):
       return self.proxy.remove_node(self.stack_name, self.stack_id, n) 
 
-   def getResourceState(self):
+   def get_resource_state(self):
       pass 
 
    def configure_machine_file(self):

@@ -31,12 +31,12 @@ if __name__ == "__main__":
    proxy = ResourcesProxy(url, stack_name, stack_id)
    for i in range(1, 8):
       print "add" + str(i)
-      proxy.addNode(stack_name, stack_id, 1)
+      proxy.add_node(1)
       proxy.configure_machine_file()
 
    for i in range(1, 8):
       print "remove" + str(i)
-      proxy.removeode(stack_name, stack_id, 1)
+      proxy.remove_node(1)
       proxy.configure_machine_file()
 
    # A port for communication between components
