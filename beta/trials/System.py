@@ -5,7 +5,7 @@ import sys
 from Platform import platform_unit as platform_unit
 from Computation import computation_unit as computation_unit
 from multiprocessing import Process, Value, Manager
-from infrastructure.resources import Resources
+from infrastructure.resources.client import ResourcesProxy
 
 class ReconfigurationPort():
    def __init__(self):
@@ -22,14 +22,24 @@ class ReconfigurationPort():
 
 if __name__ == "__main__": 
    # The information of the virtual cluster
-   stack_name = sys.argv[1]
-   stack_id = sys.argv[2]
-   computation_input = sys.argv[3]
+   url = sys.argv[1]
+   stack_name = sys.argv[2]
+   stack_id = sys.argv[3]
+   computation_input = sys.argv[4]
 
    print stack_name, stack_id, computation_input
+   proxy = ResourcesProxy(url, stack_name, stack_id)
+   for i in range(1, 8):
+      print "add" + str(i)
+      proxy.add_node(stack_name, stack_id, 1)
+      proxy.configure_machine_file()
+      print proxy.get_ips(stack_name, stack_id)
 
-   resources = Resources(stack_name, stack_id)
-   resources.addNode(1)
+   for i in range(1, 8):
+      print "remove" + str(i)
+      proxy.remove_node(stack_name, stack_id, 1)
+      proxy.configure_machine_file()
+      print proxy.get_ips(stack_name, stack_id)
 
    # A port for communication between components
 #   reconfiguration_port = ReconfigurationPort()

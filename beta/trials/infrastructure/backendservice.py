@@ -1,9 +1,12 @@
 import os
 import sys
 import uuid
+
+from multiprocessing import Process
 from infrastructure.cloud import OpenStack
 from infrastructure.common import parse_profile
 from infrastructure.common.ssh import SSH
+from infrastructure.resourcesserver import start_server
 
 class BackEndService:
    def __init__(self, credentials):
@@ -11,7 +14,7 @@ class BackEndService:
       self.openstack = OpenStack(credentials)
       
       # ssh configuration
-      self.ssh = SSH(os.environ['USER'], self.openstack.parse_rc(credentials)["OS_KEYFILE"], 22)
+      self.ssh = SSH("ubuntu", self.openstack.parse_rc(credentials)["OS_KEYFILE"], 22)
 
    def deploy_platform(self, profile):
       stack_name = "elastic_cluster_" + str(uuid.uuid4())
@@ -28,21 +31,23 @@ class BackEndService:
       # deploy platform
       (stack_name, stack_id) = self.deploy_platform(profile)
 
-      # recover head_node_ip
-      head_node_ip = self.openstack.get_ips(stack_name, stack_id)['floating_ip']
-
-      # copy credentials and profile
-      self.ssh.copy_file(head_node_ip, self.credentials, "credentials")
-      self.ssh.copy_file(head_node_ip, profile, "profile")
-
+      # start ResourceServer
+      # (credentials, profile, stack_name, stack_id)
+      url = "http://" + "200.19.177.89" + "/" + "33004"
+      server = Process(target = start_server, args=(self.credentials, profile, "200.19.177.89", 33004))
+      server.daemon = True
+      server.start()
+      
       # execute the Computational System remotely  
-      cmd = os.environ['HOME'] + "/" + "repositorios/elastichpc/beta/trials/System.py " + stack_name + " " + stack_id + " " + computation_input 
-      output = self.ssh.run_command(head_node_ip, cmd)
+      floating_ip = self.openstack.get_ips()['floating_ip']
+      cmd = "repositorios/elastichpc/beta/trials/System.py " + url + " " + stack_name + " " + stack_id + " " + computation_input 
+      output = self.ssh.run_command(floating_ip, cmd)
 
       # destroy the platform
+      # server.terminate()
       # self.destroy_platform(stack_name, stack_id)
 
-      return output
+      # return output
    
 if __name__ == '__main__':
    credentials_file = sys.argv[1]   
