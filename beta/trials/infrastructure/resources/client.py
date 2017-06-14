@@ -3,6 +3,8 @@ import xmlrpclib
 class ResourcesProxy():
    def __init__(self, url, stack_name, stack_id):
       self.proxy = xmlrpclib.ServerProxy(url)      
+      self.stack_name = stack_name
+      self.stack_id = stack_id
 
    def add_node(self, n = 1):
       return self.proxy.add_node(self.stack_name, self.stack_id, n) 
