@@ -33,7 +33,7 @@ class BackEndService:
 
       # start ResourceServer
       # (credentials, profile, stack_name, stack_id)
-      url = "http://" + "200.19.177.89" + "/" + "33004"
+      url = "http://" + "200.19.177.89" + ":" + "33004"
       server = Process(target = start_server, args=(self.credentials, profile, "200.19.177.89", 33004))
       server.daemon = True
       server.start()

@@ -27,7 +27,7 @@ if __name__ == "__main__":
    stack_id = sys.argv[3]
    computation_input = sys.argv[4]
 
-   print stack_name, stack_id, computation_input
+   print url, stack_name, stack_id, computation_input
    proxy = ResourcesProxy(url, stack_name, stack_id)
    for i in range(1, 8):
       print "add" + str(i)
