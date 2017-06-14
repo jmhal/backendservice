@@ -24,7 +24,7 @@ class ResourcesProxy():
       self.number_of_nodes = 1
       machinefile.write(ips['head_node_ip'] + ":2")
       for machine in ips['compute_node_ips']:
-         machinefile.write(machine + ":2"))
+         machinefile.write(machine + ":2")
 	 self.number_of_nodes += 1
       machinefile.close()
       
