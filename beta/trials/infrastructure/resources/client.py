@@ -22,7 +22,7 @@ class ResourcesProxy():
       ips = self.proxy.get_ips(self.stack_name, self.stack_id)
       
       self.number_of_nodes = 1
-      machinefile.write(ips['head_node_ip'] + ":2"))
+      machinefile.write(ips['head_node_ip'] + ":2")
       for machine in ips['compute_node_ips']:
          machinefile.write(machine + ":2"))
 	 self.number_of_nodes += 1
