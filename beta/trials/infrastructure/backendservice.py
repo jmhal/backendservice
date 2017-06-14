@@ -6,7 +6,7 @@ from multiprocessing import Process
 from infrastructure.cloud import OpenStack
 from infrastructure.common import parse_profile
 from infrastructure.common.ssh import SSH
-from infrastructure.resourcesserver import start_server
+from infrastructure.resources.server import start_server
 
 class BackEndService:
    def __init__(self, credentials):
@@ -39,15 +39,16 @@ class BackEndService:
       server.start()
       
       # execute the Computational System remotely  
-      floating_ip = self.openstack.get_ips()['floating_ip']
+      floating_ip = self.openstack.get_ips(stack_name, stack_id)['floating_ip']
       cmd = "repositorios/elastichpc/beta/trials/System.py " + url + " " + stack_name + " " + stack_id + " " + computation_input 
       output = self.ssh.run_command(floating_ip, cmd)
 
       # destroy the platform
       # server.terminate()
       # self.destroy_platform(stack_name, stack_id)
-
-      # return output
+     
+      server.join()
+      return output
    
 if __name__ == '__main__':
    credentials_file = sys.argv[1]   
