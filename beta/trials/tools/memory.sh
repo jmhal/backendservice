@@ -9,6 +9,7 @@ machine_file() {
 
 list=`machine_file`
 
-memory=$(pdsh -R ssh -w $list free -m 2> /dev/null | grep Mem | awk 'BEGIN{ mem=0 }{mem = mem + $5}END{print mem/NR}')
+memory=$(pdsh -R ssh -w $list free -m 2> /dev/null | grep Mem | awk 'BEGIN{ mem=0 }{mem = mem + $4}END{print mem/NR}')
+cpu=$(pdsh -R ssh -w $list cat /proc/cpuinfo 2> /dev/null | grep Mem | awk 'BEGIN { cpu=0 } {cpu = cpu + $1} END { if (cpu == 0) { print cpu ; } else { print cpu/NR;}}')
 
-echo $memory
+echo $cpu:$memory 
