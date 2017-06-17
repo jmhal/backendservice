@@ -3,7 +3,7 @@ import os
 import time
 import subprocess
 
-def number_of_nodes(self):
+def number_of_nodes():
    return len ([ l for l in open(os.environ['HOME'] + "/machinefile", "r").readlines() if l.strip(' \n') != '' ]) 
 
 def log(msg):
