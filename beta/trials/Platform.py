@@ -70,3 +70,4 @@ def platform_unit(reconfiguration_port, url, stack_name, stack_id, qos_values, q
       log("State = |" + str(state['compute_state']) + "|" + str(state['resource_state']) + "|" + str(state['nodes']) + "|")
 
    log("Finish Platform.")
+   log(str(execution_log))
