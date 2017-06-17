@@ -39,7 +39,7 @@ def platform_unit(reconfiguration_port, url, stack_name, stack_id, qos_values, q
    proxy = ResourcesProxy(url, stack_name, stack_id)
 
    # set up machinefile
-   nodes = proxy.configure_machile_file()
+   nodes = proxy.configure_machine_file()
    log("Number Of Nodes = " + str(nodes))
 
    # start the computation
@@ -61,7 +61,7 @@ def platform_unit(reconfiguration_port, url, stack_name, stack_id, qos_values, q
       resource_state = proxy.get_resource_state()
 
       # update resources
-      nodes = proxy.configure_machile_file()
+      nodes = proxy.configure_machine_file()
  
       # insert state in log
       state = {'compute_state': compute_state, 'resource_state': resource_state, 'nodes': nodes}
