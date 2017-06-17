@@ -3,7 +3,7 @@ import ctypes
 import sys
 import logging
 
-from multiprocessing import Process, Value, Manager
+from multiprocessing import Process, Value, Manager, Lock
 
 from Platform import platform_unit as platform_unit
 from Computation import computation_unit as computation_unit
@@ -25,6 +25,9 @@ class ReconfigurationPort():
 
       # how much of the progress has been achieved
       self.sensor = Value('f', 0.0, lock = True)
+
+      # a lock for updating/reading the machine file
+      self.machine_file_lock = Lock()
 
    def get_sensor(self):
       return self.sensor
