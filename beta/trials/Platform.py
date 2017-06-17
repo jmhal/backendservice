@@ -1,5 +1,6 @@
 import time
 import logging
+import collections
 from infrastructure.resources.client import ResourcesProxy
 
 def log(msg):
@@ -70,4 +71,5 @@ def platform_unit(reconfiguration_port, url, stack_name, stack_id, qos_values, q
       log("State = |" + str(state['compute_state']) + "|" + str(state['resource_state']) + "|" + str(state['nodes']) + "|")
 
    log("Finish Platform.")
-   log(str(execution_log))
+   ordered_log = collections.OrderedDict(sorted(execution_log.items())).items() 
+   log(str(ordered_log))
