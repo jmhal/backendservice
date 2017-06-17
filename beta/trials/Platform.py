@@ -48,7 +48,7 @@ def platform_unit(reconfiguration_port, url, stack_name, stack_id, qos_values, q
    # execution log to keep track of the events
    execution_log = {}
 
-   while reconfiguration_port.get_actuator().value != "finished":
+   while reconfiguration_port.get_sensor().value < 1.0:
       # monitor interval
       time.sleep(5)
 
