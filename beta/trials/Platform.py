@@ -68,4 +68,4 @@ def platform_unit(reconfiguration_port, url, stack_name, stack_id, qos_values, q
       execution_log[time.time()] = state
       log ("State = " + str(state))
 
-
+   log("Finish Platform.")

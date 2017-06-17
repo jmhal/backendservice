@@ -14,7 +14,7 @@ def computation_unit(reconfiguration_port, computation_input):
 
    # just do nothing for a while
    for i in range(1,11):
-      reconfiguration_port.get_sensor().value = i / 10
+      reconfiguration_port.get_sensor().value = i / 10.0
       log("Progress = " + str(i / 10.0))
       time.sleep(5)
 

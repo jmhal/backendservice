@@ -1,4 +1,5 @@
 import os
+import subprocess
 import xmlrpclib
 
 class ResourcesProxy():
@@ -14,7 +15,9 @@ class ResourcesProxy():
       return self.proxy.remove_node(self.stack_name, self.stack_id, n) 
 
    def get_resource_state(self):
-      return "0:0" 
+      home = os.environ['HOME']
+      p = subprocess.Popen([home + "/repositorios/elastichpc/beta/trials/tools/resource_state.sh","cpu"], stdout=subprocess.PIPE)
+      return float(p.communicate()[0]) 
 
    def configure_machine_file(self):
       machinefile = open(os.environ['HOME'] + "/machinefile", "w")
