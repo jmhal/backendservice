@@ -29,10 +29,10 @@ def computation_unit(reconfiguration_port, computation_input):
                  "-n", str(number_of_nodes() * 2) , 
 		 "-machinefile", home + "/machinefile", 
 		 home + "/repositorios/elastichpc/beta/trials/Matrix_Work_Queue.py" + 
-		 str(m), "10", "0", "teste.mtr_" + str(m)]
+		 str(m), "10", "0", "teste.mtr_" + str(i)]
       process = subprocess.Popen(command, stdout = subprocess.PIPE, stderr=subprocess.STDOUT)
       (output, error) = process.communicate()
-      os.remove(home + "/repositorios/elastichpc/beta/trials/" + "teste.mtr_" + str(m))
+      # os.remove(home + "/repositorios/elastichpc/beta/trials/" + "teste.mtr_" + str(m))
       log("Execution = " + output + "|" + error)
 
       reconfiguration_port.get_sensor().value = float(i + 1) / inputs_size
