@@ -51,6 +51,6 @@ def start_server(credentials, profile, address, port):
    server.serve_forever()
 
 if __name__ == '__main__':
-   start_server("/home/joaoalencar/openstack/keystonerc_joaoalencar", "profile.yaml", "200.19.177.89", 33004)
+   start_server("/home/joaoalencar/openstack/keystonerc_joaoalencar", "/home/joaoalencar/repositorios/elastichpc/beta/trials/infrastructure/profile.yaml", "200.19.177.89", 33004)
 
 

@@ -47,7 +47,7 @@ if __name__ == "__main__":
    reconfiguration_port = ReconfigurationPort()
 
    log("Starting Platform.")
-   platform = Process(target = platform_unit, args=(reconfiguration_port, url, stack_name, stack_id))
+   platform = Process(target = platform_unit, args=(reconfiguration_port, url, stack_name, stack_id, qos_values, qos_weights, qos_factor, qos_intervals))
    platform.daemon = True
    platform.start()
 
