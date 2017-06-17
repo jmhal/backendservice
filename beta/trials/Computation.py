@@ -16,7 +16,7 @@ def computation_unit(reconfiguration_port, computation_input):
    for i in range(1,11):
       reconfiguration_port.get_sensor().value = i / 10
       log("Progress = " + str(i / 10))
-      sleep(5)
+      time.sleep(5)
 
    # finish the computation
    reconfiguration_port.get_actuator().value = "finished"
