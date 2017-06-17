@@ -24,10 +24,10 @@ def computation_unit(reconfiguration_port, computation_input):
    for i in range(len(inputs)) :
       m = inputs[i]
       log("Matrix Size = " + str(m))
-      
+     
+      nodes = 2 * number_of_nodes()
       command = ["mpirun", 
-                 "-n", str(number_of_nodes() * 2) , 
-		 "-machinefile", home + "/machinefile", 
+                 "-n", nodes, "-machinefile", home + "/machinefile", 
 		 home + "/repositorios/elastichpc/beta/trials/Matrix_Work_Queue.py", 
 		 str(m), "10", "0", "teste.mtr_" + str(i)]
       log(str(command))
