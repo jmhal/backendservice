@@ -38,7 +38,7 @@ def computation_unit(reconfiguration_port, computation_input):
       log(str(command))
       process = subprocess.Popen(command, stdout = subprocess.PIPE, stderr=subprocess.STDOUT)
       (output, error) = process.communicate()
-      # os.remove(home + "/repositorios/elastichpc/beta/trials/" + "teste.mtr_" + str(m))
+      os.remove(home + "/repositorios/elastichpc/beta/trials/" + "teste.mtr_" + str(i))
       log("Execution = " + str(output) + "|" + str(error))
 
       reconfiguration_port.get_sensor().value = float(i + 1) / inputs_size
