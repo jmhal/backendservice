@@ -4,8 +4,12 @@ import time
 import subprocess
 
 def number_of_nodes():
-   return len ([ l for l in open(os.environ['HOME'] + "/machinefile", "r").readlines() if l.strip(' \n') != '' ]) 
+   _file = open(os.environ['HOME'] + "/machinefile", "r")
+   n = len ([ l for l in _files.readlines() if l.strip(' \n') != '' ]) 
+   _file.close()
+   return n
 
+   return 
 def log(msg):
    logging.debug("COMPUTATION: " + msg)
    return
