@@ -5,7 +5,7 @@ import subprocess
 
 def number_of_nodes():
    _file = open(os.environ['HOME'] + "/machinefile", "r")
-   n = len ([ l for l in _files.readlines() if l.strip(' \n') != '' ]) 
+   n = len ([ l for l in _file.readlines() if l.strip(' \n') != '' ]) 
    _file.close()
    return n
 
