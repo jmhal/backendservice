@@ -27,7 +27,7 @@ def computation_unit(reconfiguration_port, computation_input):
      
       nodes = 2 * number_of_nodes()
       command = ["mpirun", 
-                 "-n", nodes, "-machinefile", home + "/machinefile", 
+                 "-n", str(nodes), "-machinefile", home + "/machinefile", 
 		 home + "/repositorios/elastichpc/beta/trials/Matrix_Work_Queue.py", 
 		 str(m), "10", "0", "teste.mtr_" + str(i)]
       log(str(command))
