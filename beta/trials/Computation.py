@@ -31,8 +31,7 @@ def computation_unit(reconfiguration_port, computation_input):
 		 home + "repositorios/elastichpc/beta/trials/Matrix_Work_Queue.py" + 
 		 str(m), "10", "0", "teste.mtr_" + str(m)]
       process = subprocess.Popen(command, stdout = subprocess.PIPE, stderr=subprocess.STDOUT)
-      output = process.communicate()[0]
-      error = process.communicate()[1]
+      (output, error) = process.communicate()
       os.remove(home + "repositorios/elastichpc/beta/trials/" + "teste.mtr_" + str(m))
       log("Execution = " + output + "|" + error)
 
