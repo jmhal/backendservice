@@ -1,5 +1,10 @@
 import logging
+import os
 import time
+import subprocess
+
+def number_of_nodes(self):
+   return len ([ l for l in open(os.environ['HOME'] + "/machinefile", "r").readlines() if l.strip(' \n') != '' ]) 
 
 def log(msg):
    logging.debug("COMPUTATION: " + msg)
@@ -12,11 +17,27 @@ def computation_unit(reconfiguration_port, computation_input):
       time.sleep(5)
    log("Starting Computation.")
 
-   # just do nothing for a while
-   for i in range(1,11):
-      reconfiguration_port.get_sensor().value = i / 10.0
-      log("Progress = " + str(i / 10.0))
-      time.sleep(5)
+   # compute the matrix
+   inputs = [ int(x) for x in computation_input.split(':') ]
+   inputs_size = len(inputs)
+   home = os.environ['HOME']
+   for i in range(len(inputs)) :
+      m = inputs[i]
+      log("Matrix Size = " + str(m))
+      
+      command = ["mpirun", 
+                 "-n", str(number_of_nodes() * 2) , 
+		 "-machinefile", home + "/machinefile", 
+		 home + "repositorios/elastichpc/beta/trials/Matrix_Work_Queue.py" + 
+		 str(m), "10", "0", "teste.mtr_" + str(m)]
+      process = subprocess.Popen(command, stdout = subprocess.PIPE, stderr=subprocess.STDOUT)
+      output = process.communicate()[0]
+      error = process.communicate()[1]
+      os.remove(home + "repositorios/elastichpc/beta/trials/" + "teste.mtr_" + str(m))
+      log("Execution = " + output + "|" + error)
+
+      reconfiguration_port.get_sensor().value = float(i + 1) / inputs_size
+      log("Progress = " + str(float(i + 1) /inputs_size))
 
    # finish the computation
    reconfiguration_port.get_actuator().value = "finished"
