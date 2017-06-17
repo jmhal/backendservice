@@ -14,7 +14,7 @@ class ResourcesProxy():
       return self.proxy.remove_node(self.stack_name, self.stack_id, n) 
 
    def get_resource_state(self):
-      pass 
+      return "0:0" 
 
    def configure_machine_file(self):
       machinefile = open(os.environ['HOME'] + "/machinefile", "w")

@@ -1,17 +1,29 @@
 #!/usr/bin/python
 import ctypes
 import sys
+import logging
+
+from multiprocessing import Process, Value, Manager
 
 from Platform import platform_unit as platform_unit
 from Computation import computation_unit as computation_unit
-from multiprocessing import Process, Value, Manager
-from infrastructure.resources.client import ResourcesProxy
+
+# configure logging 
+logging.basicConfig(filename='computational_system.log',level=logging.DEBUG, format='%(asctime)s %(message)s')
+
+def log(msg):
+   logging.debug("SYSTEM: " + msg)
+   return
 
 class ReconfigurationPort():
    def __init__(self):
       # self.actuator = Value(ctypes.c_char_p, "empty", lock = True)
       manager = Manager()
-      self.actuator = manager.Value(ctypes.c_char_p, "start")
+
+      # start, stop or reconfigure
+      self.actuator = manager.Value(ctypes.c_char_p, "wait")
+
+      # how much of the progress has been achieved
       self.sensor = Value('f', 0.0, lock = True)
 
    def get_sensor(self):
@@ -25,35 +37,28 @@ if __name__ == "__main__":
    url = sys.argv[1]
    stack_name = sys.argv[2]
    stack_id = sys.argv[3]
-   computation_input = sys.argv[4]
-
-   print url, stack_name, stack_id, computation_input
-   proxy = ResourcesProxy(url, stack_name, stack_id)
-   for i in range(1, 8):
-      print "add" + str(i)
-      print proxy.add_node(1)
-      print proxy.configure_machine_file()
-
-   for i in range(1, 8):
-      print "remove" + str(i)
-      print proxy.remove_node(1)
-      print proxy.configure_machine_file()
+   qos_values = sys.argv[4]             # a:t:e:c:p
+   qos_weights = sys.argv[5]            # wa:wt:we:wc:wp
+   qos_factor = sys.argv[6]             # alfa
+   qos_intervals = sys.argv[7]          # monitoring:sample:reconfiguration
+   computation_input = sys.argv[8]
 
    # A port for communication between components
-#   reconfiguration_port = ReconfigurationPort()
-#
-#   platform = Process(target = platform_unit, args=(reconfiguration_port, credentials, profile, stack_id))
-#   platform.daemon = True
-#   platform.start()
-#
-#   computation = Process(target = computation_unit, args=(reconfiguration_port, computation_input))
-#   computation.daemon = True
-#   computation.start()
-#
-#   platform.join()
-#   computation.join()
-#
-#   print reconfiguration_port.get_sensor().value
-#   print reconfiguration_port.get_actuator().value
-#
-#   
+   reconfiguration_port = ReconfigurationPort()
+
+   log("Starting Platform.")
+   platform = Process(target = platform_unit, args=(reconfiguration_port, url, stack_name, stack_id))
+   platform.daemon = True
+   platform.start()
+
+   log("Starting Computation.")
+   computation = Process(target = computation_unit, args=(reconfiguration_port, computation_input))
+   computation.daemon = True
+   computation.start()
+
+   log("Waiting on Platform to finish.")
+   platform.join()
+   log("Waiting on Computation to finish.")
+   computation.join()
+
+   log("Good bye...")
