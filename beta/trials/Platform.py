@@ -66,6 +66,6 @@ def platform_unit(reconfiguration_port, url, stack_name, stack_id, qos_values, q
       # insert state in log
       state = {'compute_state': compute_state, 'resource_state': resource_state, 'nodes': nodes}
       execution_log[time.time()] = state
-      log("State = |" + str(state['compute_state']) + "|" + str(state['resource_state']) + "|" + str(state['nodes']) + "|"))
+      log("State = |" + str(state['compute_state']) + "|" + str(state['resource_state']) + "|" + str(state['nodes']) + "|")
 
    log("Finish Platform.")
