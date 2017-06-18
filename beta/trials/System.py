@@ -9,7 +9,7 @@ from Platform import platform_unit as platform_unit
 from Computation import computation_unit as computation_unit
 
 # configure logging 
-logging.basicConfig(filename='computational_system.log',level=logging.DEBUG, format='%(create)s|%(message)s')
+logging.basicConfig(filename='computational_system.log',level=logging.DEBUG, format='%(created)f|%(message)s')
 
 def log(msg):
    logging.debug("SYSTEM: " + msg)
