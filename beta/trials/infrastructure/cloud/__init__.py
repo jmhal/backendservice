@@ -127,6 +127,7 @@ class OpenStack:
 				    stack_id = stack_id)
 
       outputs = data['stack']['outputs']
+      self.logger.debug(str(outputs))
 
       ips = {}
       for d in outputs:
