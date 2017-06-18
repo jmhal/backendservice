@@ -27,7 +27,7 @@ class ReconfigurationPort():
       self.sensor = Value('f', 0.0, lock = True)
 
       # a lock for updating/reading the machine file
-      self.machine_file_lock = Lock()
+      self.machine_file_lock = manager.Lock()
 
    def get_sensor(self):
       return self.sensor
