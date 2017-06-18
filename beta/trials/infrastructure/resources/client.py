@@ -20,7 +20,7 @@ class ResourcesProxy():
       return float(p.communicate()[0]) 
 
    def configure_machine_file(self):
-      machinefile = open(os.environ['HOME'] + "/machinefile", "w")
+      machinefile = open(os.environ['HOME'] + "/machinefile_new", "w")
       
       ips = self.proxy.get_ips(self.stack_name, self.stack_id)
       
@@ -31,6 +31,8 @@ class ResourcesProxy():
 	 self.number_of_nodes += 1
       machinefile.close()
       
+      os.rename(os.environ['HOME'] + "/machinefile_new", os.environ['HOME'] + "/machinefile")
+
       return self.number_of_nodes
 
 
