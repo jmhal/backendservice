@@ -27,8 +27,7 @@ def computation_unit(reconfiguration_port, computation_input):
    home = os.environ['HOME']
    for i in range(len(inputs)) :
       m = inputs[i]
-      log("Matrix Size = " + str(m))
-    
+      log("Start (MatrixSize, Iteration) = |" + str(m) + "|" + str(i) +"|")
       with reconfiguration_port.machine_file_lock:
          nodes = 2 * number_of_nodes()
          command = ["mpirun", 
@@ -38,6 +37,7 @@ def computation_unit(reconfiguration_port, computation_input):
          log(str(command))
          process = subprocess.Popen(command, stdout = subprocess.PIPE, stderr=subprocess.STDOUT)
       (output, error) = process.communicate()
+      log("End (MatrixSize, Iteration) = |" + str(m) + "|" + str(i) +"|")
       os.remove(home + "/repositorios/elastichpc/beta/trials/" + "teste.mtr_" + str(i))
       log("Execution = " + str(output) + "|" + str(error))
 

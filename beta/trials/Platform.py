@@ -51,7 +51,7 @@ def platform_unit(reconfiguration_port, url, stack_name, stack_id, qos_values, q
 
    while reconfiguration_port.get_sensor().value < 1.0:
       # monitor interval
-      time.sleep(5)
+      time.sleep(monitor_interval)
 
       # retrieve computation state:
       #   computation progress 
