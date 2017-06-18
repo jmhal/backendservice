@@ -31,7 +31,12 @@ def remove_node(stack_name, stack_id, n = 1):
 
 def get_ips(stack_name, stack_id):
    global openstack
-   return openstack.get_ips(stack_name, stack_id)
+   # return openstack.get_ips(stack_name, stack_id)
+   # a bug sometimes stops head_node_ip from being retrieved
+   d = openstack.get_ips(stack_name, stack_id)
+   if d['head_node_ip'] == None:
+      d['head_node_ip'] = "10.10.10.3"
+   return d
 
 def start_server(credentials, profile, address, port):
    global profile_dict

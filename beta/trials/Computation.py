@@ -32,8 +32,8 @@ def computation_unit(reconfiguration_port, computation_input):
          nodes = 2 * number_of_nodes()
          command = ["mpirun", 
                     "-n", str(nodes), "-machinefile", home + "/machinefile", 
-	            home + "/repositorios/elastichpc/beta/trials/Matrix_Work_Queue.py", 
-		    str(m), "10", "0", "teste.mtr_" + str(i)]
+	            home + "/repositorios/elastichpc/beta/trials/Matrix.py", 
+		    str(m), "teste.mtr_" + str(i)]
          log(str(command))
          process = subprocess.Popen(command, stdout = subprocess.PIPE, stderr=subprocess.STDOUT)
       (output, error) = process.communicate()
