@@ -29,7 +29,7 @@ class Keystone:
       now = datetime.now()
       difference = now - self.token_create_time
       if difference.seconds > 60 * 60:
-         self.token = self.get_auth_token(self.url, self.tenant_name, self.username, self.password)
+         self.token = self.get_auth_token(self.tenant_name, self.username, self.password)
       return self.token
 
    def get_auth_token(self, tenant_name, username, password):
