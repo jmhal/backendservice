@@ -45,6 +45,7 @@ class BackEndService:
       cmd = "repositorios/elastichpc/beta/trials/System.py " +url + " " + stack_name + " " + stack_id + " " + qos_values + " " + qos_weights + " " + qos_factor + " " + qos_intervals+ " " + computation_input 
       output = self.ssh.run_command(floating_ip, cmd)
 
+      self.ssh.get_file(floating_ip, "computational_system.log", "computational_system.log")
       # destroy the platform
       # server.terminate()
       # self.destroy_platform(stack_name, stack_id)

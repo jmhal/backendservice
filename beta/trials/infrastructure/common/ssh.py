@@ -16,10 +16,17 @@ class SSH:
       self.disconnect()
       return output
 
-   def copy_file(self, ip, _file, name):
+   def put_file(self, ip, local_file, remote_file):
       self.connect(ip)
       sftp = self.ssh.open_sftp()
-      sftp.put(_file, "/home/ubuntu/" + name);
+      sftp.put(local_file, remote_file);
+      sftp.close()
+      self.disconnect()
+
+   def get_file(self, ip, local_file, remote_file):
+      self.connect(ip)
+      sftp = self.ssh.open_sftp()
+      sftp.get(remote_file, local_file);
       sftp.close()
       self.disconnect()
 
