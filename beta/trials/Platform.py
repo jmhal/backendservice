@@ -62,8 +62,8 @@ def platform_unit(reconfiguration_port, url, stack_name, stack_id, qos_values, q
       resource_state = proxy.get_resource_state()
 
       # update resources
-      with reconfiguration_port.machine_file_lock:
-         nodes = proxy.configure_machine_file()
+      #with reconfiguration_port.machine_file_lock:
+      #   nodes = proxy.configure_machine_file()
  
       # insert state in log
       state = {'compute_state': compute_state, 'resource_state': resource_state, 'nodes': nodes}
