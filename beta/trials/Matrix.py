@@ -11,6 +11,9 @@ rank = comm.Get_rank()
 N = int(sys.argv[1])
 file_name = sys.argv[2]
 
+if (N % size != 0):
+   N = N - (N % size)
+
 A = None
 C = None
 if rank == 0:
