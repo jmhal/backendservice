@@ -72,4 +72,4 @@ def platform_unit(reconfiguration_port, url, stack_name, stack_id, qos_values, q
 
    log("Finish Platform.")
    ordered_log = collections.OrderedDict(sorted(execution_log.items())).items() 
-   log(str(ordered_log))
+   log("Execution Log = " + str(ordered_log))

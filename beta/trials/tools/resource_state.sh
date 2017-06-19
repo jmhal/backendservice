@@ -23,5 +23,5 @@ then
       echo $memory;
    fi
 else
-   echo $cpu:$memory 
+   echo "$cpu|$memory"
 fi
