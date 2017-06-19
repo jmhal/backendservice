@@ -16,7 +16,7 @@ class ResourcesProxy():
 
    def get_resource_state(self):
       home = os.environ['HOME']
-      p = subprocess.Popen([home + "/repositorios/elastichpc/beta/trials/tools/resource_state.sh","cpu"], stdout=subprocess.PIPE)
+      p = subprocess.Popen([home + "/repositorios/elastichpc/beta/trials/tools/resource_state.sh"], stdout=subprocess.PIPE)
       return p.communicate()[0].rstrip()
 
    def configure_machine_file(self):
