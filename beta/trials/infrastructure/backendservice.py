@@ -20,7 +20,7 @@ class BackEndService:
       self.stack_name = "elastic_cluster_" + str(uuid.uuid4())
       profile_dict = parse_profile(profile)
       
-      self.stack_id = self.openstack.deploy_profile(stack_name, profile_dict['template_file'], profile_dict['params'])
+      self.stack_id = self.openstack.deploy_profile(self.stack_name, profile_dict['template_file'], profile_dict['params'])
 
       return (self.stack_name, self.stack_id)
 
