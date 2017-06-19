@@ -42,7 +42,7 @@ class BackEndService:
       
       # execute the Computational System remotely  
       floating_ip = self.openstack.get_ips(stack_name, stack_id)['floating_ip']
-      cmd = "repositorios/elastichpc/beta/trials/System.py " + url + " " + stack_name + " " + stack_id + " " + qos_values + " " + qos_weights + " " + qos_factor + " " + qos_intervals " " + computation_input 
+      cmd = "repositorios/elastichpc/beta/trials/System.py " +url + " " + stack_name + " " + stack_id + " " + qos_values + " " + qos_weights + " " + qos_factor + " " + qos_intervals+ " " + computation_input 
       output = self.ssh.run_command(floating_ip, cmd)
 
       # destroy the platform
