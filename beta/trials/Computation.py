@@ -15,7 +15,6 @@ def log(msg):
    return
 
 def computation_unit(reconfiguration_port, computation_input):
-
    # wait until platform is ready.
    while (reconfiguration_port.get_actuator().value != "start"):
       time.sleep(5)
@@ -33,12 +32,12 @@ def computation_unit(reconfiguration_port, computation_input):
          command = ["mpirun", 
                     "-n", str(nodes), "-machinefile", home + "/machinefile", 
 	            home + "/repositorios/elastichpc/beta/trials/Matrix.py", 
-		    str(m), "teste.mtr_" + str(i)]
+		    str(m), home + "/teste.mtr_" + str(i)]
          log(str(command))
          process = subprocess.Popen(command, stdout = subprocess.PIPE, stderr=subprocess.STDOUT)
       (output, error) = process.communicate()
       log("End (MatrixSize, Iteration) = |" + str(m) + "|" + str(i) +"|")
-      os.remove(home + "/repositorios/elastichpc/beta/trials/" + "teste.mtr_" + str(i))
+      os.remove(home + "/teste.mtr_" + str(i))
       log("Execution = " + str(output) + "|" + str(error))
 
       reconfiguration_port.get_sensor().value = float(i + 1) / inputs_size
