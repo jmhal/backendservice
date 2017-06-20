@@ -43,6 +43,7 @@ class BackEndService:
       # execute the Computational System remotely  
       floating_ip = self.openstack.get_ips(stack_name, stack_id)['floating_ip']
       cmd = "repositorios/elastichpc/beta/trials/" + system_type.strip() + "/System.py " + url + " " + stack_name + " " + stack_id + " " + qos_values + " " + qos_weights + " " + qos_factor + " " + qos_intervals+ " " + computation_input 
+      print "BACKENDSERVICE: " + cmd
       output = self.ssh.run_command(floating_ip, cmd)
       self.ssh.get_file(floating_ip, "computational_system.log", "computational_system.log")
       

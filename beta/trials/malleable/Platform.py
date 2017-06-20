@@ -65,11 +65,12 @@ def platform_unit(reconfiguration_port, url, stack_name, stack_id, qos_values, q
 
       # update resources
       if (compute_state > 0.5) and reconfigure:
+         log("RECONFIGURATION BEFORE: " + str(nodes) + "|" + str(output)) 
          reconfigure = False
-         output = proxy.add_nodes(1)
+         output = proxy.add_node(1)
 	 with reconfiguration_port.machine_file_lock:
             nodes = proxy.configure_machine_file()
-            log("RECONFIGURATION TRIAL: " + str(nodes) + "|" + str(output)) 
+            log("RECONFIGURATION AFTER: " + str(nodes) + "|" + str(output)) 
  
       # insert state in log
       state = {'compute_state': compute_state, 'resource_state': resource_state, 'nodes': nodes}
