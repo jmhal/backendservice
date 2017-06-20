@@ -27,7 +27,7 @@ class BackEndService:
    def destroy_platform(self, stack_name, stack_id):
       return self.openstack.destroy_profile(stack_name, stack_id)
 
-   def go(self, system_type,  profile, qos_values, qos_weights, qos_factor, qos_intervals, computation_input):
+   def go(self, system_type, profile, qos_values, qos_weights, qos_factor, qos_intervals, computation_input):
       # deploy platform
       (stack_name, stack_id) = self.deploy_platform(profile)
       print "Stack Name: " + str (stack_name)
@@ -42,7 +42,7 @@ class BackEndService:
       
       # execute the Computational System remotely  
       floating_ip = self.openstack.get_ips(stack_name, stack_id)['floating_ip']
-      cmd = "repositorios/elastichpc/beta/trials/" + system_type + "/System.py " + url + " " + stack_name + " " + stack_id + " " + qos_values + " " + qos_weights + " " + qos_factor + " " + qos_intervals+ " " + computation_input 
+      cmd = "repositorios/elastichpc/beta/trials/" + system_type.strip() + "/System.py " + url + " " + stack_name + " " + stack_id + " " + qos_values + " " + qos_weights + " " + qos_factor + " " + qos_intervals+ " " + computation_input 
       output = self.ssh.run_command(floating_ip, cmd)
       self.ssh.get_file(floating_ip, "computational_system.log", "computational_system.log")
       
