@@ -25,8 +25,8 @@ echo $computational_input
 
 # run the system
 profile_file="/home/joaoalencar/repositorios/elastichpc/beta/trials/results/no_reconfiguration/profiles/profile_${cluster_size}.yaml"
-echo "Running with parameters = $profile_file $qos_values $qos_weights $qos_factor $qos_intervals $computational_input"
-python ~/repositorios/elastichpc/beta/trials/infrastructure/backendservice.py ~/openstack/keystonerc_joaoalencar $profile_file $qos_values $qos_weights $qos_factor $qos_intervals $computational_input 
+echo "Running with parameters = static $profile_file $qos_values $qos_weights $qos_factor $qos_intervals $computational_input"
+python ~/repositorios/elastichpc/beta/trials/infrastructure/backendservice.py static ~/openstack/keystonerc_joaoalencar $profile_file $qos_values $qos_weights $qos_factor $qos_intervals $computational_input 
 
 # renaming log
 if [ -f "computational_system.log" ]
