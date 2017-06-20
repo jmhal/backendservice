@@ -1,0 +1,148 @@
+1497897440.104062|SYSTEM: Starting Platform.
+1497897440.106634|SYSTEM: Starting Computation.
+1497897440.109955|SYSTEM: Waiting on Platform to finish.
+1497897440.114231|PLATFORM: QoS Values ={'execution_time': 0.0, 'resource_efficiency': 0.0, 'cost': 0.0, 'power_consumption': 0.0, 'accuracy': 0.0}
+1497897440.114387|PLATFORM: QoS Weight ={'execution_time': 0.0, 'resource_efficiency': 0.0, 'cost': 0.0, 'power_consumption': 0.0, 'accuracy': 0.0}
+1497897440.114445|PLATFORM: QoS Factor =0.0
+1497897440.114495|PLATFORM: Monitor Interval = 10
+1497897440.114533|PLATFORM: Sample Interval = 10
+1497897440.114573|PLATFORM: Reconfiguration Interval = 10
+1497897440.114621|PLATFORM: http://200.19.177.89:33004:elastic_cluster_72cd9d79-499c-4d69-8fd8-1ab6af9a2ce7:50a30361-791f-4424-a99f-ca3649f60b20
+1497897442.768902|PLATFORM: Number Of Nodes = 2
+1497897445.123763|COMPUTATION: Starting Computation.
+1497897445.124044|COMPUTATION: Start (MatrixSize, Iteration) = |2000|0|
+1497897445.125086|COMPUTATION: ['mpirun', '-n', '4', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '2000', '/home/ubuntu/teste.mtr_0']
+1497897453.401322|PLATFORM: State = |0.0|0.375|172.5|2|
+1497897453.870857|COMPUTATION: End (MatrixSize, Iteration) = |2000|0|
+1497897453.885718|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+|None
+1497897453.885830|COMPUTATION: Progress = 0.05
+1497897453.885873|COMPUTATION: Start (MatrixSize, Iteration) = |2000|1|
+1497897453.886090|COMPUTATION: ['mpirun', '-n', '4', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '2000', '/home/ubuntu/teste.mtr_1']
+1497897459.271490|COMPUTATION: End (MatrixSize, Iteration) = |2000|1|
+1497897459.285613|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+|None
+1497897459.285696|COMPUTATION: Progress = 0.1
+1497897459.285737|COMPUTATION: Start (MatrixSize, Iteration) = |2000|2|
+1497897459.285970|COMPUTATION: ['mpirun', '-n', '4', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '2000', '/home/ubuntu/teste.mtr_2']
+1497897463.912960|PLATFORM: State = |0.10000000149|0.59|172.5|2|
+1497897464.629321|COMPUTATION: End (MatrixSize, Iteration) = |2000|2|
+1497897464.643610|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+|None
+1497897464.643691|COMPUTATION: Progress = 0.15
+1497897464.643733|COMPUTATION: Start (MatrixSize, Iteration) = |2000|3|
+1497897464.643999|COMPUTATION: ['mpirun', '-n', '4', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '2000', '/home/ubuntu/teste.mtr_3']
+1497897470.184603|COMPUTATION: End (MatrixSize, Iteration) = |2000|3|
+1497897470.200913|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+|None
+1497897470.201030|COMPUTATION: Progress = 0.2
+1497897470.201074|COMPUTATION: Start (MatrixSize, Iteration) = |2000|4|
+1497897470.201314|COMPUTATION: ['mpirun', '-n', '4', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '2000', '/home/ubuntu/teste.mtr_4']
+1497897474.465986|PLATFORM: State = |0.20000000298|0.805|172.5|2|
+1497897475.280398|COMPUTATION: End (MatrixSize, Iteration) = |2000|4|
+1497897475.296831|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+|None
+1497897475.296923|COMPUTATION: Progress = 0.25
+1497897475.296969|COMPUTATION: Start (MatrixSize, Iteration) = |2000|5|
+1497897475.297241|COMPUTATION: ['mpirun', '-n', '4', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '2000', '/home/ubuntu/teste.mtr_5']
+1497897481.277140|COMPUTATION: End (MatrixSize, Iteration) = |2000|5|
+1497897481.293183|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+|None
+1497897481.293275|COMPUTATION: Progress = 0.3
+1497897481.293329|COMPUTATION: Start (MatrixSize, Iteration) = |2000|6|
+1497897481.293531|COMPUTATION: ['mpirun', '-n', '4', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '2000', '/home/ubuntu/teste.mtr_6']
+1497897485.048685|PLATFORM: State = |0.300000011921|0.99|172.5|2|
+1497897486.220323|COMPUTATION: End (MatrixSize, Iteration) = |2000|6|
+1497897486.235276|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+|None
+1497897486.235385|COMPUTATION: Progress = 0.35
+1497897486.235427|COMPUTATION: Start (MatrixSize, Iteration) = |2000|7|
+1497897486.235621|COMPUTATION: ['mpirun', '-n', '4', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '2000', '/home/ubuntu/teste.mtr_7']
+1497897491.569001|COMPUTATION: End (MatrixSize, Iteration) = |2000|7|
+1497897491.583908|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+|None
+1497897491.583996|COMPUTATION: Progress = 0.4
+1497897491.584038|COMPUTATION: Start (MatrixSize, Iteration) = |2000|8|
+1497897491.584243|COMPUTATION: ['mpirun', '-n', '4', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '2000', '/home/ubuntu/teste.mtr_8']
+1497897495.596925|PLATFORM: State = |0.40000000596|1.145|171.5|2|
+1497897496.802516|COMPUTATION: End (MatrixSize, Iteration) = |2000|8|
+1497897496.816797|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+|None
+1497897496.816874|COMPUTATION: Progress = 0.45
+1497897496.816915|COMPUTATION: Start (MatrixSize, Iteration) = |2000|9|
+1497897496.817075|COMPUTATION: ['mpirun', '-n', '4', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '2000', '/home/ubuntu/teste.mtr_9']
+1497897501.926988|COMPUTATION: End (MatrixSize, Iteration) = |2000|9|
+1497897501.941411|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+|None
+1497897501.941483|COMPUTATION: Progress = 0.5
+1497897501.941522|COMPUTATION: Start (MatrixSize, Iteration) = |2000|10|
+1497897501.941667|COMPUTATION: ['mpirun', '-n', '4', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '2000', '/home/ubuntu/teste.mtr_10']
+1497897506.061533|PLATFORM: State = |0.5|1.24|172.5|2|
+1497897507.414773|COMPUTATION: End (MatrixSize, Iteration) = |2000|10|
+1497897507.429569|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+|None
+1497897507.429640|COMPUTATION: Progress = 0.55
+1497897507.429680|COMPUTATION: Start (MatrixSize, Iteration) = |2000|11|
+1497897507.429827|COMPUTATION: ['mpirun', '-n', '4', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '2000', '/home/ubuntu/teste.mtr_11']
+1497897512.690645|COMPUTATION: End (MatrixSize, Iteration) = |2000|11|
+1497897512.704826|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+|None
+1497897512.704900|COMPUTATION: Progress = 0.6
+1497897512.704939|COMPUTATION: Start (MatrixSize, Iteration) = |2000|12|
+1497897512.705092|COMPUTATION: ['mpirun', '-n', '4', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '2000', '/home/ubuntu/teste.mtr_12']
+1497897516.617251|PLATFORM: State = |0.600000023842|1.4|173.5|2|
+1497897517.840742|COMPUTATION: End (MatrixSize, Iteration) = |2000|12|
+1497897517.855500|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+|None
+1497897517.855573|COMPUTATION: Progress = 0.65
+1497897517.855612|COMPUTATION: Start (MatrixSize, Iteration) = |2000|13|
+1497897517.855758|COMPUTATION: ['mpirun', '-n', '4', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '2000', '/home/ubuntu/teste.mtr_13']
+1497897522.956325|COMPUTATION: End (MatrixSize, Iteration) = |2000|13|
+1497897522.972062|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+|None
+1497897522.972165|COMPUTATION: Progress = 0.7
+1497897522.972208|COMPUTATION: Start (MatrixSize, Iteration) = |2000|14|
+1497897522.974311|COMPUTATION: ['mpirun', '-n', '4', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '2000', '/home/ubuntu/teste.mtr_14']
+1497897527.149048|PLATFORM: State = |0.699999988079|1.445|173.5|2|
+1497897528.141761|COMPUTATION: End (MatrixSize, Iteration) = |2000|14|
+1497897528.156769|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+|None
+1497897528.156846|COMPUTATION: Progress = 0.75
+1497897528.156886|COMPUTATION: Start (MatrixSize, Iteration) = |2000|15|
+1497897528.157092|COMPUTATION: ['mpirun', '-n', '4', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '2000', '/home/ubuntu/teste.mtr_15']
+1497897533.330819|COMPUTATION: End (MatrixSize, Iteration) = |2000|15|
+1497897533.345467|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+|None
+1497897533.345547|COMPUTATION: Progress = 0.8
+1497897533.345597|COMPUTATION: Start (MatrixSize, Iteration) = |2000|16|
+1497897533.345761|COMPUTATION: ['mpirun', '-n', '4', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '2000', '/home/ubuntu/teste.mtr_16']
+1497897537.708441|PLATFORM: State = |0.800000011921|1.3|173.5|2|
+1497897538.533882|COMPUTATION: End (MatrixSize, Iteration) = |2000|16|
+1497897538.548680|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+|None
+1497897538.548759|COMPUTATION: Progress = 0.85
+1497897538.548798|COMPUTATION: Start (MatrixSize, Iteration) = |2000|17|
+1497897538.550826|COMPUTATION: ['mpirun', '-n', '4', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '2000', '/home/ubuntu/teste.mtr_17']
+1497897543.898572|COMPUTATION: End (MatrixSize, Iteration) = |2000|17|
+1497897543.912974|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+|None
+1497897543.913049|COMPUTATION: Progress = 0.9
+1497897543.913090|COMPUTATION: Start (MatrixSize, Iteration) = |2000|18|
+1497897543.913237|COMPUTATION: ['mpirun', '-n', '4', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '2000', '/home/ubuntu/teste.mtr_18']
+1497897548.233059|PLATFORM: State = |0.899999976158|1.205|173.5|2|
+1497897549.169628|COMPUTATION: End (MatrixSize, Iteration) = |2000|18|
+1497897549.184280|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+|None
+1497897549.184354|COMPUTATION: Progress = 0.95
+1497897549.184395|COMPUTATION: Start (MatrixSize, Iteration) = |2000|19|
+1497897549.184546|COMPUTATION: ['mpirun', '-n', '4', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '2000', '/home/ubuntu/teste.mtr_19']
+1497897554.299481|COMPUTATION: End (MatrixSize, Iteration) = |2000|19|
+1497897554.313950|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+|None
+1497897554.314023|COMPUTATION: Progress = 1.0
+1497897554.314141|COMPUTATION: Finish Computation.
+1497897558.814162|PLATFORM: State = |1.0|1.09|84.5|2|
+1497897558.814350|PLATFORM: Finish Platform.
+1497897558.815008|PLATFORM: Execution Log = [(1497897453.401236, {'compute_state': 0.0, 'resource_state': '0.375|172.5', 'nodes': 2}), (1497897463.912885, {'compute_state': 0.10000000149011612, 'resource_state': '0.59|172.5', 'nodes': 2}), (1497897474.465882, {'compute_state': 0.20000000298023224, 'resource_state': '0.805|172.5', 'nodes': 2}), (1497897485.048589, {'compute_state': 0.30000001192092896, 'resource_state': '0.99|172.5', 'nodes': 2}), (1497897495.596855, {'compute_state': 0.4000000059604645, 'resource_state': '1.145|171.5', 'nodes': 2}), (1497897506.061461, {'compute_state': 0.5, 'resource_state': '1.24|172.5', 'nodes': 2}), (1497897516.617182, {'compute_state': 0.6000000238418579, 'resource_state': '1.4|173.5', 'nodes': 2}), (1497897527.148958, {'compute_state': 0.699999988079071, 'resource_state': '1.445|173.5', 'nodes': 2}), (1497897537.708345, {'compute_state': 0.800000011920929, 'resource_state': '1.3|173.5', 'nodes': 2}), (1497897548.232989, {'compute_state': 0.8999999761581421, 'resource_state': '1.205|173.5', 'nodes': 2}), (1497897558.814055, {'compute_state': 1.0, 'resource_state': '1.09|84.5', 'nodes': 2})]
+1497897558.817742|SYSTEM: Waiting on Computation to finish.
+1497897558.817876|SYSTEM: Good bye...
