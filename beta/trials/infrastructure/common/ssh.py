@@ -13,6 +13,8 @@ class SSH:
       output = ""
       for line in ssh_stdout.readlines():
            output = output + line
+      for line in ssh_stderr.readlines():
+           output = output + line
       self.disconnect()
       return output
 
