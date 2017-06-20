@@ -49,6 +49,8 @@ def platform_unit(reconfiguration_port, url, stack_name, stack_id, qos_values, q
    # execution log to keep track of the events
    execution_log = {}
 
+   reconfigure = True
+
    while reconfiguration_port.get_sensor().value < 1.0:
       # monitor interval
       time.sleep(monitor_interval)
@@ -62,8 +64,12 @@ def platform_unit(reconfiguration_port, url, stack_name, stack_id, qos_values, q
       resource_state = proxy.get_resource_state()
 
       # update resources
-      #with reconfiguration_port.machine_file_lock:
-      #   nodes = proxy.configure_machine_file()
+      if (compute_state > 0.5) and reconfigure:
+         reconfigure = False
+         output = proxy.add_nodes(1)
+	 with reconfiguration_port.machine_file_lock:
+            nodes = proxy.configure_machine_file()
+            log("RECONFIGURATION TRIAL: " + str(nodes) + "|" + str(output)) 
  
       # insert state in log
       state = {'compute_state': compute_state, 'resource_state': resource_state, 'nodes': nodes}
