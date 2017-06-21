@@ -7,6 +7,31 @@ def log(msg):
    logging.debug("PLATFORM: " + msg)
    return
 
+def extrapolation(execution_log, compute_state):
+   if (len(execution_log) == 0):
+      return (0.0, 0.0)
+   else:
+      # predicting the execution time 
+      start_time = execution_log.keys().sort()[0]
+      current_time = time.time()
+      predict_time = (current_time - start_time) / compute_state
+      
+      # predicting the execution cost
+      cost = 0.0
+      previous_vms = None
+      previous_time = None
+      for time_stamp in execution_log.keys().sort():
+         if (previous_vms == None) and (previous == None):
+	    previous_vms = execution_log[time_stamp]['nodes']
+	    previous_time = time_stamp
+	 else:
+	    cost += (time_stamp - previous_time) * previous_vms
+	    previous_time = time_stamp
+	    previous_vms = execution_log[time_stamp]['nodes']
+      cost += (predict_time - current_time) * previous_vms
+      return (predict_time, cost)
+      
+
 def platform_unit(reconfiguration_port, url, stack_name, stack_id, qos_values, qos_weights, qos_factor, qos_intervals):
    # extract contract
    qos_values_dict = {}
@@ -36,8 +61,8 @@ def platform_unit(reconfiguration_port, url, stack_name, stack_id, qos_values, q
    log("Reconfiguration Interval = " + str(reconfiguration_interval))
 
    # create a proxy for resources control
-   log(url + ":" + stack_name + ":" + stack_id)
    proxy = ResourcesProxy(url, stack_name, stack_id)
+   log(url + ":" + stack_name + ":" + stack_id)
 
    # set up machinefile
    nodes = proxy.configure_machine_file()
@@ -49,12 +74,11 @@ def platform_unit(reconfiguration_port, url, stack_name, stack_id, qos_values, q
    # execution log to keep track of the events
    execution_log = {}
 
-   reconfigure = True
-
    while reconfiguration_port.get_sensor().value < 1.0:
       # monitor interval
       time.sleep(monitor_interval)
 
+      ## Monitoring Phase
       # retrieve computation state:
       #   computation progress 
       compute_state = reconfiguration_port.get_sensor().value
@@ -62,6 +86,8 @@ def platform_unit(reconfiguration_port, url, stack_name, stack_id, qos_values, q
       # retrieve infrastructure state:
       #   efficiency
       resource_state = proxy.get_resource_state()
+
+      ## Analysis Phase 
 
       # update resources
       if (compute_state > 0.2) and reconfigure:
