@@ -14,7 +14,7 @@ def extrapolation(execution_log, compute_state):
       # predicting the execution time 
       start_time = execution_log.keys().sort()[0]
       current_time = time.time()
-      predict_time = (current_time - start_time) / compute_state
+      predicted_time = (current_time - start_time) / compute_state
       
       # predicting the execution cost
       cost = 0.0
@@ -28,8 +28,8 @@ def extrapolation(execution_log, compute_state):
 	    cost += (time_stamp - previous_time) * previous_vms
 	    previous_time = time_stamp
 	    previous_vms = execution_log[time_stamp]['nodes']
-      cost += (predict_time - current_time) * previous_vms
-      return (predict_time, cost)
+      cost += (predicted_time - current_time) * previous_vms
+      return (predicted_time, cost)
       
 
 def platform_unit(reconfiguration_port, url, stack_name, stack_id, qos_values, qos_weights, qos_factor, qos_intervals):
@@ -90,8 +90,8 @@ def platform_unit(reconfiguration_port, url, stack_name, stack_id, qos_values, q
       resource_state = proxy.get_resource_state()
 
       ## Analysis Phase 
-      (predict_time, predict_cost) = extrapolation(execution_log, resource_state)
-      log("(predict_time, predict_cost) = " + str(predict_time) + "|" + str(predict_cost))
+      (predicted_time, predicted_cost) = extrapolation(execution_log, resource_state)
+      log("(predicted_time, predicted_cost) = " + str(predicted_time) + "|" + str(predicted_cost))
  
       qos_sample['execution_time'] = predicted_time
       qos_sample['cost'] = cost
