@@ -154,6 +154,7 @@ def platform_unit(reconfiguration_port, url, stack_name, stack_id, qos_values, q
 
       
       ## Execution Phase
+      """
       if (time.time() - last_reconfiguration_time) < reconfiguration_interval:
          log("RECONFIGURATION BEFORE: " + str(nodes)) 
          if N == 1:
@@ -164,7 +165,7 @@ def platform_unit(reconfiguration_port, url, stack_name, stack_id, qos_values, q
 	    nodes = proxy.configure_machine_file()
          log("RECONFIGURATION AFTER: " + str(nodes) + "|" + str(output))
 	 last_reconfiguration_time = time.time()
-
+      """
       # insert state in log
       state = {'compute_state': compute_state, 'resource_state': resource_state, 'nodes': nodes}
       execution_log[time.time()] = state
