@@ -37,7 +37,7 @@ def platform_unit(reconfiguration_port, url, stack_name, stack_id, qos_values, q
    qos_values_dict = {}
    qos_values_dict['accuracy'] = float(qos_values.split(':')[0])
    qos_values_dict['execution_time'] = float(qos_values.split(':')[1])
-   qos_values_dict['resource_efficiency'] = float(qos_values.split(':')[2])
+   qos_values_dict['efficiency'] = float(qos_values.split(':')[2])
    qos_values_dict['cost'] = float(qos_values.split(':')[3])
    qos_values_dict['power_consumption'] = float(qos_values.split(':')[4])
    log("QoS Values =" + str(qos_values_dict))
@@ -45,7 +45,7 @@ def platform_unit(reconfiguration_port, url, stack_name, stack_id, qos_values, q
    qos_weights_dict = {}
    qos_weights_dict['accuracy'] = float(qos_weights.split(':')[0])
    qos_weights_dict['execution_time'] = float(qos_weights.split(':')[1])
-   qos_weights_dict['resource_efficiency'] = float(qos_weights.split(':')[2])
+   qos_weights_dict['efficiency'] = float(qos_weights.split(':')[2])
    qos_weights_dict['cost'] = float(qos_weights.split(':')[3])
    qos_weights_dict['power_consumption'] = float(qos_weights.split(':')[4])
    log("QoS Weight =" + str(qos_weights_dict))
@@ -74,6 +74,8 @@ def platform_unit(reconfiguration_port, url, stack_name, stack_id, qos_values, q
    # execution log to keep track of the events
    execution_log = {}
 
+   last_reconfiguration_time = time.time()
+
    while reconfiguration_port.get_sensor().value < 1.0:
       # monitor interval
       time.sleep(monitor_interval)
@@ -88,16 +90,81 @@ def platform_unit(reconfiguration_port, url, stack_name, stack_id, qos_values, q
       resource_state = proxy.get_resource_state()
 
       ## Analysis Phase 
-
-      # update resources
-      if (compute_state > 0.2) and reconfigure:
-         log("RECONFIGURATION BEFORE: " + str(nodes)) 
-         reconfigure = False
-         output = proxy.add_node(1)
-	 with reconfiguration_port.machine_file_lock:
-            nodes = proxy.configure_machine_file()
-            log("RECONFIGURATION AFTER: " + str(nodes) + "|" + str(output)) 
+      (predict_time, predict_cost) = extrapolation(execution_log, resource_state)
+      log("(predict_time, predict_cost) = " + str(predict_time) + "|" + str(predict_cost))
  
+      qos_sample['execution_time'] = predicted_time
+      qos_sample['cost'] = cost
+
+      load_average = 0.0
+      for sample in execution_log.values():
+         load_average += float(sample['resource_state'].split('|')[0])
+      load_average /= len(execution_log)	 
+      qos_sample['efficiency'] = load_average
+     
+      log("QoS Sample = " + str(qos_sample))
+
+      ## Planning Phase
+      breach = False
+      delta = {}
+      #for param in qos_values_dict.keys():
+      for param in ["execution_time", "cost", "efficiency"]:
+         if not ((qos_sample[param] > (1 - alfa) * qos_values_dict[param]) and (qos_sample[param] < (1 + alfa) *qos_values_dict[param])):
+            delta[param] = abs(qos_values_dict[param] - qos_sample[param]) 
+	    delta[param] /= qos_values_dict[param]
+	    delta[param] *= qos_weight[param]
+	    breach = True
+      
+      if not breach:
+         log("Contract not breached =" + str(delta))
+	 state = {'compute_state': compute_state, 'resource_state': resource_state, 'nodes': nodes}
+         execution_log[time.time()] = state
+         log("State = |" + str(state['compute_state']) + "|" + str(state['resource_state']) + "|" + str(state['nodes']) + "|")
+	 continue
+      else:
+         log("Contract breached = " + str(delta))
+	   
+      maxValue = 0.0
+      maxParam = None
+      for param in delta.keys():
+         if delta[param] > maxValue :
+	    maxParam = param
+	    maxValue = delta[param]
+      log("Parameter to Reconfigure: " + param)
+
+      N = 0
+      if maxParam in ["efficiency"]:
+         if qos_sample[maxParam] < (1 - alpha) * qos_values_dict[maxParam]:
+	    # scale down
+	    N = -1
+	    log("Scale Down = " + maxParam + "|" + str(qos_sample[maxParam]) + "|" + str(qos_values_dict[maxParam]))
+	 elif qos_sample[maxParam] > (1 + alpha) * qos_values_dict[maxParam]:
+	    # scale up
+	    N = 1
+	    log("Scale Up = " + maxParam + "|" + str(qos_sample[maxParam]) + "|" + str(qos_values_dict[maxParam]))
+      elif maxParam in ["execution_time", "cost"]:
+         if qos_sample[maxParam] < (1 - alpha) * qos_values_dict[maxParam]:
+	    # scale down
+	    N = -1
+	    log("Scale Down = " + maxParam + "|" + str(qos_sample[maxParam]) + "|" + str(qos_values_dict[maxParam]))
+	 elif qos_sample[maxParam] > (1 + alpha) * qos_values_dict[maxParam]:
+	    # scale up
+	    N = 1
+	    log("Scale Up = " + maxParam + "|" + str(qos_sample[maxParam]) + "|" + str(qos_values_dict[maxParam]))
+
+      
+      ## Execution Phase
+      if (time.time() - last_reconfiguration_time) < reconfiguration_interval:
+         log("RECONFIGURATION BEFORE: " + str(nodes)) 
+         if N == 1:
+            output = proxy.add_node(1)
+         elif N == -1:
+	    output = proxy.remove_node(1)
+	 with reconfiguration_port.machine_file_lock:
+	    nodes = proxy.configure_machine_file()
+         log("RECONFIGURATION AFTER: " + str(nodes) + "|" + str(output))
+	 last_reconfiguration_time = time.time()
+
       # insert state in log
       state = {'compute_state': compute_state, 'resource_state': resource_state, 'nodes': nodes}
       execution_log[time.time()] = state
