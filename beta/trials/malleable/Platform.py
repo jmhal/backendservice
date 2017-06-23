@@ -14,7 +14,7 @@ def extrapolation(execution_log, compute_state):
       # predicting the execution time
       start_time = sorted(execution_log.keys())[0]
       current_time = time.time()
-      predicted_time = (current_time - start_time) / compute_state
+      predicted_time = (current_time - start_time) / float(compute_state)
       
       # predicting the execution cost
       cost = 0.0
