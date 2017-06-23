@@ -97,7 +97,7 @@ def platform_unit(reconfiguration_port, url, stack_name, stack_id, qos_values, q
       qos_sample['execution_time'] = predicted_time
       qos_sample['cost'] = predicted_cost
 
-      load_average = 0.0 + float(resource_states.split('|')[0])
+      load_average = 0.0 + float(resource_state.split('|')[0])
       for sample in execution_log.values():
          load_average += float(sample['resource_state'].split('|')[0])
       load_average /= len(execution_log) + 1	 
