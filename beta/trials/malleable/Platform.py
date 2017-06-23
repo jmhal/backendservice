@@ -110,7 +110,7 @@ def platform_unit(reconfiguration_port, url, stack_name, stack_id, qos_values, q
       delta = {}
       #for param in qos_values_dict.keys():
       for param in ["execution_time", "cost", "efficiency"]:
-         if not ((qos_sample[param] > (1 - alfa) * qos_values_dict[param]) and (qos_sample[param] < (1 + alfa) *qos_values_dict[param])):
+         if not ((qos_sample[param] > (1 - alpha) * qos_values_dict[param]) and (qos_sample[param] < (1 + alpha) *qos_values_dict[param])):
             delta[param] = abs(qos_values_dict[param] - qos_sample[param]) 
 	    delta[param] /= qos_values_dict[param]
 	    delta[param] *= qos_weights_dict[param]
