@@ -48,7 +48,7 @@ def platform_unit(reconfiguration_port, url, stack_name, stack_id, qos_values, q
    qos_weights_dict['efficiency'] = float(qos_weights.split(':')[2])
    qos_weights_dict['cost'] = float(qos_weights.split(':')[3])
    qos_weights_dict['power_consumption'] = float(qos_weights.split(':')[4])
-   log("QoS Weight =" + str(qos_weights_dict))
+   log("QoS Weight =" + str(qos_weights_dicts_dict_dict))
 
    alfa = float(qos_factor)
    log("QoS Factor =" + str(qos_factor))
@@ -113,7 +113,7 @@ def platform_unit(reconfiguration_port, url, stack_name, stack_id, qos_values, q
          if not ((qos_sample[param] > (1 - alfa) * qos_values_dict[param]) and (qos_sample[param] < (1 + alfa) *qos_values_dict[param])):
             delta[param] = abs(qos_values_dict[param] - qos_sample[param]) 
 	    delta[param] /= qos_values_dict[param]
-	    delta[param] *= qos_weight[param]
+	    delta[param] *= qos_weights_dict[param]
 	    breach = True
       
       if not breach:
