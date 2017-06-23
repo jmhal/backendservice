@@ -93,6 +93,7 @@ def platform_unit(reconfiguration_port, url, stack_name, stack_id, qos_values, q
       (predicted_time, predicted_cost) = extrapolation(execution_log, resource_state)
       log("(predicted_time, predicted_cost) = " + str(predicted_time) + "|" + str(predicted_cost))
  
+      qos_sample = {}
       qos_sample['execution_time'] = predicted_time
       qos_sample['cost'] = cost
 
