@@ -50,7 +50,7 @@ def platform_unit(reconfiguration_port, url, stack_name, stack_id, qos_values, q
    qos_weights_dict['power_consumption'] = float(qos_weights.split(':')[4])
    log("QoS Weight =" + str(qos_weights_dict))
 
-   alfa = float(qos_factor)
+   alpha = float(qos_factor)
    log("QoS Factor =" + str(qos_factor))
 
    monitor_interval = int(qos_intervals.split(':')[0])
