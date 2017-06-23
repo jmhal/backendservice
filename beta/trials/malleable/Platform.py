@@ -11,8 +11,8 @@ def extrapolation(execution_log, compute_state):
    if (len(execution_log) == 0):
       return (0.0, 0.0)
    else:
-      # predicting the execution time 
-      start_time = execution_log.keys().sort()[0]
+      # predicting the execution time
+      start_time = sorted(execution_log.keys())[0]
       current_time = time.time()
       predicted_time = (current_time - start_time) / compute_state
       
@@ -20,7 +20,7 @@ def extrapolation(execution_log, compute_state):
       cost = 0.0
       previous_vms = None
       previous_time = None
-      for time_stamp in execution_log.keys().sort():
+      for time_stamp in sorted(execution_log.keys()):
          if (previous_vms == None) and (previous == None):
 	    previous_vms = execution_log[time_stamp]['nodes']
 	    previous_time = time_stamp
