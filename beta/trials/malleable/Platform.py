@@ -8,7 +8,7 @@ def log(msg):
    return
 
 def extrapolation(execution_log, compute_state):
-   if (len(execution_log) == 0):
+   if (len(execution_log) == 0) or (float(compute_state) == 0):
       return (0.0, 0.0)
    else:
       # predicting the execution time
@@ -21,14 +21,14 @@ def extrapolation(execution_log, compute_state):
       previous_vms = None
       previous_time = None
       for time_stamp in sorted(execution_log.keys()):
-         if (previous_vms == None) and (previous == None):
+         if (previous_vms == None) and (previous_time == None):
 	    previous_vms = execution_log[time_stamp]['nodes']
 	    previous_time = time_stamp
 	 else:
 	    cost += (time_stamp - previous_time) * previous_vms
 	    previous_time = time_stamp
 	    previous_vms = execution_log[time_stamp]['nodes']
-      cost += (predicted_time - current_time) * previous_vms
+      cost += (predicted_time - (current_time - start_time)) * previous_vms
       return (predicted_time, cost)
       
 
@@ -76,6 +76,8 @@ def platform_unit(reconfiguration_port, url, stack_name, stack_id, qos_values, q
 
    last_reconfiguration_time = time.time()
 
+   last_compute_state = 0.0
+
    while reconfiguration_port.get_sensor().value < 1.0:
       # monitor interval
       time.sleep(monitor_interval)
@@ -90,7 +92,15 @@ def platform_unit(reconfiguration_port, url, stack_name, stack_id, qos_values, q
       resource_state = proxy.get_resource_state()
 
       ## Analysis Phase 
-      (predicted_time, predicted_cost) = extrapolation(execution_log, resource_state)
+      if (len(execution_log) == 0) or (float(compute_state) == last_compute_state):
+         log ("Not Enough Information for Analysis.")
+         state = {'compute_state': compute_state, 'resource_state': resource_state, 'nodes': nodes}
+         execution_log[time.time()] = state
+         log("State = |" + str(state['compute_state']) + "|" + str(state['resource_state']) + "|" + str(state['nodes']) + "|")
+         continue
+
+      last_compute_state = float(compute_state)
+      (predicted_time, predicted_cost) = extrapolation(execution_log, compute_state)
       log("(predicted_time, predicted_cost) = " + str(predicted_time) + "|" + str(predicted_cost))
  
       qos_sample = {}
@@ -131,7 +141,7 @@ def platform_unit(reconfiguration_port, url, stack_name, stack_id, qos_values, q
          if delta[param] > maxValue :
 	    maxParam = param
 	    maxValue = delta[param]
-      log("Parameter to Reconfigure: " + param)
+      log("Parameter to Reconfigure: " + maxParam)
 
       N = 0
       if maxParam in ["efficiency"]:
@@ -143,7 +153,7 @@ def platform_unit(reconfiguration_port, url, stack_name, stack_id, qos_values, q
 	    # scale up
 	    N = 1
 	    log("Scale Up = " + maxParam + "|" + str(qos_sample[maxParam]) + "|" + str(qos_values_dict[maxParam]))
-      elif maxParam in ["execution_time", "cost"]:
+      elif maxParam in ["execution_time"]:
          if qos_sample[maxParam] < (1 - alpha) * qos_values_dict[maxParam]:
 	    # scale down
 	    N = -1
@@ -152,6 +162,16 @@ def platform_unit(reconfiguration_port, url, stack_name, stack_id, qos_values, q
 	    # scale up
 	    N = 1
 	    log("Scale Up = " + maxParam + "|" + str(qos_sample[maxParam]) + "|" + str(qos_values_dict[maxParam]))
+      elif maxParam in ["cost"]:
+         if qos_sample[maxParam] < (1 - alpha) * qos_values_dict[maxParam]:
+	    # scale down
+	    N = 1
+	    log("Scale Up = " + maxParam + "|" + str(qos_sample[maxParam]) + "|" + str(qos_values_dict[maxParam]))
+	 elif qos_sample[maxParam] > (1 + alpha) * qos_values_dict[maxParam]:
+	    # scale up
+	    N = -1
+	    log("Scale Down = " + maxParam + "|" + str(qos_sample[maxParam]) + "|" + str(qos_values_dict[maxParam]))
+
 
       
       ## Execution Phase
@@ -174,4 +194,7 @@ def platform_unit(reconfiguration_port, url, stack_name, stack_id, qos_values, q
 
    log("Finish Platform.")
    ordered_log = collections.OrderedDict(sorted(execution_log.items())).items() 
+   start_time = ordered_log[0][0]
+   end_time = ordered_log[-1][0]
+   log("Elapsed = " + str(end_time - start_time))
    log("Execution Log = " + str(ordered_log))

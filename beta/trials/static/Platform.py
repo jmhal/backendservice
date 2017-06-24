@@ -72,4 +72,7 @@ def platform_unit(reconfiguration_port, url, stack_name, stack_id, qos_values, q
 
    log("Finish Platform.")
    ordered_log = collections.OrderedDict(sorted(execution_log.items())).items() 
+   start_time = ordered_log[0][0]
+   end_time = ordered_log[-1][0]
+   log("Elapsed = " + str(end_time - start_time))
    log("Execution Log = " + str(ordered_log))
