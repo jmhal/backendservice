@@ -1,0 +1,960 @@
+1498248048.526520|SYSTEM: Starting Platform.
+1498248048.528370|SYSTEM: Starting Computation.
+1498248048.531270|SYSTEM: Waiting on Platform to finish.
+1498248048.537798|PLATFORM: QoS Values ={'execution_time': 700.0, 'efficiency': 1.4, 'cost': 4000.0, 'power_consumption': 0.0, 'accuracy': 0.0}
+1498248048.538029|PLATFORM: QoS Weight ={'execution_time': 0.4, 'efficiency': 0.4, 'cost': 0.4, 'power_consumption': 0.0, 'accuracy': 0.0}
+1498248048.538111|PLATFORM: QoS Factor =0.1
+1498248048.538183|PLATFORM: Monitor Interval = 10
+1498248048.538242|PLATFORM: Sample Interval = 10
+1498248048.538310|PLATFORM: Reconfiguration Interval = 30
+1498248048.539227|PLATFORM: http://200.19.177.89:33004:elasticnode:62f23550-2d7a-48dc-bc5d-90db3e76a956
+1498248054.064656|PLATFORM: Number Of Nodes = 6
+1498248058.549102|COMPUTATION: Starting Computation.
+1498248058.549565|COMPUTATION: Start (MatrixSize, Iteration) = |10000|0|
+1498248058.550141|COMPUTATION: ['mpirun', '-n', '12', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '10000', '/home/ubuntu/teste.mtr_0']
+1498248065.091689|PLATFORM: Not Enough Information for Analysis.
+1498248065.091894|PLATFORM: State = |0.0|0.196667|1848.17|6|
+1498248076.120240|PLATFORM: Not Enough Information for Analysis.
+1498248076.120416|PLATFORM: State = |0.0|0.518333|1875.83|6|
+1498248087.152494|PLATFORM: Not Enough Information for Analysis.
+1498248087.152712|PLATFORM: State = |0.0|0.79|2002.83|6|
+1498248098.212676|PLATFORM: Not Enough Information for Analysis.
+1498248098.212866|PLATFORM: State = |0.0|1.01833|2003.67|6|
+1498248109.262096|PLATFORM: Not Enough Information for Analysis.
+1498248109.262276|PLATFORM: State = |0.0|1.20667|2003.5|6|
+1498248120.276264|PLATFORM: Not Enough Information for Analysis.
+1498248120.276435|PLATFORM: State = |0.0|1.38833|2003.5|6|
+1498248131.383192|PLATFORM: Not Enough Information for Analysis.
+1498248131.383370|PLATFORM: State = |0.0|1.52833|2003.67|6|
+1498248142.448617|PLATFORM: Not Enough Information for Analysis.
+1498248142.448791|PLATFORM: State = |0.0|1.63167|2004|6|
+1498248153.512594|PLATFORM: Not Enough Information for Analysis.
+1498248153.512773|PLATFORM: State = |0.0|1.75333|2004|6|
+1498248164.579049|PLATFORM: Not Enough Information for Analysis.
+1498248164.579233|PLATFORM: State = |0.0|1.80333|2004|6|
+1498248175.636971|PLATFORM: Not Enough Information for Analysis.
+1498248175.637283|PLATFORM: State = |0.0|1.85167|1868.5|6|
+1498248186.668222|PLATFORM: Not Enough Information for Analysis.
+1498248186.668407|PLATFORM: State = |0.0|1.85333|1590.67|6|
+1498248197.291751|PLATFORM: Not Enough Information for Analysis.
+1498248197.292043|PLATFORM: State = |0.0|1.71833|498.167|6|
+1498248207.923495|PLATFORM: Not Enough Information for Analysis.
+1498248207.923746|PLATFORM: State = |0.0|1.51|498.5|6|
+1498248234.329812|PLATFORM: Not Enough Information for Analysis.
+1498248234.331297|PLATFORM: State = |0.0|1.18667|498.167|6|
+1498248243.057242|COMPUTATION: End (MatrixSize, Iteration) = |10000|0|
+1498248243.260674|COMPUTATION: Execution = Warning: Permanently added '10.10.10.7' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.5' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.6' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.8' (ECDSA) to the list of known hosts.
+|None
+1498248243.260895|COMPUTATION: Progress = 0.05
+1498248243.260963|COMPUTATION: Start (MatrixSize, Iteration) = |10000|1|
+1498248243.261336|COMPUTATION: ['mpirun', '-n', '12', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '10000', '/home/ubuntu/teste.mtr_1']
+1498248245.430517|PLATFORM: (predicted_time, predicted_cost) = 3606.77086701|21574.0302838
+1498248245.430797|PLATFORM: QoS Sample = {'execution_time': 3606.770867008405, 'efficiency': 1.3185412500000002, 'cost': 21574.03028379939}
+1498248245.430907|PLATFORM: Contract breached = {'execution_time': 1.661011924004803, 'cost': 1.7574030283799393}
+1498248245.430986|PLATFORM: Parameter to Reconfigure: cost
+1498248245.431053|PLATFORM: Scale Up = cost|21574.0302838|4000.0
+1498248245.431103|PLATFORM: State = |0.0500000007451|1.14167|1654.83|6|
+1498248256.474245|PLATFORM: Not Enough Information for Analysis.
+1498248256.474432|PLATFORM: State = |0.0500000007451|1.27167|1876.67|6|
+1498248267.555110|PLATFORM: Not Enough Information for Analysis.
+1498248267.555299|PLATFORM: State = |0.0500000007451|1.40833|2003.83|6|
+1498248278.643026|PLATFORM: Not Enough Information for Analysis.
+1498248278.643218|PLATFORM: State = |0.0500000007451|1.53|2003.5|6|
+1498248289.726540|PLATFORM: Not Enough Information for Analysis.
+1498248289.726751|PLATFORM: State = |0.0500000007451|1.60333|2003.17|6|
+1498248300.772101|PLATFORM: Not Enough Information for Analysis.
+1498248300.772275|PLATFORM: State = |0.0500000007451|1.67833|2003.5|6|
+1498248311.906625|PLATFORM: Not Enough Information for Analysis.
+1498248311.906801|PLATFORM: State = |0.0500000007451|1.76833|2004|6|
+1498248323.173793|PLATFORM: Not Enough Information for Analysis.
+1498248323.173975|PLATFORM: State = |0.0500000007451|1.80667|2003|6|
+1498248334.208169|PLATFORM: Not Enough Information for Analysis.
+1498248334.208360|PLATFORM: State = |0.0500000007451|1.865|2003.83|6|
+1498248345.254984|PLATFORM: Not Enough Information for Analysis.
+1498248345.255181|PLATFORM: State = |0.0500000007451|1.895|2003.5|6|
+1498248356.299800|PLATFORM: Not Enough Information for Analysis.
+1498248356.300021|PLATFORM: State = |0.0500000007451|1.94833|2003.5|6|
+1498248367.298241|PLATFORM: Not Enough Information for Analysis.
+1498248367.298422|PLATFORM: State = |0.0500000007451|1.93167|1590.5|6|
+1498248378.670332|PLATFORM: Not Enough Information for Analysis.
+1498248378.670623|PLATFORM: State = |0.0500000007451|1.88|1650.33|6|
+1498248389.351363|PLATFORM: Not Enough Information for Analysis.
+1498248389.351559|PLATFORM: State = |0.0500000007451|1.62833|498.333|6|
+1498248399.967174|PLATFORM: Not Enough Information for Analysis.
+1498248399.967328|PLATFORM: State = |0.0500000007451|1.39833|498|6|
+1498248412.666462|PLATFORM: Not Enough Information for Analysis.
+1498248412.666700|PLATFORM: State = |0.0500000007451|1.19833|497.5|6|
+1498248423.724864|PLATFORM: Not Enough Information for Analysis.
+1498248423.725224|PLATFORM: State = |0.0500000007451|1.01333|498|6|
+1498248430.194323|COMPUTATION: End (MatrixSize, Iteration) = |10000|1|
+1498248430.406167|COMPUTATION: Execution = Warning: Permanently added '10.10.10.7' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.5' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.6' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.8' (ECDSA) to the list of known hosts.
+|None
+1498248430.406350|COMPUTATION: Progress = 0.1
+1498248430.406409|COMPUTATION: Start (MatrixSize, Iteration) = |10000|2|
+1498248430.406905|COMPUTATION: ['mpirun', '-n', '12', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '10000', '/home/ubuntu/teste.mtr_2']
+1498248434.741526|PLATFORM: (predicted_time, predicted_cost) = 3696.49539446|22112.8750233
+1498248434.741711|PLATFORM: QoS Sample = {'execution_time': 3696.4953944609256, 'efficiency': 1.4518173636363638, 'cost': 22112.87502332073}
+1498248434.741773|PLATFORM: Contract breached = {'execution_time': 1.7122830825491004, 'cost': 1.811287502332073}
+1498248434.741820|PLATFORM: Parameter to Reconfigure: cost
+1498248434.741863|PLATFORM: Scale Up = cost|22112.8750233|4000.0
+1498248434.741897|PLATFORM: State = |0.10000000149|0.988333|1805|6|
+1498248445.762730|PLATFORM: Not Enough Information for Analysis.
+1498248445.762929|PLATFORM: State = |0.10000000149|1.21167|1877|6|
+1498248456.806540|PLATFORM: Not Enough Information for Analysis.
+1498248456.806732|PLATFORM: State = |0.10000000149|1.4|2004.33|6|
+1498248467.869769|PLATFORM: Not Enough Information for Analysis.
+1498248467.869976|PLATFORM: State = |0.10000000149|1.49333|2004.33|6|
+1498248478.918667|PLATFORM: Not Enough Information for Analysis.
+1498248478.918867|PLATFORM: State = |0.10000000149|1.6|2004.5|6|
+1498248490.070863|PLATFORM: Not Enough Information for Analysis.
+1498248490.071042|PLATFORM: State = |0.10000000149|1.68333|2004.5|6|
+1498248501.182764|PLATFORM: Not Enough Information for Analysis.
+1498248501.182948|PLATFORM: State = |0.10000000149|1.74833|2004.5|6|
+1498248512.214523|PLATFORM: Not Enough Information for Analysis.
+1498248512.214706|PLATFORM: State = |0.10000000149|1.79167|2004.5|6|
+1498248523.387917|PLATFORM: Not Enough Information for Analysis.
+1498248523.388119|PLATFORM: State = |0.10000000149|1.82833|2004.33|6|
+1498248534.437837|PLATFORM: Not Enough Information for Analysis.
+1498248534.438029|PLATFORM: State = |0.10000000149|1.85833|2004.5|6|
+1498248545.481592|PLATFORM: Not Enough Information for Analysis.
+1498248545.481783|PLATFORM: State = |0.10000000149|1.89667|2004.5|6|
+1498248556.499420|PLATFORM: Not Enough Information for Analysis.
+1498248556.499719|PLATFORM: State = |0.10000000149|1.82667|1590.83|6|
+1498248567.147667|PLATFORM: Not Enough Information for Analysis.
+1498248567.147873|PLATFORM: State = |0.10000000149|1.67167|498.667|6|
+1498248577.851200|PLATFORM: Not Enough Information for Analysis.
+1498248577.851416|PLATFORM: State = |0.10000000149|1.47833|498.667|6|
+1498248592.596507|PLATFORM: Not Enough Information for Analysis.
+1498248592.596817|PLATFORM: State = |0.10000000149|1.24|498|6|
+1498248603.297249|PLATFORM: Not Enough Information for Analysis.
+1498248603.297448|PLATFORM: State = |0.10000000149|1.06|498.167|6|
+1498248614.301649|PLATFORM: Not Enough Information for Analysis.
+1498248614.301964|PLATFORM: State = |0.10000000149|0.951667|498.167|6|
+1498248614.784444|COMPUTATION: End (MatrixSize, Iteration) = |10000|2|
+1498248614.979411|COMPUTATION: Execution = Warning: Permanently added '10.10.10.5' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.7' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.6' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.8' (ECDSA) to the list of known hosts.
+|None
+1498248614.979594|COMPUTATION: Progress = 0.15
+1498248614.979652|COMPUTATION: Start (MatrixSize, Iteration) = |10000|3|
+1498248614.980194|COMPUTATION: ['mpirun', '-n', '12', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '10000', '/home/ubuntu/teste.mtr_3']
+1498248625.315266|PLATFORM: (predicted_time, predicted_cost) = 3734.82180537|22342.8514345
+1498248625.315448|PLATFORM: QoS Sample = {'execution_time': 3734.821805365014, 'efficiency': 1.4751994, 'cost': 22342.851434511707}
+1498248625.315513|PLATFORM: Contract breached = {'execution_time': 1.734183888780008, 'cost': 1.8342851434511709}
+1498248625.315552|PLATFORM: Parameter to Reconfigure: cost
+1498248625.315590|PLATFORM: Scale Up = cost|22342.8514345|4000.0
+1498248625.315624|PLATFORM: State = |0.15000000596|1.11|1876.33|6|
+1498248636.383143|PLATFORM: Not Enough Information for Analysis.
+1498248636.383338|PLATFORM: State = |0.15000000596|1.265|2003.67|6|
+1498248647.482429|PLATFORM: Not Enough Information for Analysis.
+1498248647.482608|PLATFORM: State = |0.15000000596|1.40167|2003.67|6|
+1498248658.593794|PLATFORM: Not Enough Information for Analysis.
+1498248658.593990|PLATFORM: State = |0.15000000596|1.50167|2004.33|6|
+1498248669.624198|PLATFORM: Not Enough Information for Analysis.
+1498248669.624369|PLATFORM: State = |0.15000000596|1.585|2003.83|6|
+1498248680.670752|PLATFORM: Not Enough Information for Analysis.
+1498248680.670960|PLATFORM: State = |0.15000000596|1.66167|2004.33|6|
+1498248691.726426|PLATFORM: Not Enough Information for Analysis.
+1498248691.726610|PLATFORM: State = |0.15000000596|1.73|2003.83|6|
+1498248702.785544|PLATFORM: Not Enough Information for Analysis.
+1498248702.785731|PLATFORM: State = |0.15000000596|1.785|2004.17|6|
+1498248713.850946|PLATFORM: Not Enough Information for Analysis.
+1498248713.851159|PLATFORM: State = |0.15000000596|1.85333|2004|6|
+1498248725.005702|PLATFORM: Not Enough Information for Analysis.
+1498248725.005885|PLATFORM: State = |0.15000000596|1.875|2003.83|6|
+1498248736.030472|PLATFORM: Not Enough Information for Analysis.
+1498248736.030705|PLATFORM: State = |0.15000000596|1.885|1591.17|6|
+1498248746.679051|PLATFORM: Not Enough Information for Analysis.
+1498248746.679237|PLATFORM: State = |0.15000000596|1.84333|498.333|6|
+1498248757.348227|PLATFORM: Not Enough Information for Analysis.
+1498248757.348478|PLATFORM: State = |0.15000000596|1.61333|498.167|6|
+1498248768.340040|PLATFORM: Not Enough Information for Analysis.
+1498248768.340368|PLATFORM: State = |0.15000000596|1.4|497.833|6|
+1498248779.017975|PLATFORM: Not Enough Information for Analysis.
+1498248779.018220|PLATFORM: State = |0.15000000596|1.21833|497.833|6|
+1498248790.067378|PLATFORM: Not Enough Information for Analysis.
+1498248790.067616|PLATFORM: State = |0.15000000596|1.08167|497.833|6|
+1498248795.360990|COMPUTATION: End (MatrixSize, Iteration) = |10000|3|
+1498248795.587262|COMPUTATION: Execution = Warning: Permanently added '10.10.10.7' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.5' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.6' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.8' (ECDSA) to the list of known hosts.
+|None
+1498248795.587529|COMPUTATION: Progress = 0.2
+1498248795.587589|COMPUTATION: Start (MatrixSize, Iteration) = |10000|4|
+1498248795.587932|COMPUTATION: ['mpirun', '-n', '12', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '10000', '/home/ubuntu/teste.mtr_4']
+1498248801.198466|PLATFORM: (predicted_time, predicted_cost) = 3680.53211569|22016.4084692
+1498248801.198744|PLATFORM: QoS Sample = {'execution_time': 3680.5321156899317, 'efficiency': 1.4928278787878788, 'cost': 22016.40846915256}
+1498248801.198827|PLATFORM: Contract breached = {'execution_time': 1.7031612089656756, 'cost': 1.801640846915256}
+1498248801.198874|PLATFORM: Parameter to Reconfigure: cost
+1498248801.198917|PLATFORM: Scale Up = cost|22016.4084692|4000.0
+1498248801.198956|PLATFORM: State = |0.20000000298|1.06667|1824.17|6|
+1498248812.246409|PLATFORM: Not Enough Information for Analysis.
+1498248812.246660|PLATFORM: State = |0.20000000298|1.25333|1876.17|6|
+1498248823.365396|PLATFORM: Not Enough Information for Analysis.
+1498248823.365580|PLATFORM: State = |0.20000000298|1.39167|2003.33|6|
+1498248834.426673|PLATFORM: Not Enough Information for Analysis.
+1498248834.426884|PLATFORM: State = |0.20000000298|1.50833|2004.67|6|
+1498248845.467484|PLATFORM: Not Enough Information for Analysis.
+1498248845.467764|PLATFORM: State = |0.20000000298|1.63833|2004.5|6|
+1498248856.565665|PLATFORM: Not Enough Information for Analysis.
+1498248856.565853|PLATFORM: State = |0.20000000298|1.72333|2004.17|6|
+1498248867.692886|PLATFORM: Not Enough Information for Analysis.
+1498248867.693101|PLATFORM: State = |0.20000000298|1.785|2004.83|6|
+1498248878.729418|PLATFORM: Not Enough Information for Analysis.
+1498248878.729634|PLATFORM: State = |0.20000000298|1.82|2004.5|6|
+1498248889.769132|PLATFORM: Not Enough Information for Analysis.
+1498248889.769319|PLATFORM: State = |0.20000000298|1.86333|2004.33|6|
+1498248900.858942|PLATFORM: Not Enough Information for Analysis.
+1498248900.859170|PLATFORM: State = |0.20000000298|1.90333|2004.33|6|
+1498248911.918806|PLATFORM: Not Enough Information for Analysis.
+1498248911.918983|PLATFORM: State = |0.20000000298|1.92833|2004.5|6|
+1498248922.969945|PLATFORM: Not Enough Information for Analysis.
+1498248922.970201|PLATFORM: State = |0.20000000298|1.94333|1871.5|6|
+1498248933.611331|PLATFORM: Not Enough Information for Analysis.
+1498248933.698162|PLATFORM: State = |0.20000000298|1.80833|498.333|6|
+1498248944.319542|PLATFORM: Not Enough Information for Analysis.
+1498248944.319779|PLATFORM: State = |0.20000000298|1.56|498.667|6|
+1498248955.064981|PLATFORM: Not Enough Information for Analysis.
+1498248955.065347|PLATFORM: State = |0.20000000298|1.40667|498.333|6|
+1498248965.783955|PLATFORM: Not Enough Information for Analysis.
+1498248965.784252|PLATFORM: State = |0.20000000298|1.22667|498.5|6|
+1498248977.228181|PLATFORM: Not Enough Information for Analysis.
+1498248977.228465|PLATFORM: State = |0.20000000298|1.11333|498.167|6|
+1498248980.961912|COMPUTATION: End (MatrixSize, Iteration) = |10000|4|
+1498248981.239024|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.7' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.5' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.6' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.8' (ECDSA) to the list of known hosts.
+|None
+1498248981.242678|COMPUTATION: Progress = 0.25
+1498248981.242811|COMPUTATION: Start (MatrixSize, Iteration) = |10000|5|
+1498248981.243261|COMPUTATION: ['mpirun', '-n', '12', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '10000', '/home/ubuntu/teste.mtr_5']
+1498248988.370577|PLATFORM: (predicted_time, predicted_cost) = 3693.11435986|22091.834022
+1498248988.370788|PLATFORM: QoS Sample = {'execution_time': 3693.114359855652, 'efficiency': 1.5132925301204823, 'cost': 22091.834022045135}
+1498248988.370851|PLATFORM: Contract breached = {'execution_time': 1.7103510627746585, 'cost': 1.8091834022045135}
+1498248988.370915|PLATFORM: Parameter to Reconfigure: cost
+1498248988.370958|PLATFORM: Scale Up = cost|22091.834022|4000.0
+1498248988.370994|PLATFORM: State = |0.25|1.20333|1846.5|6|
+1498248999.484179|PLATFORM: Not Enough Information for Analysis.
+1498248999.484372|PLATFORM: State = |0.25|1.35167|1877.17|6|
+1498249010.615470|PLATFORM: Not Enough Information for Analysis.
+1498249010.615657|PLATFORM: State = |0.25|1.5|2004.5|6|
+1498249021.711418|PLATFORM: Not Enough Information for Analysis.
+1498249021.711614|PLATFORM: State = |0.25|1.61833|2004.5|6|
+1498249032.775640|PLATFORM: Not Enough Information for Analysis.
+1498249032.775868|PLATFORM: State = |0.25|1.695|2004|6|
+1498249043.899382|PLATFORM: Not Enough Information for Analysis.
+1498249043.899564|PLATFORM: State = |0.25|1.74667|2004.33|6|
+1498249055.019358|PLATFORM: Not Enough Information for Analysis.
+1498249055.019569|PLATFORM: State = |0.25|1.79|2004.33|6|
+1498249066.099359|PLATFORM: Not Enough Information for Analysis.
+1498249066.099543|PLATFORM: State = |0.25|1.85667|2004.33|6|
+1498249077.153844|PLATFORM: Not Enough Information for Analysis.
+1498249077.154024|PLATFORM: State = |0.25|1.905|2004.17|6|
+1498249088.197613|PLATFORM: Not Enough Information for Analysis.
+1498249088.197818|PLATFORM: State = |0.25|1.92167|2004.17|6|
+1498249099.236851|PLATFORM: Not Enough Information for Analysis.
+1498249099.237039|PLATFORM: State = |0.25|1.96333|2004.17|6|
+1498249110.295891|PLATFORM: Not Enough Information for Analysis.
+1498249110.296083|PLATFORM: State = |0.25|1.93167|1591.33|6|
+1498249120.946111|PLATFORM: Not Enough Information for Analysis.
+1498249120.946266|PLATFORM: State = |0.25|1.79167|498.5|6|
+1498249131.592492|PLATFORM: Not Enough Information for Analysis.
+1498249131.592805|PLATFORM: State = |0.25|1.585|499.167|6|
+1498249142.240324|PLATFORM: Not Enough Information for Analysis.
+1498249142.240545|PLATFORM: State = |0.25|1.39333|499|6|
+1498249153.107290|PLATFORM: Not Enough Information for Analysis.
+1498249153.107505|PLATFORM: State = |0.25|1.22333|498.667|6|
+1498249163.870281|PLATFORM: Not Enough Information for Analysis.
+1498249163.870510|PLATFORM: State = |0.25|1.075|498.833|6|
+1498249172.449886|COMPUTATION: End (MatrixSize, Iteration) = |10000|5|
+1498249173.784702|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.7' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.5' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.6' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.8' (ECDSA) to the list of known hosts.
+|None
+1498249173.785107|COMPUTATION: Progress = 0.3
+1498249173.785218|COMPUTATION: Start (MatrixSize, Iteration) = |10000|6|
+1498249173.785671|COMPUTATION: ['mpirun', '-n', '12', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '10000', '/home/ubuntu/teste.mtr_6']
+1498249174.536308|PLATFORM: (predicted_time, predicted_cost) = 3698.14702677|22124.888998
+1498249174.536805|PLATFORM: QoS Sample = {'execution_time': 3698.1470267714253, 'efficiency': 1.5291328699999998, 'cost': 22124.888997996564}
+1498249174.536971|PLATFORM: Contract breached = {'execution_time': 1.7132268724408146, 'cost': 1.8124888997996564}
+1498249174.537098|PLATFORM: Parameter to Reconfigure: cost
+1498249174.537200|PLATFORM: Scale Up = cost|22124.888998|4000.0
+1498249174.537280|PLATFORM: State = |0.300000011921|0.961667|63.8333|6|
+1498249185.579079|PLATFORM: Not Enough Information for Analysis.
+1498249185.579272|PLATFORM: State = |0.300000011921|1.12167|1877|6|
+1498249196.635719|PLATFORM: Not Enough Information for Analysis.
+1498249196.635894|PLATFORM: State = |0.300000011921|1.29333|2003.83|6|
+1498249207.724863|PLATFORM: Not Enough Information for Analysis.
+1498249207.725044|PLATFORM: State = |0.300000011921|1.41333|2004.67|6|
+1498249218.763422|PLATFORM: Not Enough Information for Analysis.
+1498249218.763612|PLATFORM: State = |0.300000011921|1.53833|2004.33|6|
+1498249229.847530|PLATFORM: Not Enough Information for Analysis.
+1498249229.847722|PLATFORM: State = |0.300000011921|1.63|2004.5|6|
+1498249240.872479|PLATFORM: Not Enough Information for Analysis.
+1498249240.872671|PLATFORM: State = |0.300000011921|1.72667|2004.17|6|
+1498249251.961560|PLATFORM: Not Enough Information for Analysis.
+1498249251.961807|PLATFORM: State = |0.300000011921|1.85|2004.17|6|
+1498249263.028453|PLATFORM: Not Enough Information for Analysis.
+1498249263.028629|PLATFORM: State = |0.300000011921|1.89167|2004.5|6|
+1498249274.103804|PLATFORM: Not Enough Information for Analysis.
+1498249274.104004|PLATFORM: State = |0.300000011921|1.91|2004.17|6|
+1498249285.152160|PLATFORM: Not Enough Information for Analysis.
+1498249285.152363|PLATFORM: State = |0.300000011921|1.92667|2004|6|
+1498249296.257161|PLATFORM: Not Enough Information for Analysis.
+1498249296.257438|PLATFORM: State = |0.300000011921|1.96833|1885|6|
+1498249306.939739|PLATFORM: Not Enough Information for Analysis.
+1498249306.939992|PLATFORM: State = |0.300000011921|1.85667|498.5|6|
+1498249317.603881|PLATFORM: Not Enough Information for Analysis.
+1498249317.604127|PLATFORM: State = |0.300000011921|1.63833|499.333|6|
+1498249328.311473|PLATFORM: Not Enough Information for Analysis.
+1498249328.311722|PLATFORM: State = |0.300000011921|1.45|499.5|6|
+1498249339.039876|PLATFORM: Not Enough Information for Analysis.
+1498249339.040134|PLATFORM: State = |0.300000011921|1.28833|498.833|6|
+1498249349.707159|PLATFORM: Not Enough Information for Analysis.
+1498249349.707405|PLATFORM: State = |0.300000011921|1.14167|498.833|6|
+1498249360.407386|PLATFORM: Not Enough Information for Analysis.
+1498249360.407685|PLATFORM: State = |0.300000011921|1.07|499|6|
+1498249367.347815|COMPUTATION: End (MatrixSize, Iteration) = |10000|6|
+1498249368.741862|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.7' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.5' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.6' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.8' (ECDSA) to the list of known hosts.
+|None
+1498249368.742157|COMPUTATION: Progress = 0.35
+1498249368.742265|COMPUTATION: Start (MatrixSize, Iteration) = |10000|7|
+1498249368.742668|COMPUTATION: ['mpirun', '-n', '12', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '10000', '/home/ubuntu/teste.mtr_7']
+1498249371.560466|PLATFORM: (predicted_time, predicted_cost) = 3732.76699224|22329.6861429
+1498249371.560760|PLATFORM: QoS Sample = {'execution_time': 3732.7669922414334, 'efficiency': 1.5316521779661014, 'cost': 22329.68614286358}
+1498249371.560842|PLATFORM: Contract breached = {'execution_time': 1.7330097098522477, 'cost': 1.832968614286358}
+1498249371.560896|PLATFORM: Parameter to Reconfigure: cost
+1498249371.560947|PLATFORM: Scale Up = cost|22329.6861429|4000.0
+1498249371.560993|PLATFORM: State = |0.34999999404|1.10667|1688.83|6|
+1498249382.636066|PLATFORM: Not Enough Information for Analysis.
+1498249382.636301|PLATFORM: State = |0.34999999404|1.27833|1876.17|6|
+1498249393.702292|PLATFORM: Not Enough Information for Analysis.
+1498249393.702491|PLATFORM: State = |0.34999999404|1.40333|2004|6|
+1498249404.787925|PLATFORM: Not Enough Information for Analysis.
+1498249404.788120|PLATFORM: State = |0.34999999404|1.52667|2004|6|
+1498249415.859791|PLATFORM: Not Enough Information for Analysis.
+1498249415.859988|PLATFORM: State = |0.34999999404|1.655|2004.17|6|
+1498249426.916070|PLATFORM: Not Enough Information for Analysis.
+1498249426.916247|PLATFORM: State = |0.34999999404|1.74167|2004.17|6|
+1498249437.961086|PLATFORM: Not Enough Information for Analysis.
+1498249437.961256|PLATFORM: State = |0.34999999404|1.8|2004.33|6|
+1498249449.036309|PLATFORM: Not Enough Information for Analysis.
+1498249449.036514|PLATFORM: State = |0.34999999404|1.84833|2004.17|6|
+1498249460.099988|PLATFORM: Not Enough Information for Analysis.
+1498249460.100165|PLATFORM: State = |0.34999999404|1.9|2003.83|6|
+1498249471.201669|PLATFORM: Not Enough Information for Analysis.
+1498249471.201857|PLATFORM: State = |0.34999999404|1.92167|2004.17|6|
+1498249482.254614|PLATFORM: Not Enough Information for Analysis.
+1498249482.254791|PLATFORM: State = |0.34999999404|1.93333|2004|6|
+1498249493.132124|PLATFORM: Not Enough Information for Analysis.
+1498249493.132269|PLATFORM: State = |0.34999999404|1.90167|791.5|6|
+1498249503.820590|PLATFORM: Not Enough Information for Analysis.
+1498249503.820739|PLATFORM: State = |0.34999999404|1.63667|499.333|6|
+1498249514.467918|PLATFORM: Not Enough Information for Analysis.
+1498249514.468099|PLATFORM: State = |0.34999999404|1.43167|499.167|6|
+1498249525.628670|PLATFORM: Not Enough Information for Analysis.
+1498249525.628852|PLATFORM: State = |0.34999999404|1.25|498.667|6|
+1498249537.563413|PLATFORM: Not Enough Information for Analysis.
+1498249537.563603|PLATFORM: State = |0.34999999404|1.12|498.667|6|
+1498249542.097777|COMPUTATION: End (MatrixSize, Iteration) = |10000|7|
+1498249542.750107|COMPUTATION: Execution = Warning: Permanently added '10.10.10.5' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.7' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.6' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.8' (ECDSA) to the list of known hosts.
+|None
+1498249542.750409|COMPUTATION: Progress = 0.4
+1498249542.750519|COMPUTATION: Start (MatrixSize, Iteration) = |10000|8|
+1498249542.753645|COMPUTATION: ['mpirun', '-n', '12', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '10000', '/home/ubuntu/teste.mtr_8']
+1498249548.608201|PLATFORM: (predicted_time, predicted_cost) = 3708.79020708|22186.4749327
+1498249548.608546|PLATFORM: QoS Sample = {'execution_time': 3708.7902070762184, 'efficiency': 1.5390046791044776, 'cost': 22186.474932719153}
+1498249548.608654|PLATFORM: Contract breached = {'execution_time': 1.7193086897578391, 'cost': 1.8186474932719154}
+1498249548.608707|PLATFORM: Parameter to Reconfigure: cost
+1498249548.608784|PLATFORM: Scale Up = cost|22186.4749327|4000.0
+1498249548.608832|PLATFORM: State = |0.40000000596|1.14333|1832.5|6|
+1498249559.663841|PLATFORM: Not Enough Information for Analysis.
+1498249559.664009|PLATFORM: State = |0.40000000596|1.31|1877|6|
+1498249570.788484|PLATFORM: Not Enough Information for Analysis.
+1498249570.788675|PLATFORM: State = |0.40000000596|1.415|2004.33|6|
+1498249581.856444|PLATFORM: Not Enough Information for Analysis.
+1498249581.856634|PLATFORM: State = |0.40000000596|1.53833|2004.17|6|
+1498249592.924751|PLATFORM: Not Enough Information for Analysis.
+1498249592.924931|PLATFORM: State = |0.40000000596|1.64167|2004.5|6|
+1498249604.026678|PLATFORM: Not Enough Information for Analysis.
+1498249604.026887|PLATFORM: State = |0.40000000596|1.71833|2004|6|
+1498249615.119864|PLATFORM: Not Enough Information for Analysis.
+1498249615.120052|PLATFORM: State = |0.40000000596|1.77833|2004.5|6|
+1498249626.166300|PLATFORM: Not Enough Information for Analysis.
+1498249626.166582|PLATFORM: State = |0.40000000596|1.84667|2003.83|6|
+1498249637.300281|PLATFORM: Not Enough Information for Analysis.
+1498249637.300458|PLATFORM: State = |0.40000000596|1.89667|2004.33|6|
+1498249648.395848|PLATFORM: Not Enough Information for Analysis.
+1498249648.396076|PLATFORM: State = |0.40000000596|1.93167|2004.17|6|
+1498249659.488108|PLATFORM: Not Enough Information for Analysis.
+1498249659.488276|PLATFORM: State = |0.40000000596|1.97|2004.5|6|
+1498249670.520245|PLATFORM: Not Enough Information for Analysis.
+1498249670.520487|PLATFORM: State = |0.40000000596|1.88167|1039.83|6|
+1498249681.150692|PLATFORM: Not Enough Information for Analysis.
+1498249681.150846|PLATFORM: State = |0.40000000596|1.67667|498|6|
+1498249691.790820|PLATFORM: Not Enough Information for Analysis.
+1498249691.790991|PLATFORM: State = |0.40000000596|1.44667|498.333|6|
+1498249702.423171|PLATFORM: Not Enough Information for Analysis.
+1498249702.423333|PLATFORM: State = |0.40000000596|1.29167|498.5|6|
+1498249713.060249|PLATFORM: Not Enough Information for Analysis.
+1498249713.060426|PLATFORM: State = |0.40000000596|1.15167|498.667|6|
+1498249723.758213|PLATFORM: Not Enough Information for Analysis.
+1498249723.758404|PLATFORM: State = |0.40000000596|1.03833|498.667|6|
+1498249734.493220|PLATFORM: Not Enough Information for Analysis.
+1498249734.493442|PLATFORM: State = |0.40000000596|0.923333|497.833|6|
+1498249737.637472|COMPUTATION: End (MatrixSize, Iteration) = |10000|8|
+1498249739.003887|COMPUTATION: Execution = Warning: Permanently added '10.10.10.7' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.5' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.6' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.8' (ECDSA) to the list of known hosts.
+|None
+1498249739.004165|COMPUTATION: Progress = 0.45
+1498249739.004265|COMPUTATION: Start (MatrixSize, Iteration) = |10000|9|
+1498249739.004787|COMPUTATION: ['mpirun', '-n', '12', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '10000', '/home/ubuntu/teste.mtr_9']
+1498249745.543634|PLATFORM: (predicted_time, predicted_cost) = 3734.33694136|22339.7214796
+1498249745.543899|PLATFORM: QoS Sample = {'execution_time': 3734.3369413571077, 'efficiency': 1.5374011842105264, 'cost': 22339.721479628395}
+1498249745.543963|PLATFORM: Contract breached = {'execution_time': 1.7339068236326332, 'cost': 1.8339721479628395}
+1498249745.544002|PLATFORM: Parameter to Reconfigure: cost
+1498249745.544040|PLATFORM: Scale Up = cost|22339.7214796|4000.0
+1498249745.544074|PLATFORM: State = |0.449999988079|1.00167|1840.83|6|
+1498249756.585194|PLATFORM: Not Enough Information for Analysis.
+1498249756.585366|PLATFORM: State = |0.449999988079|1.21167|1877.33|6|
+1498249767.664447|PLATFORM: Not Enough Information for Analysis.
+1498249767.664614|PLATFORM: State = |0.449999988079|1.35|2004|6|
+1498249778.756305|PLATFORM: Not Enough Information for Analysis.
+1498249778.756492|PLATFORM: State = |0.449999988079|1.45667|2004.5|6|
+1498249789.816268|PLATFORM: Not Enough Information for Analysis.
+1498249789.816457|PLATFORM: State = |0.449999988079|1.59833|2004.33|6|
+1498249800.879158|PLATFORM: Not Enough Information for Analysis.
+1498249800.879358|PLATFORM: State = |0.449999988079|1.65833|2004.33|6|
+1498249811.893138|PLATFORM: Not Enough Information for Analysis.
+1498249811.893350|PLATFORM: State = |0.449999988079|1.73667|2004.67|6|
+1498249823.000133|PLATFORM: Not Enough Information for Analysis.
+1498249823.000316|PLATFORM: State = |0.449999988079|1.82|2004.17|6|
+1498249834.076994|PLATFORM: Not Enough Information for Analysis.
+1498249834.077201|PLATFORM: State = |0.449999988079|1.86667|2004.5|6|
+1498249845.194033|PLATFORM: Not Enough Information for Analysis.
+1498249845.194201|PLATFORM: State = |0.449999988079|1.90333|2004.33|6|
+1498249856.290814|PLATFORM: Not Enough Information for Analysis.
+1498249856.291036|PLATFORM: State = |0.449999988079|1.94833|2004.33|6|
+1498249867.288268|PLATFORM: Not Enough Information for Analysis.
+1498249867.288467|PLATFORM: State = |0.449999988079|1.84|1039.67|6|
+1498249877.979247|PLATFORM: Not Enough Information for Analysis.
+1498249877.979493|PLATFORM: State = |0.449999988079|1.63333|498.167|6|
+1498249888.611822|PLATFORM: Not Enough Information for Analysis.
+1498249888.612083|PLATFORM: State = |0.449999988079|1.43333|499|6|
+1498249899.271890|PLATFORM: Not Enough Information for Analysis.
+1498249899.272195|PLATFORM: State = |0.449999988079|1.27667|498.667|6|
+1498249909.980911|PLATFORM: Not Enough Information for Analysis.
+1498249909.981213|PLATFORM: State = |0.449999988079|1.105|498.833|6|
+1498249920.664231|PLATFORM: Not Enough Information for Analysis.
+1498249920.664532|PLATFORM: State = |0.449999988079|0.996667|498.667|6|
+1498249920.889633|COMPUTATION: End (MatrixSize, Iteration) = |10000|9|
+1498249921.104324|COMPUTATION: Execution = Warning: Permanently added '10.10.10.7' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.5' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.6' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.8' (ECDSA) to the list of known hosts.
+|None
+1498249921.104553|COMPUTATION: Progress = 0.5
+1498249921.104610|COMPUTATION: Start (MatrixSize, Iteration) = |10000|10|
+1498249921.105008|COMPUTATION: ['mpirun', '-n', '12', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '10000', '/home/ubuntu/teste.mtr_10']
+1498249931.679880|PLATFORM: (predicted_time, predicted_cost) = 3733.1756959|22332.9628916
+1498249931.680138|PLATFORM: QoS Sample = {'execution_time': 3733.1756958961487, 'efficiency': 1.5364988579881662, 'cost': 22332.962891578674}
+1498249931.680202|PLATFORM: Contract breached = {'execution_time': 1.7332432547977992, 'cost': 1.8332962891578675}
+1498249931.680241|PLATFORM: Parameter to Reconfigure: cost
+1498249931.680280|PLATFORM: Scale Up = cost|22332.9628916|4000.0
+1498249931.680314|PLATFORM: State = |0.5|1.14833|1877.67|6|
+1498249942.768616|PLATFORM: Not Enough Information for Analysis.
+1498249942.768788|PLATFORM: State = |0.5|1.29667|2005|6|
+1498249953.796688|PLATFORM: Not Enough Information for Analysis.
+1498249953.796892|PLATFORM: State = |0.5|1.41333|2004.5|6|
+1498249964.897739|PLATFORM: Not Enough Information for Analysis.
+1498249964.897934|PLATFORM: State = |0.5|1.545|2005.17|6|
+1498249975.963716|PLATFORM: Not Enough Information for Analysis.
+1498249975.963929|PLATFORM: State = |0.5|1.615|2004.5|6|
+1498249987.045005|PLATFORM: Not Enough Information for Analysis.
+1498249987.045218|PLATFORM: State = |0.5|1.74167|2004.67|6|
+1498249998.107397|PLATFORM: Not Enough Information for Analysis.
+1498249998.107603|PLATFORM: State = |0.5|1.81333|2005|6|
+1498250009.210261|PLATFORM: Not Enough Information for Analysis.
+1498250009.210444|PLATFORM: State = |0.5|1.85667|2005|6|
+1498250020.265433|PLATFORM: Not Enough Information for Analysis.
+1498250020.265617|PLATFORM: State = |0.5|1.90833|2004.83|6|
+1498250031.312408|PLATFORM: Not Enough Information for Analysis.
+1498250031.312606|PLATFORM: State = |0.5|1.95167|2004.67|6|
+1498250045.527977|PLATFORM: Not Enough Information for Analysis.
+1498250045.528218|PLATFORM: State = |0.5|1.98667|1897.67|6|
+1498250056.225212|PLATFORM: Not Enough Information for Analysis.
+1498250056.225499|PLATFORM: State = |0.5|1.725|499.167|6|
+1498250066.934508|PLATFORM: Not Enough Information for Analysis.
+1498250066.934742|PLATFORM: State = |0.5|1.52167|499|6|
+1498250077.608931|PLATFORM: Not Enough Information for Analysis.
+1498250077.609337|PLATFORM: State = |0.5|1.34|499|6|
+1498250089.844265|PLATFORM: Not Enough Information for Analysis.
+1498250089.844567|PLATFORM: State = |0.5|1.155|499|6|
+1498250100.912364|PLATFORM: Not Enough Information for Analysis.
+1498250100.912588|PLATFORM: State = |0.5|1.02667|498.833|6|
+1498250102.475633|COMPUTATION: End (MatrixSize, Iteration) = |10000|10|
+1498250102.695340|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.7' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.5' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.6' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.8' (ECDSA) to the list of known hosts.
+|None
+1498250102.695570|COMPUTATION: Progress = 0.55
+1498250102.695625|COMPUTATION: Start (MatrixSize, Iteration) = |10000|11|
+1498250102.695926|COMPUTATION: ['mpirun', '-n', '12', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '10000', '/home/ubuntu/teste.mtr_11']
+1498250111.956872|PLATFORM: (predicted_time, predicted_cost) = 3721.57227556|22263.1690846
+1498250111.957239|PLATFORM: QoS Sample = {'execution_time': 3721.572275561153, 'efficiency': 1.5389729027027037, 'cost': 22263.169084561225}
+1498250111.957322|PLATFORM: Contract breached = {'execution_time': 1.7266127288920874, 'cost': 1.8263169084561224}
+1498250111.957375|PLATFORM: Parameter to Reconfigure: cost
+1498250111.957420|PLATFORM: Scale Up = cost|22263.1690846|4000.0
+1498250111.957458|PLATFORM: State = |0.550000011921|1.145|1876.83|6|
+1498250123.033907|PLATFORM: Not Enough Information for Analysis.
+1498250123.034091|PLATFORM: State = |0.550000011921|1.29333|2004.33|6|
+1498250134.091185|PLATFORM: Not Enough Information for Analysis.
+1498250134.091399|PLATFORM: State = |0.550000011921|1.415|2004.83|6|
+1498250145.133599|PLATFORM: Not Enough Information for Analysis.
+1498250145.133792|PLATFORM: State = |0.550000011921|1.53333|2004.17|6|
+1498250156.180505|PLATFORM: Not Enough Information for Analysis.
+1498250156.180676|PLATFORM: State = |0.550000011921|1.60667|2004.5|6|
+1498250167.221683|PLATFORM: Not Enough Information for Analysis.
+1498250167.221868|PLATFORM: State = |0.550000011921|1.69|2004.83|6|
+1498250178.316694|PLATFORM: Not Enough Information for Analysis.
+1498250178.316907|PLATFORM: State = |0.550000011921|1.795|2004.5|6|
+1498250189.357752|PLATFORM: Not Enough Information for Analysis.
+1498250189.357932|PLATFORM: State = |0.550000011921|1.845|2004.5|6|
+1498250200.568612|PLATFORM: Not Enough Information for Analysis.
+1498250200.568795|PLATFORM: State = |0.550000011921|1.88667|2004.83|6|
+1498250211.643191|PLATFORM: Not Enough Information for Analysis.
+1498250211.643367|PLATFORM: State = |0.550000011921|1.93333|2004.5|6|
+1498250222.737532|PLATFORM: Not Enough Information for Analysis.
+1498250222.737755|PLATFORM: State = |0.550000011921|1.93167|1879.33|6|
+1498250233.428396|PLATFORM: Not Enough Information for Analysis.
+1498250233.428676|PLATFORM: State = |0.550000011921|1.84|498.167|6|
+1498250244.101279|PLATFORM: Not Enough Information for Analysis.
+1498250244.101577|PLATFORM: State = |0.550000011921|1.62333|498.833|6|
+1498250254.788427|PLATFORM: Not Enough Information for Analysis.
+1498250254.788611|PLATFORM: State = |0.550000011921|1.44333|498.667|6|
+1498250265.467225|PLATFORM: Not Enough Information for Analysis.
+1498250265.467461|PLATFORM: State = |0.550000011921|1.295|498.5|6|
+1498250276.137152|PLATFORM: Not Enough Information for Analysis.
+1498250276.137523|PLATFORM: State = |0.550000011921|1.15|498.5|6|
+1498250283.012746|COMPUTATION: End (MatrixSize, Iteration) = |10000|11|
+1498250283.903984|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.7' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.5' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.6' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.8' (ECDSA) to the list of known hosts.
+|None
+1498250283.904304|COMPUTATION: Progress = 0.6
+1498250283.904413|COMPUTATION: Start (MatrixSize, Iteration) = |10000|12|
+1498250283.904825|COMPUTATION: ['mpirun', '-n', '12', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '10000', '/home/ubuntu/teste.mtr_12']
+1498250287.176757|PLATFORM: (predicted_time, predicted_cost) = 3703.47428308|22154.6114451
+1498250287.177146|PLATFORM: QoS Sample = {'execution_time': 3703.4742830803284, 'efficiency': 1.5427693880597022, 'cost': 22154.611445075447}
+1498250287.177224|PLATFORM: Contract breached = {'execution_time': 1.716271018903045, 'efficiency': 0.04079125373134351, 'cost': 1.8154611445075446}
+1498250287.177269|PLATFORM: Parameter to Reconfigure: cost
+1498250287.177312|PLATFORM: Scale Up = cost|22154.6114451|4000.0
+1498250287.177349|PLATFORM: State = |0.600000023842|1.105|1784.17|6|
+1498250298.257302|PLATFORM: Not Enough Information for Analysis.
+1498250298.257478|PLATFORM: State = |0.600000023842|1.32667|1877|6|
+1498250309.321995|PLATFORM: Not Enough Information for Analysis.
+1498250309.322197|PLATFORM: State = |0.600000023842|1.42833|2004.17|6|
+1498250320.346024|PLATFORM: Not Enough Information for Analysis.
+1498250320.346222|PLATFORM: State = |0.600000023842|1.53333|2004.17|6|
+1498250331.373818|PLATFORM: Not Enough Information for Analysis.
+1498250331.374013|PLATFORM: State = |0.600000023842|1.60667|2004.33|6|
+1498250342.450166|PLATFORM: Not Enough Information for Analysis.
+1498250342.450345|PLATFORM: State = |0.600000023842|1.67833|2003.83|6|
+1498250353.510100|PLATFORM: Not Enough Information for Analysis.
+1498250353.510286|PLATFORM: State = |0.600000023842|1.745|2003.67|6|
+1498250364.576410|PLATFORM: Not Enough Information for Analysis.
+1498250364.576580|PLATFORM: State = |0.600000023842|1.8|2004.33|6|
+1498250375.650248|PLATFORM: Not Enough Information for Analysis.
+1498250375.650444|PLATFORM: State = |0.600000023842|1.85|2004|6|
+1498250386.713142|PLATFORM: Not Enough Information for Analysis.
+1498250386.713332|PLATFORM: State = |0.600000023842|1.90333|2004|6|
+1498250397.749006|PLATFORM: Not Enough Information for Analysis.
+1498250397.749284|PLATFORM: State = |0.600000023842|1.93333|2004|6|
+1498250408.864361|PLATFORM: Not Enough Information for Analysis.
+1498250408.864555|PLATFORM: State = |0.600000023842|1.88|1064.83|6|
+1498250419.551523|PLATFORM: Not Enough Information for Analysis.
+1498250419.551711|PLATFORM: State = |0.600000023842|1.60667|498.667|6|
+1498250430.199296|PLATFORM: Not Enough Information for Analysis.
+1498250430.199486|PLATFORM: State = |0.600000023842|1.42|498.667|6|
+1498250440.960329|PLATFORM: Not Enough Information for Analysis.
+1498250440.960627|PLATFORM: State = |0.600000023842|1.265|498.167|6|
+1498250451.612728|PLATFORM: Not Enough Information for Analysis.
+1498250451.613146|PLATFORM: State = |0.600000023842|1.095|498.667|6|
+1498250460.913175|COMPUTATION: End (MatrixSize, Iteration) = |10000|12|
+1498250461.097486|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.7' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.5' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.6' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.8' (ECDSA) to the list of known hosts.
+|None
+1498250461.097641|COMPUTATION: Progress = 0.65
+1498250461.097686|COMPUTATION: Start (MatrixSize, Iteration) = |10000|13|
+1498250461.099666|COMPUTATION: ['mpirun', '-n', '12', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '10000', '/home/ubuntu/teste.mtr_13']
+1498250462.437641|PLATFORM: (predicted_time, predicted_cost) = 3688.22403681|22064.3980429
+1498250462.437999|PLATFORM: QoS Sample = {'execution_time': 3688.22403681183, 'efficiency': 1.544485285714286, 'cost': 22064.39804291154}
+1498250462.438080|PLATFORM: Contract breached = {'execution_time': 1.7075565924639031, 'efficiency': 0.04128151020408172, 'cost': 1.8064398042911542}
+1498250462.438144|PLATFORM: Parameter to Reconfigure: cost
+1498250462.438198|PLATFORM: Scale Up = cost|22064.3980429|4000.0
+1498250462.438284|PLATFORM: State = |0.649999976158|0.985|66.6667|6|
+1498250473.506253|PLATFORM: Not Enough Information for Analysis.
+1498250473.506432|PLATFORM: State = |0.649999976158|1.185|1877.17|6|
+1498250484.543097|PLATFORM: Not Enough Information for Analysis.
+1498250484.543301|PLATFORM: State = |0.649999976158|1.31167|2004.5|6|
+1498250495.616748|PLATFORM: Not Enough Information for Analysis.
+1498250495.616928|PLATFORM: State = |0.649999976158|1.46333|2004.67|6|
+1498250506.737045|PLATFORM: Not Enough Information for Analysis.
+1498250506.737269|PLATFORM: State = |0.649999976158|1.58667|2004.67|6|
+1498250517.908893|PLATFORM: Not Enough Information for Analysis.
+1498250517.909090|PLATFORM: State = |0.649999976158|1.68|2005|6|
+1498250528.942225|PLATFORM: Not Enough Information for Analysis.
+1498250528.942401|PLATFORM: State = |0.649999976158|1.76167|2005.17|6|
+1498250540.003463|PLATFORM: Not Enough Information for Analysis.
+1498250540.003656|PLATFORM: State = |0.649999976158|1.8|2004.67|6|
+1498250551.072627|PLATFORM: Not Enough Information for Analysis.
+1498250551.072800|PLATFORM: State = |0.649999976158|1.85|2004.67|6|
+1498250562.182372|PLATFORM: Not Enough Information for Analysis.
+1498250562.182597|PLATFORM: State = |0.649999976158|1.905|2004.5|6|
+1498250573.247313|PLATFORM: Not Enough Information for Analysis.
+1498250573.247503|PLATFORM: State = |0.649999976158|1.93333|2004.5|6|
+1498250584.297184|PLATFORM: Not Enough Information for Analysis.
+1498250584.297426|PLATFORM: State = |0.649999976158|1.88833|1039.5|6|
+1498250594.979427|PLATFORM: Not Enough Information for Analysis.
+1498250594.979613|PLATFORM: State = |0.649999976158|1.65333|498.833|6|
+1498250605.700023|PLATFORM: Not Enough Information for Analysis.
+1498250605.700259|PLATFORM: State = |0.649999976158|1.45833|498.667|6|
+1498250616.393513|PLATFORM: Not Enough Information for Analysis.
+1498250616.393747|PLATFORM: State = |0.649999976158|1.26833|498.167|6|
+1498250628.759290|PLATFORM: Not Enough Information for Analysis.
+1498250628.759613|PLATFORM: State = |0.649999976158|1.105|498.167|6|
+1498250639.448067|PLATFORM: Not Enough Information for Analysis.
+1498250639.448293|PLATFORM: State = |0.649999976158|0.985|498.5|6|
+1498250641.285843|COMPUTATION: End (MatrixSize, Iteration) = |10000|13|
+1498250641.564841|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.7' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.5' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.8' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.6' (ECDSA) to the list of known hosts.
+|None
+1498250641.565197|COMPUTATION: Progress = 0.7
+1498250641.565318|COMPUTATION: Start (MatrixSize, Iteration) = |10000|14|
+1498250641.565746|COMPUTATION: ['mpirun', '-n', '12', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '10000', '/home/ubuntu/teste.mtr_14']
+1498250650.490650|PLATFORM: (predicted_time, predicted_cost) = 3693.42655716|22094.3064485
+1498250650.490963|PLATFORM: QoS Sample = {'execution_time': 3693.42655715647, 'efficiency': 1.5431052435897432, 'cost': 22094.30644853727}
+1498250650.491026|PLATFORM: Contract breached = {'execution_time': 1.7105294612322688, 'efficiency': 0.040887212454212375, 'cost': 1.8094306448537272}
+1498250650.491066|PLATFORM: Parameter to Reconfigure: cost
+1498250650.491104|PLATFORM: Scale Up = cost|22094.3064485|4000.0
+1498250650.491159|PLATFORM: State = |0.699999988079|1.09833|1876.67|6|
+1498250661.592603|PLATFORM: Not Enough Information for Analysis.
+1498250661.592815|PLATFORM: State = |0.699999988079|1.235|2004|6|
+1498250672.644436|PLATFORM: Not Enough Information for Analysis.
+1498250672.644617|PLATFORM: State = |0.699999988079|1.38|2004|6|
+1498250683.687908|PLATFORM: Not Enough Information for Analysis.
+1498250683.688076|PLATFORM: State = |0.699999988079|1.51167|2004.17|6|
+1498250694.727304|PLATFORM: Not Enough Information for Analysis.
+1498250694.727480|PLATFORM: State = |0.699999988079|1.61667|2004.17|6|
+1498250705.752478|PLATFORM: Not Enough Information for Analysis.
+1498250705.752651|PLATFORM: State = |0.699999988079|1.685|2004.5|6|
+1498250716.782484|PLATFORM: Not Enough Information for Analysis.
+1498250716.782677|PLATFORM: State = |0.699999988079|1.75|2004.33|6|
+1498250727.880417|PLATFORM: Not Enough Information for Analysis.
+1498250727.880636|PLATFORM: State = |0.699999988079|1.82|2004.5|6|
+1498250738.898509|PLATFORM: Not Enough Information for Analysis.
+1498250738.898679|PLATFORM: State = |0.699999988079|1.85|2004.17|6|
+1498250749.903392|PLATFORM: Not Enough Information for Analysis.
+1498250749.903558|PLATFORM: State = |0.699999988079|1.88667|2004|6|
+1498250761.707098|PLATFORM: Not Enough Information for Analysis.
+1498250761.707389|PLATFORM: State = |0.699999988079|1.92|1604.67|6|
+1498250772.335093|PLATFORM: Not Enough Information for Analysis.
+1498250772.335248|PLATFORM: State = |0.699999988079|1.70667|498.333|6|
+1498250783.009161|PLATFORM: Not Enough Information for Analysis.
+1498250783.009464|PLATFORM: State = |0.699999988079|1.57333|498.667|6|
+1498250795.810928|PLATFORM: Not Enough Information for Analysis.
+1498250795.811204|PLATFORM: State = |0.699999988079|1.33333|498.5|6|
+1498250806.927927|PLATFORM: Not Enough Information for Analysis.
+1498250806.928254|PLATFORM: State = |0.699999988079|1.155|498.5|6|
+1498250817.731933|COMPUTATION: End (MatrixSize, Iteration) = |10000|14|
+1498250818.004950|COMPUTATION: Execution = Warning: Permanently added '10.10.10.7' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.5' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.6' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.8' (ECDSA) to the list of known hosts.
+|None
+1498250818.005203|COMPUTATION: Progress = 0.75
+1498250818.005271|COMPUTATION: Start (MatrixSize, Iteration) = |10000|15|
+1498250818.005584|COMPUTATION: ['mpirun', '-n', '12', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '10000', '/home/ubuntu/teste.mtr_15']
+1498250818.168505|PLATFORM: Not Enough Information for Analysis.
+1498250818.168820|PLATFORM: State = |0.699999988079|1.005|89.5|6|
+1498250829.211656|PLATFORM: (predicted_time, predicted_cost) = 3685.49274953|22046.700633
+1498250829.212027|PLATFORM: QoS Sample = {'execution_time': 3685.492749532064, 'efficiency': 1.5427131879999996, 'cost': 22046.70063304901}
+1498250829.212112|PLATFORM: Contract breached = {'execution_time': 1.7059958568754654, 'efficiency': 0.040775196571428474, 'cost': 1.804670063304901}
+1498250829.212170|PLATFORM: Parameter to Reconfigure: cost
+1498250829.212221|PLATFORM: Scale Up = cost|22046.700633|4000.0
+1498250829.212257|PLATFORM: State = |0.75|1.16333|1876.5|6|
+1498250840.265216|PLATFORM: Not Enough Information for Analysis.
+1498250840.265399|PLATFORM: State = |0.75|1.315|2004.17|6|
+1498250851.343513|PLATFORM: Not Enough Information for Analysis.
+1498250851.343708|PLATFORM: State = |0.75|1.43|2004.33|6|
+1498250862.431391|PLATFORM: Not Enough Information for Analysis.
+1498250862.431576|PLATFORM: State = |0.75|1.57667|2004.33|6|
+1498250873.518551|PLATFORM: Not Enough Information for Analysis.
+1498250873.518721|PLATFORM: State = |0.75|1.655|2004.33|6|
+1498250884.608801|PLATFORM: Not Enough Information for Analysis.
+1498250884.609007|PLATFORM: State = |0.75|1.71333|2004.33|6|
+1498250895.712509|PLATFORM: Not Enough Information for Analysis.
+1498250895.712706|PLATFORM: State = |0.75|1.79167|2004|6|
+1498250906.774470|PLATFORM: Not Enough Information for Analysis.
+1498250906.774645|PLATFORM: State = |0.75|1.82333|2004.33|6|
+1498250917.852489|PLATFORM: Not Enough Information for Analysis.
+1498250917.852672|PLATFORM: State = |0.75|1.87|2004.33|6|
+1498250928.940457|PLATFORM: Not Enough Information for Analysis.
+1498250928.940657|PLATFORM: State = |0.75|1.98333|2004.33|6|
+1498250939.997863|PLATFORM: Not Enough Information for Analysis.
+1498250939.998078|PLATFORM: State = |0.75|2.035|2004.17|6|
+1498250950.628649|PLATFORM: Not Enough Information for Analysis.
+1498250950.628907|PLATFORM: State = |0.75|1.87333|499.167|6|
+1498250961.349027|PLATFORM: Not Enough Information for Analysis.
+1498250961.349389|PLATFORM: State = |0.75|1.62167|499.333|6|
+1498250971.999878|PLATFORM: Not Enough Information for Analysis.
+1498250972.000208|PLATFORM: State = |0.75|1.425|499.5|6|
+1498250982.748245|PLATFORM: Not Enough Information for Analysis.
+1498250982.748559|PLATFORM: State = |0.75|1.24833|499|6|
+1498250993.421767|PLATFORM: Not Enough Information for Analysis.
+1498250993.423159|PLATFORM: State = |0.75|1.07333|499.333|6|
+1498251004.131136|PLATFORM: Not Enough Information for Analysis.
+1498251004.131382|PLATFORM: State = |0.75|0.971667|499.167|6|
+1498251004.983410|COMPUTATION: End (MatrixSize, Iteration) = |10000|15|
+1498251006.397143|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.7' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.5' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.6' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.8' (ECDSA) to the list of known hosts.
+|None
+1498251006.408826|COMPUTATION: Progress = 0.8
+1498251006.408958|COMPUTATION: Start (MatrixSize, Iteration) = |10000|16|
+1498251006.409576|COMPUTATION: ['mpirun', '-n', '12', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '10000', '/home/ubuntu/teste.mtr_16']
+1498251015.222230|PLATFORM: (predicted_time, predicted_cost) = 3687.66254503|22059.4317545
+1498251015.222670|PLATFORM: QoS Sample = {'execution_time': 3687.6625450303773, 'efficiency': 1.5437201647940069, 'cost': 22059.431754500045}
+1498251015.222754|PLATFORM: Contract breached = {'execution_time': 1.7072357400173583, 'efficiency': 0.04106290422685913, 'cost': 1.8059431754500048}
+1498251015.222802|PLATFORM: Parameter to Reconfigure: cost
+1498251015.222847|PLATFORM: Scale Up = cost|22059.4317545|4000.0
+1498251015.222894|PLATFORM: State = |0.800000011921|1.08833|1876.67|6|
+1498251026.297687|PLATFORM: Not Enough Information for Analysis.
+1498251026.297854|PLATFORM: State = |0.800000011921|1.25167|1877|6|
+1498251037.374193|PLATFORM: Not Enough Information for Analysis.
+1498251037.374372|PLATFORM: State = |0.800000011921|1.41333|2004.17|6|
+1498251048.447774|PLATFORM: Not Enough Information for Analysis.
+1498251048.447961|PLATFORM: State = |0.800000011921|1.51|2004.83|6|
+1498251059.495921|PLATFORM: Not Enough Information for Analysis.
+1498251059.496109|PLATFORM: State = |0.800000011921|1.62|2004.5|6|
+1498251070.570082|PLATFORM: Not Enough Information for Analysis.
+1498251070.570258|PLATFORM: State = |0.800000011921|1.69667|2004.67|6|
+1498251081.643729|PLATFORM: Not Enough Information for Analysis.
+1498251081.643966|PLATFORM: State = |0.800000011921|1.74667|2004.17|6|
+1498251092.710278|PLATFORM: Not Enough Information for Analysis.
+1498251092.710460|PLATFORM: State = |0.800000011921|1.82167|2004.33|6|
+1498251103.734262|PLATFORM: Not Enough Information for Analysis.
+1498251103.734433|PLATFORM: State = |0.800000011921|1.86333|2004.83|6|
+1498251114.822210|PLATFORM: Not Enough Information for Analysis.
+1498251114.822382|PLATFORM: State = |0.800000011921|1.88667|2004.33|6|
+1498251125.992292|PLATFORM: Not Enough Information for Analysis.
+1498251125.992534|PLATFORM: State = |0.800000011921|1.89333|1623.5|6|
+1498251136.663505|PLATFORM: Not Enough Information for Analysis.
+1498251136.663766|PLATFORM: State = |0.800000011921|1.665|499.333|6|
+1498251147.326570|PLATFORM: Not Enough Information for Analysis.
+1498251147.326756|PLATFORM: State = |0.800000011921|1.41167|499.333|6|
+1498251157.967665|PLATFORM: Not Enough Information for Analysis.
+1498251157.967908|PLATFORM: State = |0.800000011921|1.22|499.167|6|
+1498251168.651315|PLATFORM: Not Enough Information for Analysis.
+1498251168.651558|PLATFORM: State = |0.800000011921|1.06667|499.333|6|
+1498251177.747683|COMPUTATION: End (MatrixSize, Iteration) = |10000|16|
+1498251177.954509|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.7' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.5' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.6' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.8' (ECDSA) to the list of known hosts.
+|None
+1498251177.954741|COMPUTATION: Progress = 0.85
+1498251177.954799|COMPUTATION: Start (MatrixSize, Iteration) = |10000|17|
+1498251177.955086|COMPUTATION: ['mpirun', '-n', '12', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '10000', '/home/ubuntu/teste.mtr_17']
+1498251179.705742|PLATFORM: (predicted_time, predicted_cost) = 3664.25113021|21919.1835071
+1498251179.706280|PLATFORM: QoS Sample = {'execution_time': 3664.251130209218, 'efficiency': 1.543244553191489, 'cost': 21919.18350711972}
+1498251179.706368|PLATFORM: Contract breached = {'execution_time': 1.6938577886909816, 'efficiency': 0.040927015197568285, 'cost': 1.791918350711972}
+1498251179.706423|PLATFORM: Parameter to Reconfigure: cost
+1498251179.706475|PLATFORM: Scale Up = cost|21919.1835071|4000.0
+1498251179.706521|PLATFORM: State = |0.850000023842|0.955|90.6667|6|
+1498251190.732139|PLATFORM: Not Enough Information for Analysis.
+1498251190.732417|PLATFORM: State = |0.850000023842|1.18167|1876.83|6|
+1498251201.794002|PLATFORM: Not Enough Information for Analysis.
+1498251201.794197|PLATFORM: State = |0.850000023842|1.30833|2004.33|6|
+1498251212.841270|PLATFORM: Not Enough Information for Analysis.
+1498251212.841447|PLATFORM: State = |0.850000023842|1.46|2004|6|
+1498251223.894019|PLATFORM: Not Enough Information for Analysis.
+1498251223.894204|PLATFORM: State = |0.850000023842|1.56|2004.5|6|
+1498251234.966030|PLATFORM: Not Enough Information for Analysis.
+1498251234.966222|PLATFORM: State = |0.850000023842|1.64833|2004.83|6|
+1498251246.021861|PLATFORM: Not Enough Information for Analysis.
+1498251246.022047|PLATFORM: State = |0.850000023842|1.725|2004.17|6|
+1498251257.094277|PLATFORM: Not Enough Information for Analysis.
+1498251257.094457|PLATFORM: State = |0.850000023842|1.76667|2004.33|6|
+1498251268.173807|PLATFORM: Not Enough Information for Analysis.
+1498251268.173990|PLATFORM: State = |0.850000023842|1.82333|2004.33|6|
+1498251279.218540|PLATFORM: Not Enough Information for Analysis.
+1498251279.218744|PLATFORM: State = |0.850000023842|1.89333|2004.67|6|
+1498251290.273883|PLATFORM: Not Enough Information for Analysis.
+1498251290.274081|PLATFORM: State = |0.850000023842|1.92833|2004.17|6|
+1498251300.892015|PLATFORM: Not Enough Information for Analysis.
+1498251300.892173|PLATFORM: State = |0.850000023842|1.85833|498.167|6|
+1498251311.525806|PLATFORM: Not Enough Information for Analysis.
+1498251311.525997|PLATFORM: State = |0.850000023842|1.63667|498.667|6|
+1498251322.186824|PLATFORM: Not Enough Information for Analysis.
+1498251322.187011|PLATFORM: State = |0.850000023842|1.42333|498.5|6|
+1498251332.811403|PLATFORM: Not Enough Information for Analysis.
+1498251332.811597|PLATFORM: State = |0.850000023842|1.20167|498.667|6|
+1498251343.631482|PLATFORM: Not Enough Information for Analysis.
+1498251343.631739|PLATFORM: State = |0.850000023842|1.09833|497.833|6|
+1498251354.335487|PLATFORM: Not Enough Information for Analysis.
+1498251354.335721|PLATFORM: State = |0.850000023842|1.03333|498.333|6|
+1498251356.632658|COMPUTATION: End (MatrixSize, Iteration) = |10000|17|
+1498251356.848903|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.7' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.5' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.6' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.8' (ECDSA) to the list of known hosts.
+|None
+1498251356.849181|COMPUTATION: Progress = 0.9
+1498251356.849242|COMPUTATION: Start (MatrixSize, Iteration) = |10000|18|
+1498251356.849555|COMPUTATION: ['mpirun', '-n', '12', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '10000', '/home/ubuntu/teste.mtr_18']
+1498251365.351331|PLATFORM: (predicted_time, predicted_cost) = 3666.95473504|21935.6363511
+1498251365.351758|PLATFORM: QoS Sample = {'execution_time': 3666.9547350394655, 'efficiency': 1.5414435250836112, 'cost': 21935.636351101355}
+1498251365.351837|PLATFORM: Contract breached = {'execution_time': 1.6954027057368375, 'efficiency': 0.04041243573817465, 'cost': 1.7935636351101356}
+1498251365.351883|PLATFORM: Parameter to Reconfigure: cost
+1498251365.351927|PLATFORM: Scale Up = cost|21935.6363511|4000.0
+1498251365.351965|PLATFORM: State = |0.899999976158|1.15|1877|6|
+1498251376.391324|PLATFORM: Not Enough Information for Analysis.
+1498251376.391491|PLATFORM: State = |0.899999976158|1.30833|1877.17|6|
+1498251387.449792|PLATFORM: Not Enough Information for Analysis.
+1498251387.449976|PLATFORM: State = |0.899999976158|1.46333|2004.83|6|
+1498251398.463899|PLATFORM: Not Enough Information for Analysis.
+1498251398.464073|PLATFORM: State = |0.899999976158|1.56333|2004.83|6|
+1498251409.546395|PLATFORM: Not Enough Information for Analysis.
+1498251409.546579|PLATFORM: State = |0.899999976158|1.63167|2004.83|6|
+1498251420.619593|PLATFORM: Not Enough Information for Analysis.
+1498251420.619775|PLATFORM: State = |0.899999976158|1.71|2004.67|6|
+1498251431.699620|PLATFORM: Not Enough Information for Analysis.
+1498251431.699801|PLATFORM: State = |0.899999976158|1.77333|2004.5|6|
+1498251442.766472|PLATFORM: Not Enough Information for Analysis.
+1498251442.766642|PLATFORM: State = |0.899999976158|1.84167|2004.67|6|
+1498251453.818594|PLATFORM: Not Enough Information for Analysis.
+1498251453.818782|PLATFORM: State = |0.899999976158|1.86667|2004.33|6|
+1498251464.907879|PLATFORM: Not Enough Information for Analysis.
+1498251464.908074|PLATFORM: State = |0.899999976158|1.90333|2004.83|6|
+1498251475.941277|PLATFORM: Not Enough Information for Analysis.
+1498251475.941500|PLATFORM: State = |0.899999976158|1.94667|1867.5|6|
+1498251486.583483|PLATFORM: Not Enough Information for Analysis.
+1498251486.583662|PLATFORM: State = |0.899999976158|1.79667|498.5|6|
+1498251497.216407|PLATFORM: Not Enough Information for Analysis.
+1498251497.216683|PLATFORM: State = |0.899999976158|1.56833|498.833|6|
+1498251507.832060|PLATFORM: Not Enough Information for Analysis.
+1498251507.832290|PLATFORM: State = |0.899999976158|1.38667|498.667|6|
+1498251518.503883|PLATFORM: Not Enough Information for Analysis.
+1498251518.504111|PLATFORM: State = |0.899999976158|1.21667|499.333|6|
+1498251529.152824|PLATFORM: Not Enough Information for Analysis.
+1498251529.153111|PLATFORM: State = |0.899999976158|1.07|499.5|6|
+1498251534.400980|COMPUTATION: End (MatrixSize, Iteration) = |10000|18|
+1498251534.640446|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.7' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.5' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.8' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.6' (ECDSA) to the list of known hosts.
+|None
+1498251534.640662|COMPUTATION: Progress = 0.95
+1498251534.640740|COMPUTATION: Start (MatrixSize, Iteration) = |10000|19|
+1498251534.641112|COMPUTATION: ['mpirun', '-n', '12', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '10000', '/home/ubuntu/teste.mtr_19']
+1498251540.203197|PLATFORM: (predicted_time, predicted_cost) = 3658.01165955|21881.7708459
+1498251540.203633|PLATFORM: QoS Sample = {'execution_time': 3658.0116595470486, 'efficiency': 1.542909885714285, 'cost': 21881.77084591602}
+1498251540.203710|PLATFORM: Contract breached = {'execution_time': 1.690292376884028, 'efficiency': 0.040831395918367146, 'cost': 1.788177084591602}
+1498251540.203756|PLATFORM: Parameter to Reconfigure: cost
+1498251540.203800|PLATFORM: Scale Up = cost|21881.7708459|4000.0
+1498251540.203838|PLATFORM: State = |0.949999988079|1.07833|1825.5|6|
+1498251551.249558|PLATFORM: Not Enough Information for Analysis.
+1498251551.249734|PLATFORM: State = |0.949999988079|1.25667|1877.17|6|
+1498251562.330612|PLATFORM: Not Enough Information for Analysis.
+1498251562.330821|PLATFORM: State = |0.949999988079|1.36833|2003.83|6|
+1498251573.387330|PLATFORM: Not Enough Information for Analysis.
+1498251573.387533|PLATFORM: State = |0.949999988079|1.49833|2004.5|6|
+1498251584.453162|PLATFORM: Not Enough Information for Analysis.
+1498251584.453407|PLATFORM: State = |0.949999988079|1.62|2004.33|6|
+1498251595.494407|PLATFORM: Not Enough Information for Analysis.
+1498251595.494600|PLATFORM: State = |0.949999988079|1.7|2004.33|6|
+1498251606.601891|PLATFORM: Not Enough Information for Analysis.
+1498251606.602077|PLATFORM: State = |0.949999988079|1.765|2004.5|6|
+1498251617.664609|PLATFORM: Not Enough Information for Analysis.
+1498251617.664795|PLATFORM: State = |0.949999988079|1.835|2004.17|6|
+1498251628.720616|PLATFORM: Not Enough Information for Analysis.
+1498251628.720809|PLATFORM: State = |0.949999988079|1.87333|2004|6|
+1498251639.800583|PLATFORM: Not Enough Information for Analysis.
+1498251639.800793|PLATFORM: State = |0.949999988079|1.92167|2004.5|6|
+1498251650.831198|PLATFORM: Not Enough Information for Analysis.
+1498251650.831420|PLATFORM: State = |0.949999988079|1.93333|2004.5|6|
+1498251661.552953|PLATFORM: Not Enough Information for Analysis.
+1498251661.553298|PLATFORM: State = |0.949999988079|1.83833|497.833|6|
+1498251672.180959|PLATFORM: Not Enough Information for Analysis.
+1498251672.181401|PLATFORM: State = |0.949999988079|1.59667|498.833|6|
+1498251682.832130|PLATFORM: Not Enough Information for Analysis.
+1498251682.832381|PLATFORM: State = |0.949999988079|1.34333|498.667|6|
+1498251693.832551|PLATFORM: Not Enough Information for Analysis.
+1498251693.832812|PLATFORM: State = |0.949999988079|1.19167|498.333|6|
+1498251704.493929|PLATFORM: Not Enough Information for Analysis.
+1498251704.494375|PLATFORM: State = |0.949999988079|1.04833|498.333|6|
+1498251710.889447|COMPUTATION: End (MatrixSize, Iteration) = |10000|19|
+1498251711.058789|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.7' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.5' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.6' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.8' (ECDSA) to the list of known hosts.
+|None
+1498251711.059056|COMPUTATION: Progress = 1.0
+1498251711.059305|COMPUTATION: Finish Computation.
+1498251715.214780|PLATFORM: (predicted_time, predicted_cost) = 3650.1223681|21836.4148207
+1498251715.215526|PLATFORM: QoS Sample = {'execution_time': 3650.1223680973053, 'efficiency': 1.5430259939577033, 'cost': 21836.41482067108}
+1498251715.215671|PLATFORM: Contract breached = {'execution_time': 1.6857842103413174, 'efficiency': 0.04086456970220098, 'cost': 1.7836414820671083}
+1498251715.215762|PLATFORM: Parameter to Reconfigure: cost
+1498251715.215847|PLATFORM: Scale Up = cost|21836.4148207|4000.0
+1498251715.215922|PLATFORM: State = |1.0|0.935|61.8333|6|
+1498251715.216016|PLATFORM: Finish Platform.
+1498251715.221885|PLATFORM: Elapsed = 3650.12403798
+1498251715.224011|PLATFORM: Execution Log = [(1498248065.091867, {'compute_state': 0.0, 'resource_state': '0.196667|1848.17', 'nodes': 6}), (1498248076.120399, {'compute_state': 0.0, 'resource_state': '0.518333|1875.83', 'nodes': 6}), (1498248087.152692, {'compute_state': 0.0, 'resource_state': '0.79|2002.83', 'nodes': 6}), (1498248098.212849, {'compute_state': 0.0, 'resource_state': '1.01833|2003.67', 'nodes': 6}), (1498248109.26226, {'compute_state': 0.0, 'resource_state': '1.20667|2003.5', 'nodes': 6}), (1498248120.276418, {'compute_state': 0.0, 'resource_state': '1.38833|2003.5', 'nodes': 6}), (1498248131.383354, {'compute_state': 0.0, 'resource_state': '1.52833|2003.67', 'nodes': 6}), (1498248142.448775, {'compute_state': 0.0, 'resource_state': '1.63167|2004', 'nodes': 6}), (1498248153.512757, {'compute_state': 0.0, 'resource_state': '1.75333|2004', 'nodes': 6}), (1498248164.579216, {'compute_state': 0.0, 'resource_state': '1.80333|2004', 'nodes': 6}), (1498248175.637265, {'compute_state': 0.0, 'resource_state': '1.85167|1868.5', 'nodes': 6}), (1498248186.668388, {'compute_state': 0.0, 'resource_state': '1.85333|1590.67', 'nodes': 6}), (1498248197.292013, {'compute_state': 0.0, 'resource_state': '1.71833|498.167', 'nodes': 6}), (1498248207.923718, {'compute_state': 0.0, 'resource_state': '1.51|498.5', 'nodes': 6}), (1498248234.33126, {'compute_state': 0.0, 'resource_state': '1.18667|498.167', 'nodes': 6}), (1498248245.431092, {'compute_state': 0.05000000074505806, 'resource_state': '1.14167|1654.83', 'nodes': 6}), (1498248256.474402, {'compute_state': 0.05000000074505806, 'resource_state': '1.27167|1876.67', 'nodes': 6}), (1498248267.55528, {'compute_state': 0.05000000074505806, 'resource_state': '1.40833|2003.83', 'nodes': 6}), (1498248278.643201, {'compute_state': 0.05000000074505806, 'resource_state': '1.53|2003.5', 'nodes': 6}), (1498248289.72673, {'compute_state': 0.05000000074505806, 'resource_state': '1.60333|2003.17', 'nodes': 6}), (1498248300.772257, {'compute_state': 0.05000000074505806, 'resource_state': '1.67833|2003.5', 'nodes': 6}), (1498248311.906782, {'compute_state': 0.05000000074505806, 'resource_state': '1.76833|2004', 'nodes': 6}), (1498248323.173954, {'compute_state': 0.05000000074505806, 'resource_state': '1.80667|2003', 'nodes': 6}), (1498248334.208342, {'compute_state': 0.05000000074505806, 'resource_state': '1.865|2003.83', 'nodes': 6}), (1498248345.255163, {'compute_state': 0.05000000074505806, 'resource_state': '1.895|2003.5', 'nodes': 6}), (1498248356.300001, {'compute_state': 0.05000000074505806, 'resource_state': '1.94833|2003.5', 'nodes': 6}), (1498248367.298404, {'compute_state': 0.05000000074505806, 'resource_state': '1.93167|1590.5', 'nodes': 6}), (1498248378.670595, {'compute_state': 0.05000000074505806, 'resource_state': '1.88|1650.33', 'nodes': 6}), (1498248389.351538, {'compute_state': 0.05000000074505806, 'resource_state': '1.62833|498.333', 'nodes': 6}), (1498248399.967312, {'compute_state': 0.05000000074505806, 'resource_state': '1.39833|498', 'nodes': 6}), (1498248412.666673, {'compute_state': 0.05000000074505806, 'resource_state': '1.19833|497.5', 'nodes': 6}), (1498248423.725188, {'compute_state': 0.05000000074505806, 'resource_state': '1.01333|498', 'nodes': 6}), (1498248434.741889, {'compute_state': 0.10000000149011612, 'resource_state': '0.988333|1805', 'nodes': 6}), (1498248445.762912, {'compute_state': 0.10000000149011612, 'resource_state': '1.21167|1877', 'nodes': 6}), (1498248456.806715, {'compute_state': 0.10000000149011612, 'resource_state': '1.4|2004.33', 'nodes': 6}), (1498248467.869959, {'compute_state': 0.10000000149011612, 'resource_state': '1.49333|2004.33', 'nodes': 6}), (1498248478.918849, {'compute_state': 0.10000000149011612, 'resource_state': '1.6|2004.5', 'nodes': 6}), (1498248490.071026, {'compute_state': 0.10000000149011612, 'resource_state': '1.68333|2004.5', 'nodes': 6}), (1498248501.182931, {'compute_state': 0.10000000149011612, 'resource_state': '1.74833|2004.5', 'nodes': 6}), (1498248512.214689, {'compute_state': 0.10000000149011612, 'resource_state': '1.79167|2004.5', 'nodes': 6}), (1498248523.388102, {'compute_state': 0.10000000149011612, 'resource_state': '1.82833|2004.33', 'nodes': 6}), (1498248534.438011, {'compute_state': 0.10000000149011612, 'resource_state': '1.85833|2004.5', 'nodes': 6}), (1498248545.481765, {'compute_state': 0.10000000149011612, 'resource_state': '1.89667|2004.5', 'nodes': 6}), (1498248556.499689, {'compute_state': 0.10000000149011612, 'resource_state': '1.82667|1590.83', 'nodes': 6}), (1498248567.147854, {'compute_state': 0.10000000149011612, 'resource_state': '1.67167|498.667', 'nodes': 6}), (1498248577.851395, {'compute_state': 0.10000000149011612, 'resource_state': '1.47833|498.667', 'nodes': 6}), (1498248592.596766, {'compute_state': 0.10000000149011612, 'resource_state': '1.24|498', 'nodes': 6}), (1498248603.297427, {'compute_state': 0.10000000149011612, 'resource_state': '1.06|498.167', 'nodes': 6}), (1498248614.301927, {'compute_state': 0.10000000149011612, 'resource_state': '0.951667|498.167', 'nodes': 6}), (1498248625.315616, {'compute_state': 0.15000000596046448, 'resource_state': '1.11|1876.33', 'nodes': 6}), (1498248636.38332, {'compute_state': 0.15000000596046448, 'resource_state': '1.265|2003.67', 'nodes': 6}), (1498248647.482591, {'compute_state': 0.15000000596046448, 'resource_state': '1.40167|2003.67', 'nodes': 6}), (1498248658.593973, {'compute_state': 0.15000000596046448, 'resource_state': '1.50167|2004.33', 'nodes': 6}), (1498248669.624352, {'compute_state': 0.15000000596046448, 'resource_state': '1.585|2003.83', 'nodes': 6}), (1498248680.670942, {'compute_state': 0.15000000596046448, 'resource_state': '1.66167|2004.33', 'nodes': 6}), (1498248691.726593, {'compute_state': 0.15000000596046448, 'resource_state': '1.73|2003.83', 'nodes': 6}), (1498248702.785713, {'compute_state': 0.15000000596046448, 'resource_state': '1.785|2004.17', 'nodes': 6}), (1498248713.851142, {'compute_state': 0.15000000596046448, 'resource_state': '1.85333|2004', 'nodes': 6}), (1498248725.005868, {'compute_state': 0.15000000596046448, 'resource_state': '1.875|2003.83', 'nodes': 6}), (1498248736.030681, {'compute_state': 0.15000000596046448, 'resource_state': '1.885|1591.17', 'nodes': 6}), (1498248746.679217, {'compute_state': 0.15000000596046448, 'resource_state': '1.84333|498.333', 'nodes': 6}), (1498248757.348457, {'compute_state': 0.15000000596046448, 'resource_state': '1.61333|498.167', 'nodes': 6}), (1498248768.340334, {'compute_state': 0.15000000596046448, 'resource_state': '1.4|497.833', 'nodes': 6}), (1498248779.018198, {'compute_state': 0.15000000596046448, 'resource_state': '1.21833|497.833', 'nodes': 6}), (1498248790.067597, {'compute_state': 0.15000000596046448, 'resource_state': '1.08167|497.833', 'nodes': 6}), (1498248801.198946, {'compute_state': 0.20000000298023224, 'resource_state': '1.06667|1824.17', 'nodes': 6}), (1498248812.246639, {'compute_state': 0.20000000298023224, 'resource_state': '1.25333|1876.17', 'nodes': 6}), (1498248823.365563, {'compute_state': 0.20000000298023224, 'resource_state': '1.39167|2003.33', 'nodes': 6}), (1498248834.426866, {'compute_state': 0.20000000298023224, 'resource_state': '1.50833|2004.67', 'nodes': 6}), (1498248845.467739, {'compute_state': 0.20000000298023224, 'resource_state': '1.63833|2004.5', 'nodes': 6}), (1498248856.565836, {'compute_state': 0.20000000298023224, 'resource_state': '1.72333|2004.17', 'nodes': 6}), (1498248867.693082, {'compute_state': 0.20000000298023224, 'resource_state': '1.785|2004.83', 'nodes': 6}), (1498248878.729617, {'compute_state': 0.20000000298023224, 'resource_state': '1.82|2004.5', 'nodes': 6}), (1498248889.769303, {'compute_state': 0.20000000298023224, 'resource_state': '1.86333|2004.33', 'nodes': 6}), (1498248900.859151, {'compute_state': 0.20000000298023224, 'resource_state': '1.90333|2004.33', 'nodes': 6}), (1498248911.918967, {'compute_state': 0.20000000298023224, 'resource_state': '1.92833|2004.5', 'nodes': 6}), (1498248922.970184, {'compute_state': 0.20000000298023224, 'resource_state': '1.94333|1871.5', 'nodes': 6}), (1498248933.698129, {'compute_state': 0.20000000298023224, 'resource_state': '1.80833|498.333', 'nodes': 6}), (1498248944.319753, {'compute_state': 0.20000000298023224, 'resource_state': '1.56|498.667', 'nodes': 6}), (1498248955.065311, {'compute_state': 0.20000000298023224, 'resource_state': '1.40667|498.333', 'nodes': 6}), (1498248965.784223, {'compute_state': 0.20000000298023224, 'resource_state': '1.22667|498.5', 'nodes': 6}), (1498248977.228434, {'compute_state': 0.20000000298023224, 'resource_state': '1.11333|498.167', 'nodes': 6}), (1498248988.370985, {'compute_state': 0.25, 'resource_state': '1.20333|1846.5', 'nodes': 6}), (1498248999.484347, {'compute_state': 0.25, 'resource_state': '1.35167|1877.17', 'nodes': 6}), (1498249010.61564, {'compute_state': 0.25, 'resource_state': '1.5|2004.5', 'nodes': 6}), (1498249021.71159, {'compute_state': 0.25, 'resource_state': '1.61833|2004.5', 'nodes': 6}), (1498249032.77585, {'compute_state': 0.25, 'resource_state': '1.695|2004', 'nodes': 6}), (1498249043.899547, {'compute_state': 0.25, 'resource_state': '1.74667|2004.33', 'nodes': 6}), (1498249055.019544, {'compute_state': 0.25, 'resource_state': '1.79|2004.33', 'nodes': 6}), (1498249066.099525, {'compute_state': 0.25, 'resource_state': '1.85667|2004.33', 'nodes': 6}), (1498249077.154008, {'compute_state': 0.25, 'resource_state': '1.905|2004.17', 'nodes': 6}), (1498249088.1978, {'compute_state': 0.25, 'resource_state': '1.92167|2004.17', 'nodes': 6}), (1498249099.23701, {'compute_state': 0.25, 'resource_state': '1.96333|2004.17', 'nodes': 6}), (1498249110.296065, {'compute_state': 0.25, 'resource_state': '1.93167|1591.33', 'nodes': 6}), (1498249120.94625, {'compute_state': 0.25, 'resource_state': '1.79167|498.5', 'nodes': 6}), (1498249131.592771, {'compute_state': 0.25, 'resource_state': '1.585|499.167', 'nodes': 6}), (1498249142.240526, {'compute_state': 0.25, 'resource_state': '1.39333|499', 'nodes': 6}), (1498249153.107488, {'compute_state': 0.25, 'resource_state': '1.22333|498.667', 'nodes': 6}), (1498249163.870492, {'compute_state': 0.25, 'resource_state': '1.075|498.833', 'nodes': 6}), (1498249174.537261, {'compute_state': 0.30000001192092896, 'resource_state': '0.961667|63.8333', 'nodes': 6}), (1498249185.579255, {'compute_state': 0.30000001192092896, 'resource_state': '1.12167|1877', 'nodes': 6}), (1498249196.63587, {'compute_state': 0.30000001192092896, 'resource_state': '1.29333|2003.83', 'nodes': 6}), (1498249207.725026, {'compute_state': 0.30000001192092896, 'resource_state': '1.41333|2004.67', 'nodes': 6}), (1498249218.763594, {'compute_state': 0.30000001192092896, 'resource_state': '1.53833|2004.33', 'nodes': 6}), (1498249229.847705, {'compute_state': 0.30000001192092896, 'resource_state': '1.63|2004.5', 'nodes': 6}), (1498249240.872652, {'compute_state': 0.30000001192092896, 'resource_state': '1.72667|2004.17', 'nodes': 6}), (1498249251.961787, {'compute_state': 0.30000001192092896, 'resource_state': '1.85|2004.17', 'nodes': 6}), (1498249263.028612, {'compute_state': 0.30000001192092896, 'resource_state': '1.89167|2004.5', 'nodes': 6}), (1498249274.103986, {'compute_state': 0.30000001192092896, 'resource_state': '1.91|2004.17', 'nodes': 6}), (1498249285.152345, {'compute_state': 0.30000001192092896, 'resource_state': '1.92667|2004', 'nodes': 6}), (1498249296.257382, {'compute_state': 0.30000001192092896, 'resource_state': '1.96833|1885', 'nodes': 6}), (1498249306.939966, {'compute_state': 0.30000001192092896, 'resource_state': '1.85667|498.5', 'nodes': 6}), (1498249317.604105, {'compute_state': 0.30000001192092896, 'resource_state': '1.63833|499.333', 'nodes': 6}), (1498249328.311699, {'compute_state': 0.30000001192092896, 'resource_state': '1.45|499.5', 'nodes': 6}), (1498249339.040103, {'compute_state': 0.30000001192092896, 'resource_state': '1.28833|498.833', 'nodes': 6}), (1498249349.707381, {'compute_state': 0.30000001192092896, 'resource_state': '1.14167|498.833', 'nodes': 6}), (1498249360.407657, {'compute_state': 0.30000001192092896, 'resource_state': '1.07|499', 'nodes': 6}), (1498249371.560982, {'compute_state': 0.3499999940395355, 'resource_state': '1.10667|1688.83', 'nodes': 6}), (1498249382.636282, {'compute_state': 0.3499999940395355, 'resource_state': '1.27833|1876.17', 'nodes': 6}), (1498249393.702461, {'compute_state': 0.3499999940395355, 'resource_state': '1.40333|2004', 'nodes': 6}), (1498249404.788103, {'compute_state': 0.3499999940395355, 'resource_state': '1.52667|2004', 'nodes': 6}), (1498249415.859971, {'compute_state': 0.3499999940395355, 'resource_state': '1.655|2004.17', 'nodes': 6}), (1498249426.91623, {'compute_state': 0.3499999940395355, 'resource_state': '1.74167|2004.17', 'nodes': 6}), (1498249437.961239, {'compute_state': 0.3499999940395355, 'resource_state': '1.8|2004.33', 'nodes': 6}), (1498249449.036497, {'compute_state': 0.3499999940395355, 'resource_state': '1.84833|2004.17', 'nodes': 6}), (1498249460.100149, {'compute_state': 0.3499999940395355, 'resource_state': '1.9|2003.83', 'nodes': 6}), (1498249471.201839, {'compute_state': 0.3499999940395355, 'resource_state': '1.92167|2004.17', 'nodes': 6}), (1498249482.254775, {'compute_state': 0.3499999940395355, 'resource_state': '1.93333|2004', 'nodes': 6}), (1498249493.132254, {'compute_state': 0.3499999940395355, 'resource_state': '1.90167|791.5', 'nodes': 6}), (1498249503.820724, {'compute_state': 0.3499999940395355, 'resource_state': '1.63667|499.333', 'nodes': 6}), (1498249514.468083, {'compute_state': 0.3499999940395355, 'resource_state': '1.43167|499.167', 'nodes': 6}), (1498249525.628836, {'compute_state': 0.3499999940395355, 'resource_state': '1.25|498.667', 'nodes': 6}), (1498249537.563587, {'compute_state': 0.3499999940395355, 'resource_state': '1.12|498.667', 'nodes': 6}), (1498249548.608821, {'compute_state': 0.4000000059604645, 'resource_state': '1.14333|1832.5', 'nodes': 6}), (1498249559.663993, {'compute_state': 0.4000000059604645, 'resource_state': '1.31|1877', 'nodes': 6}), (1498249570.788658, {'compute_state': 0.4000000059604645, 'resource_state': '1.415|2004.33', 'nodes': 6}), (1498249581.856616, {'compute_state': 0.4000000059604645, 'resource_state': '1.53833|2004.17', 'nodes': 6}), (1498249592.924914, {'compute_state': 0.4000000059604645, 'resource_state': '1.64167|2004.5', 'nodes': 6}), (1498249604.026868, {'compute_state': 0.4000000059604645, 'resource_state': '1.71833|2004', 'nodes': 6}), (1498249615.120033, {'compute_state': 0.4000000059604645, 'resource_state': '1.77833|2004.5', 'nodes': 6}), (1498249626.166488, {'compute_state': 0.4000000059604645, 'resource_state': '1.84667|2003.83', 'nodes': 6}), (1498249637.300441, {'compute_state': 0.4000000059604645, 'resource_state': '1.89667|2004.33', 'nodes': 6}), (1498249648.396058, {'compute_state': 0.4000000059604645, 'resource_state': '1.93167|2004.17', 'nodes': 6}), (1498249659.48826, {'compute_state': 0.4000000059604645, 'resource_state': '1.97|2004.5', 'nodes': 6}), (1498249670.520465, {'compute_state': 0.4000000059604645, 'resource_state': '1.88167|1039.83', 'nodes': 6}), (1498249681.15083, {'compute_state': 0.4000000059604645, 'resource_state': '1.67667|498', 'nodes': 6}), (1498249691.790976, {'compute_state': 0.4000000059604645, 'resource_state': '1.44667|498.333', 'nodes': 6}), (1498249702.423317, {'compute_state': 0.4000000059604645, 'resource_state': '1.29167|498.5', 'nodes': 6}), (1498249713.060408, {'compute_state': 0.4000000059604645, 'resource_state': '1.15167|498.667', 'nodes': 6}), (1498249723.758384, {'compute_state': 0.4000000059604645, 'resource_state': '1.03833|498.667', 'nodes': 6}), (1498249734.493418, {'compute_state': 0.4000000059604645, 'resource_state': '0.923333|497.833', 'nodes': 6}), (1498249745.544066, {'compute_state': 0.44999998807907104, 'resource_state': '1.00167|1840.83', 'nodes': 6}), (1498249756.585349, {'compute_state': 0.44999998807907104, 'resource_state': '1.21167|1877.33', 'nodes': 6}), (1498249767.664597, {'compute_state': 0.44999998807907104, 'resource_state': '1.35|2004', 'nodes': 6}), (1498249778.756475, {'compute_state': 0.44999998807907104, 'resource_state': '1.45667|2004.5', 'nodes': 6}), (1498249789.816439, {'compute_state': 0.44999998807907104, 'resource_state': '1.59833|2004.33', 'nodes': 6}), (1498249800.879341, {'compute_state': 0.44999998807907104, 'resource_state': '1.65833|2004.33', 'nodes': 6}), (1498249811.893331, {'compute_state': 0.44999998807907104, 'resource_state': '1.73667|2004.67', 'nodes': 6}), (1498249823.000299, {'compute_state': 0.44999998807907104, 'resource_state': '1.82|2004.17', 'nodes': 6}), (1498249834.077184, {'compute_state': 0.44999998807907104, 'resource_state': '1.86667|2004.5', 'nodes': 6}), (1498249845.194184, {'compute_state': 0.44999998807907104, 'resource_state': '1.90333|2004.33', 'nodes': 6}), (1498249856.291016, {'compute_state': 0.44999998807907104, 'resource_state': '1.94833|2004.33', 'nodes': 6}), (1498249867.288447, {'compute_state': 0.44999998807907104, 'resource_state': '1.84|1039.67', 'nodes': 6}), (1498249877.979467, {'compute_state': 0.44999998807907104, 'resource_state': '1.63333|498.167', 'nodes': 6}), (1498249888.612057, {'compute_state': 0.44999998807907104, 'resource_state': '1.43333|499', 'nodes': 6}), (1498249899.272148, {'compute_state': 0.44999998807907104, 'resource_state': '1.27667|498.667', 'nodes': 6}), (1498249909.981188, {'compute_state': 0.44999998807907104, 'resource_state': '1.105|498.833', 'nodes': 6}), (1498249920.664501, {'compute_state': 0.44999998807907104, 'resource_state': '0.996667|498.667', 'nodes': 6}), (1498249931.680306, {'compute_state': 0.5, 'resource_state': '1.14833|1877.67', 'nodes': 6}), (1498249942.768771, {'compute_state': 0.5, 'resource_state': '1.29667|2005', 'nodes': 6}), (1498249953.796875, {'compute_state': 0.5, 'resource_state': '1.41333|2004.5', 'nodes': 6}), (1498249964.897915, {'compute_state': 0.5, 'resource_state': '1.545|2005.17', 'nodes': 6}), (1498249975.963911, {'compute_state': 0.5, 'resource_state': '1.615|2004.5', 'nodes': 6}), (1498249987.0452, {'compute_state': 0.5, 'resource_state': '1.74167|2004.67', 'nodes': 6}), (1498249998.107574, {'compute_state': 0.5, 'resource_state': '1.81333|2005', 'nodes': 6}), (1498250009.210425, {'compute_state': 0.5, 'resource_state': '1.85667|2005', 'nodes': 6}), (1498250020.265599, {'compute_state': 0.5, 'resource_state': '1.90833|2004.83', 'nodes': 6}), (1498250031.312588, {'compute_state': 0.5, 'resource_state': '1.95167|2004.67', 'nodes': 6}), (1498250045.5282, {'compute_state': 0.5, 'resource_state': '1.98667|1897.67', 'nodes': 6}), (1498250056.22547, {'compute_state': 0.5, 'resource_state': '1.725|499.167', 'nodes': 6}), (1498250066.934716, {'compute_state': 0.5, 'resource_state': '1.52167|499', 'nodes': 6}), (1498250077.609301, {'compute_state': 0.5, 'resource_state': '1.34|499', 'nodes': 6}), (1498250089.844537, {'compute_state': 0.5, 'resource_state': '1.155|499', 'nodes': 6}), (1498250100.912568, {'compute_state': 0.5, 'resource_state': '1.02667|498.833', 'nodes': 6}), (1498250111.957449, {'compute_state': 0.550000011920929, 'resource_state': '1.145|1876.83', 'nodes': 6}), (1498250123.034073, {'compute_state': 0.550000011920929, 'resource_state': '1.29333|2004.33', 'nodes': 6}), (1498250134.09137, {'compute_state': 0.550000011920929, 'resource_state': '1.415|2004.83', 'nodes': 6}), (1498250145.133774, {'compute_state': 0.550000011920929, 'resource_state': '1.53333|2004.17', 'nodes': 6}), (1498250156.180659, {'compute_state': 0.550000011920929, 'resource_state': '1.60667|2004.5', 'nodes': 6}), (1498250167.22184, {'compute_state': 0.550000011920929, 'resource_state': '1.69|2004.83', 'nodes': 6}), (1498250178.316887, {'compute_state': 0.550000011920929, 'resource_state': '1.795|2004.5', 'nodes': 6}), (1498250189.357915, {'compute_state': 0.550000011920929, 'resource_state': '1.845|2004.5', 'nodes': 6}), (1498250200.568777, {'compute_state': 0.550000011920929, 'resource_state': '1.88667|2004.83', 'nodes': 6}), (1498250211.643351, {'compute_state': 0.550000011920929, 'resource_state': '1.93333|2004.5', 'nodes': 6}), (1498250222.737738, {'compute_state': 0.550000011920929, 'resource_state': '1.93167|1879.33', 'nodes': 6}), (1498250233.428644, {'compute_state': 0.550000011920929, 'resource_state': '1.84|498.167', 'nodes': 6}), (1498250244.101542, {'compute_state': 0.550000011920929, 'resource_state': '1.62333|498.833', 'nodes': 6}), (1498250254.78859, {'compute_state': 0.550000011920929, 'resource_state': '1.44333|498.667', 'nodes': 6}), (1498250265.467439, {'compute_state': 0.550000011920929, 'resource_state': '1.295|498.5', 'nodes': 6}), (1498250276.137483, {'compute_state': 0.550000011920929, 'resource_state': '1.15|498.5', 'nodes': 6}), (1498250287.177341, {'compute_state': 0.6000000238418579, 'resource_state': '1.105|1784.17', 'nodes': 6}), (1498250298.257461, {'compute_state': 0.6000000238418579, 'resource_state': '1.32667|1877', 'nodes': 6}), (1498250309.322178, {'compute_state': 0.6000000238418579, 'resource_state': '1.42833|2004.17', 'nodes': 6}), (1498250320.346203, {'compute_state': 0.6000000238418579, 'resource_state': '1.53333|2004.17', 'nodes': 6}), (1498250331.373995, {'compute_state': 0.6000000238418579, 'resource_state': '1.60667|2004.33', 'nodes': 6}), (1498250342.450327, {'compute_state': 0.6000000238418579, 'resource_state': '1.67833|2003.83', 'nodes': 6}), (1498250353.510268, {'compute_state': 0.6000000238418579, 'resource_state': '1.745|2003.67', 'nodes': 6}), (1498250364.576561, {'compute_state': 0.6000000238418579, 'resource_state': '1.8|2004.33', 'nodes': 6}), (1498250375.650425, {'compute_state': 0.6000000238418579, 'resource_state': '1.85|2004', 'nodes': 6}), (1498250386.713315, {'compute_state': 0.6000000238418579, 'resource_state': '1.90333|2004', 'nodes': 6}), (1498250397.749266, {'compute_state': 0.6000000238418579, 'resource_state': '1.93333|2004', 'nodes': 6}), (1498250408.864538, {'compute_state': 0.6000000238418579, 'resource_state': '1.88|1064.83', 'nodes': 6}), (1498250419.551691, {'compute_state': 0.6000000238418579, 'resource_state': '1.60667|498.667', 'nodes': 6}), (1498250430.199466, {'compute_state': 0.6000000238418579, 'resource_state': '1.42|498.667', 'nodes': 6}), (1498250440.960592, {'compute_state': 0.6000000238418579, 'resource_state': '1.265|498.167', 'nodes': 6}), (1498250451.61304, {'compute_state': 0.6000000238418579, 'resource_state': '1.095|498.667', 'nodes': 6}), (1498250462.438233, {'compute_state': 0.6499999761581421, 'resource_state': '0.985|66.6667', 'nodes': 6}), (1498250473.506404, {'compute_state': 0.6499999761581421, 'resource_state': '1.185|1877.17', 'nodes': 6}), (1498250484.543282, {'compute_state': 0.6499999761581421, 'resource_state': '1.31167|2004.5', 'nodes': 6}), (1498250495.616909, {'compute_state': 0.6499999761581421, 'resource_state': '1.46333|2004.67', 'nodes': 6}), (1498250506.737251, {'compute_state': 0.6499999761581421, 'resource_state': '1.58667|2004.67', 'nodes': 6}), (1498250517.909071, {'compute_state': 0.6499999761581421, 'resource_state': '1.68|2005', 'nodes': 6}), (1498250528.942383, {'compute_state': 0.6499999761581421, 'resource_state': '1.76167|2005.17', 'nodes': 6}), (1498250540.003639, {'compute_state': 0.6499999761581421, 'resource_state': '1.8|2004.67', 'nodes': 6}), (1498250551.072783, {'compute_state': 0.6499999761581421, 'resource_state': '1.85|2004.67', 'nodes': 6}), (1498250562.182578, {'compute_state': 0.6499999761581421, 'resource_state': '1.905|2004.5', 'nodes': 6}), (1498250573.247486, {'compute_state': 0.6499999761581421, 'resource_state': '1.93333|2004.5', 'nodes': 6}), (1498250584.297406, {'compute_state': 0.6499999761581421, 'resource_state': '1.88833|1039.5', 'nodes': 6}), (1498250594.979595, {'compute_state': 0.6499999761581421, 'resource_state': '1.65333|498.833', 'nodes': 6}), (1498250605.700239, {'compute_state': 0.6499999761581421, 'resource_state': '1.45833|498.667', 'nodes': 6}), (1498250616.393729, {'compute_state': 0.6499999761581421, 'resource_state': '1.26833|498.167', 'nodes': 6}), (1498250628.75958, {'compute_state': 0.6499999761581421, 'resource_state': '1.105|498.167', 'nodes': 6}), (1498250639.448264, {'compute_state': 0.6499999761581421, 'resource_state': '0.985|498.5', 'nodes': 6}), (1498250650.49115, {'compute_state': 0.699999988079071, 'resource_state': '1.09833|1876.67', 'nodes': 6}), (1498250661.592796, {'compute_state': 0.699999988079071, 'resource_state': '1.235|2004', 'nodes': 6}), (1498250672.644599, {'compute_state': 0.699999988079071, 'resource_state': '1.38|2004', 'nodes': 6}), (1498250683.688058, {'compute_state': 0.699999988079071, 'resource_state': '1.51167|2004.17', 'nodes': 6}), (1498250694.727462, {'compute_state': 0.699999988079071, 'resource_state': '1.61667|2004.17', 'nodes': 6}), (1498250705.752633, {'compute_state': 0.699999988079071, 'resource_state': '1.685|2004.5', 'nodes': 6}), (1498250716.782659, {'compute_state': 0.699999988079071, 'resource_state': '1.75|2004.33', 'nodes': 6}), (1498250727.880617, {'compute_state': 0.699999988079071, 'resource_state': '1.82|2004.5', 'nodes': 6}), (1498250738.898663, {'compute_state': 0.699999988079071, 'resource_state': '1.85|2004.17', 'nodes': 6}), (1498250749.903542, {'compute_state': 0.699999988079071, 'resource_state': '1.88667|2004', 'nodes': 6}), (1498250761.707358, {'compute_state': 0.699999988079071, 'resource_state': '1.92|1604.67', 'nodes': 6}), (1498250772.335232, {'compute_state': 0.699999988079071, 'resource_state': '1.70667|498.333', 'nodes': 6}), (1498250783.009429, {'compute_state': 0.699999988079071, 'resource_state': '1.57333|498.667', 'nodes': 6}), (1498250795.811173, {'compute_state': 0.699999988079071, 'resource_state': '1.33333|498.5', 'nodes': 6}), (1498250806.928218, {'compute_state': 0.699999988079071, 'resource_state': '1.155|498.5', 'nodes': 6}), (1498250818.168785, {'compute_state': 0.699999988079071, 'resource_state': '1.005|89.5', 'nodes': 6}), (1498250829.212249, {'compute_state': 0.75, 'resource_state': '1.16333|1876.5', 'nodes': 6}), (1498250840.265382, {'compute_state': 0.75, 'resource_state': '1.315|2004.17', 'nodes': 6}), (1498250851.343689, {'compute_state': 0.75, 'resource_state': '1.43|2004.33', 'nodes': 6}), (1498250862.431558, {'compute_state': 0.75, 'resource_state': '1.57667|2004.33', 'nodes': 6}), (1498250873.518703, {'compute_state': 0.75, 'resource_state': '1.655|2004.33', 'nodes': 6}), (1498250884.608979, {'compute_state': 0.75, 'resource_state': '1.71333|2004.33', 'nodes': 6}), (1498250895.712688, {'compute_state': 0.75, 'resource_state': '1.79167|2004', 'nodes': 6}), (1498250906.774627, {'compute_state': 0.75, 'resource_state': '1.82333|2004.33', 'nodes': 6}), (1498250917.852654, {'compute_state': 0.75, 'resource_state': '1.87|2004.33', 'nodes': 6}), (1498250928.940639, {'compute_state': 0.75, 'resource_state': '1.98333|2004.33', 'nodes': 6}), (1498250939.998059, {'compute_state': 0.75, 'resource_state': '2.035|2004.17', 'nodes': 6}), (1498250950.62888, {'compute_state': 0.75, 'resource_state': '1.87333|499.167', 'nodes': 6}), (1498250961.349354, {'compute_state': 0.75, 'resource_state': '1.62167|499.333', 'nodes': 6}), (1498250972.000172, {'compute_state': 0.75, 'resource_state': '1.425|499.5', 'nodes': 6}), (1498250982.748523, {'compute_state': 0.75, 'resource_state': '1.24833|499', 'nodes': 6}), (1498250993.423135, {'compute_state': 0.75, 'resource_state': '1.07333|499.333', 'nodes': 6}), (1498251004.131361, {'compute_state': 0.75, 'resource_state': '0.971667|499.167', 'nodes': 6}), (1498251015.222877, {'compute_state': 0.800000011920929, 'resource_state': '1.08833|1876.67', 'nodes': 6}), (1498251026.297837, {'compute_state': 0.800000011920929, 'resource_state': '1.25167|1877', 'nodes': 6}), (1498251037.374354, {'compute_state': 0.800000011920929, 'resource_state': '1.41333|2004.17', 'nodes': 6}), (1498251048.447934, {'compute_state': 0.800000011920929, 'resource_state': '1.51|2004.83', 'nodes': 6}), (1498251059.496092, {'compute_state': 0.800000011920929, 'resource_state': '1.62|2004.5', 'nodes': 6}), (1498251070.570239, {'compute_state': 0.800000011920929, 'resource_state': '1.69667|2004.67', 'nodes': 6}), (1498251081.643946, {'compute_state': 0.800000011920929, 'resource_state': '1.74667|2004.17', 'nodes': 6}), (1498251092.710441, {'compute_state': 0.800000011920929, 'resource_state': '1.82167|2004.33', 'nodes': 6}), (1498251103.734416, {'compute_state': 0.800000011920929, 'resource_state': '1.86333|2004.83', 'nodes': 6}), (1498251114.822364, {'compute_state': 0.800000011920929, 'resource_state': '1.88667|2004.33', 'nodes': 6}), (1498251125.992515, {'compute_state': 0.800000011920929, 'resource_state': '1.89333|1623.5', 'nodes': 6}), (1498251136.663737, {'compute_state': 0.800000011920929, 'resource_state': '1.665|499.333', 'nodes': 6}), (1498251147.326736, {'compute_state': 0.800000011920929, 'resource_state': '1.41167|499.333', 'nodes': 6}), (1498251157.967887, {'compute_state': 0.800000011920929, 'resource_state': '1.22|499.167', 'nodes': 6}), (1498251168.651536, {'compute_state': 0.800000011920929, 'resource_state': '1.06667|499.333', 'nodes': 6}), (1498251179.70651, {'compute_state': 0.8500000238418579, 'resource_state': '0.955|90.6667', 'nodes': 6}), (1498251190.732389, {'compute_state': 0.8500000238418579, 'resource_state': '1.18167|1876.83', 'nodes': 6}), (1498251201.794178, {'compute_state': 0.8500000238418579, 'resource_state': '1.30833|2004.33', 'nodes': 6}), (1498251212.84143, {'compute_state': 0.8500000238418579, 'resource_state': '1.46|2004', 'nodes': 6}), (1498251223.894186, {'compute_state': 0.8500000238418579, 'resource_state': '1.56|2004.5', 'nodes': 6}), (1498251234.966204, {'compute_state': 0.8500000238418579, 'resource_state': '1.64833|2004.83', 'nodes': 6}), (1498251246.022029, {'compute_state': 0.8500000238418579, 'resource_state': '1.725|2004.17', 'nodes': 6}), (1498251257.094439, {'compute_state': 0.8500000238418579, 'resource_state': '1.76667|2004.33', 'nodes': 6}), (1498251268.173971, {'compute_state': 0.8500000238418579, 'resource_state': '1.82333|2004.33', 'nodes': 6}), (1498251279.218726, {'compute_state': 0.8500000238418579, 'resource_state': '1.89333|2004.67', 'nodes': 6}), (1498251290.274063, {'compute_state': 0.8500000238418579, 'resource_state': '1.92833|2004.17', 'nodes': 6}), (1498251300.892155, {'compute_state': 0.8500000238418579, 'resource_state': '1.85833|498.167', 'nodes': 6}), (1498251311.525969, {'compute_state': 0.8500000238418579, 'resource_state': '1.63667|498.667', 'nodes': 6}), (1498251322.186991, {'compute_state': 0.8500000238418579, 'resource_state': '1.42333|498.5', 'nodes': 6}), (1498251332.811575, {'compute_state': 0.8500000238418579, 'resource_state': '1.20167|498.667', 'nodes': 6}), (1498251343.631716, {'compute_state': 0.8500000238418579, 'resource_state': '1.09833|497.833', 'nodes': 6}), (1498251354.335698, {'compute_state': 0.8500000238418579, 'resource_state': '1.03333|498.333', 'nodes': 6}), (1498251365.351955, {'compute_state': 0.8999999761581421, 'resource_state': '1.15|1877', 'nodes': 6}), (1498251376.391474, {'compute_state': 0.8999999761581421, 'resource_state': '1.30833|1877.17', 'nodes': 6}), (1498251387.449958, {'compute_state': 0.8999999761581421, 'resource_state': '1.46333|2004.83', 'nodes': 6}), (1498251398.464055, {'compute_state': 0.8999999761581421, 'resource_state': '1.56333|2004.83', 'nodes': 6}), (1498251409.546561, {'compute_state': 0.8999999761581421, 'resource_state': '1.63167|2004.83', 'nodes': 6}), (1498251420.619758, {'compute_state': 0.8999999761581421, 'resource_state': '1.71|2004.67', 'nodes': 6}), (1498251431.699784, {'compute_state': 0.8999999761581421, 'resource_state': '1.77333|2004.5', 'nodes': 6}), (1498251442.766625, {'compute_state': 0.8999999761581421, 'resource_state': '1.84167|2004.67', 'nodes': 6}), (1498251453.818763, {'compute_state': 0.8999999761581421, 'resource_state': '1.86667|2004.33', 'nodes': 6}), (1498251464.908044, {'compute_state': 0.8999999761581421, 'resource_state': '1.90333|2004.83', 'nodes': 6}), (1498251475.941482, {'compute_state': 0.8999999761581421, 'resource_state': '1.94667|1867.5', 'nodes': 6}), (1498251486.583646, {'compute_state': 0.8999999761581421, 'resource_state': '1.79667|498.5', 'nodes': 6}), (1498251497.216644, {'compute_state': 0.8999999761581421, 'resource_state': '1.56833|498.833', 'nodes': 6}), (1498251507.832264, {'compute_state': 0.8999999761581421, 'resource_state': '1.38667|498.667', 'nodes': 6}), (1498251518.504089, {'compute_state': 0.8999999761581421, 'resource_state': '1.21667|499.333', 'nodes': 6}), (1498251529.153048, {'compute_state': 0.8999999761581421, 'resource_state': '1.07|499.5', 'nodes': 6}), (1498251540.203829, {'compute_state': 0.949999988079071, 'resource_state': '1.07833|1825.5', 'nodes': 6}), (1498251551.249715, {'compute_state': 0.949999988079071, 'resource_state': '1.25667|1877.17', 'nodes': 6}), (1498251562.330801, {'compute_state': 0.949999988079071, 'resource_state': '1.36833|2003.83', 'nodes': 6}), (1498251573.387515, {'compute_state': 0.949999988079071, 'resource_state': '1.49833|2004.5', 'nodes': 6}), (1498251584.453384, {'compute_state': 0.949999988079071, 'resource_state': '1.62|2004.33', 'nodes': 6}), (1498251595.494582, {'compute_state': 0.949999988079071, 'resource_state': '1.7|2004.33', 'nodes': 6}), (1498251606.602059, {'compute_state': 0.949999988079071, 'resource_state': '1.765|2004.5', 'nodes': 6}), (1498251617.664778, {'compute_state': 0.949999988079071, 'resource_state': '1.835|2004.17', 'nodes': 6}), (1498251628.720791, {'compute_state': 0.949999988079071, 'resource_state': '1.87333|2004', 'nodes': 6}), (1498251639.800776, {'compute_state': 0.949999988079071, 'resource_state': '1.92167|2004.5', 'nodes': 6}), (1498251650.831398, {'compute_state': 0.949999988079071, 'resource_state': '1.93333|2004.5', 'nodes': 6}), (1498251661.553262, {'compute_state': 0.949999988079071, 'resource_state': '1.83833|497.833', 'nodes': 6}), (1498251672.181365, {'compute_state': 0.949999988079071, 'resource_state': '1.59667|498.833', 'nodes': 6}), (1498251682.832356, {'compute_state': 0.949999988079071, 'resource_state': '1.34333|498.667', 'nodes': 6}), (1498251693.832786, {'compute_state': 0.949999988079071, 'resource_state': '1.19167|498.333', 'nodes': 6}), (1498251704.494337, {'compute_state': 0.949999988079071, 'resource_state': '1.04833|498.333', 'nodes': 6}), (1498251715.215905, {'compute_state': 1.0, 'resource_state': '0.935|61.8333', 'nodes': 6})]
+1498251715.229019|SYSTEM: Waiting on Computation to finish.
+1498251715.229338|SYSTEM: Good bye...
