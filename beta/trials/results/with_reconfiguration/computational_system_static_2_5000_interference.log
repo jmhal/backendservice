@@ -1,0 +1,296 @@
+1498498776.269682|SYSTEM: Starting Platform.
+1498498776.273189|SYSTEM: Starting Computation.
+1498498776.277867|SYSTEM: Waiting on Platform to finish.
+1498498776.286584|PLATFORM: QoS Values ={'execution_time': 0.0, 'resource_efficiency': 0.0, 'cost': 0.0, 'power_consumption': 0.0, 'accuracy': 0.0}
+1498498776.286906|PLATFORM: QoS Weight ={'execution_time': 0.0, 'resource_efficiency': 0.0, 'cost': 0.0, 'power_consumption': 0.0, 'accuracy': 0.0}
+1498498776.286993|PLATFORM: QoS Factor =0
+1498498776.287088|PLATFORM: Monitor Interval = 10
+1498498776.287162|PLATFORM: Sample Interval = 10
+1498498776.287245|PLATFORM: Reconfiguration Interval = 10
+1498498776.287318|PLATFORM: http://200.19.177.89:33004:elasticcluster:2650f199-2a08-4b6c-a2d5-1836b3bc711b
+1498498778.360032|PLATFORM: Number Of Nodes = 2
+1498498781.302256|COMPUTATION: Starting Computation.
+1498498781.353243|COMPUTATION: Start (MatrixSize, Iteration) = |5000|0|
+1498498781.353937|COMPUTATION: ['mpirun', '-n', '4', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '5000', '/home/ubuntu/teste.mtr_0']
+1498498789.602913|PLATFORM: State = |0.0|0.3|787|2|
+1498498800.781244|PLATFORM: State = |0.0|0.565|786.5|2|
+1498498812.142263|PLATFORM: State = |0.0|0.785|788.5|2|
+1498498823.321049|PLATFORM: State = |0.0|1.05|788.5|2|
+1498498834.589464|PLATFORM: State = |0.0|1.275|788.5|2|
+1498498845.683978|PLATFORM: State = |0.0|1.39|788.5|2|
+1498498856.236398|PLATFORM: State = |0.0|1.485|455.5|2|
+1498498867.109786|PLATFORM: State = |0.0|1.37|456|2|
+1498498868.278627|COMPUTATION: End (MatrixSize, Iteration) = |5000|0|
+1498498868.449297|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+|None
+1498498868.449781|COMPUTATION: Progress = 0.047619047619
+1498498868.449970|COMPUTATION: Start (MatrixSize, Iteration) = |5000|1|
+1498498868.451073|COMPUTATION: ['mpirun', '-n', '4', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '5000', '/home/ubuntu/teste.mtr_1']
+1498498878.272416|PLATFORM: State = |0.047619048506|1.525|791|2|
+1498498889.460067|PLATFORM: State = |0.047619048506|1.66|791|2|
+1498498900.680637|PLATFORM: State = |0.047619048506|1.715|791|2|
+1498498911.947786|PLATFORM: State = |0.047619048506|1.755|791|2|
+1498498923.119961|PLATFORM: State = |0.047619048506|1.84|791|2|
+1498498934.244768|PLATFORM: State = |0.047619048506|1.865|791|2|
+1498498944.864949|PLATFORM: State = |0.047619048506|1.705|456.5|2|
+1498498952.153870|COMPUTATION: End (MatrixSize, Iteration) = |5000|1|
+1498498953.893662|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+|None
+1498498953.898835|COMPUTATION: Progress = 0.0952380952381
+1498498953.899404|COMPUTATION: Start (MatrixSize, Iteration) = |5000|2|
+1498498953.900385|COMPUTATION: ['mpirun', '-n', '4', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '5000', '/home/ubuntu/teste.mtr_2']
+1498498956.123918|PLATFORM: State = |0.095238097012|1.595|669.5|2|
+1498498967.279873|PLATFORM: State = |0.095238097012|1.66|789.5|2|
+1498498978.540876|PLATFORM: State = |0.095238097012|1.72|789.5|2|
+1498498989.694378|PLATFORM: State = |0.095238097012|1.82|791|2|
+1498499000.848324|PLATFORM: State = |0.095238097012|1.845|790|2|
+1498499012.101338|PLATFORM: State = |0.095238097012|1.87|790.5|2|
+1498499022.846166|PLATFORM: State = |0.095238097012|1.93|456|2|
+1498499033.498087|PLATFORM: State = |0.095238097012|1.755|456.5|2|
+1498499034.532984|COMPUTATION: End (MatrixSize, Iteration) = |5000|2|
+1498499036.272520|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+|None
+1498499036.276623|COMPUTATION: Progress = 0.142857142857
+1498499036.277021|COMPUTATION: Start (MatrixSize, Iteration) = |5000|3|
+1498499036.278010|COMPUTATION: ['mpirun', '-n', '4', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '5000', '/home/ubuntu/teste.mtr_3']
+1498499045.056906|PLATFORM: State = |0.142857149243|1.74|790|2|
+1498499056.296420|PLATFORM: State = |0.142857149243|1.775|790|2|
+1498499067.521574|PLATFORM: State = |0.142857149243|1.815|790|2|
+1498499078.595380|PLATFORM: State = |0.142857149243|1.885|790|2|
+1498499089.968544|PLATFORM: State = |0.142857149243|1.915|789.5|2|
+1498499100.730105|PLATFORM: State = |0.142857149243|1.805|456.5|2|
+1498499110.406067|COMPUTATION: End (MatrixSize, Iteration) = |5000|3|
+1498499111.381867|PLATFORM: State = |0.142857149243|1.685|91|2|
+1498499112.793253|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+|None
+1498499112.793464|COMPUTATION: Progress = 0.190476190476
+1498499112.793689|COMPUTATION: Start (MatrixSize, Iteration) = |5000|4|
+1498499112.794118|COMPUTATION: ['mpirun', '-n', '4', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '5000', '/home/ubuntu/teste.mtr_4']
+1498499122.727147|PLATFORM: State = |0.190476194024|1.775|790.5|2|
+1498499134.001024|PLATFORM: State = |0.190476194024|1.81|790|2|
+1498499145.232882|PLATFORM: State = |0.190476194024|1.89|790.5|2|
+1498499156.400047|PLATFORM: State = |0.190476194024|1.91|790.5|2|
+1498499167.496143|PLATFORM: State = |0.190476194024|1.925|790|2|
+1498499178.353093|PLATFORM: State = |0.190476194024|1.895|457|2|
+1498499189.200289|PLATFORM: State = |0.190476194024|1.72|457|2|
+1498499194.228646|COMPUTATION: End (MatrixSize, Iteration) = |5000|4|
+1498499194.335542|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+|None
+1498499194.335795|COMPUTATION: Progress = 0.238095238095
+1498499194.335987|COMPUTATION: Start (MatrixSize, Iteration) = |5000|5|
+1498499194.337131|COMPUTATION: ['mpirun', '-n', '4', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '5000', '/home/ubuntu/teste.mtr_5']
+1498499200.327441|PLATFORM: State = |0.238095238805|1.75|790|2|
+1498499211.495246|PLATFORM: State = |0.238095238805|1.785|790|2|
+1498499222.707171|PLATFORM: State = |0.238095238805|1.825|790|2|
+1498499233.888057|PLATFORM: State = |0.238095238805|1.85|790.5|2|
+1498499245.097763|PLATFORM: State = |0.238095238805|1.88|790.5|2|
+1498499256.281824|PLATFORM: State = |0.238095238805|1.9|790.5|2|
+1498499267.161979|PLATFORM: State = |0.238095238805|1.8|456|2|
+1498499277.710738|COMPUTATION: End (MatrixSize, Iteration) = |5000|5|
+1498499277.799398|PLATFORM: State = |0.238095238805|1.76|457|2|
+1498499277.818984|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+|None
+1498499277.819342|COMPUTATION: Progress = 0.285714285714
+1498499277.819478|COMPUTATION: Start (MatrixSize, Iteration) = |5000|6|
+1498499277.819871|COMPUTATION: ['mpirun', '-n', '4', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '5000', '/home/ubuntu/teste.mtr_6']
+1498499288.762867|PLATFORM: State = |0.285714298487|1.835|790.5|2|
+1498499300.048176|PLATFORM: State = |0.285714298487|1.88|790|2|
+1498499311.253338|PLATFORM: State = |0.285714298487|1.935|790|2|
+1498499322.399405|PLATFORM: State = |0.285714298487|1.94|790|2|
+1498499333.611739|PLATFORM: State = |0.285714298487|1.99|790|2|
+1498499344.332272|PLATFORM: State = |0.285714298487|1.91|456|2|
+1498499350.839469|COMPUTATION: End (MatrixSize, Iteration) = |5000|6|
+1498499352.761862|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+|None
+1498499352.762415|COMPUTATION: Progress = 0.333333333333
+1498499352.762570|COMPUTATION: Start (MatrixSize, Iteration) = |5000|7|
+1498499352.764221|COMPUTATION: ['mpirun', '-n', '4', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '5000', '/home/ubuntu/teste.mtr_7']
+1498499355.667315|PLATFORM: State = |0.333333343267|1.83|694.5|2|
+1498499366.719087|PLATFORM: State = |0.333333343267|1.855|789.5|2|
+1498499377.702245|PLATFORM: State = |0.333333343267|1.875|789.5|2|
+1498499388.840254|PLATFORM: State = |0.333333343267|2.01|790.5|2|
+1498499400.000527|PLATFORM: State = |0.333333343267|2.02|791|2|
+1498499410.805615|PLATFORM: State = |0.333333343267|1.975|457.5|2|
+1498499421.442047|PLATFORM: State = |0.333333343267|1.745|457.5|2|
+1498499427.712526|COMPUTATION: End (MatrixSize, Iteration) = |5000|7|
+1498499428.861772|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+|None
+1498499428.862165|COMPUTATION: Progress = 0.380952380952
+1498499428.862271|COMPUTATION: Start (MatrixSize, Iteration) = |5000|8|
+1498499428.867097|COMPUTATION: ['mpirun', '-n', '4', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '5000', '/home/ubuntu/teste.mtr_8']
+1498499432.817613|PLATFORM: State = |0.380952388048|1.75|694|2|
+1498499444.172341|PLATFORM: State = |0.380952388048|1.94|789.5|2|
+1498499455.388904|PLATFORM: State = |0.380952388048|2.005|790|2|
+1498499466.353928|PLATFORM: State = |0.380952388048|2.005|791|2|
+1498499477.552199|PLATFORM: State = |0.380952388048|2|790.5|2|
+1498499489.000981|PLATFORM: State = |0.380952388048|2.035|790|2|
+1498499499.882173|PLATFORM: State = |0.380952388048|1.845|456|2|
+1498499506.230278|COMPUTATION: End (MatrixSize, Iteration) = |5000|8|
+1498499506.886627|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+|None
+1498499506.887004|COMPUTATION: Progress = 0.428571428571
+1498499506.887121|COMPUTATION: Start (MatrixSize, Iteration) = |5000|9|
+1498499506.887609|COMPUTATION: ['mpirun', '-n', '4', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '5000', '/home/ubuntu/teste.mtr_9']
+1498499511.317450|PLATFORM: State = |0.428571432829|1.795|694.5|2|
+1498499522.710762|PLATFORM: State = |0.428571432829|1.825|790|2|
+1498499533.916798|PLATFORM: State = |0.428571432829|1.965|790|2|
+1498499544.956687|PLATFORM: State = |0.428571432829|2.03|791|2|
+1498499555.936920|PLATFORM: State = |0.428571432829|2.025|791|2|
+1498499567.203420|PLATFORM: State = |0.428571432829|2.015|791|2|
+1498499578.107223|PLATFORM: State = |0.428571432829|1.785|457.5|2|
+1498499588.257905|COMPUTATION: End (MatrixSize, Iteration) = |5000|9|
+1498499588.433324|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+|None
+1498499588.434074|COMPUTATION: Progress = 0.47619047619
+1498499588.434722|COMPUTATION: Start (MatrixSize, Iteration) = |5000|10|
+1498499588.436696|COMPUTATION: ['mpirun', '-n', '4', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '5000', '/home/ubuntu/teste.mtr_10']
+1498499588.782269|PLATFORM: State = |0.428571432829|1.66|91|2|
+1498499600.020391|PLATFORM: State = |0.47619047761|1.81|789.5|2|
+1498499611.260037|PLATFORM: State = |0.47619047761|1.915|789.5|2|
+1498499622.488529|PLATFORM: State = |0.47619047761|1.93|789.5|2|
+1498499633.474387|PLATFORM: State = |0.47619047761|1.94|790|2|
+1498499644.518836|PLATFORM: State = |0.47619047761|1.945|789.5|2|
+1498499655.423281|PLATFORM: State = |0.47619047761|1.77|456.5|2|
+1498499662.894622|COMPUTATION: End (MatrixSize, Iteration) = |5000|10|
+1498499664.218776|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+|None
+1498499664.225964|COMPUTATION: Progress = 0.52380952381
+1498499664.226579|COMPUTATION: Start (MatrixSize, Iteration) = |5000|11|
+1498499664.227328|COMPUTATION: ['mpirun', '-n', '4', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '5000', '/home/ubuntu/teste.mtr_11']
+1498499667.045522|PLATFORM: State = |0.523809552193|1.73|686.5|2|
+1498499678.558140|PLATFORM: State = |0.523809552193|1.785|789.5|2|
+1498499689.708125|PLATFORM: State = |0.523809552193|1.815|789.5|2|
+1498499700.904000|PLATFORM: State = |0.523809552193|1.895|790.5|2|
+1498499712.140124|PLATFORM: State = |0.523809552193|1.95|790|2|
+1498499723.230648|PLATFORM: State = |0.523809552193|2|790.5|2|
+1498499733.780212|PLATFORM: State = |0.523809552193|1.96|456.5|2|
+1498499744.661615|PLATFORM: State = |0.523809552193|1.82|456.5|2|
+1498499745.677756|COMPUTATION: End (MatrixSize, Iteration) = |5000|11|
+1498499745.817046|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+|None
+1498499745.817524|COMPUTATION: Progress = 0.571428571429
+1498499745.817660|COMPUTATION: Start (MatrixSize, Iteration) = |5000|12|
+1498499745.818080|COMPUTATION: ['mpirun', '-n', '4', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '5000', '/home/ubuntu/teste.mtr_12']
+1498499755.832027|PLATFORM: State = |0.571428596973|1.83|790.5|2|
+1498499767.015388|PLATFORM: State = |0.571428596973|1.855|790.5|2|
+1498499778.468673|PLATFORM: State = |0.571428596973|1.92|790|2|
+1498499789.920654|PLATFORM: State = |0.571428596973|1.935|790|2|
+1498499801.212630|PLATFORM: State = |0.571428596973|1.95|790|2|
+1498499811.821053|PLATFORM: State = |0.571428596973|1.955|456.5|2|
+1498499822.489451|PLATFORM: State = |0.571428596973|1.73|456|2|
+1498499824.392540|COMPUTATION: End (MatrixSize, Iteration) = |5000|12|
+1498499824.978848|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+|None
+1498499824.979583|COMPUTATION: Progress = 0.619047619048
+1498499824.979952|COMPUTATION: Start (MatrixSize, Iteration) = |5000|13|
+1498499824.980673|COMPUTATION: ['mpirun', '-n', '4', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '5000', '/home/ubuntu/teste.mtr_13']
+1498499834.048306|PLATFORM: State = |0.619047641754|1.745|791|2|
+1498499845.198172|PLATFORM: State = |0.619047641754|1.785|791|2|
+1498499856.335648|PLATFORM: State = |0.619047641754|1.83|791|2|
+1498499867.524066|PLATFORM: State = |0.619047641754|1.855|791|2|
+1498499878.749969|PLATFORM: State = |0.619047641754|2.005|791|2|
+1498499889.818476|PLATFORM: State = |0.619047641754|2|791|2|
+1498499900.376332|PLATFORM: State = |0.619047641754|2.05|457.5|2|
+1498499910.755810|COMPUTATION: End (MatrixSize, Iteration) = |5000|13|
+1498499911.913028|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+|None
+1498499911.913557|COMPUTATION: Progress = 0.666666666667
+1498499911.913716|COMPUTATION: Start (MatrixSize, Iteration) = |5000|14|
+1498499911.915067|COMPUTATION: ['mpirun', '-n', '4', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '5000', '/home/ubuntu/teste.mtr_14']
+1498499912.911007|PLATFORM: State = |0.666666686535|1.93|94.5|2|
+1498499924.117933|PLATFORM: State = |0.666666686535|1.975|790|2|
+1498499935.236296|PLATFORM: State = |0.666666686535|1.98|790|2|
+1498499946.428295|PLATFORM: State = |0.666666686535|1.99|790.5|2|
+1498499957.601892|PLATFORM: State = |0.666666686535|1.99|790|2|
+1498499968.744974|PLATFORM: State = |0.666666686535|1.99|790.5|2|
+1498499979.513963|PLATFORM: State = |0.666666686535|1.95|456|2|
+1498499989.463817|COMPUTATION: End (MatrixSize, Iteration) = |5000|14|
+1498499990.044098|PLATFORM: State = |0.666666686535|1.725|91.5|2|
+1498499991.737814|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+|None
+1498499991.738050|COMPUTATION: Progress = 0.714285714286
+1498499991.738134|COMPUTATION: Start (MatrixSize, Iteration) = |5000|15|
+1498499991.738457|COMPUTATION: ['mpirun', '-n', '4', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '5000', '/home/ubuntu/teste.mtr_15']
+1498500001.329120|PLATFORM: State = |0.714285731316|1.795|789.5|2|
+1498500012.536517|PLATFORM: State = |0.714285731316|1.83|790|2|
+1498500023.708647|PLATFORM: State = |0.714285731316|1.895|789.5|2|
+1498500034.913154|PLATFORM: State = |0.714285731316|1.915|789.5|2|
+1498500046.111763|PLATFORM: State = |0.714285731316|1.975|789.5|2|
+1498500057.267070|PLATFORM: State = |0.714285731316|1.975|789.5|2|
+1498500067.960924|PLATFORM: State = |0.714285731316|1.86|455.5|2|
+1498500076.357895|COMPUTATION: End (MatrixSize, Iteration) = |5000|15|
+1498500077.988929|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+|None
+1498500077.989289|COMPUTATION: Progress = 0.761904761905
+1498500077.989458|COMPUTATION: Start (MatrixSize, Iteration) = |5000|16|
+1498500077.989876|COMPUTATION: ['mpirun', '-n', '4', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '5000', '/home/ubuntu/teste.mtr_16']
+1498500078.778143|PLATFORM: State = |0.714285731316|1.62|93.5|2|
+1498500089.870876|PLATFORM: State = |0.761904776096|1.68|790.5|2|
+1498500101.232388|PLATFORM: State = |0.761904776096|1.78|790.5|2|
+1498500112.404334|PLATFORM: State = |0.761904776096|1.815|790.5|2|
+1498500123.600743|PLATFORM: State = |0.761904776096|1.895|790.5|2|
+1498500134.808134|PLATFORM: State = |0.761904776096|1.905|790.5|2|
+1498500145.409531|PLATFORM: State = |0.761904776096|1.88|456.5|2|
+1498500155.862019|COMPUTATION: End (MatrixSize, Iteration) = |5000|16|
+1498500156.009191|PLATFORM: State = |0.761904776096|1.645|457|2|
+1498500157.296057|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+|None
+1498500157.299128|COMPUTATION: Progress = 0.809523809524
+1498500157.299465|COMPUTATION: Start (MatrixSize, Iteration) = |5000|17|
+1498500157.299978|COMPUTATION: ['mpirun', '-n', '4', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '5000', '/home/ubuntu/teste.mtr_17']
+1498500167.115558|PLATFORM: State = |0.809523820877|1.7|790.5|2|
+1498500178.076248|PLATFORM: State = |0.809523820877|1.745|790|2|
+1498500189.288178|PLATFORM: State = |0.809523820877|1.83|790|2|
+1498500200.616669|PLATFORM: State = |0.809523820877|1.95|790|2|
+1498500211.844835|PLATFORM: State = |0.809523820877|1.955|790|2|
+1498500222.477306|PLATFORM: State = |0.809523820877|1.84|457|2|
+1498500231.719406|COMPUTATION: End (MatrixSize, Iteration) = |5000|17|
+1498500231.848624|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+|None
+1498500231.849298|COMPUTATION: Progress = 0.857142857143
+1498500231.849697|COMPUTATION: Start (MatrixSize, Iteration) = |5000|18|
+1498500231.850392|COMPUTATION: ['mpirun', '-n', '4', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '5000', '/home/ubuntu/teste.mtr_18']
+1498500233.871952|PLATFORM: State = |0.857142865658|1.725|676|2|
+1498500244.956555|PLATFORM: State = |0.857142865658|1.765|789.5|2|
+1498500256.021754|PLATFORM: State = |0.857142865658|1.82|789.5|2|
+1498500267.001629|PLATFORM: State = |0.857142865658|1.85|791|2|
+1498500278.168056|PLATFORM: State = |0.857142865658|1.87|790.5|2|
+1498500288.760809|PLATFORM: State = |0.857142865658|1.89|456.5|2|
+1498500299.661771|PLATFORM: State = |0.857142865658|1.715|456.5|2|
+1498500300.784588|COMPUTATION: End (MatrixSize, Iteration) = |5000|18|
+1498500300.904140|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+|None
+1498500300.904421|COMPUTATION: Progress = 0.904761904762
+1498500300.904475|COMPUTATION: Start (MatrixSize, Iteration) = |5000|19|
+1498500300.904819|COMPUTATION: ['mpirun', '-n', '4', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '5000', '/home/ubuntu/teste.mtr_19']
+1498500310.998236|PLATFORM: State = |0.904761910439|1.75|790|2|
+1498500322.196202|PLATFORM: State = |0.904761910439|1.79|791|2|
+1498500333.533487|PLATFORM: State = |0.904761910439|1.82|790.5|2|
+1498500344.623622|PLATFORM: State = |0.904761910439|1.89|790.5|2|
+1498500355.631367|PLATFORM: State = |0.904761910439|1.955|791|2|
+1498500366.360661|PLATFORM: State = |0.904761910439|1.845|456.5|2|
+1498500377.001680|PLATFORM: State = |0.904761910439|1.76|456.5|2|
+1498500381.958446|COMPUTATION: End (MatrixSize, Iteration) = |5000|19|
+1498500382.087558|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+|None
+1498500382.087880|COMPUTATION: Progress = 0.952380952381
+1498500382.087937|COMPUTATION: Start (MatrixSize, Iteration) = |5000|20|
+1498500382.088263|COMPUTATION: ['mpirun', '-n', '4', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '5000', '/home/ubuntu/teste.mtr_20']
+1498500388.337723|PLATFORM: State = |0.952380955219|1.68|789.5|2|
+1498500399.539706|PLATFORM: State = |0.952380955219|1.78|790|2|
+1498500410.728184|PLATFORM: State = |0.952380955219|1.865|790|2|
+1498500421.976152|PLATFORM: State = |0.952380955219|1.89|791.5|2|
+1498500432.985563|PLATFORM: State = |0.952380955219|1.905|791.5|2|
+1498500443.965190|PLATFORM: State = |0.952380955219|1.965|791.5|2|
+1498500454.695658|PLATFORM: State = |0.952380955219|1.89|457.5|2|
+1498500462.103180|COMPUTATION: End (MatrixSize, Iteration) = |5000|20|
+1498500463.989688|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+|None
+1498500463.990605|COMPUTATION: Progress = 1.0
+1498500463.991391|COMPUTATION: Finish Computation.
+1498500465.465774|PLATFORM: State = |1.0|1.75|86.5|2|
+1498500465.466210|PLATFORM: Finish Platform.
+1498500465.475426|PLATFORM: Elapsed = 1675.86282802
+1498500465.477227|PLATFORM: Execution Log = [(1498498789.602783, {'compute_state': 0.0, 'resource_state': '0.3|787', 'nodes': 2}), (1498498800.780958, {'compute_state': 0.0, 'resource_state': '0.565|786.5', 'nodes': 2}), (1498498812.142119, {'compute_state': 0.0, 'resource_state': '0.785|788.5', 'nodes': 2}), (1498498823.320913, {'compute_state': 0.0, 'resource_state': '1.05|788.5', 'nodes': 2}), (1498498834.589335, {'compute_state': 0.0, 'resource_state': '1.275|788.5', 'nodes': 2}), (1498498845.683869, {'compute_state': 0.0, 'resource_state': '1.39|788.5', 'nodes': 2}), (1498498856.236315, {'compute_state': 0.0, 'resource_state': '1.485|455.5', 'nodes': 2}), (1498498867.109636, {'compute_state': 0.0, 'resource_state': '1.37|456', 'nodes': 2}), (1498498878.272301, {'compute_state': 0.0476190485060215, 'resource_state': '1.525|791', 'nodes': 2}), (1498498889.459951, {'compute_state': 0.0476190485060215, 'resource_state': '1.66|791', 'nodes': 2}), (1498498900.680513, {'compute_state': 0.0476190485060215, 'resource_state': '1.715|791', 'nodes': 2}), (1498498911.947656, {'compute_state': 0.0476190485060215, 'resource_state': '1.755|791', 'nodes': 2}), (1498498923.11984, {'compute_state': 0.0476190485060215, 'resource_state': '1.84|791', 'nodes': 2}), (1498498934.244116, {'compute_state': 0.0476190485060215, 'resource_state': '1.865|791', 'nodes': 2}), (1498498944.864856, {'compute_state': 0.0476190485060215, 'resource_state': '1.705|456.5', 'nodes': 2}), (1498498956.123791, {'compute_state': 0.095238097012043, 'resource_state': '1.595|669.5', 'nodes': 2}), (1498498967.279717, {'compute_state': 0.095238097012043, 'resource_state': '1.66|789.5', 'nodes': 2}), (1498498978.540722, {'compute_state': 0.095238097012043, 'resource_state': '1.72|789.5', 'nodes': 2}), (1498498989.694239, {'compute_state': 0.095238097012043, 'resource_state': '1.82|791', 'nodes': 2}), (1498499000.848174, {'compute_state': 0.095238097012043, 'resource_state': '1.845|790', 'nodes': 2}), (1498499012.101165, {'compute_state': 0.095238097012043, 'resource_state': '1.87|790.5', 'nodes': 2}), (1498499022.846037, {'compute_state': 0.095238097012043, 'resource_state': '1.93|456', 'nodes': 2}), (1498499033.497971, {'compute_state': 0.095238097012043, 'resource_state': '1.755|456.5', 'nodes': 2}), (1498499045.056754, {'compute_state': 0.1428571492433548, 'resource_state': '1.74|790', 'nodes': 2}), (1498499056.296281, {'compute_state': 0.1428571492433548, 'resource_state': '1.775|790', 'nodes': 2}), (1498499067.521422, {'compute_state': 0.1428571492433548, 'resource_state': '1.815|790', 'nodes': 2}), (1498499078.59527, {'compute_state': 0.1428571492433548, 'resource_state': '1.885|790', 'nodes': 2}), (1498499089.96832, {'compute_state': 0.1428571492433548, 'resource_state': '1.915|789.5', 'nodes': 2}), (1498499100.729978, {'compute_state': 0.1428571492433548, 'resource_state': '1.805|456.5', 'nodes': 2}), (1498499111.381721, {'compute_state': 0.1428571492433548, 'resource_state': '1.685|91', 'nodes': 2}), (1498499122.724973, {'compute_state': 0.190476194024086, 'resource_state': '1.775|790.5', 'nodes': 2}), (1498499134.000131, {'compute_state': 0.190476194024086, 'resource_state': '1.81|790', 'nodes': 2}), (1498499145.232754, {'compute_state': 0.190476194024086, 'resource_state': '1.89|790.5', 'nodes': 2}), (1498499156.39991, {'compute_state': 0.190476194024086, 'resource_state': '1.91|790.5', 'nodes': 2}), (1498499167.496, {'compute_state': 0.190476194024086, 'resource_state': '1.925|790', 'nodes': 2}), (1498499178.352932, {'compute_state': 0.190476194024086, 'resource_state': '1.895|457', 'nodes': 2}), (1498499189.200145, {'compute_state': 0.190476194024086, 'resource_state': '1.72|457', 'nodes': 2}), (1498499200.327322, {'compute_state': 0.2380952388048172, 'resource_state': '1.75|790', 'nodes': 2}), (1498499211.494928, {'compute_state': 0.2380952388048172, 'resource_state': '1.785|790', 'nodes': 2}), (1498499222.706848, {'compute_state': 0.2380952388048172, 'resource_state': '1.825|790', 'nodes': 2}), (1498499233.887896, {'compute_state': 0.2380952388048172, 'resource_state': '1.85|790.5', 'nodes': 2}), (1498499245.097638, {'compute_state': 0.2380952388048172, 'resource_state': '1.88|790.5', 'nodes': 2}), (1498499256.281133, {'compute_state': 0.2380952388048172, 'resource_state': '1.9|790.5', 'nodes': 2}), (1498499267.161852, {'compute_state': 0.2380952388048172, 'resource_state': '1.8|456', 'nodes': 2}), (1498499277.799299, {'compute_state': 0.2380952388048172, 'resource_state': '1.76|457', 'nodes': 2}), (1498499288.762756, {'compute_state': 0.2857142984867096, 'resource_state': '1.835|790.5', 'nodes': 2}), (1498499300.047992, {'compute_state': 0.2857142984867096, 'resource_state': '1.88|790', 'nodes': 2}), (1498499311.252425, {'compute_state': 0.2857142984867096, 'resource_state': '1.935|790', 'nodes': 2}), (1498499322.399246, {'compute_state': 0.2857142984867096, 'resource_state': '1.94|790', 'nodes': 2}), (1498499333.611579, {'compute_state': 0.2857142984867096, 'resource_state': '1.99|790', 'nodes': 2}), (1498499344.332134, {'compute_state': 0.2857142984867096, 'resource_state': '1.91|456', 'nodes': 2}), (1498499355.667201, {'compute_state': 0.3333333432674408, 'resource_state': '1.83|694.5', 'nodes': 2}), (1498499366.718976, {'compute_state': 0.3333333432674408, 'resource_state': '1.855|789.5', 'nodes': 2}), (1498499377.702144, {'compute_state': 0.3333333432674408, 'resource_state': '1.875|789.5', 'nodes': 2}), (1498499388.84014, {'compute_state': 0.3333333432674408, 'resource_state': '2.01|790.5', 'nodes': 2}), (1498499400.000402, {'compute_state': 0.3333333432674408, 'resource_state': '2.02|791', 'nodes': 2}), (1498499410.805446, {'compute_state': 0.3333333432674408, 'resource_state': '1.975|457.5', 'nodes': 2}), (1498499421.441932, {'compute_state': 0.3333333432674408, 'resource_state': '1.745|457.5', 'nodes': 2}), (1498499432.81749, {'compute_state': 0.380952388048172, 'resource_state': '1.75|694', 'nodes': 2}), (1498499444.172224, {'compute_state': 0.380952388048172, 'resource_state': '1.94|789.5', 'nodes': 2}), (1498499455.388781, {'compute_state': 0.380952388048172, 'resource_state': '2.005|790', 'nodes': 2}), (1498499466.35384, {'compute_state': 0.380952388048172, 'resource_state': '2.005|791', 'nodes': 2}), (1498499477.552068, {'compute_state': 0.380952388048172, 'resource_state': '2|790.5', 'nodes': 2}), (1498499489.000847, {'compute_state': 0.380952388048172, 'resource_state': '2.035|790', 'nodes': 2}), (1498499499.880869, {'compute_state': 0.380952388048172, 'resource_state': '1.845|456', 'nodes': 2}), (1498499511.317278, {'compute_state': 0.4285714328289032, 'resource_state': '1.795|694.5', 'nodes': 2}), (1498499522.70754, {'compute_state': 0.4285714328289032, 'resource_state': '1.825|790', 'nodes': 2}), (1498499533.916666, {'compute_state': 0.4285714328289032, 'resource_state': '1.965|790', 'nodes': 2}), (1498499544.956572, {'compute_state': 0.4285714328289032, 'resource_state': '2.03|791', 'nodes': 2}), (1498499555.93679, {'compute_state': 0.4285714328289032, 'resource_state': '2.025|791', 'nodes': 2}), (1498499567.203261, {'compute_state': 0.4285714328289032, 'resource_state': '2.015|791', 'nodes': 2}), (1498499578.106169, {'compute_state': 0.4285714328289032, 'resource_state': '1.785|457.5', 'nodes': 2}), (1498499588.78209, {'compute_state': 0.4285714328289032, 'resource_state': '1.66|91', 'nodes': 2}), (1498499600.020269, {'compute_state': 0.4761904776096344, 'resource_state': '1.81|789.5', 'nodes': 2}), (1498499611.259917, {'compute_state': 0.4761904776096344, 'resource_state': '1.915|789.5', 'nodes': 2}), (1498499622.488409, {'compute_state': 0.4761904776096344, 'resource_state': '1.93|789.5', 'nodes': 2}), (1498499633.474259, {'compute_state': 0.4761904776096344, 'resource_state': '1.94|790', 'nodes': 2}), (1498499644.518714, {'compute_state': 0.4761904776096344, 'resource_state': '1.945|789.5', 'nodes': 2}), (1498499655.423128, {'compute_state': 0.4761904776096344, 'resource_state': '1.77|456.5', 'nodes': 2}), (1498499667.045346, {'compute_state': 0.523809552192688, 'resource_state': '1.73|686.5', 'nodes': 2}), (1498499678.557971, {'compute_state': 0.523809552192688, 'resource_state': '1.785|789.5', 'nodes': 2}), (1498499689.708, {'compute_state': 0.523809552192688, 'resource_state': '1.815|789.5', 'nodes': 2}), (1498499700.903883, {'compute_state': 0.523809552192688, 'resource_state': '1.895|790.5', 'nodes': 2}), (1498499712.140004, {'compute_state': 0.523809552192688, 'resource_state': '1.95|790', 'nodes': 2}), (1498499723.230543, {'compute_state': 0.523809552192688, 'resource_state': '2|790.5', 'nodes': 2}), (1498499733.780117, {'compute_state': 0.523809552192688, 'resource_state': '1.96|456.5', 'nodes': 2}), (1498499744.661407, {'compute_state': 0.523809552192688, 'resource_state': '1.82|456.5', 'nodes': 2}), (1498499755.831716, {'compute_state': 0.5714285969734192, 'resource_state': '1.83|790.5', 'nodes': 2}), (1498499767.015085, {'compute_state': 0.5714285969734192, 'resource_state': '1.855|790.5', 'nodes': 2}), (1498499778.468541, {'compute_state': 0.5714285969734192, 'resource_state': '1.92|790', 'nodes': 2}), (1498499789.920534, {'compute_state': 0.5714285969734192, 'resource_state': '1.935|790', 'nodes': 2}), (1498499801.212502, {'compute_state': 0.5714285969734192, 'resource_state': '1.95|790', 'nodes': 2}), (1498499811.820927, {'compute_state': 0.5714285969734192, 'resource_state': '1.955|456.5', 'nodes': 2}), (1498499822.489315, {'compute_state': 0.5714285969734192, 'resource_state': '1.73|456', 'nodes': 2}), (1498499834.048137, {'compute_state': 0.6190476417541504, 'resource_state': '1.745|791', 'nodes': 2}), (1498499845.19805, {'compute_state': 0.6190476417541504, 'resource_state': '1.785|791', 'nodes': 2}), (1498499856.335529, {'compute_state': 0.6190476417541504, 'resource_state': '1.83|791', 'nodes': 2}), (1498499867.523937, {'compute_state': 0.6190476417541504, 'resource_state': '1.855|791', 'nodes': 2}), (1498499878.749846, {'compute_state': 0.6190476417541504, 'resource_state': '2.005|791', 'nodes': 2}), (1498499889.81838, {'compute_state': 0.6190476417541504, 'resource_state': '2|791', 'nodes': 2}), (1498499900.376245, {'compute_state': 0.6190476417541504, 'resource_state': '2.05|457.5', 'nodes': 2}), (1498499912.910818, {'compute_state': 0.6666666865348816, 'resource_state': '1.93|94.5', 'nodes': 2}), (1498499924.1178, {'compute_state': 0.6666666865348816, 'resource_state': '1.975|790', 'nodes': 2}), (1498499935.236182, {'compute_state': 0.6666666865348816, 'resource_state': '1.98|790', 'nodes': 2}), (1498499946.428156, {'compute_state': 0.6666666865348816, 'resource_state': '1.99|790.5', 'nodes': 2}), (1498499957.601771, {'compute_state': 0.6666666865348816, 'resource_state': '1.99|790', 'nodes': 2}), (1498499968.744852, {'compute_state': 0.6666666865348816, 'resource_state': '1.99|790.5', 'nodes': 2}), (1498499979.513819, {'compute_state': 0.6666666865348816, 'resource_state': '1.95|456', 'nodes': 2}), (1498499990.044005, {'compute_state': 0.6666666865348816, 'resource_state': '1.725|91.5', 'nodes': 2}), (1498500001.328986, {'compute_state': 0.7142857313156128, 'resource_state': '1.795|789.5', 'nodes': 2}), (1498500012.536384, {'compute_state': 0.7142857313156128, 'resource_state': '1.83|790', 'nodes': 2}), (1498500023.708523, {'compute_state': 0.7142857313156128, 'resource_state': '1.895|789.5', 'nodes': 2}), (1498500034.91303, {'compute_state': 0.7142857313156128, 'resource_state': '1.915|789.5', 'nodes': 2}), (1498500046.111625, {'compute_state': 0.7142857313156128, 'resource_state': '1.975|789.5', 'nodes': 2}), (1498500057.266941, {'compute_state': 0.7142857313156128, 'resource_state': '1.975|789.5', 'nodes': 2}), (1498500067.960812, {'compute_state': 0.7142857313156128, 'resource_state': '1.86|455.5', 'nodes': 2}), (1498500078.778044, {'compute_state': 0.7142857313156128, 'resource_state': '1.62|93.5', 'nodes': 2}), (1498500089.870785, {'compute_state': 0.761904776096344, 'resource_state': '1.68|790.5', 'nodes': 2}), (1498500101.232203, {'compute_state': 0.761904776096344, 'resource_state': '1.78|790.5', 'nodes': 2}), (1498500112.404207, {'compute_state': 0.761904776096344, 'resource_state': '1.815|790.5', 'nodes': 2}), (1498500123.600624, {'compute_state': 0.761904776096344, 'resource_state': '1.895|790.5', 'nodes': 2}), (1498500134.808017, {'compute_state': 0.761904776096344, 'resource_state': '1.905|790.5', 'nodes': 2}), (1498500145.409423, {'compute_state': 0.761904776096344, 'resource_state': '1.88|456.5', 'nodes': 2}), (1498500156.009076, {'compute_state': 0.761904776096344, 'resource_state': '1.645|457', 'nodes': 2}), (1498500167.115439, {'compute_state': 0.8095238208770752, 'resource_state': '1.7|790.5', 'nodes': 2}), (1498500178.076156, {'compute_state': 0.8095238208770752, 'resource_state': '1.745|790', 'nodes': 2}), (1498500189.288054, {'compute_state': 0.8095238208770752, 'resource_state': '1.83|790', 'nodes': 2}), (1498500200.61654, {'compute_state': 0.8095238208770752, 'resource_state': '1.95|790', 'nodes': 2}), (1498500211.844713, {'compute_state': 0.8095238208770752, 'resource_state': '1.955|790', 'nodes': 2}), (1498500222.477189, {'compute_state': 0.8095238208770752, 'resource_state': '1.84|457', 'nodes': 2}), (1498500233.871829, {'compute_state': 0.8571428656578064, 'resource_state': '1.725|676', 'nodes': 2}), (1498500244.956389, {'compute_state': 0.8571428656578064, 'resource_state': '1.765|789.5', 'nodes': 2}), (1498500256.021656, {'compute_state': 0.8571428656578064, 'resource_state': '1.82|789.5', 'nodes': 2}), (1498500267.001533, {'compute_state': 0.8571428656578064, 'resource_state': '1.85|791', 'nodes': 2}), (1498500278.167934, {'compute_state': 0.8571428656578064, 'resource_state': '1.87|790.5', 'nodes': 2}), (1498500288.760691, {'compute_state': 0.8571428656578064, 'resource_state': '1.89|456.5', 'nodes': 2}), (1498500299.661562, {'compute_state': 0.8571428656578064, 'resource_state': '1.715|456.5', 'nodes': 2}), (1498500310.998071, {'compute_state': 0.9047619104385376, 'resource_state': '1.75|790', 'nodes': 2}), (1498500322.196081, {'compute_state': 0.9047619104385376, 'resource_state': '1.79|791', 'nodes': 2}), (1498500333.533338, {'compute_state': 0.9047619104385376, 'resource_state': '1.82|790.5', 'nodes': 2}), (1498500344.623516, {'compute_state': 0.9047619104385376, 'resource_state': '1.89|790.5', 'nodes': 2}), (1498500355.631279, {'compute_state': 0.9047619104385376, 'resource_state': '1.955|791', 'nodes': 2}), (1498500366.360354, {'compute_state': 0.9047619104385376, 'resource_state': '1.845|456.5', 'nodes': 2}), (1498500377.00157, {'compute_state': 0.9047619104385376, 'resource_state': '1.76|456.5', 'nodes': 2}), (1498500388.337594, {'compute_state': 0.9523809552192688, 'resource_state': '1.68|789.5', 'nodes': 2}), (1498500399.539529, {'compute_state': 0.9523809552192688, 'resource_state': '1.78|790', 'nodes': 2}), (1498500410.728046, {'compute_state': 0.9523809552192688, 'resource_state': '1.865|790', 'nodes': 2}), (1498500421.976007, {'compute_state': 0.9523809552192688, 'resource_state': '1.89|791.5', 'nodes': 2}), (1498500432.985454, {'compute_state': 0.9523809552192688, 'resource_state': '1.905|791.5', 'nodes': 2}), (1498500443.965093, {'compute_state': 0.9523809552192688, 'resource_state': '1.965|791.5', 'nodes': 2}), (1498500454.695503, {'compute_state': 0.9523809552192688, 'resource_state': '1.89|457.5', 'nodes': 2}), (1498500465.465611, {'compute_state': 1.0, 'resource_state': '1.75|86.5', 'nodes': 2})]
+1498500465.489000|SYSTEM: Waiting on Computation to finish.
+1498500465.490971|SYSTEM: Good bye...
