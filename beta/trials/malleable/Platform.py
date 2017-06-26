@@ -190,10 +190,13 @@ def platform_unit(reconfiguration_port, url, stack_name, stack_id, qos_values, q
                log("State = |" + str(state['compute_state']) + "|" + str(state['resource_state']) + "|" + str(state['nodes']) + "|")
                time.sleep(monitor_interval)
             if reconfiguration_port.get_actuator().value == "go_ahead":
-               log("Reading to Scale Down.")
+               log("Readyto Scale Down.")
                output = proxy.remove_node(1)
                reconfiguration_port.get_actuator().value = "scaled"
                log("Scaled Down.")
+            if reconfiguration_port.get_actuator().value == "finished":
+               log("Computation is over. Forget Scale down.")
+               break
             else :
                log("Computation Did Not Accept Scale Down.")
 	 with reconfiguration_port.machine_file_lock:
