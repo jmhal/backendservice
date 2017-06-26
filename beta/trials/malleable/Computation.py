@@ -27,6 +27,11 @@ def computation_unit(reconfiguration_port, computation_input):
    for i in range(len(inputs)) :
       m = inputs[i]
       log("Start (MatrixSize, Iteration) = |" + str(m) + "|" + str(i) +"|")
+      if reconfiguration_port.get_actuator().value == "scale_down":
+         reconfiguration_port.get_actuator().value = "go_ahead"
+      while reconfiguration_port.get_actuator().value == "go_ahead":
+         log("Waiting to Scale Down.")
+         time.sleep(5)
       with reconfiguration_port.machine_file_lock:
          nodes = 2 * number_of_nodes()
          command = ["mpirun", 

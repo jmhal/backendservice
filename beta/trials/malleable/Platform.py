@@ -172,21 +172,37 @@ def platform_unit(reconfiguration_port, url, stack_name, stack_id, qos_values, q
 	    N = -1
 	    log("Scale Down = " + maxParam + "|" + str(qos_sample[maxParam]) + "|" + str(qos_values_dict[maxParam]))
 
-
-      
+           
+      log("N Value =" + str(N))
       ## Execution Phase
-      """
-      if (time.time() - last_reconfiguration_time) < reconfiguration_interval:
+      if (time.time() - last_reconfiguration_time) > reconfiguration_interval:
          log("RECONFIGURATION BEFORE: " + str(nodes)) 
          if N == 1:
+            # No problem, does not affect running computation
             output = proxy.add_node(1)
          elif N == -1:
-	    output = proxy.remove_node(1)
+            # We cannot remove a node while computation is using it
+            reconfiguration_port.get_actuator().value = "scale_down"
+            while (reconfiguration_port.get_actuator().value == "scale_down"):
+               log("Waiting to Scale Down.")
+               state = {'compute_state': compute_state, 'resource_state': resource_state, 'nodes': nodes}
+               execution_log[time.time()] = state
+               log("State = |" + str(state['compute_state']) + "|" + str(state['resource_state']) + "|" + str(state['nodes']) + "|")
+               time.sleep(monitor_interval)
+            if reconfiguration_port.get_actuator().value = "go_ahead":
+               log("Reading to Scale Down.")
+               output = proxy.remove_node(1)
+               reconfiguration_port.get_actuator().value = "scaled"
+               log("Scaled Down.")
+            else :
+               log("Computation Did Not Accept Scale Down.")
 	 with reconfiguration_port.machine_file_lock:
 	    nodes = proxy.configure_machine_file()
          log("RECONFIGURATION AFTER: " + str(nodes) + "|" + str(output))
-	 last_reconfiguration_time = time.time()
-      """
+	 last_reconfiguration_time = time.time() 
+      else:
+         log("RECONFIGURATION INTERVAL NOT DONE.")
+      
       # insert state in log
       state = {'compute_state': compute_state, 'resource_state': resource_state, 'nodes': nodes}
       execution_log[time.time()] = state
