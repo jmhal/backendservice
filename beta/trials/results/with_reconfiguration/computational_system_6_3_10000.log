@@ -1,0 +1,89 @@
+1498006056.640424|SYSTEM: Starting Platform.
+1498006056.641839|SYSTEM: Starting Computation.
+1498006056.643895|SYSTEM: Waiting on Platform to finish.
+1498006056.647311|PLATFORM: QoS Values ={'execution_time': 0.0, 'resource_efficiency': 0.0, 'cost': 0.0, 'power_consumption': 0.0, 'accuracy': 0.0}
+1498006056.647438|PLATFORM: QoS Weight ={'execution_time': 0.0, 'resource_efficiency': 0.0, 'cost': 0.0, 'power_consumption': 0.0, 'accuracy': 0.0}
+1498006056.647482|PLATFORM: QoS Factor =0.0
+1498006056.647524|PLATFORM: Monitor Interval = 10
+1498006056.647558|PLATFORM: Sample Interval = 10
+1498006056.647592|PLATFORM: Reconfiguration Interval = 10
+1498006056.647624|PLATFORM: http://200.19.177.89:33004:elastic_cluster_e5e14f13-5fa1-4472-836f-d8b8456eca75:3f1b4f3c-bbeb-43bd-a401-616898dcebcc
+1498006061.368655|PLATFORM: Number Of Nodes = 6
+1498006061.655417|COMPUTATION: Starting Computation.
+1498006061.655584|COMPUTATION: Start (MatrixSize, Iteration) = |10000|0|
+1498006061.655838|COMPUTATION: ['mpirun', '-n', '12', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '10000', '/home/ubuntu/teste.mtr_0']
+1498006072.516846|PLATFORM: State = |0.0|0.526667|1870.67|6|
+1498006083.576815|PLATFORM: State = |0.0|0.751667|2002.33|6|
+1498006094.653845|PLATFORM: State = |0.0|0.985|2002.83|6|
+1498006105.733817|PLATFORM: State = |0.0|1.155|2003.5|6|
+1498006116.799572|PLATFORM: State = |0.0|1.35167|2003.5|6|
+1498006127.858453|PLATFORM: State = |0.0|1.46333|2003.33|6|
+1498006138.894142|PLATFORM: State = |0.0|1.56667|2003.33|6|
+1498006149.941514|PLATFORM: State = |0.0|1.63667|2003.17|6|
+1498006161.022190|PLATFORM: State = |0.0|1.73|2003|6|
+1498006172.087240|PLATFORM: State = |0.0|1.795|2003.67|6|
+1498006183.129291|PLATFORM: State = |0.0|1.825|1866.17|6|
+1498006194.052242|PLATFORM: State = |0.0|1.79|1452.5|6|
+1498006204.661205|PLATFORM: State = |0.0|1.63|498|6|
+1498006215.536627|PLATFORM: State = |0.0|1.43167|498.167|6|
+1498006253.582012|COMPUTATION: End (MatrixSize, Iteration) = |10000|0|
+1498006253.763209|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.5' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.6' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.8' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.7' (ECDSA) to the list of known hosts.
+|None
+1498006253.763550|COMPUTATION: Progress = 0.333333333333
+1498006253.763707|COMPUTATION: Start (MatrixSize, Iteration) = |10000|1|
+1498006253.764090|COMPUTATION: ['mpirun', '-n', '12', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '10000', '/home/ubuntu/teste.mtr_1']
+1498006253.971814|PLATFORM: State = |0.0|0.991667|497.333|6|
+1498006265.020858|PLATFORM: RECONFIGURATION BEFORE: 6
+1498006370.654367|PLATFORM: RECONFIGURATION AFTER: 7|BUILDING
+1498006370.654699|PLATFORM: State = |0.333333343267|1.22|1877|7|
+1498006382.035062|PLATFORM: State = |0.333333343267|1.67857|1607.57|7|
+1498006392.635808|PLATFORM: State = |0.333333343267|1.51429|435|7|
+1498006403.251841|PLATFORM: State = |0.333333343267|1.32429|435.286|7|
+1498006419.573782|PLATFORM: State = |0.333333343267|1.10714|434.429|7|
+1498006430.587547|PLATFORM: State = |0.333333343267|0.967143|434.429|7|
+1498006435.775541|COMPUTATION: End (MatrixSize, Iteration) = |10000|1|
+1498006437.661795|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.5' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.6' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.8' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.7' (ECDSA) to the list of known hosts.
+|None
+1498006437.662093|COMPUTATION: Progress = 0.666666666667
+1498006437.662251|COMPUTATION: Start (MatrixSize, Iteration) = |10000|2|
+1498006437.662589|COMPUTATION: ['mpirun', '-n', '14', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '10000', '/home/ubuntu/teste.mtr_2']
+1498006441.480875|PLATFORM: State = |0.666666686535|0.9|91|7|
+1498006452.518619|PLATFORM: State = |0.666666686535|1.08143|1838.86|7|
+1498006463.616123|PLATFORM: State = |0.666666686535|1.22|1948|7|
+1498006474.649579|PLATFORM: State = |0.666666686535|1.37571|1947.71|7|
+1498006485.725306|PLATFORM: State = |0.666666686535|1.50714|1948.29|7|
+1498006496.844683|PLATFORM: State = |0.666666686535|1.64714|1947.43|7|
+1498006507.945282|PLATFORM: State = |0.666666686535|1.70286|1948|7|
+1498006519.023392|PLATFORM: State = |0.666666686535|1.76143|1947.57|7|
+1498006530.088911|PLATFORM: State = |0.666666686535|1.82286|1948.14|7|
+1498006541.169668|PLATFORM: State = |0.666666686535|1.87857|1948.29|7|
+1498006552.148703|PLATFORM: State = |0.666666686535|1.90143|1832|7|
+1498006564.711443|PLATFORM: State = |0.666666686535|1.88286|1529.71|7|
+1498006575.340087|PLATFORM: State = |0.666666686535|1.61857|435.714|7|
+1498006585.951793|PLATFORM: State = |0.666666686535|1.44286|435.714|7|
+1498006596.651775|PLATFORM: State = |0.666666686535|1.26857|435.571|7|
+1498006607.264429|PLATFORM: State = |0.666666686535|1.13857|436.286|7|
+1498006617.855283|PLATFORM: State = |0.666666686535|1.01857|436|7|
+1498006619.834391|COMPUTATION: End (MatrixSize, Iteration) = |10000|2|
+1498006621.660811|COMPUTATION: Execution = Warning: Permanently added '10.10.10.6' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.5' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.8' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.7' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.9' (ECDSA) to the list of known hosts.
+|None
+1498006621.660976|COMPUTATION: Progress = 1.0
+1498006621.661131|COMPUTATION: Finish Computation.
+1498006628.456461|PLATFORM: State = |1.0|0.891429|59.4286|7|
+1498006628.456642|PLATFORM: Finish Platform.
+1498006628.457426|PLATFORM: Execution Log = [(1498006072.516757, {'compute_state': 0.0, 'resource_state': '0.526667|1870.67', 'nodes': 6}), (1498006083.576729, {'compute_state': 0.0, 'resource_state': '0.751667|2002.33', 'nodes': 6}), (1498006094.653754, {'compute_state': 0.0, 'resource_state': '0.985|2002.83', 'nodes': 6}), (1498006105.733728, {'compute_state': 0.0, 'resource_state': '1.155|2003.5', 'nodes': 6}), (1498006116.799493, {'compute_state': 0.0, 'resource_state': '1.35167|2003.5', 'nodes': 6}), (1498006127.858363, {'compute_state': 0.0, 'resource_state': '1.46333|2003.33', 'nodes': 6}), (1498006138.894058, {'compute_state': 0.0, 'resource_state': '1.56667|2003.33', 'nodes': 6}), (1498006149.941425, {'compute_state': 0.0, 'resource_state': '1.63667|2003.17', 'nodes': 6}), (1498006161.022104, {'compute_state': 0.0, 'resource_state': '1.73|2003', 'nodes': 6}), (1498006172.087147, {'compute_state': 0.0, 'resource_state': '1.795|2003.67', 'nodes': 6}), (1498006183.129202, {'compute_state': 0.0, 'resource_state': '1.825|1866.17', 'nodes': 6}), (1498006194.052158, {'compute_state': 0.0, 'resource_state': '1.79|1452.5', 'nodes': 6}), (1498006204.661126, {'compute_state': 0.0, 'resource_state': '1.63|498', 'nodes': 6}), (1498006215.536547, {'compute_state': 0.0, 'resource_state': '1.43167|498.167', 'nodes': 6}), (1498006253.971722, {'compute_state': 0.0, 'resource_state': '0.991667|497.333', 'nodes': 6}), (1498006370.65468, {'compute_state': 0.3333333432674408, 'resource_state': '1.22|1877', 'nodes': 7}), (1498006382.034975, {'compute_state': 0.3333333432674408, 'resource_state': '1.67857|1607.57', 'nodes': 7}), (1498006392.635735, {'compute_state': 0.3333333432674408, 'resource_state': '1.51429|435', 'nodes': 7}), (1498006403.251767, {'compute_state': 0.3333333432674408, 'resource_state': '1.32429|435.286', 'nodes': 7}), (1498006419.573704, {'compute_state': 0.3333333432674408, 'resource_state': '1.10714|434.429', 'nodes': 7}), (1498006430.587475, {'compute_state': 0.3333333432674408, 'resource_state': '0.967143|434.429', 'nodes': 7}), (1498006441.48079, {'compute_state': 0.6666666865348816, 'resource_state': '0.9|91', 'nodes': 7}), (1498006452.518533, {'compute_state': 0.6666666865348816, 'resource_state': '1.08143|1838.86', 'nodes': 7}), (1498006463.616039, {'compute_state': 0.6666666865348816, 'resource_state': '1.22|1948', 'nodes': 7}), (1498006474.649482, {'compute_state': 0.6666666865348816, 'resource_state': '1.37571|1947.71', 'nodes': 7}), (1498006485.725218, {'compute_state': 0.6666666865348816, 'resource_state': '1.50714|1948.29', 'nodes': 7}), (1498006496.844556, {'compute_state': 0.6666666865348816, 'resource_state': '1.64714|1947.43', 'nodes': 7}), (1498006507.945193, {'compute_state': 0.6666666865348816, 'resource_state': '1.70286|1948', 'nodes': 7}), (1498006519.023307, {'compute_state': 0.6666666865348816, 'resource_state': '1.76143|1947.57', 'nodes': 7}), (1498006530.088824, {'compute_state': 0.6666666865348816, 'resource_state': '1.82286|1948.14', 'nodes': 7}), (1498006541.16958, {'compute_state': 0.6666666865348816, 'resource_state': '1.87857|1948.29', 'nodes': 7}), (1498006552.14862, {'compute_state': 0.6666666865348816, 'resource_state': '1.90143|1832', 'nodes': 7}), (1498006564.711349, {'compute_state': 0.6666666865348816, 'resource_state': '1.88286|1529.71', 'nodes': 7}), (1498006575.340003, {'compute_state': 0.6666666865348816, 'resource_state': '1.61857|435.714', 'nodes': 7}), (1498006585.951716, {'compute_state': 0.6666666865348816, 'resource_state': '1.44286|435.714', 'nodes': 7}), (1498006596.651694, {'compute_state': 0.6666666865348816, 'resource_state': '1.26857|435.571', 'nodes': 7}), (1498006607.264347, {'compute_state': 0.6666666865348816, 'resource_state': '1.13857|436.286', 'nodes': 7}), (1498006617.855208, {'compute_state': 0.6666666865348816, 'resource_state': '1.01857|436', 'nodes': 7}), (1498006628.45638, {'compute_state': 1.0, 'resource_state': '0.891429|59.4286', 'nodes': 7})]
+1498006628.459924|SYSTEM: Waiting on Computation to finish.
+1498006628.460046|SYSTEM: Good bye...

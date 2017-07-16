@@ -4,10 +4,10 @@
 cluster_size=$1
 runs=$2
 N=$3
-qos_values="0:0:0:0:0"
-qos_weights="0:0:0:0:0"
-qos_factor="0.0"
-qos_intervals="10:10:10"
+qos_values="0:700.0:1.5:4100:0"
+qos_weights="0:0.4:0.4:0.4:0"
+qos_factor="0.1"
+qos_intervals="10:10:120"
 
 # create computational input
 separator=":"
