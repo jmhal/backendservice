@@ -191,6 +191,9 @@ def platform_unit(reconfiguration_port, url, stack_name, stack_id, qos_values, q
            output = proxy.add_node(1)
          elif N == -1:
             # We cannot remove a node while computation is using it
+            if (nodes == 2):
+               log ("Contract down limit reached. Skipping Scale Down.")
+               continue 
             reconfiguration_port.get_actuator().value = "scale_down"
             while (reconfiguration_port.get_actuator().value == "scale_down"):
                log("Waiting to Scale Down.")
