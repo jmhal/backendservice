@@ -1,0 +1,737 @@
+1500331776.074513|SYSTEM: Starting Platform.
+1500331776.076872|SYSTEM: Starting Computation.
+1500331776.081310|SYSTEM: Waiting on Platform to finish.
+1500331776.087639|PLATFORM: QoS Values ={'execution_time': 1132.0, 'efficiency': 1.75, 'cost': 2264.0, 'power_consumption': 0.0, 'accuracy': 0.0}
+1500331776.087885|PLATFORM: QoS Weight ={'execution_time': 0.5, 'efficiency': 0.1, 'cost': 0.4, 'power_consumption': 0.0, 'accuracy': 0.0}
+1500331776.088008|PLATFORM: QoS Factor =0.1
+1500331776.088111|PLATFORM: Monitor Interval = 10
+1500331776.088188|PLATFORM: Sample Interval = 10
+1500331776.088262|PLATFORM: Reconfiguration Interval = 120
+1500331776.089229|PLATFORM: http://200.19.177.89:33004:elasticcluster:71aa7d85-5416-4700-9a54-f79ece899f83
+1500331778.081227|PLATFORM: Number Of Nodes = 2
+1500331781.102087|COMPUTATION: Starting Computation.
+1500331781.102722|COMPUTATION: Start (MatrixSize, Iteration) = |5000|0|
+1500331781.103609|COMPUTATION: ['mpirun', '-n', '4', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '5000', '/home/ubuntu/teste.mtr_0']
+1500331788.943764|PLATFORM: State = Elapsed Time : 10.8607978821; Progress : 0.0; Efficiency : 0.275|119; Nodes : 2
+1500331788.944051|PLATFORM: Not Enough Information for Analysis.
+1500331799.961148|PLATFORM: State = Elapsed Time : 21.8775629997; Progress : 0.0; Efficiency : 0.54|789.5; Nodes : 2
+1500331799.961363|PLATFORM: Not Enough Information for Analysis.
+1500331810.970817|PLATFORM: State = Elapsed Time : 32.8878118992; Progress : 0.0; Efficiency : 0.86|790.5; Nodes : 2
+1500331810.971027|PLATFORM: Not Enough Information for Analysis.
+1500331821.939114|PLATFORM: State = Elapsed Time : 43.8561000824; Progress : 0.0; Efficiency : 1.03|790.5; Nodes : 2
+1500331821.939315|PLATFORM: Not Enough Information for Analysis.
+1500331832.921256|PLATFORM: State = Elapsed Time : 54.8382680416; Progress : 0.0; Efficiency : 1.185|790.5; Nodes : 2
+1500331832.921587|PLATFORM: Not Enough Information for Analysis.
+1500331843.491085|PLATFORM: State = Elapsed Time : 65.4080660343; Progress : 0.0; Efficiency : 1.15|456.5; Nodes : 2
+1500331843.491391|PLATFORM: Not Enough Information for Analysis.
+1500331852.643900|COMPUTATION: End (MatrixSize, Iteration) = |5000|0|
+1500331852.763115|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+|None
+1500331852.763506|COMPUTATION: Progress = 0.05
+1500331852.763670|COMPUTATION: Start (MatrixSize, Iteration) = |5000|1|
+1500331852.764558|COMPUTATION: ['mpirun', '-n', '4', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '5000', '/home/ubuntu/teste.mtr_1']
+1500331854.541506|PLATFORM: State = Elapsed Time : 76.458532095; Progress : 0.0500000007451; Efficiency : 1.2|677.5; Nodes : 2
+1500331854.541713|PLATFORM: (predicted_time, predicted_cost) = 1311.95058298|2601.80073595
+1500331854.541804|PLATFORM: QoS Sample = {'execution_time': 1311.950582981846, 'efficiency': 0.8914285714285715, 'cost': 2601.800735951943}
+1500331854.541872|PLATFORM: Contract breached = {'execution_time': 0.07948347304851859, 'efficiency': 0.04906122448979592, 'cost': 0.059682108825431616}
+1500331854.541917|PLATFORM: Parameter to Reconfigure: execution_time
+1500331854.541958|PLATFORM: Scale Up = execution_time|1311.95058298|1132.0
+1500331854.541993|PLATFORM: N Value =1
+1500331854.542239|PLATFORM: RECONFIGURATION INTERVAL NOT DONE.
+1500331854.542296|PLATFORM: State = Elapsed Time : 76.4594199657; Progress : 0.0500000007451; Efficiency : 1.2|677.5; Nodes : 2
+1500331865.658856|PLATFORM: State = Elapsed Time : 87.5758929253; Progress : 0.0500000007451; Efficiency : 1.4|789.5; Nodes : 2
+1500331865.659036|PLATFORM: Not Enough Information for Analysis.
+1500331876.654086|PLATFORM: State = Elapsed Time : 98.5711379051; Progress : 0.0500000007451; Efficiency : 1.495|789.5; Nodes : 2
+1500331876.654253|PLATFORM: Not Enough Information for Analysis.
+1500331887.626388|PLATFORM: State = Elapsed Time : 109.543401957; Progress : 0.0500000007451; Efficiency : 1.57|790.5; Nodes : 2
+1500331887.626592|PLATFORM: Not Enough Information for Analysis.
+1500331898.665097|PLATFORM: State = Elapsed Time : 120.582119942; Progress : 0.0500000007451; Efficiency : 1.635|790.5; Nodes : 2
+1500331898.665307|PLATFORM: Not Enough Information for Analysis.
+1500331909.264422|PLATFORM: State = Elapsed Time : 131.18137908; Progress : 0.0500000007451; Efficiency : 1.55|456; Nodes : 2
+1500331909.264794|PLATFORM: Not Enough Information for Analysis.
+1500331916.165303|COMPUTATION: End (MatrixSize, Iteration) = |5000|1|
+1500331916.274060|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+|None
+1500331916.274252|COMPUTATION: Progress = 0.1
+1500331916.274313|COMPUTATION: Start (MatrixSize, Iteration) = |5000|2|
+1500331916.274858|COMPUTATION: ['mpirun', '-n', '4', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '5000', '/home/ubuntu/teste.mtr_2']
+1500331920.189598|PLATFORM: State = Elapsed Time : 142.106633902; Progress : 0.10000000149; Efficiency : 1.47|694.5; Nodes : 2
+1500331920.189819|PLATFORM: (predicted_time, predicted_cost) = 1312.45630216|2603.06280421
+1500331920.189905|PLATFORM: QoS Sample = {'execution_time': 1312.4563021591857, 'efficiency': 1.1815384615384616, 'cost': 2603.062804208508}
+1500331920.189972|PLATFORM: Contract breached = {'execution_time': 0.07970684724345659, 'efficiency': 0.03248351648351648, 'cost': 0.0599050890827753}
+1500331920.190016|PLATFORM: Parameter to Reconfigure: execution_time
+1500331920.190057|PLATFORM: Scale Up = execution_time|1312.45630216|1132.0
+1500331920.190092|PLATFORM: N Value =1
+1500331920.195349|PLATFORM: RECONFIGURATION BEFORE: 2
+1500331977.088177|COMPUTATION: End (MatrixSize, Iteration) = |5000|2|
+1500331978.780625|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+|None
+1500331978.780974|COMPUTATION: Progress = 0.15
+1500331978.781093|COMPUTATION: Start (MatrixSize, Iteration) = |5000|3|
+1500331978.782013|COMPUTATION: ['mpirun', '-n', '4', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '5000', '/home/ubuntu/teste.mtr_3']
+1500332015.712473|PLATFORM: RECONFIGURATION AFTER: 3|BUILDING
+1500332015.712625|PLATFORM: State = Elapsed Time : 237.629745007; Progress : 0.10000000149; Efficiency : 1.47|694.5; Nodes : 3
+1500332026.507116|PLATFORM: State = Elapsed Time : 248.424154997; Progress : 0.15000000596; Efficiency : 1.24667|320.667; Nodes : 3
+1500332026.507335|PLATFORM: (predicted_time, predicted_cost) = 1583.75427152|4492.11026028
+1500332026.507451|PLATFORM: QoS Sample = {'execution_time': 1583.7542715170275, 'efficiency': 1.1861907142857144, 'cost': 4492.110260277477}
+1500332026.507516|PLATFORM: Contract breached = {'execution_time': 0.19953810579374007, 'efficiency': 0.032217673469387746, 'cost': 0.3936590565861267}
+1500332026.507560|PLATFORM: Parameter to Reconfigure: cost
+1500332026.507600|PLATFORM: Scale Down = cost|4492.11026028|2264.0
+1500332026.507633|PLATFORM: N Value =-1
+1500332026.507986|PLATFORM: RECONFIGURATION INTERVAL NOT DONE.
+1500332026.508053|PLATFORM: State = Elapsed Time : 248.425177097; Progress : 0.15000000596; Efficiency : 1.24667|320.667; Nodes : 3
+1500332037.159287|PLATFORM: State = Elapsed Time : 259.076298952; Progress : 0.15000000596; Efficiency : 1.20667|321; Nodes : 3
+1500332037.159502|PLATFORM: Not Enough Information for Analysis.
+1500332037.511678|COMPUTATION: End (MatrixSize, Iteration) = |5000|3|
+1500332038.760289|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+|None
+1500332038.760630|COMPUTATION: Progress = 0.2
+1500332038.760752|COMPUTATION: Start (MatrixSize, Iteration) = |5000|4|
+1500332038.761566|COMPUTATION: ['mpirun', '-n', '6', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '5000', '/home/ubuntu/teste.mtr_4']
+1500332048.192716|PLATFORM: State = Elapsed Time : 270.109750032; Progress : 0.20000000298; Efficiency : 1.30333|680; Nodes : 3
+1500332048.192959|PLATFORM: (predicted_time, predicted_cost) = 1296.24383545|3628.86290954
+1500332048.193041|PLATFORM: QoS Sample = {'execution_time': 1296.2438354455853, 'efficiency': 1.1947918750000002, 'cost': 3628.862909544535}
+1500332048.193118|PLATFORM: Contract breached = {'execution_time': 0.07254586371271436, 'efficiency': 0.03172617857142856, 'cost': 0.24114185680998848}
+1500332048.193162|PLATFORM: Parameter to Reconfigure: cost
+1500332048.193202|PLATFORM: Scale Down = cost|3628.86290954|2264.0
+1500332048.193236|PLATFORM: N Value =-1
+1500332048.193496|PLATFORM: RECONFIGURATION INTERVAL NOT DONE.
+1500332048.193562|PLATFORM: State = Elapsed Time : 270.110686064; Progress : 0.20000000298; Efficiency : 1.30333|680; Nodes : 3
+1500332059.207071|PLATFORM: State = Elapsed Time : 281.124108076; Progress : 0.20000000298; Efficiency : 1.43667|680; Nodes : 3
+1500332059.207287|PLATFORM: Not Enough Information for Analysis.
+1500332070.185098|PLATFORM: State = Elapsed Time : 292.102140903; Progress : 0.20000000298; Efficiency : 1.52333|680.333; Nodes : 3
+1500332070.185293|PLATFORM: Not Enough Information for Analysis.
+1500332080.727318|PLATFORM: State = Elapsed Time : 302.644362926; Progress : 0.20000000298; Efficiency : 1.47333|320; Nodes : 3
+1500332080.727484|PLATFORM: Not Enough Information for Analysis.
+1500332089.563746|COMPUTATION: End (MatrixSize, Iteration) = |5000|4|
+1500332089.689778|COMPUTATION: Execution = Warning: Permanently added '10.10.10.5' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+|None
+1500332089.690165|COMPUTATION: Progress = 0.25
+1500332089.690336|COMPUTATION: Start (MatrixSize, Iteration) = |6000|5|
+1500332089.690793|COMPUTATION: ['mpirun', '-n', '6', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '6000', '/home/ubuntu/teste.mtr_5']
+1500332091.688177|PLATFORM: State = Elapsed Time : 313.605202913; Progress : 0.25; Efficiency : 1.43|806; Nodes : 3
+1500332091.688420|PLATFORM: (predicted_time, predicted_cost) = 1210.9769125|3373.27969718
+1500332091.688519|PLATFORM: QoS Sample = {'execution_time': 1210.9769124984741, 'efficiency': 1.2489999999999997, 'cost': 3373.2796971797943}
+1500332091.688588|PLATFORM: Contract breached = {'efficiency': 0.028628571428571448, 'cost': 0.1959858122225785}
+1500332091.688629|PLATFORM: Parameter to Reconfigure: cost
+1500332091.688671|PLATFORM: Scale Down = cost|3373.27969718|2264.0
+1500332091.688706|PLATFORM: N Value =-1
+1500332091.688894|PLATFORM: RECONFIGURATION INTERVAL NOT DONE.
+1500332091.688991|PLATFORM: State = Elapsed Time : 313.606112003; Progress : 0.25; Efficiency : 1.43|806; Nodes : 3
+1500332102.709280|PLATFORM: State = Elapsed Time : 324.62628603; Progress : 0.25; Efficiency : 1.54|933.333; Nodes : 3
+1500332102.709493|PLATFORM: Not Enough Information for Analysis.
+1500332113.747621|PLATFORM: State = Elapsed Time : 335.664647102; Progress : 0.25; Efficiency : 1.61333|933.333; Nodes : 3
+1500332113.747842|PLATFORM: Not Enough Information for Analysis.
+1500332124.793480|PLATFORM: State = Elapsed Time : 346.710465908; Progress : 0.25; Efficiency : 1.75333|933.667; Nodes : 3
+1500332124.793677|PLATFORM: Not Enough Information for Analysis.
+1500332135.811976|PLATFORM: State = Elapsed Time : 357.728995085; Progress : 0.25; Efficiency : 1.83|932.667; Nodes : 3
+1500332135.812170|PLATFORM: Not Enough Information for Analysis.
+1500332146.395045|PLATFORM: State = Elapsed Time : 368.312072992; Progress : 0.25; Efficiency : 1.8|413.333; Nodes : 3
+1500332146.395250|PLATFORM: Not Enough Information for Analysis.
+1500332156.946799|PLATFORM: State = Elapsed Time : 378.863818884; Progress : 0.25; Efficiency : 1.59|413.333; Nodes : 3
+1500332156.947002|PLATFORM: Not Enough Information for Analysis.
+1500332162.761123|COMPUTATION: End (MatrixSize, Iteration) = |6000|5|
+1500332165.487889|COMPUTATION: Execution = Warning: Permanently added '10.10.10.5' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+|None
+1500332165.488266|COMPUTATION: Progress = 0.3
+1500332165.488443|COMPUTATION: Start (MatrixSize, Iteration) = |7000|6|
+1500332165.489061|COMPUTATION: ['mpirun', '-n', '6', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '7000', '/home/ubuntu/teste.mtr_6']
+1500332167.913908|PLATFORM: State = Elapsed Time : 389.830935955; Progress : 0.300000011921; Efficiency : 1.52333|1059; Nodes : 3
+1500332167.914136|PLATFORM: (predicted_time, predicted_cost) = 1263.23309329|3530.02966365
+1500332167.914229|PLATFORM: QoS Sample = {'execution_time': 1263.233093292193, 'efficiency': 1.3566662962962963, 'cost': 3530.029663654197}
+1500332167.914295|PLATFORM: Contract breached = {'execution_time': 0.05796514721386615, 'efficiency': 0.02247621164021164, 'cost': 0.22368015258908078}
+1500332167.914340|PLATFORM: Parameter to Reconfigure: cost
+1500332167.914381|PLATFORM: Scale Down = cost|3530.02966365|2264.0
+1500332167.914429|PLATFORM: N Value =-1
+1500332167.914601|PLATFORM: RECONFIGURATION BEFORE: 3
+1500332167.914823|PLATFORM: Waiting to Scale Down.
+1500332167.914892|PLATFORM: State = Elapsed Time : 389.832014084; Progress : 0.300000011921; Efficiency : 1.52333|1059; Nodes : 3
+1500332177.921611|PLATFORM: Waiting to Scale Down.
+1500332177.921765|PLATFORM: State = Elapsed Time : 399.838885069; Progress : 0.300000011921; Efficiency : 1.52333|1059; Nodes : 3
+1500332187.929663|PLATFORM: Waiting to Scale Down.
+1500332187.929848|PLATFORM: State = Elapsed Time : 409.846965075; Progress : 0.300000011921; Efficiency : 1.52333|1059; Nodes : 3
+1500332197.937653|PLATFORM: Waiting to Scale Down.
+1500332197.937832|PLATFORM: State = Elapsed Time : 419.854950905; Progress : 0.300000011921; Efficiency : 1.52333|1059; Nodes : 3
+1500332207.945684|PLATFORM: Waiting to Scale Down.
+1500332207.945854|PLATFORM: State = Elapsed Time : 429.862972021; Progress : 0.300000011921; Efficiency : 1.52333|1059; Nodes : 3
+1500332217.954989|PLATFORM: Waiting to Scale Down.
+1500332217.955155|PLATFORM: State = Elapsed Time : 439.872272968; Progress : 0.300000011921; Efficiency : 1.52333|1059; Nodes : 3
+1500332227.961644|PLATFORM: Waiting to Scale Down.
+1500332227.961815|PLATFORM: State = Elapsed Time : 449.878933907; Progress : 0.300000011921; Efficiency : 1.52333|1059; Nodes : 3
+1500332237.970920|PLATFORM: Waiting to Scale Down.
+1500332237.971093|PLATFORM: State = Elapsed Time : 459.888210058; Progress : 0.300000011921; Efficiency : 1.52333|1059; Nodes : 3
+1500332247.977619|PLATFORM: Waiting to Scale Down.
+1500332247.977770|PLATFORM: State = Elapsed Time : 469.894887924; Progress : 0.300000011921; Efficiency : 1.52333|1059; Nodes : 3
+1500332257.988024|PLATFORM: Waiting to Scale Down.
+1500332258.003115|PLATFORM: State = Elapsed Time : 479.920197964; Progress : 0.300000011921; Efficiency : 1.52333|1059; Nodes : 3
+1500332268.009625|PLATFORM: Waiting to Scale Down.
+1500332269.202629|PLATFORM: State = Elapsed Time : 491.119713068; Progress : 0.300000011921; Efficiency : 1.52333|1059; Nodes : 3
+1500332275.658246|COMPUTATION: End (MatrixSize, Iteration) = |7000|6|
+1500332278.117005|COMPUTATION: Execution = Warning: Permanently added '10.10.10.5' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+|None
+1500332278.117380|COMPUTATION: Progress = 0.35
+1500332278.117578|COMPUTATION: Start (MatrixSize, Iteration) = |8000|7|
+1500332278.118248|COMPUTATION: Waiting to Scale Down.
+1500332279.213139|PLATFORM: Ready to Scale Down.
+1500332283.123800|COMPUTATION: Waiting to Scale Down.
+1500332288.129558|COMPUTATION: Waiting to Scale Down.
+1500332293.135229|COMPUTATION: Waiting to Scale Down.
+1500332298.174569|COMPUTATION: Waiting to Scale Down.
+1500332303.199725|COMPUTATION: Waiting to Scale Down.
+1500332308.255417|COMPUTATION: Waiting to Scale Down.
+1500332313.303106|COMPUTATION: Waiting to Scale Down.
+1500332316.969320|PLATFORM: Scaled Down.
+1500332318.959772|PLATFORM: RECONFIGURATION AFTER: 2|BUILDING
+1500332318.959955|PLATFORM: State = Elapsed Time : 540.877058029; Progress : 0.300000011921; Efficiency : 1.52333|1059; Nodes : 2
+1500332318.960215|COMPUTATION: ['mpirun', '-n', '4', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '8000', '/home/ubuntu/teste.mtr_7']
+1500332329.930859|PLATFORM: State = Elapsed Time : 551.847879887; Progress : 0.34999999404; Efficiency : 1.015|1832; Nodes : 2
+1500332329.931096|PLATFORM: (predicted_time, predicted_cost) = 1545.67686942|3372.65878039
+1500332329.931197|PLATFORM: QoS Sample = {'execution_time': 1545.676869420952, 'efficiency': 1.3949133333333332, 'cost': 3372.658780393494}
+1500332329.931275|PLATFORM: Contract breached = {'execution_time': 0.18271946529193994, 'efficiency': 0.020290666666666676, 'cost': 0.19587610961015797}
+1500332329.931321|PLATFORM: Parameter to Reconfigure: cost
+1500332329.931362|PLATFORM: Scale Down = cost|3372.65878039|2264.0
+1500332329.931396|PLATFORM: N Value =-1
+1500332329.931608|PLATFORM: RECONFIGURATION INTERVAL NOT DONE.
+1500332329.931671|PLATFORM: State = Elapsed Time : 551.848794937; Progress : 0.34999999404; Efficiency : 1.015|1832; Nodes : 2
+1500332340.892221|PLATFORM: State = Elapsed Time : 562.809241056; Progress : 0.34999999404; Efficiency : 1.245|1832; Nodes : 2
+1500332340.892399|PLATFORM: Not Enough Information for Analysis.
+1500332351.842848|PLATFORM: State = Elapsed Time : 573.759874105; Progress : 0.34999999404; Efficiency : 1.365|1832; Nodes : 2
+1500332351.843037|PLATFORM: Not Enough Information for Analysis.
+1500332362.784093|PLATFORM: State = Elapsed Time : 584.701132059; Progress : 0.34999999404; Efficiency : 1.46|1832; Nodes : 2
+1500332362.784289|PLATFORM: Not Enough Information for Analysis.
+1500332373.755943|PLATFORM: State = Elapsed Time : 595.672985077; Progress : 0.34999999404; Efficiency : 1.545|1832.5; Nodes : 2
+1500332373.756147|PLATFORM: Not Enough Information for Analysis.
+1500332384.701167|PLATFORM: State = Elapsed Time : 606.618175983; Progress : 0.34999999404; Efficiency : 1.67|1832; Nodes : 2
+1500332384.701346|PLATFORM: Not Enough Information for Analysis.
+1500332395.671031|PLATFORM: State = Elapsed Time : 617.588078976; Progress : 0.34999999404; Efficiency : 1.72|1832.5; Nodes : 2
+1500332395.671227|PLATFORM: Not Enough Information for Analysis.
+1500332406.627860|PLATFORM: State = Elapsed Time : 628.544910908; Progress : 0.34999999404; Efficiency : 1.82|1832.5; Nodes : 2
+1500332406.628021|PLATFORM: Not Enough Information for Analysis.
+1500332417.607360|PLATFORM: State = Elapsed Time : 639.524389029; Progress : 0.34999999404; Efficiency : 1.845|1832.5; Nodes : 2
+1500332417.607530|PLATFORM: Not Enough Information for Analysis.
+1500332428.539890|PLATFORM: State = Elapsed Time : 650.456938982; Progress : 0.34999999404; Efficiency : 1.87|1832.5; Nodes : 2
+1500332428.540071|PLATFORM: Not Enough Information for Analysis.
+1500332439.513376|PLATFORM: State = Elapsed Time : 661.430423975; Progress : 0.34999999404; Efficiency : 2.015|1832.5; Nodes : 2
+1500332439.513557|PLATFORM: Not Enough Information for Analysis.
+1500332450.429334|PLATFORM: State = Elapsed Time : 672.346379995; Progress : 0.34999999404; Efficiency : 2.01|1832.5; Nodes : 2
+1500332450.429515|PLATFORM: Not Enough Information for Analysis.
+1500332461.432665|PLATFORM: State = Elapsed Time : 683.349715948; Progress : 0.34999999404; Efficiency : 2.05|1833; Nodes : 2
+1500332461.432823|PLATFORM: Not Enough Information for Analysis.
+1500332472.368675|PLATFORM: State = Elapsed Time : 694.285708904; Progress : 0.34999999404; Efficiency : 2.045|1832; Nodes : 2
+1500332472.368857|PLATFORM: Not Enough Information for Analysis.
+1500332482.915204|PLATFORM: State = Elapsed Time : 704.832241058; Progress : 0.34999999404; Efficiency : 1.96|976.5; Nodes : 2
+1500332483.870408|PLATFORM: Not Enough Information for Analysis.
+1500332494.451951|PLATFORM: State = Elapsed Time : 716.36894393; Progress : 0.34999999404; Efficiency : 1.85|976.5; Nodes : 2
+1500332494.452253|PLATFORM: Not Enough Information for Analysis.
+1500332504.980523|PLATFORM: State = Elapsed Time : 726.897510052; Progress : 0.34999999404; Efficiency : 1.76|977; Nodes : 2
+1500332505.521082|PLATFORM: Not Enough Information for Analysis.
+1500332509.401806|COMPUTATION: End (MatrixSize, Iteration) = |8000|7|
+1500332509.874098|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+|None
+1500332509.874625|COMPUTATION: Progress = 0.4
+1500332509.874933|COMPUTATION: Start (MatrixSize, Iteration) = |9000|8|
+1500332509.875664|COMPUTATION: ['mpirun', '-n', '4', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '9000', '/home/ubuntu/teste.mtr_8']
+1500332516.459216|PLATFORM: State = Elapsed Time : 738.376243114; Progress : 0.40000000596; Efficiency : 1.825|1977.5; Nodes : 2
+1500332516.459461|PLATFORM: (predicted_time, predicted_cost) = 1818.78809066|3918.94702927
+1500332516.459581|PLATFORM: QoS Sample = {'execution_time': 1818.7880906643259, 'efficiency': 1.5081539285714285, 'cost': 3918.9470292690967}
+1500332516.459688|PLATFORM: Contract breached = {'execution_time': 0.3033516301520874, 'efficiency': 0.013819775510204087, 'cost': 0.292393468068745}
+1500332516.459740|PLATFORM: Parameter to Reconfigure: execution_time
+1500332516.459783|PLATFORM: Scale Up = execution_time|1818.78809066|1132.0
+1500332516.459827|PLATFORM: N Value =1
+1500332516.460006|PLATFORM: RECONFIGURATION BEFORE: 2
+1500332612.225164|PLATFORM: RECONFIGURATION AFTER: 3|BUILDING
+1500332612.225284|PLATFORM: State = Elapsed Time : 834.142404079; Progress : 0.40000000596; Efficiency : 1.825|1977.5; Nodes : 3
+1500332623.417806|PLATFORM: State = Elapsed Time : 845.33484602; Progress : 0.40000000596; Efficiency : 1.36667|1542.67; Nodes : 3
+1500332623.417965|PLATFORM: Not Enough Information for Analysis.
+1500332634.399406|PLATFORM: State = Elapsed Time : 856.316438913; Progress : 0.40000000596; Efficiency : 1.38333|1542; Nodes : 3
+1500332634.399592|PLATFORM: Not Enough Information for Analysis.
+1500332645.424041|PLATFORM: State = Elapsed Time : 867.341068029; Progress : 0.40000000596; Efficiency : 1.42667|1542.67; Nodes : 3
+1500332645.424229|PLATFORM: Not Enough Information for Analysis.
+1500332656.432064|PLATFORM: State = Elapsed Time : 878.349112034; Progress : 0.40000000596; Efficiency : 1.41333|1543; Nodes : 3
+1500332656.432247|PLATFORM: Not Enough Information for Analysis.
+1500332667.397205|PLATFORM: State = Elapsed Time : 889.314256907; Progress : 0.40000000596; Efficiency : 1.4|1542.33; Nodes : 3
+1500332667.397361|PLATFORM: Not Enough Information for Analysis.
+1500332678.396115|PLATFORM: State = Elapsed Time : 900.313163996; Progress : 0.40000000596; Efficiency : 1.39333|1542.67; Nodes : 3
+1500332678.396295|PLATFORM: Not Enough Information for Analysis.
+1500332689.400079|PLATFORM: State = Elapsed Time : 911.317126989; Progress : 0.40000000596; Efficiency : 1.38|1543; Nodes : 3
+1500332689.400281|PLATFORM: Not Enough Information for Analysis.
+1500332700.383359|PLATFORM: State = Elapsed Time : 922.300391912; Progress : 0.40000000596; Efficiency : 1.55|1542.67; Nodes : 3
+1500332700.383535|PLATFORM: Not Enough Information for Analysis.
+1500332711.384603|PLATFORM: State = Elapsed Time : 933.301650047; Progress : 0.40000000596; Efficiency : 1.51667|1543; Nodes : 3
+1500332711.384780|PLATFORM: Not Enough Information for Analysis.
+1500332722.387694|PLATFORM: State = Elapsed Time : 944.304721117; Progress : 0.40000000596; Efficiency : 1.51333|1543; Nodes : 3
+1500332722.387874|PLATFORM: Not Enough Information for Analysis.
+1500332733.364881|PLATFORM: State = Elapsed Time : 955.281904936; Progress : 0.40000000596; Efficiency : 1.48333|1542.67; Nodes : 3
+1500332733.365055|PLATFORM: Not Enough Information for Analysis.
+1500332743.955662|PLATFORM: State = Elapsed Time : 965.87270999; Progress : 0.40000000596; Efficiency : 1.38|821.333; Nodes : 3
+1500332743.955840|PLATFORM: Not Enough Information for Analysis.
+1500332754.594777|PLATFORM: State = Elapsed Time : 976.511815071; Progress : 0.40000000596; Efficiency : 1.32333|821; Nodes : 3
+1500332754.594955|PLATFORM: Not Enough Information for Analysis.
+1500332776.476708|COMPUTATION: End (MatrixSize, Iteration) = |9000|8|
+1500332778.965301|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+|None
+1500332778.969559|COMPUTATION: Progress = 0.45
+1500332778.969926|COMPUTATION: Start (MatrixSize, Iteration) = |10000|9|
+1500332778.970698|COMPUTATION: ['mpirun', '-n', '6', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '10000', '/home/ubuntu/teste.mtr_9']
+1500332779.776265|PLATFORM: State = Elapsed Time : 1001.69322896; Progress : 0.40000000596; Efficiency : 1.19333|88; Nodes : 3
+1500332779.776567|PLATFORM: Not Enough Information for Analysis.
+1500332790.720910|PLATFORM: State = Elapsed Time : 1012.63794208; Progress : 0.449999988079; Efficiency : 1.35667|2145; Nodes : 3
+1500332790.721160|PLATFORM: (predicted_time, predicted_cost) = 2226.17104335|6125.64607534
+1500332790.721278|PLATFORM: QoS Sample = {'execution_time': 2226.1710433475455, 'efficiency': 1.4864311267605637, 'cost': 6125.646075341785}
+1500332790.721344|PLATFORM: Contract breached = {'execution_time': 0.48329109688495825, 'efficiency': 0.015061078470824935, 'cost': 0.6822696246186899}
+1500332790.721390|PLATFORM: Parameter to Reconfigure: cost
+1500332790.722166|PLATFORM: Scale Down = cost|6125.64607534|2264.0
+1500332790.722233|PLATFORM: N Value =-1
+1500332790.722409|PLATFORM: RECONFIGURATION BEFORE: 3
+1500332790.722547|PLATFORM: Waiting to Scale Down.
+1500332790.722606|PLATFORM: State = Elapsed Time : 1012.63972902; Progress : 0.449999988079; Efficiency : 1.35667|2145; Nodes : 3
+1500332800.729727|PLATFORM: Waiting to Scale Down.
+1500332800.729917|PLATFORM: State = Elapsed Time : 1022.64703298; Progress : 0.449999988079; Efficiency : 1.35667|2145; Nodes : 3
+1500332810.737709|PLATFORM: Waiting to Scale Down.
+1500332810.737868|PLATFORM: State = Elapsed Time : 1032.6549859; Progress : 0.449999988079; Efficiency : 1.35667|2145; Nodes : 3
+1500332820.745706|PLATFORM: Waiting to Scale Down.
+1500332820.745860|PLATFORM: State = Elapsed Time : 1042.66296911; Progress : 0.449999988079; Efficiency : 1.35667|2145; Nodes : 3
+1500332830.753745|PLATFORM: Waiting to Scale Down.
+1500332830.753914|PLATFORM: State = Elapsed Time : 1052.67103195; Progress : 0.449999988079; Efficiency : 1.35667|2145; Nodes : 3
+1500332840.761615|PLATFORM: Waiting to Scale Down.
+1500332840.761757|PLATFORM: State = Elapsed Time : 1062.67887592; Progress : 0.449999988079; Efficiency : 1.35667|2145; Nodes : 3
+1500332850.769726|PLATFORM: Waiting to Scale Down.
+1500332850.769892|PLATFORM: State = Elapsed Time : 1072.687011; Progress : 0.449999988079; Efficiency : 1.35667|2145; Nodes : 3
+1500332860.777648|PLATFORM: Waiting to Scale Down.
+1500332860.777795|PLATFORM: State = Elapsed Time : 1082.6949141; Progress : 0.449999988079; Efficiency : 1.35667|2145; Nodes : 3
+1500332870.785617|PLATFORM: Waiting to Scale Down.
+1500332870.785758|PLATFORM: State = Elapsed Time : 1092.702878; Progress : 0.449999988079; Efficiency : 1.35667|2145; Nodes : 3
+1500332880.793621|PLATFORM: Waiting to Scale Down.
+1500332880.793775|PLATFORM: State = Elapsed Time : 1102.71089411; Progress : 0.449999988079; Efficiency : 1.35667|2145; Nodes : 3
+1500332890.801698|PLATFORM: Waiting to Scale Down.
+1500332890.801848|PLATFORM: State = Elapsed Time : 1112.71896696; Progress : 0.449999988079; Efficiency : 1.35667|2145; Nodes : 3
+1500332900.809647|PLATFORM: Waiting to Scale Down.
+1500332900.809822|PLATFORM: State = Elapsed Time : 1122.726933; Progress : 0.449999988079; Efficiency : 1.35667|2145; Nodes : 3
+1500332910.817617|PLATFORM: Waiting to Scale Down.
+1500332910.817763|PLATFORM: State = Elapsed Time : 1132.73488092; Progress : 0.449999988079; Efficiency : 1.35667|2145; Nodes : 3
+1500332920.825624|PLATFORM: Waiting to Scale Down.
+1500332920.825769|PLATFORM: State = Elapsed Time : 1142.74288893; Progress : 0.449999988079; Efficiency : 1.35667|2145; Nodes : 3
+1500332930.833608|PLATFORM: Waiting to Scale Down.
+1500332930.833778|PLATFORM: State = Elapsed Time : 1152.75089598; Progress : 0.449999988079; Efficiency : 1.35667|2145; Nodes : 3
+1500332940.841629|PLATFORM: Waiting to Scale Down.
+1500332940.841793|PLATFORM: State = Elapsed Time : 1162.75890303; Progress : 0.449999988079; Efficiency : 1.35667|2145; Nodes : 3
+1500332950.849715|PLATFORM: Waiting to Scale Down.
+1500332950.849891|PLATFORM: State = Elapsed Time : 1172.76700902; Progress : 0.449999988079; Efficiency : 1.35667|2145; Nodes : 3
+1500332960.857622|PLATFORM: Waiting to Scale Down.
+1500332960.857796|PLATFORM: State = Elapsed Time : 1182.77491307; Progress : 0.449999988079; Efficiency : 1.35667|2145; Nodes : 3
+1500332970.865644|PLATFORM: Waiting to Scale Down.
+1500332970.865810|PLATFORM: State = Elapsed Time : 1192.78292799; Progress : 0.449999988079; Efficiency : 1.35667|2145; Nodes : 3
+1500332980.873609|PLATFORM: Waiting to Scale Down.
+1500332980.873776|PLATFORM: State = Elapsed Time : 1202.79089403; Progress : 0.449999988079; Efficiency : 1.35667|2145; Nodes : 3
+1500332990.881631|PLATFORM: Waiting to Scale Down.
+1500332990.881783|PLATFORM: State = Elapsed Time : 1212.79890203; Progress : 0.449999988079; Efficiency : 1.35667|2145; Nodes : 3
+1500333000.889601|PLATFORM: Waiting to Scale Down.
+1500333000.889762|PLATFORM: State = Elapsed Time : 1222.80687904; Progress : 0.449999988079; Efficiency : 1.35667|2145; Nodes : 3
+1500333010.900020|PLATFORM: Waiting to Scale Down.
+1500333011.171109|PLATFORM: State = Elapsed Time : 1233.08820009; Progress : 0.449999988079; Efficiency : 1.35667|2145; Nodes : 3
+1500333021.181630|PLATFORM: Waiting to Scale Down.
+1500333021.246325|PLATFORM: State = Elapsed Time : 1243.16341996; Progress : 0.449999988079; Efficiency : 1.35667|2145; Nodes : 3
+1500333031.253601|PLATFORM: Waiting to Scale Down.
+1500333031.253735|PLATFORM: State = Elapsed Time : 1253.17085409; Progress : 0.449999988079; Efficiency : 1.35667|2145; Nodes : 3
+1500333041.264083|PLATFORM: Waiting to Scale Down.
+1500333041.464361|PLATFORM: State = Elapsed Time : 1263.38145089; Progress : 0.449999988079; Efficiency : 1.35667|2145; Nodes : 3
+1500333051.473573|PLATFORM: Waiting to Scale Down.
+1500333051.473702|PLATFORM: State = Elapsed Time : 1273.39082098; Progress : 0.449999988079; Efficiency : 1.35667|2145; Nodes : 3
+1500333055.748709|COMPUTATION: End (MatrixSize, Iteration) = |10000|9|
+1500333055.960480|COMPUTATION: Execution = Warning: Permanently added '10.10.10.6' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+|None
+1500333055.963415|COMPUTATION: Progress = 0.5
+1500333055.963500|COMPUTATION: Start (MatrixSize, Iteration) = |10000|10|
+1500333055.963789|COMPUTATION: Waiting to Scale Down.
+1500333060.969232|COMPUTATION: Waiting to Scale Down.
+1500333061.484085|PLATFORM: Ready to Scale Down.
+1500333065.994052|COMPUTATION: Waiting to Scale Down.
+1500333071.042279|COMPUTATION: Waiting to Scale Down.
+1500333076.088949|COMPUTATION: Waiting to Scale Down.
+1500333081.138189|COMPUTATION: Waiting to Scale Down.
+1500333086.144907|COMPUTATION: Waiting to Scale Down.
+1500333091.190105|COMPUTATION: Waiting to Scale Down.
+1500333096.254404|COMPUTATION: Waiting to Scale Down.
+1500333099.814086|PLATFORM: Scaled Down.
+1500333102.098524|PLATFORM: RECONFIGURATION AFTER: 2|BUILDING
+1500333102.098819|PLATFORM: State = Elapsed Time : 1324.01591802; Progress : 0.449999988079; Efficiency : 1.35667|2145; Nodes : 2
+1500333102.099234|COMPUTATION: ['mpirun', '-n', '4', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '10000', '/home/ubuntu/teste.mtr_10']
+1500333113.381063|PLATFORM: State = Elapsed Time : 1335.29811096; Progress : 0.5; Efficiency : 0.775|2413.5; Nodes : 2
+1500333113.381329|PLATFORM: (predicted_time, predicted_cost) = 2648.87418032|6068.30424571
+1500333113.381484|PLATFORM: QoS Sample = {'execution_time': 2648.874180316925, 'efficiency': 1.4438555555555552, 'cost': 6068.304245710373}
+1500333113.381571|PLATFORM: Contract breached = {'execution_time': 0.6699974294686065, 'efficiency': 0.017493968253968272, 'cost': 0.6721385593127868}
+1500333113.381625|PLATFORM: Parameter to Reconfigure: cost
+1500333113.381682|PLATFORM: Scale Down = cost|6068.30424571|2264.0
+1500333113.381723|PLATFORM: N Value =-1
+1500333113.383382|PLATFORM: RECONFIGURATION INTERVAL NOT DONE.
+1500333113.383736|PLATFORM: State = Elapsed Time : 1335.30085492; Progress : 0.5; Efficiency : 0.775|2413.5; Nodes : 2
+1500333124.357904|PLATFORM: State = Elapsed Time : 1346.27494907; Progress : 0.5; Efficiency : 0.965|2795.5; Nodes : 2
+1500333124.358070|PLATFORM: Not Enough Information for Analysis.
+1500333135.304305|PLATFORM: State = Elapsed Time : 1357.22134805; Progress : 0.5; Efficiency : 1.2|2795.5; Nodes : 2
+1500333135.304472|PLATFORM: Not Enough Information for Analysis.
+1500333146.256248|PLATFORM: State = Elapsed Time : 1368.17329311; Progress : 0.5; Efficiency : 1.32|2796; Nodes : 2
+1500333146.256418|PLATFORM: Not Enough Information for Analysis.
+1500333157.217533|PLATFORM: State = Elapsed Time : 1379.13451195; Progress : 0.5; Efficiency : 1.455|2796; Nodes : 2
+1500333157.217701|PLATFORM: Not Enough Information for Analysis.
+1500333168.193938|PLATFORM: State = Elapsed Time : 1390.11098409; Progress : 0.5; Efficiency : 1.535|2795.5; Nodes : 2
+1500333168.194105|PLATFORM: Not Enough Information for Analysis.
+1500333179.172787|PLATFORM: State = Elapsed Time : 1401.08982897; Progress : 0.5; Efficiency : 1.61|2796; Nodes : 2
+1500333179.172956|PLATFORM: Not Enough Information for Analysis.
+1500333190.167017|PLATFORM: State = Elapsed Time : 1412.08406901; Progress : 0.5; Efficiency : 1.765|2797; Nodes : 2
+1500333190.167177|PLATFORM: Not Enough Information for Analysis.
+1500333201.151227|PLATFORM: State = Elapsed Time : 1423.06826997; Progress : 0.5; Efficiency : 1.8|2796.5; Nodes : 2
+1500333201.151427|PLATFORM: Not Enough Information for Analysis.
+1500333212.135172|PLATFORM: State = Elapsed Time : 1434.0522151; Progress : 0.5; Efficiency : 1.88|2796.5; Nodes : 2
+1500333212.135363|PLATFORM: Not Enough Information for Analysis.
+1500333223.115260|PLATFORM: State = Elapsed Time : 1445.03228402; Progress : 0.5; Efficiency : 1.895|2797; Nodes : 2
+1500333223.115444|PLATFORM: Not Enough Information for Analysis.
+1500333234.087240|PLATFORM: State = Elapsed Time : 1456.0042851; Progress : 0.5; Efficiency : 1.915|2796.5; Nodes : 2
+1500333234.087438|PLATFORM: Not Enough Information for Analysis.
+1500333245.064744|PLATFORM: State = Elapsed Time : 1466.98175406; Progress : 0.5; Efficiency : 1.97|2796.5; Nodes : 2
+1500333245.064914|PLATFORM: Not Enough Information for Analysis.
+1500333256.015194|PLATFORM: State = Elapsed Time : 1477.93223906; Progress : 0.5; Efficiency : 1.975|2796.5; Nodes : 2
+1500333256.015372|PLATFORM: Not Enough Information for Analysis.
+1500333266.967581|PLATFORM: State = Elapsed Time : 1488.8846271; Progress : 0.5; Efficiency : 2.02|2797; Nodes : 2
+1500333266.967750|PLATFORM: Not Enough Information for Analysis.
+1500333277.919411|PLATFORM: State = Elapsed Time : 1499.83643603; Progress : 0.5; Efficiency : 2.02|2796.5; Nodes : 2
+1500333277.919588|PLATFORM: Not Enough Information for Analysis.
+1500333288.919622|PLATFORM: State = Elapsed Time : 1510.83666396; Progress : 0.5; Efficiency : 2.015|2797; Nodes : 2
+1500333288.919800|PLATFORM: Not Enough Information for Analysis.
+1500333299.859650|PLATFORM: State = Elapsed Time : 1521.77669311; Progress : 0.5; Efficiency : 2.015|2797; Nodes : 2
+1500333299.859822|PLATFORM: Not Enough Information for Analysis.
+1500333310.839796|PLATFORM: State = Elapsed Time : 1532.756845; Progress : 0.5; Efficiency : 2.08|2796.5; Nodes : 2
+1500333310.839961|PLATFORM: Not Enough Information for Analysis.
+1500333321.875904|PLATFORM: State = Elapsed Time : 1543.79294896; Progress : 0.5; Efficiency : 2.065|2796.5; Nodes : 2
+1500333321.876098|PLATFORM: Not Enough Information for Analysis.
+1500333332.855909|PLATFORM: State = Elapsed Time : 1554.77295899; Progress : 0.5; Efficiency : 2.055|2796.5; Nodes : 2
+1500333332.856100|PLATFORM: Not Enough Information for Analysis.
+1500333343.825349|PLATFORM: State = Elapsed Time : 1565.74238205; Progress : 0.5; Efficiency : 2.045|2797; Nodes : 2
+1500333343.827178|PLATFORM: Not Enough Information for Analysis.
+1500333354.780273|PLATFORM: State = Elapsed Time : 1576.69731808; Progress : 0.5; Efficiency : 2.04|2796.5; Nodes : 2
+1500333354.780449|PLATFORM: Not Enough Information for Analysis.
+1500333365.733263|PLATFORM: State = Elapsed Time : 1587.6503129; Progress : 0.5; Efficiency : 2.03|2796.5; Nodes : 2
+1500333365.733423|PLATFORM: Not Enough Information for Analysis.
+1500333376.662379|PLATFORM: State = Elapsed Time : 1598.57941794; Progress : 0.5; Efficiency : 2.065|2796.5; Nodes : 2
+1500333376.662545|PLATFORM: Not Enough Information for Analysis.
+1500333387.614622|PLATFORM: State = Elapsed Time : 1609.53166699; Progress : 0.5; Efficiency : 2.055|2797; Nodes : 2
+1500333387.614798|PLATFORM: Not Enough Information for Analysis.
+1500333398.592540|PLATFORM: State = Elapsed Time : 1620.50957608; Progress : 0.5; Efficiency : 2.045|2797; Nodes : 2
+1500333398.592707|PLATFORM: Not Enough Information for Analysis.
+1500333409.557151|PLATFORM: State = Elapsed Time : 1631.47411704; Progress : 0.5; Efficiency : 2.04|2320.5; Nodes : 2
+1500333409.557656|PLATFORM: Not Enough Information for Analysis.
+1500333420.127744|PLATFORM: State = Elapsed Time : 1642.04475689; Progress : 0.5; Efficiency : 1.96|1459.5; Nodes : 2
+1500333420.127994|PLATFORM: Not Enough Information for Analysis.
+1500333430.724863|PLATFORM: State = Elapsed Time : 1652.6418221; Progress : 0.5; Efficiency : 1.77|1459; Nodes : 2
+1500333430.725182|PLATFORM: Not Enough Information for Analysis.
+1500333454.508942|PLATFORM: State = Elapsed Time : 1676.4259131; Progress : 0.5; Efficiency : 1.475|1459; Nodes : 2
+1500333454.509260|PLATFORM: Not Enough Information for Analysis.
+1500333462.841730|COMPUTATION: End (MatrixSize, Iteration) = |10000|10|
+1500333463.100890|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+|None
+1500333463.101462|COMPUTATION: Progress = 0.55
+1500333463.101804|COMPUTATION: Start (MatrixSize, Iteration) = |9000|11|
+1500333463.102613|COMPUTATION: ['mpirun', '-n', '4', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '9000', '/home/ubuntu/teste.mtr_11']
+1500333465.556219|PLATFORM: State = Elapsed Time : 1687.47326112; Progress : 0.550000011921; Efficiency : 1.48|1788; Nodes : 2
+1500333465.556522|PLATFORM: (predicted_time, predicted_cost) = 3048.38588696|6867.79842889
+1500333465.556670|PLATFORM: QoS Sample = {'execution_time': 3048.3858869642368, 'efficiency': 1.5346284615384618, 'cost': 6867.7984288871985}
+1500333465.556736|PLATFORM: Contract breached = {'execution_time': 0.8464601974223661, 'efficiency': 0.012306945054945041, 'cost': 0.8133919485666429}
+1500333465.556792|PLATFORM: Parameter to Reconfigure: execution_time
+1500333465.556833|PLATFORM: Scale Up = execution_time|3048.38588696|1132.0
+1500333465.556865|PLATFORM: N Value =1
+1500333465.557137|PLATFORM: RECONFIGURATION BEFORE: 2
+1500333566.733176|PLATFORM: RECONFIGURATION AFTER: 3|BUILDING
+1500333566.733308|PLATFORM: State = Elapsed Time : 1788.6504271; Progress : 0.550000011921; Efficiency : 1.48|1788; Nodes : 3
+1500333577.780436|PLATFORM: State = Elapsed Time : 1799.69745302; Progress : 0.550000011921; Efficiency : 1.32667|1540.67; Nodes : 3
+1500333577.780660|PLATFORM: Not Enough Information for Analysis.
+1500333588.789751|PLATFORM: State = Elapsed Time : 1810.70679498; Progress : 0.550000011921; Efficiency : 1.32667|1540.33; Nodes : 3
+1500333588.789931|PLATFORM: Not Enough Information for Analysis.
+1500333599.843387|PLATFORM: State = Elapsed Time : 1821.7604301; Progress : 0.550000011921; Efficiency : 1.32667|1540.33; Nodes : 3
+1500333599.843599|PLATFORM: Not Enough Information for Analysis.
+1500333610.852854|PLATFORM: State = Elapsed Time : 1832.76990008; Progress : 0.550000011921; Efficiency : 1.38333|1540.33; Nodes : 3
+1500333610.853066|PLATFORM: Not Enough Information for Analysis.
+1500333621.832777|PLATFORM: State = Elapsed Time : 1843.74982595; Progress : 0.550000011921; Efficiency : 1.4|1540; Nodes : 3
+1500333621.832950|PLATFORM: Not Enough Information for Analysis.
+1500333632.805420|PLATFORM: State = Elapsed Time : 1854.7224679; Progress : 0.550000011921; Efficiency : 1.39|1540; Nodes : 3
+1500333632.807526|PLATFORM: Not Enough Information for Analysis.
+1500333643.828783|PLATFORM: State = Elapsed Time : 1865.74582911; Progress : 0.550000011921; Efficiency : 1.38|1540; Nodes : 3
+1500333643.828965|PLATFORM: Not Enough Information for Analysis.
+1500333654.892584|PLATFORM: State = Elapsed Time : 1876.80960894; Progress : 0.550000011921; Efficiency : 1.37|1540; Nodes : 3
+1500333654.892765|PLATFORM: Not Enough Information for Analysis.
+1500333665.915846|PLATFORM: State = Elapsed Time : 1887.83289504; Progress : 0.550000011921; Efficiency : 1.39|1540; Nodes : 3
+1500333665.916042|PLATFORM: Not Enough Information for Analysis.
+1500333676.880899|PLATFORM: State = Elapsed Time : 1898.79795098; Progress : 0.550000011921; Efficiency : 1.40667|1540.33; Nodes : 3
+1500333676.881074|PLATFORM: Not Enough Information for Analysis.
+1500333687.857192|PLATFORM: State = Elapsed Time : 1909.77423906; Progress : 0.550000011921; Efficiency : 1.39667|1540; Nodes : 3
+1500333687.857369|PLATFORM: Not Enough Information for Analysis.
+1500333698.555861|PLATFORM: State = Elapsed Time : 1920.4728601; Progress : 0.550000011921; Efficiency : 1.38667|817.333; Nodes : 3
+1500333698.556137|PLATFORM: Not Enough Information for Analysis.
+1500333709.214897|PLATFORM: State = Elapsed Time : 1931.13193607; Progress : 0.550000011921; Efficiency : 1.30333|818.667; Nodes : 3
+1500333709.215090|PLATFORM: Not Enough Information for Analysis.
+1500333719.771257|PLATFORM: State = Elapsed Time : 1941.68829203; Progress : 0.550000011921; Efficiency : 1.25333|819; Nodes : 3
+1500333719.771460|PLATFORM: Not Enough Information for Analysis.
+1500333734.451260|PLATFORM: State = Elapsed Time : 1956.36830091; Progress : 0.550000011921; Efficiency : 1.12667|818.333; Nodes : 3
+1500333734.451447|PLATFORM: Not Enough Information for Analysis.
+1500333737.171049|COMPUTATION: End (MatrixSize, Iteration) = |9000|11|
+1500333739.828121|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+|None
+1500333739.828557|COMPUTATION: Progress = 0.6
+1500333739.828732|COMPUTATION: Start (MatrixSize, Iteration) = |8000|12|
+1500333739.829389|COMPUTATION: ['mpirun', '-n', '6', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '8000', '/home/ubuntu/teste.mtr_12']
+1500333745.463566|PLATFORM: State = Elapsed Time : 1967.380615; Progress : 0.600000023842; Efficiency : 1.13667|1410; Nodes : 3
+1500333745.463867|PLATFORM: (predicted_time, predicted_cost) = 3260.86589055|8764.89252104
+1500333745.464032|PLATFORM: QoS Sample = {'execution_time': 3260.865890547995, 'efficiency': 1.5123633561643839, 'cost': 8764.892521039737}
+1500333745.464099|PLATFORM: Contract breached = {'execution_time': 0.9403117891113053, 'efficiency': 0.013579236790606637, 'cost': 1.1485675832225686}
+1500333745.464144|PLATFORM: Parameter to Reconfigure: cost
+1500333745.464184|PLATFORM: Scale Down = cost|8764.89252104|2264.0
+1500333745.464218|PLATFORM: N Value =-1
+1500333745.464487|PLATFORM: RECONFIGURATION BEFORE: 3
+1500333745.464676|PLATFORM: Waiting to Scale Down.
+1500333745.464736|PLATFORM: State = Elapsed Time : 1967.38185906; Progress : 0.600000023842; Efficiency : 1.13667|1410; Nodes : 3
+1500333755.473640|PLATFORM: Waiting to Scale Down.
+1500333755.473820|PLATFORM: State = Elapsed Time : 1977.39093804; Progress : 0.600000023842; Efficiency : 1.13667|1410; Nodes : 3
+1500333765.481629|PLATFORM: Waiting to Scale Down.
+1500333765.481768|PLATFORM: State = Elapsed Time : 1987.39888811; Progress : 0.600000023842; Efficiency : 1.13667|1410; Nodes : 3
+1500333775.489616|PLATFORM: Waiting to Scale Down.
+1500333775.489780|PLATFORM: State = Elapsed Time : 1997.40689802; Progress : 0.600000023842; Efficiency : 1.13667|1410; Nodes : 3
+1500333785.497606|PLATFORM: Waiting to Scale Down.
+1500333785.497748|PLATFORM: State = Elapsed Time : 2007.41486812; Progress : 0.600000023842; Efficiency : 1.13667|1410; Nodes : 3
+1500333795.505640|PLATFORM: Waiting to Scale Down.
+1500333795.505794|PLATFORM: State = Elapsed Time : 2017.42291307; Progress : 0.600000023842; Efficiency : 1.13667|1410; Nodes : 3
+1500333805.513634|PLATFORM: Waiting to Scale Down.
+1500333805.513796|PLATFORM: State = Elapsed Time : 2027.43091512; Progress : 0.600000023842; Efficiency : 1.13667|1410; Nodes : 3
+1500333815.521652|PLATFORM: Waiting to Scale Down.
+1500333815.521827|PLATFORM: State = Elapsed Time : 2037.4389441; Progress : 0.600000023842; Efficiency : 1.13667|1410; Nodes : 3
+1500333825.529679|PLATFORM: Waiting to Scale Down.
+1500333825.529849|PLATFORM: State = Elapsed Time : 2047.44696689; Progress : 0.600000023842; Efficiency : 1.13667|1410; Nodes : 3
+1500333835.537618|PLATFORM: Waiting to Scale Down.
+1500333835.537784|PLATFORM: State = Elapsed Time : 2057.45490193; Progress : 0.600000023842; Efficiency : 1.13667|1410; Nodes : 3
+1500333845.545677|PLATFORM: Waiting to Scale Down.
+1500333845.545861|PLATFORM: State = Elapsed Time : 2067.46297693; Progress : 0.600000023842; Efficiency : 1.13667|1410; Nodes : 3
+1500333855.553661|PLATFORM: Waiting to Scale Down.
+1500333855.553827|PLATFORM: State = Elapsed Time : 2077.47094488; Progress : 0.600000023842; Efficiency : 1.13667|1410; Nodes : 3
+1500333865.564158|PLATFORM: Waiting to Scale Down.
+1500333865.675625|PLATFORM: State = Elapsed Time : 2087.59271789; Progress : 0.600000023842; Efficiency : 1.13667|1410; Nodes : 3
+1500333875.686063|PLATFORM: Waiting to Scale Down.
+1500333875.866027|PLATFORM: State = Elapsed Time : 2097.78308105; Progress : 0.600000023842; Efficiency : 1.13667|1410; Nodes : 3
+1500333885.876382|PLATFORM: Waiting to Scale Down.
+1500333886.301712|PLATFORM: State = Elapsed Time : 2108.21880102; Progress : 0.600000023842; Efficiency : 1.13667|1410; Nodes : 3
+1500333891.948562|COMPUTATION: End (MatrixSize, Iteration) = |8000|12|
+1500333893.130811|COMPUTATION: Execution = Warning: Permanently added '10.10.10.7' (ECDSA) to the list of known hosts.
+Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+|None
+1500333893.131199|COMPUTATION: Progress = 0.65
+1500333893.131368|COMPUTATION: Start (MatrixSize, Iteration) = |7000|13|
+1500333893.131849|COMPUTATION: Waiting to Scale Down.
+1500333896.312261|PLATFORM: Ready to Scale Down.
+1500333898.137331|COMPUTATION: Waiting to Scale Down.
+1500333903.143146|COMPUTATION: Waiting to Scale Down.
+1500333908.149208|COMPUTATION: Waiting to Scale Down.
+1500333913.155159|COMPUTATION: Waiting to Scale Down.
+1500333918.161076|COMPUTATION: Waiting to Scale Down.
+1500333923.207908|COMPUTATION: Waiting to Scale Down.
+1500333928.256811|COMPUTATION: Waiting to Scale Down.
+1500333933.304252|COMPUTATION: Waiting to Scale Down.
+1500333938.335031|COMPUTATION: Waiting to Scale Down.
+1500333940.099794|PLATFORM: Scaled Down.
+1500333942.272024|PLATFORM: RECONFIGURATION AFTER: 2|BUILDING
+1500333942.272251|PLATFORM: State = Elapsed Time : 2164.18935299; Progress : 0.600000023842; Efficiency : 1.13667|1410; Nodes : 2
+1500333943.382768|COMPUTATION: ['mpirun', '-n', '4', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '7000', '/home/ubuntu/teste.mtr_13']
+1500333953.290603|PLATFORM: State = Elapsed Time : 2175.20764709; Progress : 0.649999976158; Efficiency : 0.815|1431; Nodes : 2
+1500333953.290920|PLATFORM: (predicted_time, predicted_cost) = 3329.76420072|7806.15095979
+1500333953.291084|PLATFORM: QoS Sample = {'execution_time': 3329.764200715439, 'efficiency': 1.4732722222222223, 'cost': 7806.15095978621}
+1500333953.291148|PLATFORM: Contract breached = {'execution_time': 0.9707439049096462, 'efficiency': 0.015813015873015868, 'cost': 0.9791786148032172}
+1500333953.291189|PLATFORM: Parameter to Reconfigure: cost
+1500333953.291226|PLATFORM: Scale Down = cost|7806.15095979|2264.0
+1500333953.291258|PLATFORM: N Value =-1
+1500333953.291421|PLATFORM: RECONFIGURATION INTERVAL NOT DONE.
+1500333953.291473|PLATFORM: State = Elapsed Time : 2175.2085979; Progress : 0.649999976158; Efficiency : 0.815|1431; Nodes : 2
+1500333964.234722|PLATFORM: State = Elapsed Time : 2186.1517539; Progress : 0.649999976158; Efficiency : 1|1431; Nodes : 2
+1500333964.234944|PLATFORM: Not Enough Information for Analysis.
+1500333975.214606|PLATFORM: State = Elapsed Time : 2197.13164902; Progress : 0.649999976158; Efficiency : 1.15|1431.5; Nodes : 2
+1500333975.214776|PLATFORM: Not Enough Information for Analysis.
+1500333986.206670|PLATFORM: State = Elapsed Time : 2208.12371492; Progress : 0.649999976158; Efficiency : 1.35|1431.5; Nodes : 2
+1500333986.206850|PLATFORM: Not Enough Information for Analysis.
+1500333997.164821|PLATFORM: State = Elapsed Time : 2219.08187103; Progress : 0.649999976158; Efficiency : 1.515|1431.5; Nodes : 2
+1500333997.164978|PLATFORM: Not Enough Information for Analysis.
+1500334008.138672|PLATFORM: State = Elapsed Time : 2230.05571795; Progress : 0.649999976158; Efficiency : 1.59|1431; Nodes : 2
+1500334008.138853|PLATFORM: Not Enough Information for Analysis.
+1500334019.097719|PLATFORM: State = Elapsed Time : 2241.013973; Progress : 0.649999976158; Efficiency : 1.655|1431.5; Nodes : 2
+1500334019.097896|PLATFORM: Not Enough Information for Analysis.
+1500334030.054615|PLATFORM: State = Elapsed Time : 2251.97164798; Progress : 0.649999976158; Efficiency : 1.71|1431.5; Nodes : 2
+1500334030.054789|PLATFORM: Not Enough Information for Analysis.
+1500334041.006396|PLATFORM: State = Elapsed Time : 2262.92344499; Progress : 0.649999976158; Efficiency : 1.8|1431.5; Nodes : 2
+1500334041.006573|PLATFORM: Not Enough Information for Analysis.
+1500334051.934023|PLATFORM: State = Elapsed Time : 2273.85106301; Progress : 0.649999976158; Efficiency : 1.79|1198; Nodes : 2
+1500334051.934214|PLATFORM: Not Enough Information for Analysis.
+1500334062.508110|PLATFORM: State = Elapsed Time : 2284.42511296; Progress : 0.649999976158; Efficiency : 1.68|776.5; Nodes : 2
+1500334062.508389|PLATFORM: Not Enough Information for Analysis.
+1500334073.087467|PLATFORM: State = Elapsed Time : 2295.00450706; Progress : 0.649999976158; Efficiency : 1.535|777; Nodes : 2
+1500334073.087641|PLATFORM: Not Enough Information for Analysis.
+1500334080.837490|COMPUTATION: End (MatrixSize, Iteration) = |7000|13|
+1500334083.352445|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+|None
+1500334083.352803|COMPUTATION: Progress = 0.7
+1500334083.353045|COMPUTATION: Start (MatrixSize, Iteration) = |6000|14|
+1500334083.353808|COMPUTATION: ['mpirun', '-n', '4', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '6000', '/home/ubuntu/teste.mtr_14']
+1500334083.704621|PLATFORM: State = Elapsed Time : 2305.62159705; Progress : 0.649999976158; Efficiency : 1.45|92.5; Nodes : 2
+1500334083.704918|PLATFORM: Not Enough Information for Analysis.
+1500334094.654348|PLATFORM: State = Elapsed Time : 2316.57139301; Progress : 0.699999988079; Efficiency : 1.54|1083; Nodes : 2
+1500334094.654664|PLATFORM: (predicted_time, predicted_cost) = 3293.87206203|7734.50474204
+1500334094.654824|PLATFORM: QoS Sample = {'execution_time': 3293.8720620337904, 'efficiency': 1.4767720000000004, 'cost': 7734.504742039001}
+1500334094.654885|PLATFORM: Contract breached = {'execution_time': 0.9548904867640416, 'efficiency': 0.015613028571428548, 'cost': 0.9665202724450532}
+1500334094.654924|PLATFORM: Parameter to Reconfigure: cost
+1500334094.654961|PLATFORM: Scale Down = cost|7734.50474204|2264.0
+1500334094.654993|PLATFORM: N Value =-1
+1500334094.655304|PLATFORM: RECONFIGURATION BEFORE: 2
+1500334094.655405|PLATFORM: Contract down limit reached. Skipping Scale Down.
+1500334105.594293|PLATFORM: State = Elapsed Time : 2327.51134205; Progress : 0.699999988079; Efficiency : 1.655|1084.5; Nodes : 2
+1500334105.594457|PLATFORM: Not Enough Information for Analysis.
+1500334116.590089|PLATFORM: State = Elapsed Time : 2338.5071249; Progress : 0.699999988079; Efficiency : 1.71|1084; Nodes : 2
+1500334116.590270|PLATFORM: Not Enough Information for Analysis.
+1500334127.527198|PLATFORM: State = Elapsed Time : 2349.44423699; Progress : 0.699999988079; Efficiency : 1.77|1084; Nodes : 2
+1500334127.527394|PLATFORM: Not Enough Information for Analysis.
+1500334138.487069|PLATFORM: State = Elapsed Time : 2360.40411496; Progress : 0.699999988079; Efficiency : 1.81|1084; Nodes : 2
+1500334138.487241|PLATFORM: Not Enough Information for Analysis.
+1500334149.510357|PLATFORM: State = Elapsed Time : 2371.42740297; Progress : 0.699999988079; Efficiency : 1.84|1082.5; Nodes : 2
+1500334149.510553|PLATFORM: Not Enough Information for Analysis.
+1500334160.067532|PLATFORM: State = Elapsed Time : 2381.9845221; Progress : 0.699999988079; Efficiency : 1.74|601; Nodes : 2
+1500334160.428085|PLATFORM: Not Enough Information for Analysis.
+1500334170.992246|PLATFORM: State = Elapsed Time : 2392.90922093; Progress : 0.699999988079; Efficiency : 1.895|602.5; Nodes : 2
+1500334171.103734|PLATFORM: Not Enough Information for Analysis.
+1500334174.477171|COMPUTATION: End (MatrixSize, Iteration) = |6000|14|
+1500334175.993167|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+|None
+1500334175.993397|COMPUTATION: Progress = 0.75
+1500334175.993525|COMPUTATION: Start (MatrixSize, Iteration) = |5000|15|
+1500334175.993993|COMPUTATION: ['mpirun', '-n', '4', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '5000', '/home/ubuntu/teste.mtr_15']
+1500334182.074195|PLATFORM: State = Elapsed Time : 2403.99123502; Progress : 0.75; Efficiency : 1.76|787; Nodes : 2
+1500334182.074500|PLATFORM: (predicted_time, predicted_cost) = 3190.84031328|7528.3992571
+1500334182.074660|PLATFORM: QoS Sample = {'execution_time': 3190.8403132756553, 'efficiency': 1.4894236263736274, 'cost': 7528.399257103602}
+1500334182.074722|PLATFORM: Contract breached = {'execution_time': 0.9093817638143353, 'efficiency': 0.01489007849293558, 'cost': 0.9301058758133574}
+1500334182.074761|PLATFORM: Parameter to Reconfigure: cost
+1500334182.074798|PLATFORM: Scale Down = cost|7528.3992571|2264.0
+1500334182.074830|PLATFORM: N Value =-1
+1500334182.074978|PLATFORM: RECONFIGURATION BEFORE: 2
+1500334182.075022|PLATFORM: Contract down limit reached. Skipping Scale Down.
+1500334193.032860|PLATFORM: State = Elapsed Time : 2414.94989491; Progress : 0.75; Efficiency : 1.905|787.5; Nodes : 2
+1500334193.033049|PLATFORM: Not Enough Information for Analysis.
+1500334204.010168|PLATFORM: State = Elapsed Time : 2425.92718506; Progress : 0.75; Efficiency : 1.92|788; Nodes : 2
+1500334204.010358|PLATFORM: Not Enough Information for Analysis.
+1500334215.001793|PLATFORM: State = Elapsed Time : 2436.9188261; Progress : 0.75; Efficiency : 1.93|788; Nodes : 2
+1500334215.001982|PLATFORM: Not Enough Information for Analysis.
+1500334225.544454|PLATFORM: State = Elapsed Time : 2447.46143794; Progress : 0.75; Efficiency : 1.825|454; Nodes : 2
+1500334225.544757|PLATFORM: Not Enough Information for Analysis.
+1500334233.463592|COMPUTATION: End (MatrixSize, Iteration) = |5000|15|
+1500334234.542993|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+|None
+1500334234.543290|COMPUTATION: Progress = 0.8
+1500334234.543396|COMPUTATION: Start (MatrixSize, Iteration) = |5000|16|
+1500334234.544183|COMPUTATION: ['mpirun', '-n', '4', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '5000', '/home/ubuntu/teste.mtr_16']
+1500334236.561668|PLATFORM: State = Elapsed Time : 2458.47869611; Progress : 0.800000011921; Efficiency : 1.955|683.5; Nodes : 2
+1500334236.562026|PLATFORM: (predicted_time, predicted_cost) = 3059.52213199|7265.66986217
+1500334236.562224|PLATFORM: QoS Sample = {'execution_time': 3059.5221319865864, 'efficiency': 1.4991940860215065, 'cost': 7265.669862165388}
+1500334236.562295|PLATFORM: Contract breached = {'execution_time': 0.8513790335629798, 'efficiency': 0.014331766513056772, 'cost': 0.8836872547995385}
+1500334236.562339|PLATFORM: Parameter to Reconfigure: cost
+1500334236.562379|PLATFORM: Scale Down = cost|7265.66986217|2264.0
+1500334236.562424|PLATFORM: N Value =-1
+1500334236.562569|PLATFORM: RECONFIGURATION BEFORE: 2
+1500334236.562615|PLATFORM: Contract down limit reached. Skipping Scale Down.
+1500334247.490227|PLATFORM: State = Elapsed Time : 2469.40725493; Progress : 0.800000011921; Efficiency : 2.06|789.5; Nodes : 2
+1500334247.518241|PLATFORM: Not Enough Information for Analysis.
+1500334258.506168|PLATFORM: State = Elapsed Time : 2480.42320395; Progress : 0.800000011921; Efficiency : 2.05|789.5; Nodes : 2
+1500334258.506353|PLATFORM: Not Enough Information for Analysis.
+1500334269.485884|PLATFORM: State = Elapsed Time : 2491.40292811; Progress : 0.800000011921; Efficiency : 2.045|790; Nodes : 2
+1500334269.486053|PLATFORM: Not Enough Information for Analysis.
+1500334280.031964|PLATFORM: State = Elapsed Time : 2501.94896007; Progress : 0.800000011921; Efficiency : 2.04|455.5; Nodes : 2
+1500334280.032253|PLATFORM: Not Enough Information for Analysis.
+1500334288.428782|COMPUTATION: End (MatrixSize, Iteration) = |5000|16|
+1500334290.459556|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+|None
+1500334290.459811|COMPUTATION: Progress = 0.85
+1500334290.459900|COMPUTATION: Start (MatrixSize, Iteration) = |5000|17|
+1500334290.460363|COMPUTATION: ['mpirun', '-n', '4', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '5000', '/home/ubuntu/teste.mtr_17']
+1500334290.645225|PLATFORM: State = Elapsed Time : 2512.56217694; Progress : 0.800000011921; Efficiency : 1.88|89.5; Nodes : 2
+1500334290.645577|PLATFORM: Not Enough Information for Analysis.
+1500334301.598129|PLATFORM: State = Elapsed Time : 2523.51516795; Progress : 0.850000023842; Efficiency : 1.865|789.5; Nodes : 2
+1500334301.598446|PLATFORM: (predicted_time, predicted_cost) = 2956.06365467|7058.88172176
+1500334301.598724|PLATFORM: QoS Sample = {'execution_time': 2956.0636546734177, 'efficiency': 1.5122256544502632, 'cost': 7058.881721759479}
+1500334301.599066|PLATFORM: Contract breached = {'execution_time': 0.8056818262691774, 'efficiency': 0.013587105459984958, 'cost': 0.8471522476606854}
+1500334301.599265|PLATFORM: Parameter to Reconfigure: cost
+1500334301.599318|PLATFORM: Scale Down = cost|7058.88172176|2264.0
+1500334301.599354|PLATFORM: N Value =-1
+1500334301.599566|PLATFORM: RECONFIGURATION BEFORE: 2
+1500334301.599649|PLATFORM: Contract down limit reached. Skipping Scale Down.
+1500334312.547454|PLATFORM: State = Elapsed Time : 2534.46450305; Progress : 0.850000023842; Efficiency : 1.94|789.5; Nodes : 2
+1500334312.547623|PLATFORM: Not Enough Information for Analysis.
+1500334323.493126|PLATFORM: State = Elapsed Time : 2545.41016603; Progress : 0.850000023842; Efficiency : 1.95|788.5; Nodes : 2
+1500334323.493289|PLATFORM: Not Enough Information for Analysis.
+1500334334.023502|PLATFORM: State = Elapsed Time : 2555.94054508; Progress : 0.850000023842; Efficiency : 1.88|455; Nodes : 2
+1500334334.023674|PLATFORM: Not Enough Information for Analysis.
+1500334341.476291|COMPUTATION: End (MatrixSize, Iteration) = |5000|17|
+1500334343.076694|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+|None
+1500334343.077043|COMPUTATION: Progress = 0.9
+1500334343.077193|COMPUTATION: Start (MatrixSize, Iteration) = |5000|18|
+1500334343.077862|COMPUTATION: ['mpirun', '-n', '4', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '5000', '/home/ubuntu/teste.mtr_18']
+1500334344.969576|PLATFORM: State = Elapsed Time : 2566.88661289; Progress : 0.899999976158; Efficiency : 1.745|685; Nodes : 2
+1500334344.969924|PLATFORM: (predicted_time, predicted_cost) = 2840.0285697|6826.82471156
+1500334344.970111|PLATFORM: QoS Sample = {'execution_time': 2840.0285696990904, 'efficiency': 1.5179644329896922, 'cost': 6826.824711562716}
+1500334344.970176|PLATFORM: Contract breached = {'execution_time': 0.754429580255782, 'efficiency': 0.013259175257731876, 'cost': 0.806152775894473}
+1500334344.970217|PLATFORM: Parameter to Reconfigure: cost
+1500334344.970262|PLATFORM: Scale Down = cost|6826.82471156|2264.0
+1500334344.970296|PLATFORM: N Value =-1
+1500334344.970435|PLATFORM: RECONFIGURATION BEFORE: 2
+1500334344.970479|PLATFORM: Contract down limit reached. Skipping Scale Down.
+1500334355.896043|PLATFORM: State = Elapsed Time : 2577.81309199; Progress : 0.899999976158; Efficiency : 1.78|788.5; Nodes : 2
+1500334355.896223|PLATFORM: Not Enough Information for Analysis.
+1500334366.840585|PLATFORM: State = Elapsed Time : 2588.75762391; Progress : 0.899999976158; Efficiency : 1.82|789; Nodes : 2
+1500334366.840741|PLATFORM: Not Enough Information for Analysis.
+1500334377.830128|PLATFORM: State = Elapsed Time : 2599.74713993; Progress : 0.899999976158; Efficiency : 1.86|789.5; Nodes : 2
+1500334377.830306|PLATFORM: Not Enough Information for Analysis.
+1500334388.432767|PLATFORM: State = Elapsed Time : 2610.349756; Progress : 0.899999976158; Efficiency : 1.76|455; Nodes : 2
+1500334388.433073|PLATFORM: Not Enough Information for Analysis.
+1500334395.964034|COMPUTATION: End (MatrixSize, Iteration) = |5000|18|
+1500334397.668236|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+|None
+1500334397.668503|COMPUTATION: Progress = 0.95
+1500334397.668600|COMPUTATION: Start (MatrixSize, Iteration) = |5000|19|
+1500334397.669145|COMPUTATION: ['mpirun', '-n', '4', '-machinefile', '/home/ubuntu/machinefile', '/home/ubuntu/repositorios/elastichpc/beta/trials/Matrix.py', '5000', '/home/ubuntu/teste.mtr_19']
+1500334399.461735|PLATFORM: State = Elapsed Time : 2621.37875891; Progress : 0.949999988079; Efficiency : 1.685|675; Nodes : 2
+1500334399.462110|PLATFORM: (predicted_time, predicted_cost) = 2747.91352081|6642.42915988
+1500334399.462300|PLATFORM: QoS Sample = {'execution_time': 2747.9135208119033, 'efficiency': 1.5234601010101025, 'cost': 6642.429159877514}
+1500334399.462364|PLATFORM: Contract breached = {'execution_time': 0.713742721206671, 'efficiency': 0.012945137085136999, 'cost': 0.773574056515462}
+1500334399.462419|PLATFORM: Parameter to Reconfigure: cost
+1500334399.462460|PLATFORM: Scale Down = cost|6642.42915988|2264.0
+1500334399.462493|PLATFORM: N Value =-1
+1500334399.462626|PLATFORM: RECONFIGURATION BEFORE: 2
+1500334399.462671|PLATFORM: Contract down limit reached. Skipping Scale Down.
+1500334410.384137|PLATFORM: State = Elapsed Time : 2632.30117989; Progress : 0.949999988079; Efficiency : 1.695|789.5; Nodes : 2
+1500334410.384300|PLATFORM: Not Enough Information for Analysis.
+1500334421.319435|PLATFORM: State = Elapsed Time : 2643.23641109; Progress : 0.949999988079; Efficiency : 1.82|790; Nodes : 2
+1500334421.319601|PLATFORM: Not Enough Information for Analysis.
+1500334432.257885|PLATFORM: State = Elapsed Time : 2654.17493606; Progress : 0.949999988079; Efficiency : 1.85|789.5; Nodes : 2
+1500334432.258067|PLATFORM: Not Enough Information for Analysis.
+1500334442.803800|PLATFORM: State = Elapsed Time : 2664.72080112; Progress : 0.949999988079; Efficiency : 1.765|456; Nodes : 2
+1500334442.858143|PLATFORM: Not Enough Information for Analysis.
+1500334447.839282|COMPUTATION: End (MatrixSize, Iteration) = |5000|19|
+1500334449.180622|COMPUTATION: Execution = Warning: Permanently added '10.10.10.4' (ECDSA) to the list of known hosts.
+|None
+1500334449.180903|COMPUTATION: Progress = 1.0
+1500334449.181246|COMPUTATION: Finish Computation.
+1500334453.476754|PLATFORM: State = Elapsed Time : 2675.39372301; Progress : 1.0; Efficiency : 1.535|85.5; Nodes : 2
+1500334453.477500|PLATFORM: (predicted_time, predicted_cost) = 2664.53301907|6476.48796248
+1500334453.477931|PLATFORM: QoS Sample = {'execution_time': 2664.533019065857, 'efficiency': 1.5278470297029716, 'cost': 6476.48796248436}
+1500334453.478100|PLATFORM: Contract breached = {'execution_time': 0.6769138776792655, 'efficiency': 0.012694455445544482, 'cost': 0.7442558237604877}
+1500334453.478201|PLATFORM: Parameter to Reconfigure: cost
+1500334453.478293|PLATFORM: Scale Down = cost|6476.48796248|2264.0
+1500334453.478370|PLATFORM: N Value =-1
+1500334453.478628|PLATFORM: Computation is over. Forget Scaling.
+1500334453.478747|PLATFORM: Finish Platform.
+1500334453.480656|PLATFORM: Elapsed = 2653.91410613
+1500334453.482091|PLATFORM: Execution Log = [(1500331788.944161, {'compute_state': 0.0, 'resource_state': '0.275|119', 'nodes': 2}), (1500331799.961516, {'compute_state': 0.0, 'resource_state': '0.54|789.5', 'nodes': 2}), (1500331810.971075, {'compute_state': 0.0, 'resource_state': '0.86|790.5', 'nodes': 2}), (1500331821.939362, {'compute_state': 0.0, 'resource_state': '1.03|790.5', 'nodes': 2}), (1500331832.921639, {'compute_state': 0.0, 'resource_state': '1.185|790.5', 'nodes': 2}), (1500331843.491476, {'compute_state': 0.0, 'resource_state': '1.15|456.5', 'nodes': 2}), (1500331854.542284, {'compute_state': 0.05000000074505806, 'resource_state': '1.2|677.5', 'nodes': 2}), (1500331865.659074, {'compute_state': 0.05000000074505806, 'resource_state': '1.4|789.5', 'nodes': 2}), (1500331876.654289, {'compute_state': 0.05000000074505806, 'resource_state': '1.495|789.5', 'nodes': 2}), (1500331887.626634, {'compute_state': 0.05000000074505806, 'resource_state': '1.57|790.5', 'nodes': 2}), (1500331898.665355, {'compute_state': 0.05000000074505806, 'resource_state': '1.635|790.5', 'nodes': 2}), (1500331909.264893, {'compute_state': 0.05000000074505806, 'resource_state': '1.55|456', 'nodes': 2}), (1500332015.712609, {'compute_state': 0.10000000149011612, 'resource_state': '1.47|694.5', 'nodes': 3}), (1500332026.508041, {'compute_state': 0.15000000596046448, 'resource_state': '1.24667|320.667', 'nodes': 3}), (1500332037.159549, {'compute_state': 0.15000000596046448, 'resource_state': '1.20667|321', 'nodes': 3}), (1500332048.193551, {'compute_state': 0.20000000298023224, 'resource_state': '1.30333|680', 'nodes': 3}), (1500332059.207327, {'compute_state': 0.20000000298023224, 'resource_state': '1.43667|680', 'nodes': 3}), (1500332070.185334, {'compute_state': 0.20000000298023224, 'resource_state': '1.52333|680.333', 'nodes': 3}), (1500332080.727525, {'compute_state': 0.20000000298023224, 'resource_state': '1.47333|320', 'nodes': 3}), (1500332091.688976, {'compute_state': 0.25, 'resource_state': '1.43|806', 'nodes': 3}), (1500332102.709546, {'compute_state': 0.25, 'resource_state': '1.54|933.333', 'nodes': 3}), (1500332113.747881, {'compute_state': 0.25, 'resource_state': '1.61333|933.333', 'nodes': 3}), (1500332124.793718, {'compute_state': 0.25, 'resource_state': '1.75333|933.667', 'nodes': 3}), (1500332135.812211, {'compute_state': 0.25, 'resource_state': '1.83|932.667', 'nodes': 3}), (1500332146.395296, {'compute_state': 0.25, 'resource_state': '1.8|413.333', 'nodes': 3}), (1500332156.947048, {'compute_state': 0.25, 'resource_state': '1.59|413.333', 'nodes': 3}), (1500332167.914879, {'compute_state': 0.30000001192092896, 'resource_state': '1.52333|1059', 'nodes': 3}), (1500332177.921748, {'compute_state': 0.30000001192092896, 'resource_state': '1.52333|1059', 'nodes': 3}), (1500332187.929829, {'compute_state': 0.30000001192092896, 'resource_state': '1.52333|1059', 'nodes': 3}), (1500332197.937815, {'compute_state': 0.30000001192092896, 'resource_state': '1.52333|1059', 'nodes': 3}), (1500332207.945835, {'compute_state': 0.30000001192092896, 'resource_state': '1.52333|1059', 'nodes': 3}), (1500332217.955137, {'compute_state': 0.30000001192092896, 'resource_state': '1.52333|1059', 'nodes': 3}), (1500332227.961797, {'compute_state': 0.30000001192092896, 'resource_state': '1.52333|1059', 'nodes': 3}), (1500332237.971074, {'compute_state': 0.30000001192092896, 'resource_state': '1.52333|1059', 'nodes': 3}), (1500332247.977751, {'compute_state': 0.30000001192092896, 'resource_state': '1.52333|1059', 'nodes': 3}), (1500332258.003059, {'compute_state': 0.30000001192092896, 'resource_state': '1.52333|1059', 'nodes': 3}), (1500332269.202574, {'compute_state': 0.30000001192092896, 'resource_state': '1.52333|1059', 'nodes': 3}), (1500332318.959921, {'compute_state': 0.30000001192092896, 'resource_state': '1.52333|1059', 'nodes': 2}), (1500332329.93166, {'compute_state': 0.3499999940395355, 'resource_state': '1.015|1832', 'nodes': 2}), (1500332340.892441, {'compute_state': 0.3499999940395355, 'resource_state': '1.245|1832', 'nodes': 2}), (1500332351.843073, {'compute_state': 0.3499999940395355, 'resource_state': '1.365|1832', 'nodes': 2}), (1500332362.786239, {'compute_state': 0.3499999940395355, 'resource_state': '1.46|1832', 'nodes': 2}), (1500332373.756199, {'compute_state': 0.3499999940395355, 'resource_state': '1.545|1832.5', 'nodes': 2}), (1500332384.701388, {'compute_state': 0.3499999940395355, 'resource_state': '1.67|1832', 'nodes': 2}), (1500332395.671265, {'compute_state': 0.3499999940395355, 'resource_state': '1.72|1832.5', 'nodes': 2}), (1500332406.62807, {'compute_state': 0.3499999940395355, 'resource_state': '1.82|1832.5', 'nodes': 2}), (1500332417.607566, {'compute_state': 0.3499999940395355, 'resource_state': '1.845|1832.5', 'nodes': 2}), (1500332428.540141, {'compute_state': 0.3499999940395355, 'resource_state': '1.87|1832.5', 'nodes': 2}), (1500332439.513596, {'compute_state': 0.3499999940395355, 'resource_state': '2.015|1832.5', 'nodes': 2}), (1500332450.429553, {'compute_state': 0.3499999940395355, 'resource_state': '2.01|1832.5', 'nodes': 2}), (1500332461.432869, {'compute_state': 0.3499999940395355, 'resource_state': '2.05|1833', 'nodes': 2}), (1500332472.368896, {'compute_state': 0.3499999940395355, 'resource_state': '2.045|1832', 'nodes': 2}), (1500332483.870536, {'compute_state': 0.3499999940395355, 'resource_state': '1.96|976.5', 'nodes': 2}), (1500332494.45234, {'compute_state': 0.3499999940395355, 'resource_state': '1.85|976.5', 'nodes': 2}), (1500332505.521176, {'compute_state': 0.3499999940395355, 'resource_state': '1.76|977', 'nodes': 2}), (1500332612.225268, {'compute_state': 0.4000000059604645, 'resource_state': '1.825|1977.5', 'nodes': 3}), (1500332623.419906, {'compute_state': 0.4000000059604645, 'resource_state': '1.36667|1542.67', 'nodes': 3}), (1500332634.399638, {'compute_state': 0.4000000059604645, 'resource_state': '1.38333|1542', 'nodes': 3}), (1500332645.424278, {'compute_state': 0.4000000059604645, 'resource_state': '1.42667|1542.67', 'nodes': 3}), (1500332656.432284, {'compute_state': 0.4000000059604645, 'resource_state': '1.41333|1543', 'nodes': 3}), (1500332667.39742, {'compute_state': 0.4000000059604645, 'resource_state': '1.4|1542.33', 'nodes': 3}), (1500332678.396333, {'compute_state': 0.4000000059604645, 'resource_state': '1.39333|1542.67', 'nodes': 3}), (1500332689.40032, {'compute_state': 0.4000000059604645, 'resource_state': '1.38|1543', 'nodes': 3}), (1500332700.383574, {'compute_state': 0.4000000059604645, 'resource_state': '1.55|1542.67', 'nodes': 3}), (1500332711.384816, {'compute_state': 0.4000000059604645, 'resource_state': '1.51667|1543', 'nodes': 3}), (1500332722.387916, {'compute_state': 0.4000000059604645, 'resource_state': '1.51333|1543', 'nodes': 3}), (1500332733.365095, {'compute_state': 0.4000000059604645, 'resource_state': '1.48333|1542.67', 'nodes': 3}), (1500332743.955891, {'compute_state': 0.4000000059604645, 'resource_state': '1.38|821.333', 'nodes': 3}), (1500332754.595, {'compute_state': 0.4000000059604645, 'resource_state': '1.32333|821', 'nodes': 3}), (1500332779.776684, {'compute_state': 0.4000000059604645, 'resource_state': '1.19333|88', 'nodes': 3}), (1500332790.722593, {'compute_state': 0.44999998807907104, 'resource_state': '1.35667|2145', 'nodes': 3}), (1500332800.729896, {'compute_state': 0.44999998807907104, 'resource_state': '1.35667|2145', 'nodes': 3}), (1500332810.73785, {'compute_state': 0.44999998807907104, 'resource_state': '1.35667|2145', 'nodes': 3}), (1500332820.745833, {'compute_state': 0.44999998807907104, 'resource_state': '1.35667|2145', 'nodes': 3}), (1500332830.753895, {'compute_state': 0.44999998807907104, 'resource_state': '1.35667|2145', 'nodes': 3}), (1500332840.76174, {'compute_state': 0.44999998807907104, 'resource_state': '1.35667|2145', 'nodes': 3}), (1500332850.769875, {'compute_state': 0.44999998807907104, 'resource_state': '1.35667|2145', 'nodes': 3}), (1500332860.777778, {'compute_state': 0.44999998807907104, 'resource_state': '1.35667|2145', 'nodes': 3}), (1500332870.785741, {'compute_state': 0.44999998807907104, 'resource_state': '1.35667|2145', 'nodes': 3}), (1500332880.793758, {'compute_state': 0.44999998807907104, 'resource_state': '1.35667|2145', 'nodes': 3}), (1500332890.801831, {'compute_state': 0.44999998807907104, 'resource_state': '1.35667|2145', 'nodes': 3}), (1500332900.809796, {'compute_state': 0.44999998807907104, 'resource_state': '1.35667|2145', 'nodes': 3}), (1500332910.817745, {'compute_state': 0.44999998807907104, 'resource_state': '1.35667|2145', 'nodes': 3}), (1500332920.825752, {'compute_state': 0.44999998807907104, 'resource_state': '1.35667|2145', 'nodes': 3}), (1500332930.833759, {'compute_state': 0.44999998807907104, 'resource_state': '1.35667|2145', 'nodes': 3}), (1500332940.841761, {'compute_state': 0.44999998807907104, 'resource_state': '1.35667|2145', 'nodes': 3}), (1500332950.849873, {'compute_state': 0.44999998807907104, 'resource_state': '1.35667|2145', 'nodes': 3}), (1500332960.857777, {'compute_state': 0.44999998807907104, 'resource_state': '1.35667|2145', 'nodes': 3}), (1500332970.865791, {'compute_state': 0.44999998807907104, 'resource_state': '1.35667|2145', 'nodes': 3}), (1500332980.873757, {'compute_state': 0.44999998807907104, 'resource_state': '1.35667|2145', 'nodes': 3}), (1500332990.881765, {'compute_state': 0.44999998807907104, 'resource_state': '1.35667|2145', 'nodes': 3}), (1500333000.889743, {'compute_state': 0.44999998807907104, 'resource_state': '1.35667|2145', 'nodes': 3}), (1500333011.171062, {'compute_state': 0.44999998807907104, 'resource_state': '1.35667|2145', 'nodes': 3}), (1500333021.246282, {'compute_state': 0.44999998807907104, 'resource_state': '1.35667|2145', 'nodes': 3}), (1500333031.253717, {'compute_state': 0.44999998807907104, 'resource_state': '1.35667|2145', 'nodes': 3}), (1500333041.464313, {'compute_state': 0.44999998807907104, 'resource_state': '1.35667|2145', 'nodes': 3}), (1500333051.473684, {'compute_state': 0.44999998807907104, 'resource_state': '1.35667|2145', 'nodes': 3}), (1500333102.098781, {'compute_state': 0.44999998807907104, 'resource_state': '1.35667|2145', 'nodes': 2}), (1500333113.383719, {'compute_state': 0.5, 'resource_state': '0.775|2413.5', 'nodes': 2}), (1500333124.358109, {'compute_state': 0.5, 'resource_state': '0.965|2795.5', 'nodes': 2}), (1500333135.304526, {'compute_state': 0.5, 'resource_state': '1.2|2795.5', 'nodes': 2}), (1500333146.256459, {'compute_state': 0.5, 'resource_state': '1.32|2796', 'nodes': 2}), (1500333157.21774, {'compute_state': 0.5, 'resource_state': '1.455|2796', 'nodes': 2}), (1500333168.195162, {'compute_state': 0.5, 'resource_state': '1.535|2795.5', 'nodes': 2}), (1500333179.172996, {'compute_state': 0.5, 'resource_state': '1.61|2796', 'nodes': 2}), (1500333190.167226, {'compute_state': 0.5, 'resource_state': '1.765|2797', 'nodes': 2}), (1500333201.151466, {'compute_state': 0.5, 'resource_state': '1.8|2796.5', 'nodes': 2}), (1500333212.135406, {'compute_state': 0.5, 'resource_state': '1.88|2796.5', 'nodes': 2}), (1500333223.115483, {'compute_state': 0.5, 'resource_state': '1.895|2797', 'nodes': 2}), (1500333234.087478, {'compute_state': 0.5, 'resource_state': '1.915|2796.5', 'nodes': 2}), (1500333245.064952, {'compute_state': 0.5, 'resource_state': '1.97|2796.5', 'nodes': 2}), (1500333256.015424, {'compute_state': 0.5, 'resource_state': '1.975|2796.5', 'nodes': 2}), (1500333266.96779, {'compute_state': 0.5, 'resource_state': '2.02|2797', 'nodes': 2}), (1500333277.91963, {'compute_state': 0.5, 'resource_state': '2.02|2796.5', 'nodes': 2}), (1500333288.919841, {'compute_state': 0.5, 'resource_state': '2.015|2797', 'nodes': 2}), (1500333299.85986, {'compute_state': 0.5, 'resource_state': '2.015|2797', 'nodes': 2}), (1500333310.84001, {'compute_state': 0.5, 'resource_state': '2.08|2796.5', 'nodes': 2}), (1500333321.876137, {'compute_state': 0.5, 'resource_state': '2.065|2796.5', 'nodes': 2}), (1500333332.85614, {'compute_state': 0.5, 'resource_state': '2.055|2796.5', 'nodes': 2}), (1500333343.827238, {'compute_state': 0.5, 'resource_state': '2.045|2797', 'nodes': 2}), (1500333354.780484, {'compute_state': 0.5, 'resource_state': '2.04|2796.5', 'nodes': 2}), (1500333365.733549, {'compute_state': 0.5, 'resource_state': '2.03|2796.5', 'nodes': 2}), (1500333376.66258, {'compute_state': 0.5, 'resource_state': '2.065|2796.5', 'nodes': 2}), (1500333387.614835, {'compute_state': 0.5, 'resource_state': '2.055|2797', 'nodes': 2}), (1500333398.592744, {'compute_state': 0.5, 'resource_state': '2.045|2797', 'nodes': 2}), (1500333409.557764, {'compute_state': 0.5, 'resource_state': '2.04|2320.5', 'nodes': 2}), (1500333420.12806, {'compute_state': 0.5, 'resource_state': '1.96|1459.5', 'nodes': 2}), (1500333430.725261, {'compute_state': 0.5, 'resource_state': '1.77|1459', 'nodes': 2}), (1500333454.50935, {'compute_state': 0.5, 'resource_state': '1.475|1459', 'nodes': 2}), (1500333566.733291, {'compute_state': 0.550000011920929, 'resource_state': '1.48|1788', 'nodes': 3}), (1500333577.780708, {'compute_state': 0.550000011920929, 'resource_state': '1.32667|1540.67', 'nodes': 3}), (1500333588.78998, {'compute_state': 0.550000011920929, 'resource_state': '1.32667|1540.33', 'nodes': 3}), (1500333599.843639, {'compute_state': 0.550000011920929, 'resource_state': '1.32667|1540.33', 'nodes': 3}), (1500333610.853108, {'compute_state': 0.550000011920929, 'resource_state': '1.38333|1540.33', 'nodes': 3}), (1500333621.832999, {'compute_state': 0.550000011920929, 'resource_state': '1.4|1540', 'nodes': 3}), (1500333632.807566, {'compute_state': 0.550000011920929, 'resource_state': '1.39|1540', 'nodes': 3}), (1500333643.829, {'compute_state': 0.550000011920929, 'resource_state': '1.38|1540', 'nodes': 3}), (1500333654.892802, {'compute_state': 0.550000011920929, 'resource_state': '1.37|1540', 'nodes': 3}), (1500333665.916083, {'compute_state': 0.550000011920929, 'resource_state': '1.39|1540', 'nodes': 3}), (1500333676.881112, {'compute_state': 0.550000011920929, 'resource_state': '1.40667|1540.33', 'nodes': 3}), (1500333687.857418, {'compute_state': 0.550000011920929, 'resource_state': '1.39667|1540', 'nodes': 3}), (1500333698.556216, {'compute_state': 0.550000011920929, 'resource_state': '1.38667|817.333', 'nodes': 3}), (1500333709.215138, {'compute_state': 0.550000011920929, 'resource_state': '1.30333|818.667', 'nodes': 3}), (1500333719.771508, {'compute_state': 0.550000011920929, 'resource_state': '1.25333|819', 'nodes': 3}), (1500333734.451491, {'compute_state': 0.550000011920929, 'resource_state': '1.12667|818.333', 'nodes': 3}), (1500333745.464724, {'compute_state': 0.6000000238418579, 'resource_state': '1.13667|1410', 'nodes': 3}), (1500333755.473801, {'compute_state': 0.6000000238418579, 'resource_state': '1.13667|1410', 'nodes': 3}), (1500333765.481751, {'compute_state': 0.6000000238418579, 'resource_state': '1.13667|1410', 'nodes': 3}), (1500333775.489762, {'compute_state': 0.6000000238418579, 'resource_state': '1.13667|1410', 'nodes': 3}), (1500333785.497731, {'compute_state': 0.6000000238418579, 'resource_state': '1.13667|1410', 'nodes': 3}), (1500333795.505777, {'compute_state': 0.6000000238418579, 'resource_state': '1.13667|1410', 'nodes': 3}), (1500333805.513778, {'compute_state': 0.6000000238418579, 'resource_state': '1.13667|1410', 'nodes': 3}), (1500333815.521808, {'compute_state': 0.6000000238418579, 'resource_state': '1.13667|1410', 'nodes': 3}), (1500333825.52983, {'compute_state': 0.6000000238418579, 'resource_state': '1.13667|1410', 'nodes': 3}), (1500333835.537765, {'compute_state': 0.6000000238418579, 'resource_state': '1.13667|1410', 'nodes': 3}), (1500333845.54584, {'compute_state': 0.6000000238418579, 'resource_state': '1.13667|1410', 'nodes': 3}), (1500333855.553808, {'compute_state': 0.6000000238418579, 'resource_state': '1.13667|1410', 'nodes': 3}), (1500333865.67558, {'compute_state': 0.6000000238418579, 'resource_state': '1.13667|1410', 'nodes': 3}), (1500333875.865943, {'compute_state': 0.6000000238418579, 'resource_state': '1.13667|1410', 'nodes': 3}), (1500333886.301663, {'compute_state': 0.6000000238418579, 'resource_state': '1.13667|1410', 'nodes': 3}), (1500333942.272216, {'compute_state': 0.6000000238418579, 'resource_state': '1.13667|1410', 'nodes': 2}), (1500333953.291462, {'compute_state': 0.6499999761581421, 'resource_state': '0.815|1431', 'nodes': 2}), (1500333964.234988, {'compute_state': 0.6499999761581421, 'resource_state': '1|1431', 'nodes': 2}), (1500333975.214813, {'compute_state': 0.6499999761581421, 'resource_state': '1.15|1431.5', 'nodes': 2}), (1500333986.206887, {'compute_state': 0.6499999761581421, 'resource_state': '1.35|1431.5', 'nodes': 2}), (1500333997.165013, {'compute_state': 0.6499999761581421, 'resource_state': '1.515|1431.5', 'nodes': 2}), (1500334008.138891, {'compute_state': 0.6499999761581421, 'resource_state': '1.59|1431', 'nodes': 2}), (1500334019.097935, {'compute_state': 0.6499999761581421, 'resource_state': '1.655|1431.5', 'nodes': 2}), (1500334030.054828, {'compute_state': 0.6499999761581421, 'resource_state': '1.71|1431.5', 'nodes': 2}), (1500334041.006611, {'compute_state': 0.6499999761581421, 'resource_state': '1.8|1431.5', 'nodes': 2}), (1500334051.934265, {'compute_state': 0.6499999761581421, 'resource_state': '1.79|1198', 'nodes': 2}), (1500334062.508461, {'compute_state': 0.6499999761581421, 'resource_state': '1.68|776.5', 'nodes': 2}), (1500334073.087687, {'compute_state': 0.6499999761581421, 'resource_state': '1.535|777', 'nodes': 2}), (1500334083.704999, {'compute_state': 0.6499999761581421, 'resource_state': '1.45|92.5', 'nodes': 2}), (1500334105.594494, {'compute_state': 0.699999988079071, 'resource_state': '1.655|1084.5', 'nodes': 2}), (1500334116.590309, {'compute_state': 0.699999988079071, 'resource_state': '1.71|1084', 'nodes': 2}), (1500334127.527434, {'compute_state': 0.699999988079071, 'resource_state': '1.77|1084', 'nodes': 2}), (1500334138.487278, {'compute_state': 0.699999988079071, 'resource_state': '1.81|1084', 'nodes': 2}), (1500334149.510591, {'compute_state': 0.699999988079071, 'resource_state': '1.84|1082.5', 'nodes': 2}), (1500334160.428251, {'compute_state': 0.699999988079071, 'resource_state': '1.74|601', 'nodes': 2}), (1500334171.103836, {'compute_state': 0.699999988079071, 'resource_state': '1.895|602.5', 'nodes': 2}), (1500334193.03309, {'compute_state': 0.75, 'resource_state': '1.905|787.5', 'nodes': 2}), (1500334204.010398, {'compute_state': 0.75, 'resource_state': '1.92|788', 'nodes': 2}), (1500334215.00202, {'compute_state': 0.75, 'resource_state': '1.93|788', 'nodes': 2}), (1500334225.544827, {'compute_state': 0.75, 'resource_state': '1.825|454', 'nodes': 2}), (1500334247.518354, {'compute_state': 0.800000011920929, 'resource_state': '2.06|789.5', 'nodes': 2}), (1500334258.506396, {'compute_state': 0.800000011920929, 'resource_state': '2.05|789.5', 'nodes': 2}), (1500334269.486092, {'compute_state': 0.800000011920929, 'resource_state': '2.045|790', 'nodes': 2}), (1500334280.032327, {'compute_state': 0.800000011920929, 'resource_state': '2.04|455.5', 'nodes': 2}), (1500334290.645669, {'compute_state': 0.800000011920929, 'resource_state': '1.88|89.5', 'nodes': 2}), (1500334312.54766, {'compute_state': 0.8500000238418579, 'resource_state': '1.94|789.5', 'nodes': 2}), (1500334323.493326, {'compute_state': 0.8500000238418579, 'resource_state': '1.95|788.5', 'nodes': 2}), (1500334334.023717, {'compute_state': 0.8500000238418579, 'resource_state': '1.88|455', 'nodes': 2}), (1500334355.89626, {'compute_state': 0.8999999761581421, 'resource_state': '1.78|788.5', 'nodes': 2}), (1500334366.840776, {'compute_state': 0.8999999761581421, 'resource_state': '1.82|789', 'nodes': 2}), (1500334377.830345, {'compute_state': 0.8999999761581421, 'resource_state': '1.86|789.5', 'nodes': 2}), (1500334388.433157, {'compute_state': 0.8999999761581421, 'resource_state': '1.76|455', 'nodes': 2}), (1500334410.384347, {'compute_state': 0.949999988079071, 'resource_state': '1.695|789.5', 'nodes': 2}), (1500334421.319638, {'compute_state': 0.949999988079071, 'resource_state': '1.82|790', 'nodes': 2}), (1500334432.258105, {'compute_state': 0.949999988079071, 'resource_state': '1.85|789.5', 'nodes': 2}), (1500334442.858267, {'compute_state': 0.949999988079071, 'resource_state': '1.765|456', 'nodes': 2})]
+1500334453.486523|SYSTEM: Waiting on Computation to finish.
+1500334453.486744|SYSTEM: Good bye...
