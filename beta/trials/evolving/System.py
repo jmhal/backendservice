@@ -27,15 +27,15 @@ class ReconfigurationPort():
       self.platform_conn, self.computation_conn = Pipe()
    
    # Methods for Computation
-   def add_node():
+   def add_node(self):
       self.computation_conn.send(["add_node"])
       return self.computation_conn.recv()
 
-   def remove_node():
+   def remove_node(self):
       self.computation_conn.send(["remove_node"])
       return self.computation_conn.recv()
   
-   def get_sensors():
+   def get_sensors(self):
       self.computation_conn.send(["sensors"])
       return self.computation_conn.recv()
  

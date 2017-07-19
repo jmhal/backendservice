@@ -34,22 +34,22 @@ def platform_unit(reconfiguration_port, url, stack_name, stack_id):
             with reconfiguration_port.machine_file_lock:
                nodes = proxy.configure_machine_file()
             reconfiguration_port.platform_conn.send(["add_node_ok"])
-         else
+         else:
             log("Can't add a node.")
             reconfiguration_port.platform_conn.send(["contract_limit"])
       elif command[0] == "remove_node":
          if nodes - 1 >= 2 :
             log("Removing a node.")
-            proxy.add_node(1)
+            proxy.remove_node(1)
             with reconfiguration_port.machine_file_lock:
                nodes = proxy.configure_machine_file()
             reconfiguration_port.platform_conn.send(["remove_node_ok"])
-         else
+         else:
             log("Can't remove a node.")
             reconfiguration_port.platform_conn.send(["contract_limit"])
       elif command[0] == "sensors":
-         log("returning sensor info.")
-         reconfiguration_port.platform_conn.send([str(resource_state)]
+         log("Returning Sensor Info.")
+         reconfiguration_port.platform_conn.send([str(resource_state)])
       else :
          log("Unknown Command.")
          reconfiguration_port.platform_conn.send(["error"])

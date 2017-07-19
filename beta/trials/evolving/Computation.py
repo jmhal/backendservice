@@ -40,6 +40,7 @@ def computation_unit(reconfiguration_port, computation_input):
          reconfiguration_port.remove_node()
       else:
          log("Input Stable.")
+         reconfiguration_port.get_sensors()
       prev_m = m
 
       log("Start (MatrixSize, Iteration) = |" + str(m) + "|" + str(i) +"|")
