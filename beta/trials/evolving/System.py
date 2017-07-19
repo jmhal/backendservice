@@ -44,7 +44,7 @@ if __name__ == "__main__":
    url = sys.argv[1]
    stack_name = sys.argv[2]
    stack_id = sys.argv[3]
-   computation_input = sys.argv[8]
+   computation_input = sys.argv[4]
 
    # A port for communication between components
    reconfiguration_port = ReconfigurationPort()
