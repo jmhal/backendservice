@@ -30,10 +30,10 @@ def platform_unit(reconfiguration_port, url, stack_name, stack_id):
       if command[0] == "add_node":
          if nodes + 1 <= 10:
             log("Adding a node.")
+            reconfiguration_port.platform_conn.send(["add_node_ok"])
             proxy.add_node(1)
             with reconfiguration_port.machine_file_lock:
                nodes = proxy.configure_machine_file()
-            reconfiguration_port.platform_conn.send(["add_node_ok"])
          else:
             log("Can't add a node.")
             reconfiguration_port.platform_conn.send(["contract_limit"])
